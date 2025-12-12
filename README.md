@@ -1,6 +1,6 @@
 # Custom IPTV Playlist Generator
 
-Automatically generates custom IPTV M3U playlists (Zee, Sony, Sports, Entertainment, Education, and Others) by pulling the latest data from iptv-org and sorting channels into categories.
+Automatically generates custom IPTV M3U playlists (Zee, Sony, Sports, Entertainment, Education, News, Kids, Music, and Others) by pulling the latest data from iptv-org and sorting channels into relevant categories. Channels can now appear in multiple categories.
 
 The playlists refresh automatically every 4 hours using GitHub Actions, so your M3U links always stay up-to-date without manual work.
 
@@ -18,6 +18,7 @@ FEATURES
   • Movies
   • News
   • Kids
+  • Music
   • Education
   • Others
 
@@ -28,28 +29,30 @@ FEATURES
 - Fully automated updates using GitHub Actions
 - Built using Node.js (JavaScript)
 
-------------------------------------
+<!-- ------------------------------------
 FOLDER STRUCTURE
 ------------------------------------
-iptv/
-   ├── generate.js
-   ├── package.json
-   ├── output/
-   │     ├── zee.m3u           (Zee channels only)
-   │     ├── sony.m3u          (Sony channels only)
-   │     ├── sports.m3u        (Sports channels only)
-   │     ├── entertainment.m3u (Entertainment channels only)
-   │     ├── education.m3u     (Education channels only)
-   │     ├── news.m3u          (News channels only)
-   │     ├── movies.m3u        (Movies channels only)
-   │     ├── kids.m3u          (Kids channels only)
-   │     ├── others.m3u        (Other channels)
-   │     └── all.m3u           (ALL channels with category headers)
-   └── .github/
-        └── workflows/
-              └── auto-update.yml
+- iptv/
+  - generate.js
+  - package.json
+  - output/
+    - zee.m3u           (Zee channels)
+    - sony.m3u          (Sony channels)
+    - star.m3u          (Star channels)
+    - sports.m3u        (Sports channels)
+    - entertainment.m3u (Entertainment channels)
+    - education.m3u     (Education channels)
+    - news.m3u          (News channels)
+    - movies.m3u        (Movies channels)
+    - kids.m3u          (Kids channels)
+    - music.m3u         (Music channels)
+    - others.m3u        (Other channels)
+    - all.m3u           (ALL channels with category headers)
+  - .github/
+    - workflows/
+      - auto-update.yml -->
 
-------------------------------------
+<!-- ------------------------------------
 REQUIREMENTS
 ------------------------------------
 - Node.js 18 or higher
@@ -77,7 +80,7 @@ The included GitHub workflow:
 - Automatically commits and pushes updates
 
 You can also run it manually from:
-GitHub → Actions → Auto Generate IPTV → Run workflow
+GitHub → Actions → Auto Generate IPTV → Run workflow -->
 
 ------------------------------------
 DIRECT PLAYLIST URLs
@@ -90,6 +93,9 @@ https://raw.githubusercontent.com/atanuroy22/iptv/main/output/zee.m3u
 
 Sony:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/sony.m3u
+
+Star:
+https://raw.githubusercontent.com/atanuroy22/iptv/main/output/star.m3u
 
 Sports:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/sports.m3u
@@ -106,6 +112,9 @@ https://raw.githubusercontent.com/atanuroy22/iptv/main/output/news.m3u
 Kids:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/kids.m3u
 
+Music:
+https://raw.githubusercontent.com/atanuroy22/iptv/main/output/music.m3u
+
 Education:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/education.m3u
 
@@ -118,14 +127,15 @@ All Channels:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/all.m3u
 
 The combined all.m3u file contains ALL channels organized into sections like:
-# ---------------- ZEE ----------------
-# ---------------- SONY ----------------
-# ---------------- ENTERTAINMENT ----------------
+<br>---------------- ZEE ---------------- <br>
+---------------- SONY ---------------- <br>
+---------------- STAR ---------------- <br>
+---------------- ENTERTAINMENT ---------------- <br>
 etc.
 
 These URLs auto-refresh every 4 hours.
 
-------------------------------------
+<!-- ------------------------------------
 CUSTOMIZATION
 ------------------------------------
 You can edit generate.js to:
@@ -173,14 +183,14 @@ const ALL_LANGS = [
     // "telugu",
     // ... etc
 ];
-```
+``` -->
 
-4. Run: npm start
+<!-- 4. Run: npm start
 
 NOTE: 
 - Channels WITHOUT a language tag are always included
 - Only channels with explicit non-matching languages are filtered out
-- This applies to ALL categories (Zee, Sony, Sports, etc.)
+- This applies to ALL categories (Zee, Sony, Sports, etc.) -->
 
 ------------------------------------
 LICENSE
