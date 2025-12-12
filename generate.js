@@ -43,6 +43,11 @@ const FILTERS = {
         detect: "sony",     // detected using tvg-name
         languages: [...ALL_LANGS]
     },
+    star: {
+        detect: "star",
+        group: ["star"],
+        languages: [...ALL_LANGS]
+    },
     music: {
         group: ["music"],
         languages: [...ALL_LANGS]
@@ -167,10 +172,11 @@ async function generate() {
     // Create combined all.m3u with section headers
     const combined = ["#EXTM3U"];
 
-    const categoryOrder = ["zee", "sony", "entertainment", "music", "sports", "movies", "news", "kids", "education", "others"];
+    const categoryOrder = ["zee", "sony", "star", "entertainment", "music", "sports", "movies", "news", "kids", "education", "others"];
     const categoryLabels = {
         zee: "ZEE",
         sony: "SONY",
+        star: "STAR",
         entertainment: "ENTERTAINMENT",
         music: "MUSIC",
         sports: "SPORTS",
