@@ -1,0 +1,63 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="TehzeebTV.in@SD" tvg-logo="https://i.imgur.com/PCVOdup.png" group-title="Undefined",Tehzeeb TV (720p)
+https://cdn-4.pishow.tv/live/239/master.m3u8
+#EXTINF:-1 tvg-id="Zee24Ghanta.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Zee_24_Ghanta_2025.svg/512px-Zee_24_Ghanta_2025.svg.png" group-title="Undefined",Zee 24 Ghanta (576p)
+http://202.164.50.194:8000/play/a04n/index.m3u8
+#EXTINF:-1 tvg-id="Zee24Kalak.in@SD" tvg-logo="https://i.imgur.com/RKrvmVo.png" group-title="Undefined",Zee 24 Kalak (720p)
+https://livetv-channels.b-cdn.net/8077/playlist.m3u8
+#EXTINF:-1 tvg-id="Zee24Taas.in@SD" tvg-logo="https://i.imgur.com/KVDGQI1.png" group-title="Undefined",Zee 24 Taas (720p)
+https://dgrvlduwztkd4.cloudfront.net/index_5.m3u8
+#EXTINF:-1 tvg-id="ZeeAction.in@SD" tvg-logo="https://i.imgur.com/MIzc3I1.png" group-title="Movies",Zee Action (576p)
+http://87.255.35.150:18507
+#EXTINF:-1 tvg-id="ZeeBangla.in@SD" tvg-logo="https://i.imgur.com/zTGTWa8.png" group-title="Entertainment",Zee Bangla (1080p)
+http://87.255.35.150:18238
+#EXTINF:-1 tvg-id="ZeeBharat.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Zee_Bharat_2025.svg/512px-Zee_Bharat_2025.svg.png" group-title="Undefined",Zee Bharat (720p)
+https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeehindustan/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/96bbab12-582e-4540-af70-510ab6824581/main.m3u8
+#EXTINF:-1 tvg-id="ZeeBiharJharkhand.in@SD" tvg-logo="https://i.imgur.com/e26mQ7x.png" group-title="Undefined",Zee Bihar Jharkhand (720p)
+https://raw.githubusercontent.com/Alstruit/adaptive-streams/alstruit-4_24_in/streams/in/ZeeBiharJharkhand.m3u8
+#EXTINF:-1 tvg-id="ZeeBollymovies.in@SD" tvg-logo="https://framerusercontent.com/images/mqfJ18x4jYe0GbZUbxSHsbnWU.png?scale-down-to=512" group-title="Movies",Zee Bollymovies (1080p) [Geo-blocked]
+https://amg17931-zee-amg17931c8-samsung-th-6526.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeBollymovies.in@Australia" tvg-logo="https://framerusercontent.com/images/mqfJ18x4jYe0GbZUbxSHsbnWU.png?scale-down-to=512" group-title="Movies",Zee Bollymovies Australia (1080p) [Geo-blocked]
+https://amg17931-zee-amg17931c8-samsung-au-8871.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeBollywood.in@SD" tvg-logo="https://i.imgur.com/0qQrV84.png" group-title="Movies",Zee Bollywood (576p)
+http://87.255.35.150:18861
+#EXTINF:-1 tvg-id="ZeeBusiness.in@SD" tvg-logo="https://i.imgur.com/vkWBtL4.png" group-title="Business",Zee Business (720p)
+https://dwby15d04agvq.cloudfront.net/index_1.m3u8
+#EXTINF:-1 tvg-id="ZeeCinema.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Zee_Cinema_2025.svg/512px-Zee_Cinema_2025.svg.png" group-title="Movies",Zee Cinema (1080p)
+https://amg17931-zee-amg17931c5-samsung-au-8873.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeCinemalu.in@SD" tvg-logo="https://i.imgur.com/uq8WSzG.png" group-title="Movies",Zee Cinemalu (1080p)
+http://87.255.35.150:18578
+#EXTINF:-1 tvg-id="ZeeDelhiNCRHaryana.in@SD" tvg-logo="https://i.imgur.com/jeBUXYz.png" group-title="News",Zee Delhi NCR Haryana (720p)
+https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeedelhincr/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/cc483a15-1b39-4642-872d-5d08d362ed01/main.m3u8
+#EXTINF:-1 tvg-id="ZeeKannada.in@SD" tvg-logo="https://i.imgur.com/aHLRen7.png" group-title="Undefined",Zee Kannada (1080p)
+http://87.255.35.150:18945
+#EXTINF:-1 tvg-id="ZeeKannadaNews.in@SD" tvg-logo="" group-title="News",Zee Kannada News (720p)
+https://d3vzwoqcbpfm8p.cloudfront.net/index_4.m3u8
+#EXTINF:-1 tvg-id="ZeeKeralam.in@SD" tvg-logo="https://i.imgur.com/NileYZz.png" group-title="Undefined",Zee Keralam (1080p)
+http://87.255.35.150:18502
+#EXTINF:-1 tvg-id="ZeeMadhyaPradeshChhattisgarh.in@SD" tvg-logo="https://i.imgur.com/YccuVVI.png" group-title="Undefined",Zee Madhya Pradesh Chhattisgarh (720p)
+https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeemadhyachhattisgarh/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2ab17056-6187-4f0e-a34d-f436ac479d6c/main.m3u8
+#EXTINF:-1 tvg-id="ZeeMarathi.in@SD" tvg-logo="https://i.imgur.com/vv9ysD3.png" group-title="Undefined",Zee Marathi (1080p)
+http://87.255.35.150:18234
+#EXTINF:-1 tvg-id="ZeeNews.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Zee_news.svg/512px-Zee_news.svg.png" group-title="News",Zee News (1080p)
+https://dknttpxmr0dwf.cloudfront.net/index_57.m3u8
+#EXTINF:-1 tvg-id="ZeeNewsMalayalam.in@SD" tvg-logo="https://i.imgur.com/MePj7ET.png" group-title="News",Zee News Malayalam (720p)
+https://d1ty2af03alkwd.cloudfront.net/index_4.m3u8
+#EXTINF:-1 tvg-id="ZeePower.in@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/aa/Z_power_general.jpg" group-title="Entertainment",Zee Power (576p)
+http://87.255.35.150:18226
+#EXTINF:-1 tvg-id="ZeePunjabHaryanaHimachal.in@SD" tvg-logo="https://i.imgur.com/wnALPbu.png" group-title="Undefined",Zee Punjab Haryana Himachal (720p)
+https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeepunjabharyanahima/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/65eed269-2f3a-4dd0-ac89-d18959af28e3/main.m3u8
+#EXTINF:-1 tvg-id="ZeePunjabi.in@SD" tvg-logo="https://i.imgur.com/boDyrrZ.png" group-title="Undefined",Zee Punjabi (576p)
+http://87.255.35.150:18931
+#EXTINF:-1 tvg-id="ZeeRajasthan.in@SD" tvg-logo="https://i.imgur.com/iYrrGlL.png" group-title="Undefined",Zee Rajasthan (720p)
+https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeerajashthannews/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/8e864b9a-1681-41a0-99a6-387490bc5b24/main.m3u8
+#EXTINF:-1 tvg-id="ZeeTamil.in@SD" tvg-logo="https://i.imgur.com/KwTVqSe.png" group-title="Undefined",Zee Tamil (1080p)
+http://87.255.35.150:18553
+#EXTINF:-1 tvg-id="ZeeTelugu.in@SD" tvg-logo="https://i.imgur.com/YSc3G9d.png" group-title="Undefined",Zee Telugu (1080p)
+http://87.255.35.150:18222
+#EXTINF:-1 tvg-id="ZeeThirai.in@SD" tvg-logo="https://i.imgur.com/vmHfPD8.png" group-title="Undefined",Zee Thirai (1080p)
+http://87.255.35.150:18597
+#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Zee_TV_Logo_2025.svg/512px-Zee_TV_Logo_2025.svg.png" group-title="Undefined",Zee TV (1080p)
+http://87.255.35.150:18849
+#EXTINF:-1 tvg-id="ZeeUttarPradeshUttarakhand.in@SD" tvg-logo="https://i.imgur.com/gxKFKRG.png" group-title="Undefined",Zee Uttar Pradesh/Uttarakhand (720p)
+https://duw35ict5q7th.cloudfront.net/index_3.m3u8
