@@ -7,8 +7,8 @@ The playlists refresh automatically every 4 hours using GitHub Actions, so your 
 ------------------------------------
 FEATURES
 ------------------------------------
-- Fetches the latest India playlist:
-  https://iptv-org.github.io/iptv/countries/in.m3u8
+<!-- - Fetches the latest India playlist:
+  https://iptv-org.github.io/iptv/countries/in.m3u8 -->
 
 - Categorizes channels into:
   • Zee
@@ -82,16 +82,11 @@ The included GitHub workflow:
 You can also run it manually from:
 GitHub → Actions → Auto Generate IPTV → Run workflow -->
 
-COMBINED PLAYLIST (All channels with category sections):
-
-All Channels with zee, sony, star, sports and other filters:
-https://raw.githubusercontent.com/atanuroy22/iptv/main/output/all.m3u
-
-The combined all.m3u file contains ALL channels
-
 ------------------------------------
 DIRECT PLAYLIST URLs
 ------------------------------------
+COMBINED all.m3u PLAYLIST (zee, sony, star, sports categories and All other channels):
+https://raw.githubusercontent.com/atanuroy22/iptv/main/output/all.m3u
 
 INDIVIDUAL CATEGORY PLAYLISTS:
 
