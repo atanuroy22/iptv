@@ -13,21 +13,21 @@ FEATURES
 - Categorizes channels into:
   • Zee
   • Sony
-  • Entertainment
+  • Star
   • Sports
-  • Movies
+  <!-- • Movies
   • News
   • Kids
   • Music
   • Education
-  • Others
+  • Others -->
 
 - Creates TWO types of playlists:
   1. Separate .m3u files for each category (in output/ folder)
   2. A combined all.m3u file with all channels organized by category sections
 
-- Fully automated updates using GitHub Actions
-- Built using Node.js (JavaScript)
+<!-- - Fully automated updates using GitHub Actions
+- Built using Node.js (JavaScript) -->
 
 <!-- ------------------------------------
 FOLDER STRUCTURE
@@ -82,6 +82,13 @@ The included GitHub workflow:
 You can also run it manually from:
 GitHub → Actions → Auto Generate IPTV → Run workflow -->
 
+COMBINED PLAYLIST (All channels with category sections):
+
+All Channels with zee, sony, star, sports and other filters:
+https://raw.githubusercontent.com/atanuroy22/iptv/main/output/all.m3u
+
+The combined all.m3u file contains ALL channels
+
 ------------------------------------
 DIRECT PLAYLIST URLs
 ------------------------------------
@@ -100,7 +107,8 @@ https://raw.githubusercontent.com/atanuroy22/iptv/main/output/star.m3u
 Sports:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/sports.m3u
 
-Entertainment:
+etc.
+<!-- Entertainment:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/entertainment.m3u
 
 Movies:
@@ -119,19 +127,8 @@ Education:
 https://raw.githubusercontent.com/atanuroy22/iptv/main/output/education.m3u
 
 Others:
-https://raw.githubusercontent.com/atanuroy22/iptv/main/output/others.m3u
+https://raw.githubusercontent.com/atanuroy22/iptv/main/output/others.m3u -->
 
-COMBINED PLAYLIST (All channels with category sections):
-
-All Channels:
-https://raw.githubusercontent.com/atanuroy22/iptv/main/output/all.m3u
-
-The combined all.m3u file contains ALL channels organized into sections like:
-<br>---------------- ZEE ---------------- <br>
----------------- SONY ---------------- <br>
----------------- STAR ---------------- <br>
----------------- ENTERTAINMENT ---------------- <br>
-etc.
 
 These URLs auto-refresh every 4 hours.
 
