@@ -84,6 +84,21 @@ const FILTERS = {
     }
 };
 
+const categoryOrder = ["zee", "sony", "star", "entertainment", "music", "sports", "movies", "news", "kids", "education", "others"];
+const categoryLabels = {
+    zee: "ZEE",
+    sony: "SONY",
+    star: "STAR",
+    entertainment: "ENTERTAINMENT",
+    music: "MUSIC",
+    sports: "SPORTS",
+    movies: "MOVIES",
+    news: "NEWS",
+    kids: "KIDS",
+    education: "EDUCATION",
+    others: "OTHERS"
+};
+
 // Extract tvg-language="X"
 function getLanguage(ext) {
     const m = ext.match(/tvg-language="([^"]+)"/i);
@@ -146,7 +161,14 @@ async function generate() {
                 if (lang && !def.languages.includes(lang)) continue;
             }
 
-            output[key].push(ext);
+            // Override group-title for brand-specific categories
+            const brandCategories = ["zee", "sony", "star"];
+            let modifiedExt = ext;
+            if (brandCategories.includes(key)) {
+                const brandName = categoryLabels[key]; // Get the brand name from categoryLabels
+                modifiedExt = ext.replace(/group-title="[^"]+"/i, `group-title="${brandName}"`);
+            }
+            output[key].push(modifiedExt);
             output[key].push(url);
             placed = true;
             // this break remove the channels from there category.(if a zee news is in zee then it will not be in news category)
@@ -171,21 +193,6 @@ async function generate() {
 
     // Create combined all.m3u with section headers
     const combined = ["#EXTM3U"];
-
-    const categoryOrder = ["zee", "sony", "star", "entertainment", "music", "sports", "movies", "news", "kids", "education", "others"];
-    const categoryLabels = {
-        zee: "ZEE",
-        sony: "SONY",
-        star: "STAR",
-        entertainment: "ENTERTAINMENT",
-        music: "MUSIC",
-        sports: "SPORTS",
-        movies: "MOVIES",
-        news: "NEWS",
-        kids: "KIDS",
-        education: "EDUCATION",
-        others: "OTHERS"
-    };
 
     for (const key of categoryOrder) {
         if (!output[key] || output[key].length <= 1) continue; // Skip empty categories
