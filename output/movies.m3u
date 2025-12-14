@@ -1,8 +1,10 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="Andflix.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/%26flix_2025.svg/512px-%26flix_2025.svg.png" group-title="Movies",&flix (480p)
 https://edge3-moblive.yuppcdn.net/drm/smil:nflixdrm.smil/index.m3u8
-#EXTINF:-1 tvg-id="Andpictures.in@SD" tvg-logo="https://i.imgur.com/VYh3V8E.png" group-title="Movies",&pictures (1080p)
+#EXTINF:-1 tvg-id="Andpictures.in@HD" tvg-logo="https://i.imgur.com/VYh3V8E.png" group-title="Movies",&pictures (1080p)
 http://66.102.120.18:8000/play/a01t/index.m3u8
+#EXTINF:-1 tvg-id="Andpictures.in@SD" tvg-logo="https://i.imgur.com/VYh3V8E.png" group-title="Movies",&pictures (576p)
+http://87.255.35.150:18510
 #EXTINF:-1 tvg-id="AndpriveHD.in@SD" tvg-logo="https://i.imgur.com/qyyUlg3.png" group-title="Movies",&prive HD (1080p)
 http://87.255.35.150:18494
 #EXTINF:-1 tvg-id="AndTV.in@SD" tvg-logo="https://i.imgur.com/32W50Y6.png" group-title="Movies",&TV (1080p)
