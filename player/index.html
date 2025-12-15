@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IPTV Player</title>
   <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
   <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
@@ -192,6 +193,11 @@
       background: #3a3a3a;
     }
 
+    .item.active {
+      background: #505050;
+      outline: 2px solid #7aa7ff;
+    }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       #controls {
@@ -227,7 +233,7 @@
   </div>
 
   <div id="player-container">
-    <video id="video" class="video-js vjs-default-skin" controls preload="auto" data-setup='{}'></video>
+    <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup='{}'></video>
     <!-- Floating channel list & toggle lives INSIDE player container -->
     <div id="list"></div>
     <button id="listToggleButton">&#9664;</button>
@@ -237,6 +243,7 @@
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const playlistUrlFromParams = urlParams.get("url");
+  const proxyBaseFromParams = urlParams.get("proxy"); // optional: proxy all HLS requests
   const playlistUrlInput = document.getElementById("playlistUrlInput");
   const loadPlaylistBtn = document.getElementById("loadPlaylistBtn");
   const listDiv = document.getElementById("list");
@@ -246,6 +253,51 @@
   let player = videojs('video');
   player.hlsQualitySelector();
   const zoomPlugin = player.zoomPlugin();
+
+  // Keep an hls.js instance for fallback when VHS fails
+  let hlsInstance = null;
+  let lastTriedUrl = null;
+  let lastBaseStreamUrl = null; // original (maybe-https-upgraded) url without applied proxy
+  let currentProxyBase = proxyBaseFromParams || null;
+  const triedProxyBases = new Set(currentProxyBase ? [currentProxyBase] : []);
+  const DEFAULT_PROXY_CANDIDATES = [
+    'https://cors.isomorphic-git.org/'
+  ];
+
+  // Remote/keyboard navigation state
+  let currentList = [];
+  let selectedIndex = 0;
+  function updateActiveItem() {
+    const items = listDiv.querySelectorAll('.item');
+    items.forEach((el, i) => {
+      if (i === selectedIndex) {
+        el.classList.add('active');
+        // ensure visibility
+        el.scrollIntoView({ block: 'nearest' });
+      } else {
+        el.classList.remove('active');
+      }
+    });
+  }
+  function selectIndex(i) {
+    if (!currentList.length) return;
+    if (i < 0) i = 0;
+    if (i >= currentList.length) i = currentList.length - 1;
+    selectedIndex = i;
+    updateActiveItem();
+  }
+
+  function setStatus(msg, isError = false) {
+    let bar = document.getElementById('statusBar');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.id = 'statusBar';
+      bar.style.cssText = 'padding:8px 12px;background:#222;color:#ddd;border-top:1px solid #333;font-size:0.9em;';
+      document.getElementById('controls').appendChild(bar);
+    }
+    bar.style.color = isError ? '#ffb4b4' : '#ddd';
+    bar.textContent = msg || '';
+  }
 
   function updateTogglePosition() {
     if (listDiv.classList.contains("hidden")) {
@@ -370,24 +422,235 @@
       return;
     }
 
-    channelsToDisplay.forEach(ch => {
+    currentList = channelsToDisplay.slice();
+    selectedIndex = 0;
+    channelsToDisplay.forEach((ch, idx) => {
       const div = document.createElement("div");
       div.className = "item";
       div.textContent = ch.name;
+      div.setAttribute('tabindex', '0');
 
       div.onclick = () => {
-        player.src({ type: 'application/x-mpegURL', src: ch.url });
-        player.play();
+        playStreamWithFallback(ch.url, ch.name);
       };
 
       listDiv.appendChild(div);
     });
 
     if (channelsToDisplay.length > 0) {
-      player.src({ type: 'application/x-mpegURL', src: channelsToDisplay[0].url });
-      player.play();
+      playStreamWithFallback(channelsToDisplay[0].url, channelsToDisplay[0].name);
+      updateActiveItem();
     }
   }
+
+  function cleanupHls() {
+    if (hlsInstance) {
+      try { hlsInstance.destroy(); } catch(e) {}
+      hlsInstance = null;
+    }
+  }
+
+  function getVideoElement() {
+    // underlying HTML5 <video> element used by video.js
+    const tech = player.tech(true);
+    return tech && tech.el ? tech.el() : document.getElementById('video');
+  }
+
+  function maybeUpgradeToHttps(url) {
+    if (location.protocol === 'https:' && url.startsWith('http://')) {
+      return 'https://' + url.substring('http://'.length);
+    }
+    return url;
+  }
+
+  function applyProxy(url) {
+    if (!currentProxyBase) return url;
+    if (currentProxyBase.includes('{url}')) {
+      return currentProxyBase.replace('{url}', encodeURIComponent(url));
+    }
+    // naive concat
+    return currentProxyBase + url;
+  }
+
+  function tryNextProxyBase() {
+    // If a proxy is already set via query, don't override; but if it fails, also try our defaults
+    for (const candidate of DEFAULT_PROXY_CANDIDATES) {
+      if (!triedProxyBases.has(candidate)) {
+        triedProxyBases.add(candidate);
+        currentProxyBase = candidate;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function playWithVJS(url) {
+    cleanupHls();
+    player.src({ type: 'application/x-mpegURL', src: url });
+    const onError = () => {
+      player.off('error', onError);
+      setStatus('Primary player failed, trying fallback…', true);
+      playWithHlsJs(url);
+    };
+    player.one('error', onError);
+    player.play().catch(() => {});
+  }
+
+  function playWithHlsJs(url) {
+    cleanupHls();
+    if (window.Hls && window.Hls.isSupported()) {
+      const videoEl = getVideoElement();
+      // Custom loader to proxy nested requests when proxy param is provided
+      const proxyBase = currentProxyBase || '';
+      const CustomLoader = (proxyBase
+        ? class extends window.Hls.DefaultConfig.loader {
+            constructor(config) { super(config); this._proxyBase = proxyBase; }
+            load(context, config, callbacks) {
+              try {
+                const original = context.url;
+                if (this._proxyBase) {
+                  const proxied = this._proxyBase.includes('{url}')
+                    ? this._proxyBase.replace('{url}', encodeURIComponent(original))
+                    : this._proxyBase + original;
+                  context.url = proxied;
+                }
+              } catch (e) {}
+              super.load(context, config, callbacks);
+            }
+          }
+        : window.Hls.DefaultConfig.loader
+      );
+
+      hlsInstance = new window.Hls({
+        enableWorker: true,
+        lowLatencyMode: true,
+        backBufferLength: 90,
+        fragLoadTimeout: 20000,
+        manifestLoadTimeout: 20000,
+        xhrSetup: function(xhr) {
+          // credentials often not needed; leave disabled by default
+          xhr.withCredentials = false;
+          // cannot set Referer/Origin headers in browsers
+        },
+        loader: CustomLoader
+      });
+      hlsInstance.attachMedia(videoEl);
+      hlsInstance.on(window.Hls.Events.MEDIA_ATTACHED, () => {
+        hlsInstance.loadSource(url);
+      });
+      hlsInstance.on(window.Hls.Events.MANIFEST_PARSED, () => {
+        player.play().catch(() => {});
+      });
+      hlsInstance.on(window.Hls.Events.ERROR, function (event, data) {
+        const { fatal, type, details } = data || {};
+        if (fatal) {
+          switch (data.type) {
+            case window.Hls.ErrorTypes.NETWORK_ERROR:
+              setStatus('Network error loading stream (CORS/geo/offline?)', true);
+              // Attempt CORS-proxied retry if we haven't already
+              if (tryNextProxyBase() && lastBaseStreamUrl) {
+                setStatus('Retrying via CORS proxy…');
+                try { hlsInstance.destroy(); } catch(e) {}
+                hlsInstance = null;
+                // Re-run with proxied base URL
+                const proxied = applyProxy(lastBaseStreamUrl);
+                playWithHlsJs(proxied);
+              } else {
+                // try to continue load; may not help for hard CORS blocks
+                try { hlsInstance.startLoad(); } catch(e) {}
+              }
+              break;
+            case window.Hls.ErrorTypes.MEDIA_ERROR:
+              setStatus('Media error, attempting recovery…', true);
+              try { hlsInstance.recoverMediaError(); } catch(e) {}
+              break;
+            default:
+              setStatus('Fatal error: ' + (type || details || 'unknown'), true);
+              try { hlsInstance.destroy(); } catch(e) {}
+              hlsInstance = null;
+              break;
+          }
+        }
+      });
+    } else {
+      setStatus('Hls.js not supported in this browser.', true);
+    }
+  }
+
+  function playStreamWithFallback(originalUrl, channelName) {
+    lastTriedUrl = originalUrl;
+    setStatus('Loading: ' + (channelName || originalUrl));
+    // Try to mitigate mixed-content by upgrading http→https when page is https
+    let url = maybeUpgradeToHttps(originalUrl);
+    // Apply optional proxy for all loads (master + segments)
+    lastBaseStreamUrl = url; // keep before applying proxy
+    // Reset proxy state per new channel unless fixed via query param
+    currentProxyBase = proxyBaseFromParams || null;
+    triedProxyBases.clear();
+    if (currentProxyBase) triedProxyBases.add(currentProxyBase);
+    url = applyProxy(url);
+
+    // First try Video.js/VHS
+    playWithVJS(url);
+  }
+
+  // Global key handler for TV/remote/keyboard
+  // Common keys: ArrowUp/Down/Left/Right, Enter, NumpadEnter, PageUp/PageDown, ChannelUp/ChannelDown
+  document.addEventListener('keydown', (e) => {
+    const key = e.key;
+    switch (key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        selectIndex(selectedIndex + 1);
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        selectIndex(selectedIndex - 1);
+        break;
+      case 'PageDown':
+        e.preventDefault();
+        selectIndex(selectedIndex + 10);
+        break;
+      case 'PageUp':
+        e.preventDefault();
+        selectIndex(selectedIndex - 10);
+        break;
+      case 'Enter':
+      case 'NumpadEnter':
+        e.preventDefault();
+        if (currentList[selectedIndex]) {
+          const ch = currentList[selectedIndex];
+          playStreamWithFallback(ch.url, ch.name);
+        }
+        break;
+      case 'ArrowLeft':
+        // toggle list visibility
+        e.preventDefault();
+        listDiv.classList.toggle('hidden');
+        listToggleButton.innerHTML = listDiv.classList.contains('hidden') ? '&#9654;' : '&#9664;';
+        updateTogglePosition();
+        break;
+      case 'ArrowRight':
+        // no-op for now
+        break;
+      default:
+        // Some TVs map channel keys to non-standard names. Try keyCode fallback
+        if (e.keyCode === 427) { // ChannelUp
+          e.preventDefault();
+          selectIndex(selectedIndex - 1);
+        } else if (e.keyCode === 428) { // ChannelDown
+          e.preventDefault();
+          selectIndex(selectedIndex + 1);
+        } else if (e.keyCode === 13) { // Enter
+          e.preventDefault();
+          if (currentList[selectedIndex]) {
+            const ch = currentList[selectedIndex];
+            playStreamWithFallback(ch.url, ch.name);
+          }
+        }
+        break;
+    }
+  }, { capture: true });
 
 </script>
 
