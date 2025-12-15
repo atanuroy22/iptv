@@ -37,6 +37,17 @@ etc.
 These URLs auto-refresh every 4 hours.
 
 ------------------------------------
+EPG (XMLTV) SUPPORT
+------------------------------------
+- You can pass an EPG URL to the player using `&epg=`. Example:
+
+  [▶ Play with EPG](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/all.m3u&epg=https://example.com/guide.xml)
+
+- If the EPG host blocks cross-origin requests, use your deployed server as a proxy:
+
+  `&epg=https://<your-domain>/epg?url=https%3A%2F%2Fexample.com%2Fguide.xml`
+
+------------------------------------
 LICENSE
 ------------------------------------
 MIT License – free to use and modify.

@@ -144,6 +144,25 @@
         position: relative; /* Allow floating overlays */
       }
 
+      /* EPG Now/Next overlay */
+      #epgOverlay {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        max-width: 38%;
+        background: rgba(0,0,0,0.55);
+        color: #eee;
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid rgba(255,255,255,0.1);
+        font-size: 0.9em;
+        line-height: 1.35;
+        z-index: 12;
+      }
+      #epgOverlay .title { font-weight: 600; color: #fff; }
+      #epgOverlay .time { color: #ccc; font-size: 0.85em; }
+      #epgOverlay .sep { opacity: 0.6; margin: 0 6px; }
+
       #controls {
         padding: 15px;
         background: #282828;
@@ -237,12 +256,14 @@
     <!-- Floating channel list & toggle lives INSIDE player container -->
     <div id="list"></div>
     <button id="listToggleButton">&#9664;</button>
+    <div id="epgOverlay" style="display:none"></div>
   </div>
 </div>
 
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const playlistUrlFromParams = urlParams.get("url");
+  const epgUrlFromParams = urlParams.get("epg"); // optional XMLTV URL
   const proxyBaseFromParams = urlParams.get("proxy"); // optional: proxy all HLS requests
   const playlistUrlInput = document.getElementById("playlistUrlInput");
   const loadPlaylistBtn = document.getElementById("loadPlaylistBtn");
@@ -335,6 +356,12 @@
     loadM3U(playlistUrlFromParams);
   }
 
+  // Load EPG if provided
+  let epgData = null; // { map: Map<tvgId, programmes[]> }
+  if (epgUrlFromParams) {
+    loadEPG(epgUrlFromParams).catch(() => {});
+  }
+
   loadPlaylistBtn.addEventListener("click", () => {
     const url = playlistUrlInput.value;
     if (url) {
@@ -384,11 +411,13 @@
         const nameMatch = line.match(/,(.*)$/);
         const groupTitleMatch = line.match(/group-title="([^"]*)"/);
         const tvgLanguageMatch = line.match(/tvg-language="([^"]*)"/);
+        const tvgIdMatch = line.match(/tvg-id="([^"]*)"/);
 
         current = {
           name: nameMatch ? nameMatch[1] : "Unknown",
           category: groupTitleMatch ? groupTitleMatch[1] : "Others",
-          language: tvgLanguageMatch ? tvgLanguageMatch[1] : "Unknown"
+          language: tvgLanguageMatch ? tvgLanguageMatch[1] : "Unknown",
+          tvgId: tvgIdMatch ? tvgIdMatch[1] : null
         };
         categories.add(current.category);
         languages.add(current.language);
@@ -457,14 +486,15 @@
       div.setAttribute('tabindex', '0');
 
       div.onclick = () => {
-        playStreamWithFallback(ch.url, ch.name);
+        playStreamWithFallback(ch.url, ch.name, ch.tvgId);
       };
 
       listDiv.appendChild(div);
     });
 
     if (channelsToDisplay.length > 0) {
-      playStreamWithFallback(channelsToDisplay[0].url, channelsToDisplay[0].name);
+      const first = channelsToDisplay[0];
+      playStreamWithFallback(first.url, first.name, first.tvgId);
       updateActiveItem();
     }
   }
@@ -647,7 +677,7 @@
     return 'application/x-mpegURL';
   }
 
-  function playStreamWithFallback(originalUrl, channelName) {
+  function playStreamWithFallback(originalUrl, channelName, tvgId) {
     lastTriedUrl = originalUrl;
     setStatus('Loading: ' + (channelName || originalUrl));
     // Try to mitigate mixed-content by upgrading http→https when page is https
@@ -662,6 +692,9 @@
 
     // First try Video.js/VHS
     playWithVJS(url);
+
+    // Update EPG overlay for selected channel
+    updateEpgOverlay(tvgId);
   }
 
   // Global key handler for TV/remote/keyboard
@@ -721,6 +754,108 @@
         break;
     }
   }, { capture: true });
+
+  // =====================
+  // EPG support (client)
+  // =====================
+  async function loadEPG(epgUrl) {
+    setStatus('Loading EPG…');
+    let xmlText = '';
+    try {
+      const r = await fetch(epgUrl);
+      if (!r.ok) throw new Error('EPG fetch failed: ' + r.status);
+      xmlText = await r.text();
+    } catch (e) {
+      // Try via proxy
+      setStatus('EPG blocked, retrying via proxy…', true);
+      if (!currentProxyBase) { tryNextProxyBase(); }
+      const proxied = applyProxy(epgUrl);
+      const r2 = await fetch(proxied);
+      if (!r2.ok) throw new Error('EPG proxied fetch failed: ' + r2.status);
+      xmlText = await r2.text();
+    }
+    epgData = parseXMLTV(xmlText);
+    setStatus('EPG loaded');
+  }
+
+  function parseXMLTV(xmlText) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xmlText, 'application/xml');
+    const progs = doc.querySelectorAll('programme');
+    const map = new Map(); // tvgId -> [{start, stop, title, desc}]
+    progs.forEach(p => {
+      const channel = p.getAttribute('channel');
+      const start = parseXmltvDate(p.getAttribute('start'));
+      const stop = parseXmltvDate(p.getAttribute('stop'));
+      const title = (p.querySelector('title')?.textContent || '').trim();
+      const desc = (p.querySelector('desc')?.textContent || '').trim();
+      if (!channel || !start || !stop) return;
+      if (!map.has(channel)) map.set(channel, []);
+      map.get(channel).push({ start, stop, title, desc });
+    });
+    // sort each by start
+    for (const arr of map.values()) arr.sort((a,b)=>a.start-b.start);
+    return { map };
+  }
+
+  function parseXmltvDate(s) {
+    if (!s) return null;
+    const m = s.match(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(?:\s?([+\-]\d{4}))?/);
+    if (!m) return null;
+    const [,Y,M,D,h,mn,ss,off] = m;
+    const iso = `${Y}-${M}-${D}T${h}:${mn}:${ss}` + (off ? `${off.substring(0,3)}:${off.substring(3)}` : 'Z');
+    const d = new Date(iso);
+    return isNaN(d.getTime()) ? null : d;
+  }
+
+  function hhmm(d) {
+    const hh = `${d.getHours()}`.padStart(2,'0');
+    const mm = `${d.getMinutes()}`.padStart(2,'0');
+    return `${hh}:${mm}`;
+  }
+
+  function updateEpgOverlay(tvgId) {
+    const overlay = document.getElementById('epgOverlay');
+    if (!epgData || !tvgId || !epgData.map.has(tvgId)) {
+      overlay.style.display = 'none';
+      return;
+    }
+    const list = epgData.map.get(tvgId);
+    const now = new Date();
+    let nowProg = null, nextProg = null;
+    for (let i=0;i<list.length;i++) {
+      const p = list[i];
+      if (p.start <= now && now < p.stop) {
+        nowProg = p;
+        nextProg = list[i+1] || null;
+        break;
+      }
+      if (p.start > now) { nextProg = p; break; }
+    }
+    if (!nowProg && list.length) {
+      // if all past, show last as now
+      nowProg = list.find(p=>p.stop>now) || list[list.length-1];
+    }
+    const parts = [];
+    if (nowProg) {
+      parts.push(`<span class="title">Now:</span> ${escapeHtml(nowProg.title||'')} <span class="time">(${hhmm(nowProg.start)}–${hhmm(nowProg.stop)})</span>`);
+    }
+    if (nextProg) {
+      parts.push(`<span class="sep">|</span><span class="title">Next:</span> ${escapeHtml(nextProg.title||'')} <span class="time">(${hhmm(nextProg.start)}–${hhmm(nextProg.stop)})</span>`);
+    }
+    overlay.innerHTML = parts.join(' ');
+    overlay.style.display = parts.length ? 'block' : 'none';
+  }
+
+  function escapeHtml(s){
+    return (s||'').replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))
+  }
+
+  // Refresh EPG overlay every minute
+  setInterval(()=>{
+    const active = currentList[selectedIndex];
+    if (active) updateEpgOverlay(active.tvgId);
+  }, 60000);
 
 </script>
 

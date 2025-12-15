@@ -32,6 +32,27 @@ You can deploy this server to a free cloud platform so your GitHub-hosted player
 2. Use a Dockerfile to bundle Node + ffmpeg; deploy a single small instance.
 3. Good when you need more control; free allowance is limited.
 
+### Option D: Glitch (free, no payment, no repo access)
+1. Go to https://glitch.com → New Project → Node.js.
+2. In the editor, add three files at project root using your `server` versions:
+  - `index.js` (copy from `server/index.js`)
+  - `package.json` (copy from `server/package.json`)
+  - `scripts/fetch-ffmpeg.js` (create folder `scripts` and copy file)
+3. Ensure `package.json` has:
+  - scripts.start: `node index.js`
+  - scripts.preinstall: `node scripts/fetch-ffmpeg.js || exit 0`
+4. Glitch sets `PORT` automatically; our server uses `process.env.PORT`.
+5. Glitch will auto-install and run; you get `https://<your-app>.glitch.me`.
+6. Start a job:
+```bash
+curl -X POST https://<your-app>.glitch.me/transmux \
+  -H "Content-Type: application/json" \
+  -d "{\"source\":\"http://87.255.35.150:18555\",\"name\":\"star-bharat\"}"
+```
+7. Use in playlist: `https://<your-app>.glitch.me/hls/star-bharat/index.m3u8`.
+
+Keep-alive (optional): Glitch/Replit may sleep after idle. You can configure a Cloudflare Worker Cron to ping your URL periodically (be mindful of platform ToS).
+
 ## API
 - Start transmux job:
 ```bash
@@ -55,6 +76,16 @@ After starting the job on your cloud domain, set the channel URL to:
 https://<your-domain>/hls/star-bharat/index.m3u8
 ```
 Your existing player will play it like any normal HLS stream (with proxy fallback if needed).
+
+## EPG (XMLTV) via server (CORS-friendly)
+- Proxy raw EPG URL (cached ~10 min):
+```bash
+curl "https://<your-domain>/epg?url=https%3A%2F%2Fexample.com%2Fguide.xml"
+```
+- Use with player `epg` param so GitHub Pages can fetch EPG without CORS issues:
+```
+https://atanuroy22.github.io/iptv/player/index.html?url=...&epg=https://<your-domain>/epg?url=https%3A%2F%2Fexample.com%2Fguide.xml
+```
 
 ## Notes
 - This copies codecs (`-c:v copy -c:a copy`) for efficiency. If a source needs re-encoding, adjust ffmpeg args.
