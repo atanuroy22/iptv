@@ -1,0 +1,15 @@
+{
+  "name": "iptv-transmux-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "preinstall": "node scripts/fetch-ffmpeg.js || exit 0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "rimraf": "^5.0.5"
+  }
+}
