@@ -2,6 +2,7 @@ import axios from "axios";
 import fs from "fs";
 
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
+const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/regions/asia.m3u";
 
 // Language Filter Configuration
 // To filter by language, comment out the languages you DON'T want
@@ -62,7 +63,8 @@ const FILTERS = {
         languages: [...ALL_LANGS]
     },
     sports: {
-        group: ["sports"],
+        detect: "sport", // Added to detect 'sport' in channel name
+        group: ["sports", "sport"], // Added 'sport' to group as well
         languages: [...ALL_LANGS]
     },
     movies: {
@@ -180,6 +182,41 @@ async function generate() {
             output["others"].push(url);
         }
     }
+
+    // --- Process SPORTS_PLAYLIST_URL for sports channels only ---
+    const { data: globalSportsData } = await axios.get(SPORTS_PLAYLIST_URL);
+    const globalSportsLines = globalSportsData.split("\n");
+
+    for (let i = 0; i < globalSportsLines.length; i++) {
+        if (!globalSportsLines[i].startsWith("#EXTINF")) continue;
+
+        const ext = globalSportsLines[i];
+        const url = globalSportsLines[i + 1];
+
+        const low = ext.toLowerCase();
+        const lang = getLanguage(low);
+        const group = getGroup(low);
+        const name = getName(low);
+
+        const def = FILTERS["sports"];
+        let match = false;
+
+        // Brand detection first (checks channel name)
+        if (def.detect && name.includes(def.detect)) match = true;
+
+        // Group detection fallback (checks group-title attribute)
+        if (def.group && def.group.some(g => group.includes(g))) match = true;
+
+        if (match) {
+            // Language filtering (if languages array is not empty, filter by language)
+            if (def.languages.length > 0) {
+                if (lang && !def.languages.includes(lang)) continue;
+            }
+            output["sports"].push(ext);
+            output["sports"].push(url);
+        }
+    }
+    // --- End of SPORTS_PLAYLIST_URL processing ---
 
     // Create output directory if it doesn't exist
     if (!fs.existsSync("output")) {

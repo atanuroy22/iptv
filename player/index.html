@@ -212,6 +212,28 @@
       background: #3a3a3a;
     }
 
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .copy-url-btn {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.8em;
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+
+    .copy-url-btn:hover {
+      background-color: #777;
+    }
+
     .item.active {
       background: #505050;
       outline: 2px solid #7aa7ff;
@@ -232,9 +254,36 @@
         min-width: unset;
       }
     }
+
+    /* Popup styles */
+    #copyPopup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      font-size: 1.1em;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    #copyPopup.show {
+      opacity: 1;
+      visibility: visible;
+    }
   </style>
 </head>
 <body>
+  <div id="copyPopup">
+    Open VLC → Media → Network Stream → paste the URL.
+  </div>
 <div id="main-content">
   <div id="controls">
     <div class="input-group">
@@ -274,6 +323,22 @@
   let player = videojs('video');
   player.hlsQualitySelector();
   const zoomPlugin = player.zoomPlugin();
+
+  let retryCounts = {}; // To store retry attempts for each channel
+
+  player.on('error', () => {
+    const currentSource = player.currentSource();
+    if (currentSource && currentSource.src) {
+      const failedUrl = currentSource.src;
+      retryCounts[failedUrl] = (retryCounts[failedUrl] || 0) + 1;
+      console.warn(`Playback failed for ${failedUrl}. Retry count: ${retryCounts[failedUrl]}`);
+
+      if (retryCounts[failedUrl] >= 2) {
+        // Re-display channels to show VLC option for the failed channel
+        applyFilters(); // This will re-render the list and apply VLC option if needed
+      }
+    }
+  });
 
   // Keep an hls.js instance for fallback when VHS fails
   let hlsInstance = null;
@@ -482,12 +547,47 @@
     channelsToDisplay.forEach((ch, idx) => {
       const div = document.createElement("div");
       div.className = "item";
-      div.textContent = ch.name;
-      div.setAttribute('tabindex', '0');
 
-      div.onclick = () => {
-        playStreamWithFallback(ch.url, ch.name, ch.tvgId);
+      const channelNameSpan = document.createElement("span");
+      channelNameSpan.textContent = ch.name;
+      channelNameSpan.style.flexGrow = "1"; // Allow name to take available space
+      channelNameSpan.style.cursor = "pointer"; // Indicate it's clickable
+      channelNameSpan.onclick = () => {
+        player.src({ type: 'application/x-mpegURL', src: ch.url });
+        player.play();
       };
+      div.appendChild(channelNameSpan);
+
+      // Copy URL button
+      const copyButton = document.createElement("button");
+      copyButton.textContent = "Copy URL";
+      copyButton.className = "copy-url-btn"; // Add a class for styling
+      copyButton.onclick = (e) => {
+        e.stopPropagation(); // Prevent channel click event from firing
+        navigator.clipboard.writeText(ch.url).then(() => {
+          // Show popup
+          const copyPopup = document.getElementById("copyPopup");
+          copyPopup.classList.add("show");
+          setTimeout(() => {
+            copyPopup.classList.remove("show");
+          }, 5000); // Hide after 5 seconds
+        }).catch(err => {
+          console.error("Failed to copy URL: ", err);
+          alert("Failed to copy URL.");
+        });
+      };
+      div.appendChild(copyButton);
+
+      // Check if this channel has failed playback multiple times
+      if (retryCounts[ch.url] && retryCounts[ch.url] >= 2) {
+        const vlcLink = document.createElement("a");
+        vlcLink.href = `vlc://${ch.url}`;
+        vlcLink.textContent = " (Open in VLC)";
+        vlcLink.style.marginLeft = "5px";
+        vlcLink.style.color = "#ffc107"; // A warning-like color
+        vlcLink.target = "_blank"; // Open in new tab, though vlc:// might not respect this
+        div.appendChild(vlcLink);
+      }
 
       listDiv.appendChild(div);
     });
