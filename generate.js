@@ -2,7 +2,7 @@ import axios from "axios";
 import fs from "fs";
 
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
-const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/regions/asia.m3u";
+const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
 
 // Language Filter Configuration
 // To filter by language, comment out the languages you DON'T want
