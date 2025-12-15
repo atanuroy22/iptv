@@ -76,6 +76,38 @@ app.post('/stop', (req, res) => {
   return res.json({ status: 'stopped' });
 });
 
+// Health
+app.get('/', (req, res) => res.type('text').send('OK'));
+app.get('/health', (req, res) => res.type('application/json').send(JSON.stringify({ ok: true })));
+
+// Simple EPG proxy with cache (to bypass CORS)
+const epgCache = new Map(); // url -> { ts, body, type }
+const EPG_TTL_MS = 10 * 60 * 1000;
+
+app.get('/epg', async (req, res) => {
+  const epgUrl = req.query.url;
+  if (!epgUrl) return res.status(400).json({ error: 'url required' });
+  const now = Date.now();
+  const cached = epgCache.get(epgUrl);
+  if (cached && (now - cached.ts) < EPG_TTL_MS) {
+    res.set('access-control-allow-origin', '*');
+    res.set('content-type', cached.type || 'application/xml; charset=utf-8');
+    return res.send(cached.body);
+  }
+  try {
+    const r = await fetch(epgUrl, { redirect: 'follow' });
+    if (!r.ok) return res.status(r.status).send('Upstream error');
+    const type = r.headers.get('content-type') || 'application/xml; charset=utf-8';
+    const body = await r.text();
+    epgCache.set(epgUrl, { ts: now, body, type });
+    res.set('access-control-allow-origin', '*');
+    res.set('content-type', type);
+    return res.send(body);
+  } catch (e) {
+    return res.status(502).json({ error: 'fetch failed' });
+  }
+});
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Transmux server listening on http://localhost:${port}`);
