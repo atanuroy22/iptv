@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IPTV Player</title>
+  <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-hls-quality-selector@1.1.4/dist/videojs-hls-quality-selector.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@theonlyducks/videojs-zoom/dist/videojs-zoom.css">
+  <script src="https://cdn.jsdelivr.net/npm/@theonlyducks/videojs-zoom/dist/videojs-zoom.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column; /* Stack controls over player */
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #controls {
+      padding: 15px;
+      background: #282828;
+      display: flex;
+      flex-direction: column; /* Arrange groups vertically */
+      gap: 10px;
+      border-bottom: 1px solid #3a3a3a;
+    }
+
+    .input-group,
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+    }
+
+    #playlistUrlInput {
+      flex-grow: 1;
+      min-width: 200px;
+    }
+
+    #categoryFilter,
+    #languageFilter {
+      flex-grow: 1;
+      min-width: 150px;
+      height: 40px; /* Standard height for single-line selects */
+    }
+
+    #playlistUrlInput,
+    #categoryFilter,
+    #languageFilter {
+      padding: 10px 12px;
+      border: 1px solid #444;
+      background: #3a3a3a;
+      color: #e0e0e0;
+      border-radius: 5px;
+      font-size: 1em;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    #playlistUrlInput::placeholder {
+      color: #bbb;
+    }
+
+    #loadPlaylistBtn,
+    #toggleListBtn {
+      padding: 10px 20px;
+      background: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.2s ease;
+    }
+
+    #loadPlaylistBtn:hover {
+      background: #0056b3;
+    }
+
+    #video {
+      width: 100%;
+      flex-grow: 1;
+      background: #000;
+    }
+
+      #list.hidden {
+        transform: translateX(-110%);
+      }
+
+      #main-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      /* Floating list INSIDE the player */
+      #list {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 200px; /* Slightly reduced width */
+        height: calc(100% - 60px); /* Slightly reduced height */
+        overflow-y: auto;
+        box-sizing: border-box;
+        background: rgba(34, 34, 34, 0.92);
+        border: 1px solid #3a3a3a;
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 10;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(0);
+      }
+
+      /* Custom Scrollbar for #list */
+      #list::-webkit-scrollbar {
+        width: 8px; /* width of the entire scrollbar */
+      }
+
+      #list::-webkit-scrollbar-track {
+        background: #222; /* color of the tracking area */
+      }
+
+      #list::-webkit-scrollbar-thumb {
+        background-color: #555; /* color of the scroll thumb */
+        border-radius: 4px; /* roundness of the scroll thumb */
+        border: 2px solid #222; /* creates padding around scroll thumb */
+      }
+
+      #player-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative; /* Allow floating overlays */
+      }
+
+      #controls {
+        padding: 15px;
+        background: #282828;
+        display: flex;
+        flex-direction: column; /* Arrange groups vertically */
+        gap: 10px;
+        border-bottom: 1px solid #3a3a3a;
+      }
+
+      #listToggleButton {
+        position: absolute;
+        top: 50%;
+        left: 10px; /* Will be adjusted via JS */
+        transform: translateY(-50%);
+        background: rgba(58,58,58,0.95);
+        color: white;
+        border: none;
+        padding: 10px 8px;
+        cursor: pointer;
+        z-index: 11;
+        border-radius: 6px;
+        font-size: 1.1em;
+      }
+
+      #listToggleButton.hidden {
+        border-radius: 6px;
+      }
+
+    .video-js {
+      width: 100%;
+      height: 100%;
+    }
+
+    .item {
+      padding: 12px 15px;
+      border-bottom: 1px solid #333;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      font-size: 0.95em;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .item:hover {
+      background: #3a3a3a;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      #playlistUrlInput,
+      #loadPlaylistBtn,
+      #categoryFilter,
+      #languageFilter {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="main-content">
+  <div id="controls">
+    <div class="input-group">
+      <input type="text" id="playlistUrlInput" placeholder="Enter M3U playlist URL">
+      <button id="loadPlaylistBtn">Load Playlist</button>
+    </div>
+    <div class="filter-group">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+      </select>
+      <!-- <select id="languageFilter" multiple>
+        <option value="all">All Languages</option>
+      </select> -->
+    </div>
+  </div>
+
+  <div id="player-container">
+    <video id="video" class="video-js vjs-default-skin" controls preload="auto" data-setup='{}'></video>
+    <!-- Floating channel list & toggle lives INSIDE player container -->
+    <div id="list"></div>
+    <button id="listToggleButton">&#9664;</button>
+  </div>
+</div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const playlistUrlFromParams = urlParams.get("url");
+  const playlistUrlInput = document.getElementById("playlistUrlInput");
+  const loadPlaylistBtn = document.getElementById("loadPlaylistBtn");
+  const listDiv = document.getElementById("list");
+  const listToggleButton = document.getElementById("listToggleButton");
+  const mainContent = document.getElementById("main-content");
+
+  let player = videojs('video');
+  player.hlsQualitySelector();
+  const zoomPlugin = player.zoomPlugin();
+
+  function updateTogglePosition() {
+    if (listDiv.classList.contains("hidden")) {
+      listToggleButton.style.left = "10px";
+    } else {
+      const left = 10 + listDiv.offsetWidth + 8; // panel + gap
+      listToggleButton.style.left = left + "px";
+    }
+  }
+
+  listToggleButton.addEventListener("click", () => {
+    listDiv.classList.toggle("hidden");
+    if (listDiv.classList.contains("hidden")) {
+      listToggleButton.innerHTML = "&#9654;"; // Right arrow
+    } else {
+      listToggleButton.innerHTML = "&#9664;"; // Left arrow
+    }
+    updateTogglePosition();
+  });
+
+  // Initial position for toggle button next to visible list
+  updateTogglePosition();
+  window.addEventListener("resize", updateTogglePosition);
+
+
+  if (playlistUrlFromParams) {
+    playlistUrlInput.value = playlistUrlFromParams;
+    loadM3U(playlistUrlFromParams);
+  }
+
+  loadPlaylistBtn.addEventListener("click", () => {
+    const url = playlistUrlInput.value;
+    if (url) {
+      loadM3U(url);
+    } else {
+      alert("Please enter a playlist URL.");
+    }
+  });
+
+  async function loadM3U(url) {
+    if (!url) {
+      document.body.innerHTML = "<h2 style='padding:20px;'>No playlist URL provided.</h2>";
+      throw new Error("No playlist URL provided");
+    }
+    const res = await fetch(url);
+    const text = await res.text();
+    const lines = text.split("\n");
+
+    let channels = [];
+    let current = {};
+    const categories = new Set();
+    const languages = new Set();
+
+    lines.forEach(line => {
+      line = line.trim();
+
+      if (line.startsWith("#EXTINF")) {
+        const nameMatch = line.match(/,(.*)$/);
+        const groupTitleMatch = line.match(/group-title="([^"]*)"/);
+        const tvgLanguageMatch = line.match(/tvg-language="([^"]*)"/);
+
+        current = {
+          name: nameMatch ? nameMatch[1] : "Unknown",
+          category: groupTitleMatch ? groupTitleMatch[1] : "Others",
+          language: tvgLanguageMatch ? tvgLanguageMatch[1] : "Unknown"
+        };
+        categories.add(current.category);
+        languages.add(current.language);
+      } else if (line.startsWith("http")) {
+        current.url = line;
+        channels.push(current);
+      }
+    });
+
+    // Store all channels and unique categories/languages globally or pass them
+    window.allChannels = channels;
+    window.uniqueCategories = Array.from(categories).sort();
+
+    populateCategoryFilter(window.uniqueCategories);
+    applyFilters();
+  }
+
+  function populateCategoryFilter(categories) {
+    const categoryFilter = document.getElementById("categoryFilter");
+    categoryFilter.innerHTML = ''; // Clear existing options
+    const allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = "All Categories";
+    allOption.selected = true; // Select "All Categories" by default
+    categoryFilter.appendChild(allOption);
+
+    categories.forEach(category => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent = category;
+      categoryFilter.appendChild(option);
+    });
+  }
+
+
+
+  function applyFilters() {
+    const selectedCategory = document.getElementById("categoryFilter").value;
+    let filteredChannels = window.allChannels;
+
+    if (selectedCategory !== "all") {
+      filteredChannels = filteredChannels.filter(ch => ch.category === selectedCategory);
+    }
+    displayChannels(filteredChannels);
+  }
+
+  document.getElementById("categoryFilter").addEventListener("change", () => {
+    applyFilters();
+  });
+
+  function displayChannels(channelsToDisplay) {
+    const listDiv = document.getElementById("list");
+    listDiv.innerHTML = ''; // Clear existing list
+
+    if (channelsToDisplay.length === 0) {
+      listDiv.innerHTML = '<p style="padding: 10px;">No channels found for the selected filters.</p>';
+      return;
+    }
+
+    channelsToDisplay.forEach(ch => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.textContent = ch.name;
+
+      div.onclick = () => {
+        player.src({ type: 'application/x-mpegURL', src: ch.url });
+        player.play();
+      };
+
+      listDiv.appendChild(div);
+    });
+
+    if (channelsToDisplay.length > 0) {
+      player.src({ type: 'application/x-mpegURL', src: channelsToDisplay[0].url });
+      player.play();
+    }
+  }
+
+</script>
+
+</body>
+</html>
