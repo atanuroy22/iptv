@@ -491,10 +491,30 @@
 
   function applyProxy(url) {
     if (!currentProxyBase) return url;
+    // Avoid double-proxying: if url already points to a known proxy, return as-is
+    const lower = url.toLowerCase();
+    const isAlreadyProxied = (
+      lower.includes('.workers.dev/?u=') ||
+      lower.includes('cors.isomorphic-git.org/') ||
+      lower.includes('corsproxy.io/?') ||
+      lower.includes('thingproxy.freeboard.io/fetch/')
+    );
+    if (isAlreadyProxied) return url;
+
+    // Template replacement
     if (currentProxyBase.includes('{url}')) {
-      return currentProxyBase.replace('{url}', encodeURIComponent(url));
+      const encoded = encodeURIComponent(url);
+      return currentProxyBase.replace('{url}', encoded);
     }
-    // naive concat
+    // If ends with '?', append encoded url after '?'
+    if (currentProxyBase.endsWith('?')) {
+      return currentProxyBase + encodeURIComponent(url);
+    }
+    // If ends with '/fetch/' like thingproxy, append url raw
+    if (currentProxyBase.endsWith('/fetch/')) {
+      return currentProxyBase + url;
+    }
+    // Fallback: prefix style
     return currentProxyBase + url;
   }
 
