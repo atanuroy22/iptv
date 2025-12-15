@@ -218,72 +218,11 @@
       align-items: center;
     }
 
-    .copy-url-btn {
-      background-color: #555;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 0.8em;
-      margin-left: 10px;
-      flex-shrink: 0;
-    }
 
-    .copy-url-btn:hover {
-      background-color: #777;
-    }
-
-    .item.active {
-      background: #505050;
-      outline: 2px solid #7aa7ff;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      #controls {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      #playlistUrlInput,
-      #loadPlaylistBtn,
-      #categoryFilter,
-      #languageFilter {
-        width: 100%;
-        min-width: unset;
-      }
-    }
-
-    /* Popup styles */
-    #copyPopup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.85);
-      color: white;
-      padding: 20px 30px;
-      border-radius: 8px;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-      font-size: 1.1em;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    #copyPopup.show {
-      opacity: 1;
-      visibility: visible;
-    }
   </style>
 </head>
 <body>
-  <div id="copyPopup">
-    Open VLC → Media → Network Stream → paste the URL.
-  </div>
+
 <div id="main-content">
   <div id="controls">
     <div class="input-group">
