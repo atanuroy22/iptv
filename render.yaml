@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: iptv-transmux
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 8080
+    autoDeploy: true
