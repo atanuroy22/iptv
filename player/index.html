@@ -324,21 +324,7 @@
   player.hlsQualitySelector();
   const zoomPlugin = player.zoomPlugin();
 
-  let retryCounts = {}; // To store retry attempts for each channel
 
-  player.on('error', () => {
-    const currentSource = player.currentSource();
-    if (currentSource && currentSource.src) {
-      const failedUrl = currentSource.src;
-      retryCounts[failedUrl] = (retryCounts[failedUrl] || 0) + 1;
-      console.warn(`Playback failed for ${failedUrl}. Retry count: ${retryCounts[failedUrl]}`);
-
-      if (retryCounts[failedUrl] >= 2) {
-        // Re-display channels to show VLC option for the failed channel
-        applyFilters(); // This will re-render the list and apply VLC option if needed
-      }
-    }
-  });
 
   // Keep an hls.js instance for fallback when VHS fails
   let hlsInstance = null;
@@ -558,36 +544,9 @@
       };
       div.appendChild(channelNameSpan);
 
-      // Copy URL button
-      const copyButton = document.createElement("button");
-      copyButton.textContent = "Copy URL";
-      copyButton.className = "copy-url-btn"; // Add a class for styling
-      copyButton.onclick = (e) => {
-        e.stopPropagation(); // Prevent channel click event from firing
-        navigator.clipboard.writeText(ch.url).then(() => {
-          // Show popup
-          const copyPopup = document.getElementById("copyPopup");
-          copyPopup.classList.add("show");
-          setTimeout(() => {
-            copyPopup.classList.remove("show");
-          }, 5000); // Hide after 5 seconds
-        }).catch(err => {
-          console.error("Failed to copy URL: ", err);
-          alert("Failed to copy URL.");
-        });
-      };
-      div.appendChild(copyButton);
 
-      // Check if this channel has failed playback multiple times
-      if (retryCounts[ch.url] && retryCounts[ch.url] >= 2) {
-        const vlcLink = document.createElement("a");
-        vlcLink.href = `vlc://${ch.url}`;
-        vlcLink.textContent = " (Open in VLC)";
-        vlcLink.style.marginLeft = "5px";
-        vlcLink.style.color = "#ffc107"; // A warning-like color
-        vlcLink.target = "_blank"; // Open in new tab, though vlc:// might not respect this
-        div.appendChild(vlcLink);
-      }
+
+
 
       listDiv.appendChild(div);
     });
