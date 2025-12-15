@@ -536,7 +536,8 @@
 
   function playWithVJS(url) {
     cleanupHls();
-    player.src({ type: 'application/x-mpegURL', src: url });
+    const type = detectMimeForUrl(url);
+    player.src({ type, src: url });
     const onError = () => {
       player.off('error', onError);
       setStatus('Primary player failed, trying fallback…', true);
@@ -633,6 +634,17 @@
     } else {
       setStatus('Hls.js not supported in this browser.', true);
     }
+  }
+
+  function detectMimeForUrl(url) {
+    const u = url.toLowerCase();
+    if (u.includes('.m3u8')) return 'application/x-mpegURL';
+    if (u.endsWith('.mp4')) return 'video/mp4';
+    if (u.endsWith('.ts')) return 'video/mp2t';
+    // Heuristic: IP:port with no path often serves MPEG-TS
+    if (/^https?:\/\/\d+\.\d+\.\d+\.\d+:\d+\/?$/.test(u)) return 'video/mp2t';
+    // default to HLS; if it fails, fallback will engage
+    return 'application/x-mpegURL';
   }
 
   function playStreamWithFallback(originalUrl, channelName) {
