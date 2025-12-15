@@ -261,7 +261,11 @@
   let currentProxyBase = proxyBaseFromParams || null;
   const triedProxyBases = new Set(currentProxyBase ? [currentProxyBase] : []);
   const DEFAULT_PROXY_CANDIDATES = [
-    'https://cors.isomorphic-git.org/'
+    // User's Cloudflare Worker proxy (prioritized)
+    'https://jolly-bonus-cab5.2e0fed7d-4ff6-4935-a061-96106fbf6b04.workers.dev/?',
+    'https://cors.isomorphic-git.org/',
+    'https://corsproxy.io/?',
+    'https://thingproxy.freeboard.io/fetch/'
   ];
 
   // Remote/keyboard navigation state
@@ -342,8 +346,27 @@
       document.body.innerHTML = "<h2 style='padding:20px;'>No playlist URL provided.</h2>";
       throw new Error("No playlist URL provided");
     }
-    const res = await fetch(url);
-    const text = await res.text();
+    // Try direct fetch first; if blocked, retry via proxy
+    let text = '';
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('Playlist fetch failed: ' + res.status);
+      text = await res.text();
+    } catch (e) {
+      // Apply current proxy or fallbacks for playlist file
+      setStatus('Playlist fetch blocked, retrying via proxy…', true);
+      // Prime proxy candidates
+      if (!currentProxyBase) { tryNextProxyBase(); }
+      const proxiedPlaylistUrl = applyProxy(url);
+      try {
+        const res2 = await fetch(proxiedPlaylistUrl);
+        if (!res2.ok) throw new Error('Proxied playlist fetch failed: ' + res2.status);
+        text = await res2.text();
+      } catch (e2) {
+        setStatus('Unable to load playlist (CORS/geo/offline).', true);
+        throw e2;
+      }
+    }
     const lines = text.split("\n");
 
     let channels = [];
@@ -484,6 +507,10 @@
     return false;
   }
 
+  // Retry tracking for the same channel, no auto-skip
+  let retryCount = 0;
+  const MAX_RETRIES_PER_PROXY = 2;
+
   function playWithVJS(url) {
     cleanupHls();
     player.src({ type: 'application/x-mpegURL', src: url });
@@ -556,8 +583,16 @@
                 const proxied = applyProxy(lastBaseStreamUrl);
                 playWithHlsJs(proxied);
               } else {
-                // try to continue load; may not help for hard CORS blocks
-                try { hlsInstance.startLoad(); } catch(e) {}
+                // No more proxies to try; attempt limited Hls.js reloads on the same channel
+                if (retryCount < MAX_RETRIES_PER_PROXY) {
+                  retryCount++;
+                  setStatus('Retrying same channel (' + retryCount + '/' + MAX_RETRIES_PER_PROXY + ')…', true);
+                  try { hlsInstance.destroy(); } catch(e) {}
+                  hlsInstance = null;
+                  playWithHlsJs(applyProxy(lastBaseStreamUrl));
+                } else {
+                  setStatus('Stream blocked or offline. This player cannot bypass server restrictions.', true);
+                }
               }
               break;
             case window.Hls.ErrorTypes.MEDIA_ERROR:
