@@ -20,22 +20,17 @@ FEATURES
 ------------------------------------
 DIRECT PLAYLIST URLs
 ------------------------------------
-COMBINED all.m3u PLAYLIST (zee, sony, star, sports categories and All other channels):
-https://atanuroy22.github.io/iptv/output/all.m3u
+COMBINED all.m3u PLAYLIST (zee, sony, star, sports categories and All other channels): https://atanuroy22.github.io/iptv/output/all.m3u - [▶ Play ](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/all.m3u)
 
 INDIVIDUAL CATEGORY PLAYLISTS:
 
-Zee:
-https://atanuroy22.github.io/iptv/output/zee.m3u
+Zee: https://atanuroy22.github.io/iptv/output/zee.m3u - [▶ Play ](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/zee.m3u)
 
-Sony:
-https://atanuroy22.github.io/iptv/output/sony.m3u
+Sony: https://atanuroy22.github.io/iptv/output/sony.m3u - [▶ Play ](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/sony.m3u)
 
-Star:
-https://atanuroy22.github.io/iptv/output/star.m3u
+Star: https://atanuroy22.github.io/iptv/output/star.m3u - [▶ Play ](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/star.m3u)
 
-Sports:
-https://atanuroy22.github.io/iptv/output/sports.m3u
+Sports: https://atanuroy22.github.io/iptv/output/sports.m3u - [▶ Play ](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/sports.m3u)
 
 etc.
 
