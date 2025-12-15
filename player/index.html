@@ -261,11 +261,14 @@
   let currentProxyBase = proxyBaseFromParams || null;
   const triedProxyBases = new Set(currentProxyBase ? [currentProxyBase] : []);
   const DEFAULT_PROXY_CANDIDATES = [
-    // User's Cloudflare Worker proxy (prioritized)
-    'https://jolly-bonus-cab5.2e0fed7d-4ff6-4935-a061-96106fbf6b04.workers.dev/?',
+    // User's Cloudflare Worker proxy (prioritized) – template style
+    'https://jolly-bonus-cab5.2e0fed7d-4ff6-4935-a061-96106fbf6b04.workers.dev/?u={url}',
+    // Prefix style: append URL directly
     'https://cors.isomorphic-git.org/',
-    'https://corsproxy.io/?',
-    'https://thingproxy.freeboard.io/fetch/'
+    // Template style: place URL after ?
+    'https://corsproxy.io/?{url}',
+    // Template style: place URL after /fetch/
+    'https://thingproxy.freeboard.io/fetch/{url}'
   ];
 
   // Remote/keyboard navigation state
