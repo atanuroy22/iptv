@@ -115,6 +115,33 @@ function getGroup(ext) {
     return m ? m[1].toLowerCase() : "";
 }
 
+// Function to get channel logo based on channel name
+function getChannelLogo(channelName) {
+    const logoMappings = {
+        'fox cricket': 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Fox_Cricket_Logo.png/150px-Fox_Cricket_Logo.png',
+        'willow tv': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/38-by-xfireflix.png',
+        'star sports': 'https://www.tataplay.com/s3-api/v1/assets/channels/star-sports-1.gif',
+        'sony sports': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sony_Pictures_Network.svg/512px-Sony_Pictures_Network.svg.png',
+        'tnt sports': 'https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png',
+        't sports': 'https://yt3.googleusercontent.com/eY6Yt0YDmWSheMmneYNjUD_2N5p8r2nFca9CENifrZ9TugWxrQW24oznjqBJPOFmSs2M6avemg=s900-c-k-c0x00ffffff-no-rj',
+        'ptv sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Ad4PNlqneWGKqwJ5ayE57PVczpsXK5a9c7AuD5b2CWYjBS5R_RQjZ8Anu2zq1GxRdcrLkhn8r7HMM0S1s-XOcYIZgfvLOaI41hAOuF8',
+        'a sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNm9wSyxdIjvlYdwU2-sq1LCSVXkkqXBWBXA&s',
+        'ten sports': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/10-by-xfireflix.png',
+        'astro cricket': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/1745008895589.png',
+        'geo sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTByiiGGHZsObgvhWaw9Vegy0hJE4ofIyjIr0yW6WIBBKGYNk6TM2acXFbh&s=10',
+        'criclife': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE35VK2_hzS658JLoU8wJ3-8ts909wrRXNRPKJcRlltQ&s'
+    };
+    
+    const lowerName = channelName.toLowerCase();
+    for (const [key, logo] of Object.entries(logoMappings)) {
+        if (lowerName.includes(key)) {
+            return logo;
+        }
+    }
+    
+    return `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(channelName)}`;
+}
+
 // Function to convert various URL formats to playable streams
 function convertToPlayableUrl(originalUrl, channelId) {
     // If it's already a direct stream URL, return as-is
@@ -126,6 +153,23 @@ function convertToPlayableUrl(originalUrl, channelId) {
     if (originalUrl.includes('tv4go.pages.dev/?id=')) {
         const id = originalUrl.split('id=')[1];
         return `https://tv4wap.github.io/ID11?id=${id}`;
+    }
+    
+    // Handle specific HTML page mappings
+    const htmlPageMappings = {
+        'allinonereborn2238.github.io/allinone/fox.html': 'https://tv4wap.github.io/ID11?id=fox',
+        'allinonereborn2238.github.io/allinone/willow.html': 'https://tv4wap.github.io/ID11?id=willowtv',
+        'tv4go.wapka.xyz/foxeng': 'https://tv4wap.github.io/ID11?id=fox',
+        'idx.gdplayertv.to/embed/fox-cricket/': 'https://tv4wap.github.io/ID11?id=fox',
+        'idx.gdplayertv.to/embed/willow-cricket/': 'https://tv4wap.github.io/ID11?id=willowtv',
+        'foxstream.pages.dev/Cricsters01.m3u8': 'https://tv4wap.github.io/ID11?id=fox'
+    };
+    
+    // Check for exact matches in HTML page mappings
+    for (const [htmlUrl, streamUrl] of Object.entries(htmlPageMappings)) {
+        if (originalUrl.includes(htmlUrl)) {
+            return streamUrl;
+        }
     }
     
     // Handle direct ID references
@@ -148,6 +192,11 @@ function convertToPlayableUrl(originalUrl, channelId) {
         if (originalUrl.includes('wapka.xyz')) {
             return `https://tv4wap.github.io/ID11?id=${originalUrl.split('/').pop().replace('.html', '')}`;
         }
+        // For allinonereborn pages, extract channel name
+        if (originalUrl.includes('allinonereborn')) {
+            const channelName = originalUrl.split('/').pop().replace('.html', '');
+            return `https://tv4wap.github.io/ID11?id=${channelName}`;
+        }
         // For other HTML pages, use a generic proxy approach
         return originalUrl; // Keep as-is for now, may need specific handling
     }
@@ -156,6 +205,14 @@ function convertToPlayableUrl(originalUrl, channelId) {
     if (originalUrl.includes('embed') || originalUrl.includes('player')) {
         if (channelId) {
             return `https://tv4wap.github.io/ID11?id=${channelId}`;
+        }
+        // Extract channel name from embed URLs
+        if (originalUrl.includes('embed/')) {
+            const parts = originalUrl.split('embed/');
+            if (parts.length > 1) {
+                const channelName = parts[1].split('/')[0];
+                return `https://tv4wap.github.io/ID11?id=${channelName}`;
+            }
         }
     }
     
@@ -167,7 +224,7 @@ function getName(ext) {
     const parts = ext.split(',');
     return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : "";
 }
-async function processM3UFile(fileData, output) {
+async function processM3UFile(fileData, output, channelTracker) {
     const lines = fileData.split("\n");
 
     for (let i = 0; i < lines.length; i++) {
@@ -178,8 +235,17 @@ async function processM3UFile(fileData, output) {
 
         if (!url || !url.startsWith('http')) continue;
 
+        // Extract channel name for deduplication
+        const name = getName(ext).toLowerCase().trim();
+        
+        // Skip if channel already exists in sports category
+        if (channelTracker["sports"].has(name)) continue;
+        
         // Convert URL to playable format
         const playableUrl = convertToPlayableUrl(url);
+        
+        // Add to tracker and output
+        channelTracker["sports"].add(name);
         
         // Force all channels from Shubhamkur M3U into sports category
         const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
@@ -188,7 +254,7 @@ async function processM3UFile(fileData, output) {
     }
 }
 
-async function processTVJSON(fileData, output) {
+async function processTVJSON(fileData, output, channelTracker) {
     let jsonData;
     try {
         jsonData = JSON.parse(fileData);
@@ -201,7 +267,7 @@ async function processTVJSON(fileData, output) {
     for (const channel of jsonData) {
         if (!channel.id) continue;
         
-        const name = channel.id.toUpperCase().replace(/_/g, ' ');
+        const name = channel.id.toUpperCase().replace(/_/g, ' ').toLowerCase().trim();
         let url = '';
         
         // Get the streaming URL from different possible fields
@@ -215,11 +281,17 @@ async function processTVJSON(fileData, output) {
         
         if (!url) continue;
 
-        // Create logo URL if not provided
-        let logo = channel.logo || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
+        // Skip if channel already exists in sports category
+        if (channelTracker["sports"].has(name)) continue;
+
+        // Create logo URL using new logo system
+        let logo = channel.logo || getChannelLogo(name);
         
         // Convert URL to playable format
         const playableUrl = convertToPlayableUrl(url, channel.id);
+        
+        // Add to tracker and output
+        channelTracker["sports"].add(name);
         
         // Force all channels into sports category
         const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
@@ -228,7 +300,7 @@ async function processTVJSON(fileData, output) {
     }
 }
 
-async function processTVIDJSON(fileData, output) {
+async function processTVIDJSON(fileData, output, channelTracker) {
     let jsonData;
     try {
         jsonData = JSON.parse(fileData);
@@ -241,12 +313,19 @@ async function processTVIDJSON(fileData, output) {
     for (const channel of jsonData) {
         if (!channel.id || !channel.name) continue;
         
-        const name = channel.name;
-        const logo = channel.logo || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
+        const name = channel.name.toLowerCase().trim();
+        
+        // Skip if channel already exists in sports category
+        if (channelTracker["sports"].has(name)) continue;
+        
+        const logo = channel.logo || getChannelLogo(name);
         
         // Create ID11 proxy URL and convert to playable format
         const originalUrl = `https://tv4wap.github.io/ID11?id=${channel.id}`;
         const playableUrl = convertToPlayableUrl(originalUrl, channel.id);
+
+        // Add to tracker and output
+        channelTracker["sports"].add(name);
 
         // Force all channels into sports category
         const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
@@ -255,7 +334,7 @@ async function processTVIDJSON(fileData, output) {
     }
 }
 
-async function processWAPTVJSON(fileData, output) {
+async function processWAPTVJSON(fileData, output, channelTracker) {
     let jsonData;
     try {
         jsonData = JSON.parse(fileData);
@@ -272,12 +351,19 @@ async function processWAPTVJSON(fileData, output) {
         for (const channel of channels) {
             if (!channel.channel_name || !channel.url) continue;
             
-            const name = channel.channel_name;
-            const logo = channel.image || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
+            const name = channel.channel_name.toLowerCase().trim();
+            
+            // Skip if channel already exists in sports category
+            if (channelTracker["sports"].has(name)) continue;
+            
+            const logo = channel.image || getChannelLogo(name);
             const url = channel.url;
 
             // Convert URL to playable format
             const playableUrl = convertToPlayableUrl(url);
+            
+            // Add to tracker and output
+            channelTracker["sports"].add(name);
 
             // Force all channels into sports category
             const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
@@ -292,8 +378,10 @@ async function generate() {
     const lines = data.split("\n");
 
     const output = {};
+    const channelTracker = {}; // Track unique channels to avoid duplicates
     Object.keys(FILTERS).forEach(k => {
         output[k] = ["#EXTM3U"];
+        channelTracker[k] = new Set(); // Track channel names per category
     });
 
     for (let i = 0; i < lines.length; i++) {
@@ -395,16 +483,16 @@ async function generate() {
             
             if (filename === 'tvm3u') {
                 // Process M3U file (existing logic)
-                await processM3UFile(fileData, output);
+                await processM3UFile(fileData, output, channelTracker);
             } else if (filename === 'tv') {
                 // Process JSON file with direct streaming URLs
-                await processTVJSON(fileData, output);
+                await processTVJSON(fileData, output, channelTracker);
             } else if (filename === 'tvid') {
                 // Process JSON file with ID11 proxy URLs
-                await processTVIDJSON(fileData, output);
+                await processTVIDJSON(fileData, output, channelTracker);
             } else if (filename === 'waptv') {
                 // Process WAPTV JSON format
-                await processWAPTVJSON(fileData, output);
+                await processWAPTVJSON(fileData, output, channelTracker);
             }
         }
     } catch (error) {
