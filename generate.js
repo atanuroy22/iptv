@@ -115,12 +115,58 @@ function getGroup(ext) {
     return m ? m[1].toLowerCase() : "";
 }
 
+// Function to convert various URL formats to playable streams
+function convertToPlayableUrl(originalUrl, channelId) {
+    // If it's already a direct stream URL, return as-is
+    if (originalUrl.includes('.m3u8') || originalUrl.includes('.mpd') || originalUrl.includes('live/')) {
+        return originalUrl;
+    }
+    
+    // Handle tv4go pages - convert to proxy stream
+    if (originalUrl.includes('tv4go.pages.dev/?id=')) {
+        const id = originalUrl.split('id=')[1];
+        return `https://tv4wap.github.io/ID11?id=${id}`;
+    }
+    
+    // Handle direct ID references
+    if (channelId) {
+        return `https://tv4wap.github.io/ID11?id=${channelId}`;
+    }
+    
+    // Handle other proxy services
+    if (originalUrl.includes('tv4wap.github.io/ID11')) {
+        return originalUrl;
+    }
+    
+    // Handle HTML pages - convert to proxy stream
+    if (originalUrl.includes('.html') || originalUrl.includes('wapka.xyz')) {
+        // Extract channel ID from HTML URL if possible
+        if (channelId) {
+            return `https://tv4wap.github.io/ID11?id=${channelId}`;
+        }
+        // For wapka.xyz pages, try to convert to proxy
+        if (originalUrl.includes('wapka.xyz')) {
+            return `https://tv4wap.github.io/ID11?id=${originalUrl.split('/').pop().replace('.html', '')}`;
+        }
+        // For other HTML pages, use a generic proxy approach
+        return originalUrl; // Keep as-is for now, may need specific handling
+    }
+    
+    // Handle embed/player pages
+    if (originalUrl.includes('embed') || originalUrl.includes('player')) {
+        if (channelId) {
+            return `https://tv4wap.github.io/ID11?id=${channelId}`;
+        }
+    }
+    
+    return originalUrl;
+}
+
 // Extract channel name (after the last comma)
 function getName(ext) {
     const parts = ext.split(',');
     return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : "";
 }
-
 async function processM3UFile(fileData, output) {
     const lines = fileData.split("\n");
 
@@ -132,10 +178,13 @@ async function processM3UFile(fileData, output) {
 
         if (!url || !url.startsWith('http')) continue;
 
+        // Convert URL to playable format
+        const playableUrl = convertToPlayableUrl(url);
+        
         // Force all channels from Shubhamkur M3U into sports category
         const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
         output["sports"].push(modifiedExt);
-        output["sports"].push(url);
+        output["sports"].push(playableUrl);
     }
 }
 
@@ -169,10 +218,13 @@ async function processTVJSON(fileData, output) {
         // Create logo URL if not provided
         let logo = channel.logo || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
         
+        // Convert URL to playable format
+        const playableUrl = convertToPlayableUrl(url, channel.id);
+        
         // Force all channels into sports category
         const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
         output["sports"].push(ext);
-        output["sports"].push(url);
+        output["sports"].push(playableUrl);
     }
 }
 
@@ -192,13 +244,14 @@ async function processTVIDJSON(fileData, output) {
         const name = channel.name;
         const logo = channel.logo || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
         
-        // Create ID11 proxy URL
-        const url = `https://tv4wap.github.io/ID11?id=${channel.id}`;
+        // Create ID11 proxy URL and convert to playable format
+        const originalUrl = `https://tv4wap.github.io/ID11?id=${channel.id}`;
+        const playableUrl = convertToPlayableUrl(originalUrl, channel.id);
 
         // Force all channels into sports category
         const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
         output["sports"].push(ext);
-        output["sports"].push(url);
+        output["sports"].push(playableUrl);
     }
 }
 
@@ -223,10 +276,13 @@ async function processWAPTVJSON(fileData, output) {
             const logo = channel.image || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
             const url = channel.url;
 
+            // Convert URL to playable format
+            const playableUrl = convertToPlayableUrl(url);
+
             // Force all channels into sports category
             const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
             output["sports"].push(ext);
-            output["sports"].push(url);
+            output["sports"].push(playableUrl);
         }
     }
 }
