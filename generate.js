@@ -4,7 +4,7 @@ import fs from "fs";
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
 const SHUBHAMKUR_BASE_URL = "https://raw.githubusercontent.com/Shubhamkur/Tv/main/";
-const SHUBHAMKUR_FILES = ["tvm3u"];
+const SHUBHAMKUR_FILES = ["waptv"];
 
 // Language Filter Configuration
 // To filter by language, comment out the languages you DON'T want
