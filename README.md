@@ -41,8 +41,7 @@ These URLs auto-refresh every 4 hours.
 HOW TO PLAY M3U
 ------------------------------------
 
-Click here to view step-by-step instructions (Android & Windows) with demo videos on how to play these M3U URLs in VLC:
-
+Click here to view step-by-step instructions (Android & Windows):
 - [Watch How to play M3U](https://atanuroy22.github.io/iptv/player/play.html)
 
 
