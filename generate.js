@@ -149,7 +149,8 @@ function isDirectPlaybackChannel(originalUrl) {
            originalUrl.includes('embed') || 
            originalUrl.includes('player') ||
            originalUrl.includes('allinonereborn') ||
-           originalUrl.includes('tv4go.pages.dev');
+           originalUrl.includes('tv4go.pages.dev') ||
+           originalUrl.includes('tv4wap.github.io/ID');
 }
 
 // Function to convert stream URLs to playable format (simplified)
@@ -164,9 +165,9 @@ function convertToPlayableUrl(originalUrl) {
         return null; // Return null to exclude MPD channels
     }
     
-    // Handle ID11 proxy URLs
-    if (originalUrl.includes('tv4wap.github.io/ID11')) {
-        return originalUrl;
+    // Filter out proxy URLs - they should go to direct HTML instead
+    if (originalUrl.includes('tv4wap.github.io/ID')) {
+        return null; // Return null to move proxy channels to direct HTML
     }
     
     return originalUrl; // Keep other URLs as-is for direct channels
@@ -281,12 +282,10 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
                     const name = normalizeChannelName(channel.name);
                     const url = `https://tv4wap.github.io/ID11?id=${channel.id}`;
                     
-                    if (!channelTracker["sports"].has(name)) {
-                        channelTracker["sports"].add(name);
-                        const logo = channel.logo || getChannelLogo(name);
-                        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
-                        output["sports"].push(ext);
-                        output["sports"].push(url);
+                    // Check if this is a proxy URL and move to direct channels
+                    if (!channelTracker["direct"].has(name)) {
+                        channelTracker["direct"].add(name);
+                        directChannels.push({ name, url, logo: channel.logo || getChannelLogo(name) });
                     }
                 }
             } else {
@@ -436,8 +435,8 @@ async function generate() {
                 if (lang && !def.languages.includes(lang)) continue;
             }
             
-            // Check if URL is MPD and redirect to direct channels
-            if (url.includes('.mpd')) {
+            // Check if URL is proxy URL or MPD and redirect to direct channels
+            if (url.includes('.mpd') || url.includes('tv4wap.github.io/ID')) {
                 const name = normalizeChannelName(getName(ext));
                 if (!channelTracker["direct"].has(name)) {
                     channelTracker["direct"].add(name);
@@ -512,12 +511,26 @@ async function generate() {
 
 // Function to generate HTML for direct playback channels
 function generateDirectChannelsHtml(channels) {
-    const htmlChannels = channels.map(channel => `
-        <div class="channel-card" onclick="window.open('${channel.url}', '_blank')">
-            <img src="${channel.logo}" alt="${channel.name}" class="channel-logo" />
-            <div class="channel-name">${channel.name}</div>
-        </div>
-    `).join('');
+    // Helper to escape HTML in text/attributes
+    const escapeHtml = (str) => String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+
+    const htmlChannels = channels.map(channel => {
+        const safeName = escapeHtml(channel.name || "");
+        const safeUrl = escapeHtml(channel.url || "");
+        const safeLogo = escapeHtml(channel.logo || "");
+
+        // Use simple anchor tag instead of inline JavaScript to avoid syntax issues
+        return `
+        <a class="channel-card" href="${safeUrl}" target="_blank" rel="noopener noreferrer">
+            <img src="${safeLogo}" alt="${safeName}" class="channel-logo" />
+            <div class="channel-name">${safeName}</div>
+        </a>
+    `;
+    }).join('');
 
     return `<!DOCTYPE html>
 <html lang="en">
