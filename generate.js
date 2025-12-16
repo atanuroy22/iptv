@@ -142,81 +142,29 @@ function getChannelLogo(channelName) {
     return `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(channelName)}`;
 }
 
-// Function to convert various URL formats to playable streams
-function convertToPlayableUrl(originalUrl, channelId) {
+// Function to check if URL is a direct playback channel
+function isDirectPlaybackChannel(originalUrl) {
+    return originalUrl.includes('.html') || 
+           originalUrl.includes('wapka.xyz') || 
+           originalUrl.includes('embed') || 
+           originalUrl.includes('player') ||
+           originalUrl.includes('allinonereborn') ||
+           originalUrl.includes('tv4go.pages.dev');
+}
+
+// Function to convert stream URLs to playable format (simplified)
+function convertToPlayableUrl(originalUrl) {
     // If it's already a direct stream URL, return as-is
     if (originalUrl.includes('.m3u8') || originalUrl.includes('.mpd') || originalUrl.includes('live/')) {
         return originalUrl;
     }
     
-    // Handle tv4go pages - convert to proxy stream
-    if (originalUrl.includes('tv4go.pages.dev/?id=')) {
-        const id = originalUrl.split('id=')[1];
-        return `https://tv4wap.github.io/ID11?id=${id}`;
-    }
-    
-    // Handle specific HTML page mappings
-    const htmlPageMappings = {
-        'allinonereborn2238.github.io/allinone/fox.html': 'https://tv4wap.github.io/ID11?id=fox',
-        'allinonereborn2238.github.io/allinone/willow.html': 'https://tv4wap.github.io/ID11?id=willowtv',
-        'tv4go.wapka.xyz/foxeng': 'https://tv4wap.github.io/ID11?id=fox',
-        'idx.gdplayertv.to/embed/fox-cricket/': 'https://tv4wap.github.io/ID11?id=fox',
-        'idx.gdplayertv.to/embed/willow-cricket/': 'https://tv4wap.github.io/ID11?id=willowtv',
-        'foxstream.pages.dev/Cricsters01.m3u8': 'https://tv4wap.github.io/ID11?id=fox'
-    };
-    
-    // Check for exact matches in HTML page mappings
-    for (const [htmlUrl, streamUrl] of Object.entries(htmlPageMappings)) {
-        if (originalUrl.includes(htmlUrl)) {
-            return streamUrl;
-        }
-    }
-    
-    // Handle direct ID references
-    if (channelId) {
-        return `https://tv4wap.github.io/ID11?id=${channelId}`;
-    }
-    
-    // Handle other proxy services
+    // Handle ID11 proxy URLs
     if (originalUrl.includes('tv4wap.github.io/ID11')) {
         return originalUrl;
     }
     
-    // Handle HTML pages - convert to proxy stream
-    if (originalUrl.includes('.html') || originalUrl.includes('wapka.xyz')) {
-        // Extract channel ID from HTML URL if possible
-        if (channelId) {
-            return `https://tv4wap.github.io/ID11?id=${channelId}`;
-        }
-        // For wapka.xyz pages, try to convert to proxy
-        if (originalUrl.includes('wapka.xyz')) {
-            return `https://tv4wap.github.io/ID11?id=${originalUrl.split('/').pop().replace('.html', '')}`;
-        }
-        // For allinonereborn pages, extract channel name
-        if (originalUrl.includes('allinonereborn')) {
-            const channelName = originalUrl.split('/').pop().replace('.html', '');
-            return `https://tv4wap.github.io/ID11?id=${channelName}`;
-        }
-        // For other HTML pages, use a generic proxy approach
-        return originalUrl; // Keep as-is for now, may need specific handling
-    }
-    
-    // Handle embed/player pages
-    if (originalUrl.includes('embed') || originalUrl.includes('player')) {
-        if (channelId) {
-            return `https://tv4wap.github.io/ID11?id=${channelId}`;
-        }
-        // Extract channel name from embed URLs
-        if (originalUrl.includes('embed/')) {
-            const parts = originalUrl.split('embed/');
-            if (parts.length > 1) {
-                const channelName = parts[1].split('/')[0];
-                return `https://tv4wap.github.io/ID11?id=${channelName}`;
-            }
-        }
-    }
-    
-    return originalUrl;
+    return originalUrl; // Keep other URLs as-is for direct channels
 }
 
 // Extract channel name (after the last comma)
@@ -224,152 +172,127 @@ function getName(ext) {
     const parts = ext.split(',');
     return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : "";
 }
-async function processM3UFile(fileData, output, channelTracker) {
-    const lines = fileData.split("\n");
 
-    for (let i = 0; i < lines.length; i++) {
-        if (!lines[i].startsWith("#EXTINF")) continue;
-
-        const ext = lines[i];
-        const url = lines[i + 1];
-
-        if (!url || !url.startsWith('http')) continue;
-
-        // Extract channel name for deduplication
-        const name = getName(ext).toLowerCase().trim();
-        
-        // Skip if channel already exists in sports category
-        if (channelTracker["sports"].has(name)) continue;
-        
-        // Convert URL to playable format
-        const playableUrl = convertToPlayableUrl(url);
-        
-        // Add to tracker and output
-        channelTracker["sports"].add(name);
-        
-        // Force all channels from Shubhamkur M3U into sports category
-        const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
-        output["sports"].push(modifiedExt);
-        output["sports"].push(playableUrl);
-    }
+// Normalize channel name for better deduplication
+function normalizeChannelName(name) {
+    return name.toLowerCase()
+        .replace(/[^a-z0-9\s]/g, '') // Remove special characters
+        .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+        .trim();
 }
-
-async function processTVJSON(fileData, output, channelTracker) {
-    let jsonData;
+// Simplified function to process all SHUBHAMKUR files
+async function processShubhamkurFiles(filename, fileData, output, channelTracker, directChannels) {
     try {
-        jsonData = JSON.parse(fileData);
-    } catch (error) {
-        console.log('Error parsing TV JSON:', error.message);
-        console.log('File data preview:', fileData.substring(0, 200));
-        return;
-    }
+        if (filename === 'tvm3u') {
+            // Process M3U file
+            const lines = fileData.split("\n");
+            for (let i = 0; i < lines.length; i++) {
+                if (!lines[i].startsWith("#EXTINF")) continue;
+                const ext = lines[i];
+                const url = lines[i + 1];
+                if (!url || !url.startsWith('http')) continue;
 
-    for (const channel of jsonData) {
-        if (!channel.id) continue;
-        
-        const name = channel.id.toUpperCase().replace(/_/g, ' ').toLowerCase().trim();
-        let url = '';
-        
-        // Get the streaming URL from different possible fields
-        if (channel.m3u8) {
-            url = channel.m3u8;
-        } else if (channel.mpd) {
-            url = channel.mpd;
-        } else if (channel.url) {
-            url = channel.url;
+                const name = normalizeChannelName(getName(ext));
+                
+                if (isDirectPlaybackChannel(url)) {
+                    if (!channelTracker["direct"].has(name)) {
+                        channelTracker["direct"].add(name);
+                        directChannels.push({ name, url, logo: getChannelLogo(name) });
+                    }
+                    continue;
+                }
+                
+                if (!channelTracker["sports"].has(name)) {
+                    channelTracker["sports"].add(name);
+                    const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
+                    output["sports"].push(modifiedExt);
+                    output["sports"].push(convertToPlayableUrl(url));
+                }
+            }
+        } else {
+            // Process JSON files (tv, tvid, waptv)
+            const jsonData = JSON.parse(fileData);
+            
+            if (filename === 'waptv') {
+                // Process WAPTV format
+                for (const channels of Object.values(jsonData)) {
+                    if (!Array.isArray(channels)) continue;
+                    for (const channel of channels) {
+                        if (!channel.channel_name || !channel.url) continue;
+                        
+                        const name = normalizeChannelName(channel.channel_name);
+                        const url = channel.url;
+                        
+                        if (isDirectPlaybackChannel(url)) {
+                            if (!channelTracker["direct"].has(name)) {
+                                channelTracker["direct"].add(name);
+                                directChannels.push({ 
+                                    name, 
+                                    url, 
+                                    logo: channel.image || getChannelLogo(name) 
+                                });
+                            }
+                            continue;
+                        }
+                        
+                        if (!channelTracker["sports"].has(name)) {
+                            channelTracker["sports"].add(name);
+                            const logo = channel.image || getChannelLogo(name);
+                            const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
+                            output["sports"].push(ext);
+                            output["sports"].push(convertToPlayableUrl(url));
+                        }
+                    }
+                }
+            } else if (filename === 'tvid') {
+                // Process TVID format
+                for (const channel of jsonData) {
+                    if (!channel.id || !channel.name) continue;
+                    
+                    const name = normalizeChannelName(channel.name);
+                    const url = `https://tv4wap.github.io/ID11?id=${channel.id}`;
+                    
+                    if (!channelTracker["sports"].has(name)) {
+                        channelTracker["sports"].add(name);
+                        const logo = channel.logo || getChannelLogo(name);
+                        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
+                        output["sports"].push(ext);
+                        output["sports"].push(url);
+                    }
+                }
+            } else {
+                // Process TV format
+                for (const channel of jsonData) {
+                    if (!channel.id) continue;
+                    
+                    const name = normalizeChannelName(channel.id.toUpperCase().replace(/_/g, ' '));
+                    const url = channel.m3u8 || channel.mpd || channel.url;
+                    if (!url) continue;
+                    
+                    if (isDirectPlaybackChannel(url)) {
+                        if (!channelTracker["direct"].has(name)) {
+                            channelTracker["direct"].add(name);
+                            directChannels.push({ 
+                                name, 
+                                url, 
+                                logo: channel.logo || getChannelLogo(name) 
+                            });
+                        }
+                        continue;
+                    }
+                    
+                    if (!channelTracker["sports"].has(name)) {
+                        channelTracker["sports"].add(name);
+                        const logo = channel.logo || getChannelLogo(name);
+                        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
+                        output["sports"].push(ext);
+                        output["sports"].push(convertToPlayableUrl(url));
+                    }
+                }
+            }
         }
-        
-        if (!url) continue;
-
-        // Skip if channel already exists in sports category
-        if (channelTracker["sports"].has(name)) continue;
-
-        // Create logo URL using new logo system
-        let logo = channel.logo || getChannelLogo(name);
-        
-        // Convert URL to playable format
-        const playableUrl = convertToPlayableUrl(url, channel.id);
-        
-        // Add to tracker and output
-        channelTracker["sports"].add(name);
-        
-        // Force all channels into sports category
-        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
-        output["sports"].push(ext);
-        output["sports"].push(playableUrl);
-    }
-}
-
-async function processTVIDJSON(fileData, output, channelTracker) {
-    let jsonData;
-    try {
-        jsonData = JSON.parse(fileData);
     } catch (error) {
-        console.log('Error parsing TVID JSON:', error.message);
-        console.log('File data preview:', fileData.substring(0, 200));
-        return;
-    }
-
-    for (const channel of jsonData) {
-        if (!channel.id || !channel.name) continue;
-        
-        const name = channel.name.toLowerCase().trim();
-        
-        // Skip if channel already exists in sports category
-        if (channelTracker["sports"].has(name)) continue;
-        
-        const logo = channel.logo || getChannelLogo(name);
-        
-        // Create ID11 proxy URL and convert to playable format
-        const originalUrl = `https://tv4wap.github.io/ID11?id=${channel.id}`;
-        const playableUrl = convertToPlayableUrl(originalUrl, channel.id);
-
-        // Add to tracker and output
-        channelTracker["sports"].add(name);
-
-        // Force all channels into sports category
-        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
-        output["sports"].push(ext);
-        output["sports"].push(playableUrl);
-    }
-}
-
-async function processWAPTVJSON(fileData, output, channelTracker) {
-    let jsonData;
-    try {
-        jsonData = JSON.parse(fileData);
-    } catch (error) {
-        console.log('Error parsing WAPTV JSON:', error.message);
-        console.log('File data preview:', fileData.substring(0, 200));
-        return;
-    }
-
-    // Process each match category
-    for (const [matchName, channels] of Object.entries(jsonData)) {
-        if (!Array.isArray(channels)) continue;
-        
-        for (const channel of channels) {
-            if (!channel.channel_name || !channel.url) continue;
-            
-            const name = channel.channel_name.toLowerCase().trim();
-            
-            // Skip if channel already exists in sports category
-            if (channelTracker["sports"].has(name)) continue;
-            
-            const logo = channel.image || getChannelLogo(name);
-            const url = channel.url;
-
-            // Convert URL to playable format
-            const playableUrl = convertToPlayableUrl(url);
-            
-            // Add to tracker and output
-            channelTracker["sports"].add(name);
-
-            // Force all channels into sports category
-            const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
-            output["sports"].push(ext);
-            output["sports"].push(playableUrl);
-        }
+        console.log(`Error processing ${filename}:`, error.message);
     }
 }
 
@@ -379,10 +302,13 @@ async function generate() {
 
     const output = {};
     const channelTracker = {}; // Track unique channels to avoid duplicates
+    const directChannels = []; // Store direct playback channels
+    
     Object.keys(FILTERS).forEach(k => {
         output[k] = ["#EXTM3U"];
         channelTracker[k] = new Set(); // Track channel names per category
     });
+    channelTracker["direct"] = new Set(); // Track direct playback channels
 
     for (let i = 0; i < lines.length; i++) {
         if (!lines[i].startsWith("#EXTINF")) continue;
@@ -481,19 +407,8 @@ async function generate() {
             const response = await axios.get(fileUrl);
             const fileData = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
             
-            if (filename === 'tvm3u') {
-                // Process M3U file (existing logic)
-                await processM3UFile(fileData, output, channelTracker);
-            } else if (filename === 'tv') {
-                // Process JSON file with direct streaming URLs
-                await processTVJSON(fileData, output, channelTracker);
-            } else if (filename === 'tvid') {
-                // Process JSON file with ID11 proxy URLs
-                await processTVIDJSON(fileData, output, channelTracker);
-            } else if (filename === 'waptv') {
-                // Process WAPTV JSON format
-                await processWAPTVJSON(fileData, output, channelTracker);
-            }
+            // Process all SHUBHAMKUR files with simplified function
+            await processShubhamkurFiles(filename, fileData, output, channelTracker, directChannels);
         }
     } catch (error) {
         console.log('Warning: Could not fetch Shubhamkur/Tv channels:', error.message);
@@ -505,6 +420,13 @@ async function generate() {
     // Create output directory if it doesn't exist
     if (!fs.existsSync("output")) {
         fs.mkdirSync("output");
+    }
+
+    // Generate direct.html for direct playback channels
+    if (directChannels.length > 0) {
+        const directHtml = generateDirectChannelsHtml(directChannels);
+        fs.writeFileSync('output/direct.html', directHtml);
+        console.log(`Generated direct.html with ${directChannels.length} direct playback channels`);
     }
 
     // Write individual category files
@@ -532,6 +454,156 @@ async function generate() {
     console.log("✅ All IPTV category playlists generated successfully!");
     console.log("📁 Individual files: output/zee.m3u, output/sony.m3u, etc.");
     console.log("📄 Combined file: output/all.m3u");
+}
+
+// Function to generate HTML for direct playback channels
+function generateDirectChannelsHtml(channels) {
+    const htmlChannels = channels.map(channel => `
+        <div class="channel-card" onclick="window.open('${channel.url}', '_blank')">
+            <img src="${channel.logo}" alt="${channel.name}" class="channel-logo" />
+            <div class="channel-name">${channel.name}</div>
+        </div>
+    `).join('');
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Playback Channels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+        
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .channel-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .channel-logo {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
+        
+        .channel-name {
+            padding: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .channels-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .channel-logo {
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .channels-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .channel-logo {
+                height: 80px;
+            }
+            
+            .channel-name {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Direct Playback Channels</h1>
+            <p>Click on any channel to open it in a new tab</p>
+        </div>
+        
+        <div class="channels-grid">
+            ${htmlChannels}
+        </div>
+        
+        <div class="footer">
+            <p>Total Channels: ${channels.length} | Generated on ${new Date().toLocaleDateString()}</p>
+        </div>
+    </div>
+</body>
+</html>`;
 }
 
 generate();
