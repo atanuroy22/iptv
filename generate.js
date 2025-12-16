@@ -155,8 +155,13 @@ function isDirectPlaybackChannel(originalUrl) {
 // Function to convert stream URLs to playable format (simplified)
 function convertToPlayableUrl(originalUrl) {
     // If it's already a direct stream URL, return as-is
-    if (originalUrl.includes('.m3u8') || originalUrl.includes('.mpd') || originalUrl.includes('live/')) {
+    if (originalUrl.includes('.m3u8') || originalUrl.includes('live/')) {
         return originalUrl;
+    }
+    
+    // Filter out MPD URLs as they may not be supported by all players
+    if (originalUrl.includes('.mpd')) {
+        return null; // Return null to exclude MPD channels
     }
     
     // Handle ID11 proxy URLs
@@ -202,11 +207,21 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
                     continue;
                 }
                 
+                const playableUrl = convertToPlayableUrl(url);
+                if (!playableUrl) {
+                    // MPD channels go to direct HTML instead
+                    if (!channelTracker["direct"].has(name)) {
+                        channelTracker["direct"].add(name);
+                        directChannels.push({ name, url, logo: getChannelLogo(name) });
+                    }
+                    continue;
+                }
+                
                 if (!channelTracker["sports"].has(name)) {
                     channelTracker["sports"].add(name);
                     const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
                     output["sports"].push(modifiedExt);
-                    output["sports"].push(convertToPlayableUrl(url));
+                    output["sports"].push(playableUrl);
                 }
             }
         } else {
@@ -235,12 +250,26 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
                             continue;
                         }
                         
+                        const playableUrl = convertToPlayableUrl(url);
+                        if (!playableUrl) {
+                            // MPD channels go to direct HTML instead
+                            if (!channelTracker["direct"].has(name)) {
+                                channelTracker["direct"].add(name);
+                                directChannels.push({ 
+                                    name, 
+                                    url, 
+                                    logo: channel.image || getChannelLogo(name) 
+                                });
+                            }
+                            continue;
+                        }
+                        
                         if (!channelTracker["sports"].has(name)) {
                             channelTracker["sports"].add(name);
                             const logo = channel.image || getChannelLogo(name);
                             const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
                             output["sports"].push(ext);
-                            output["sports"].push(convertToPlayableUrl(url));
+                            output["sports"].push(playableUrl);
                         }
                     }
                 }
@@ -281,12 +310,26 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
                         continue;
                     }
                     
+                    const playableUrl = convertToPlayableUrl(url);
+                    if (!playableUrl) {
+                        // MPD channels go to direct HTML instead
+                        if (!channelTracker["direct"].has(name)) {
+                            channelTracker["direct"].add(name);
+                            directChannels.push({ 
+                                name, 
+                                url, 
+                                logo: channel.logo || getChannelLogo(name) 
+                            });
+                        }
+                        continue;
+                    }
+                    
                     if (!channelTracker["sports"].has(name)) {
                         channelTracker["sports"].add(name);
                         const logo = channel.logo || getChannelLogo(name);
                         const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
                         output["sports"].push(ext);
-                        output["sports"].push(convertToPlayableUrl(url));
+                        output["sports"].push(playableUrl);
                     }
                 }
             }
@@ -392,6 +435,17 @@ async function generate() {
             if (def.languages.length > 0) {
                 if (lang && !def.languages.includes(lang)) continue;
             }
+            
+            // Check if URL is MPD and redirect to direct channels
+            if (url.includes('.mpd')) {
+                const name = normalizeChannelName(getName(ext));
+                if (!channelTracker["direct"].has(name)) {
+                    channelTracker["direct"].add(name);
+                    directChannels.push({ name, url, logo: getChannelLogo(name) });
+                }
+                continue;
+            }
+            
             output["sports"].push(ext);
             output["sports"].push(url);
         }
