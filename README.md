@@ -21,7 +21,7 @@ FEATURES
 DIRECT PLAYLIST URLs
 ------------------------------------
 COMBINED all.m3u PLAYLIST (zee, sony, star, sports categories and All other channels): <br>
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/all.m3u) All: https://atanuroy22.github.io/iptv/output/all.m3u 
+- [▶ Play](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/all.m3u) All: https://atanuroy22.github.io/iptv/output/all.m3u 
 
 INDIVIDUAL CATEGORY PLAYLISTS:
 
@@ -44,10 +44,10 @@ WATCH HOW TO PLAY THESE M3U
 Android & Windows Users: [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
 
 ------------------------------------
-Direct playable sports channels :- [Click here](https://atanuroy22.github.io/iptv/output/direct.html)
+Direct playable sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
 ------------------------------------
 
-------------------------------------
+<!-- ------------------------------------
 LICENSE
 ------------------------------------
-MIT License – free to use and modify.
+MIT License – free to use and modify. -->
