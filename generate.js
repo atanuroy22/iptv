@@ -3,6 +3,7 @@ import fs from "fs";
 
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
+const SHUBHAMKUR_TVM3U_URL = "https://github.com/Shubhamkur/Tv/blob/main/tvm3u";
 
 // Language Filter Configuration
 // To filter by language, comment out the languages you DON'T want
@@ -217,6 +218,25 @@ async function generate() {
         }
     }
     // --- End of SPORTS_PLAYLIST_URL processing ---
+
+    // --- Process SHUBHAMKUR_TVM3U_URL for sports channels only ---
+    const { data: shubhamkurTvm3uData } = await axios.get(SHUBHAMKUR_TVM3U_URL.replace('github.com', 'raw.githubusercontent.com').replace('/blob', ''));
+    const shubhamkurTvm3uLines = shubhamkurTvm3uData.split("\n");
+
+    for (let i = 0; i < shubhamkurTvm3uLines.length; i++) {
+        if (!shubhamkurTvm3uLines[i].startsWith("#EXTINF")) continue;
+
+        const ext = shubhamkurTvm3uLines[i];
+        const url = shubhamkurTvm3uLines[i + 1];
+
+        // Force all channels from SHUBHAMKUR_TVM3U_URL into sports category
+        const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
+        output["sports"].push(modifiedExt);
+        output["sports"].push(url);
+    }
+    // --- End of SHUBHAMKUR_TVM3U_URL processing ---
+
+
 
     // Create output directory if it doesn't exist
     if (!fs.existsSync("output")) {
