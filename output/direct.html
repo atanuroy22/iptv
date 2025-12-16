@@ -1,1 +1,269 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Playback Channels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+        
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .channel-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .channel-logo {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
+        
+        .channel-name {
+            padding: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .channels-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .channel-logo {
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .channels-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .channel-logo {
+                height: 80px;
+            }
+            
+            .channel-name {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Direct Playback Channels</h1>
+            <p>Click on any channel to open it in a new tab</p>
+        </div>
+        
+        <div class="channels-grid">
+            
+        <div class="channel-card" onclick="window.open('https://waptv.wapka.xyz/index.html', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=sony12" alt="sony12" class="channel-logo" />
+            <div class="channel-name">sony12</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://allinonereborn.online/mpd/mpd.php/5117/default_primary.mpd', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=astrocricket" alt="astrocricket" class="channel-logo" />
+            <div class="channel-name">astrocricket</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.wapka.xyz/foxeng', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=fox" alt="fox" class="channel-logo" />
+            <div class="channel-name">fox</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://fssportshd.shop/hubplayer/stream-369.php', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=fox2" alt="fox2" class="channel-logo" />
+            <div class="channel-name">fox2</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://idx.gdplayertv.to/embed/fox-cricket/', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=fox3" alt="fox3" class="channel-logo" />
+            <div class="channel-name">fox3</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://idx.gdplayertv.to/embed/willow-cricket/', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=willowtv6" alt="willowtv6" class="channel-logo" />
+            <div class="channel-name">willowtv6</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://idx.gdplayertv.to/embed/willow-xtra/', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=willowxtra2" alt="willowxtra2" class="channel-logo" />
+            <div class="channel-name">willowxtra2</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://allinonereborn.xyz/opplextv-web1/live.php?id=167594', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=skycricket" alt="skycricket" class="channel-logo" />
+            <div class="channel-name">skycricket</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://idx.gdplayertv.to/embed/sky-sports-cricket/', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=skycricket3" alt="skycricket3" class="channel-logo" />
+            <div class="channel-name">skycricket3</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://waptv.wapka.xyz', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=sts1h" alt="sts1h" class="channel-logo" />
+            <div class="channel-name">sts1h</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tvgotk.github.io/p1/?url=https://mini.allinonereborn.fun/jiotv-ww5/app/ts_live_1984.m3u8', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=sts2h" alt="sts2h" class="channel-logo" />
+            <div class="channel-name">sts2h</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://mini.allinonereborn.fun/jiotv-ww5/app/play_53706f72747331385f315f48443d3f3d31393834', '_blank')">
+            <img src="https://via.placeholder.com/100x100.png?text=sts2h1" alt="sts2h1" class="channel-logo" />
+            <div class="channel-name">sts2h1</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=sony12', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFZ2k9A85ARVyF5qIFv-BRyBNEBsNC9t9ixHzZ_s5W01L4mGs0FRsNpLBF&s=10" alt="time 130 pm" class="channel-logo" />
+            <div class="channel-name">time 130 pm</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=sts1h', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE35VK2_hzS658JLoU8wJ3-8ts909wrRXNRPKJcRlltQ&s" alt="star 1 hindi hd" class="channel-logo" />
+            <div class="channel-name">star 1 hindi hd</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=sts11', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__-2Log0T499nv2ojeHOjfkSsMe3D3aXFMzUSEFOokw&s=10" alt="star sports 1" class="channel-logo" />
+            <div class="channel-name">star sports 1</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=peo1', '_blank')">
+            <img src="https://yt3.googleusercontent.com/qP94AxnW7DbrpyYn-z3xEgi2fCSUL50w14FssUMlognNHFeY-57PdKc3RSdjcgbIySqpbkyWjpk=s900-c-k-c0x00ffffff-no-rj" alt="peo sports 1" class="channel-logo" />
+            <div class="channel-name">peo sports 1</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=tsport', '_blank')">
+            <img src="https://yt3.googleusercontent.com/eY6Yt0YDmWSheMmneYNjUD_2N5p8r2nFca9CENifrZ9TugWxrQW24oznjqBJPOFmSs2M6avemg=s900-c-k-c0x00ffffff-no-rj" alt="t sports" class="channel-logo" />
+            <div class="channel-name">t sports</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://allinonereborn2238.github.io/allinone/fox.html', '_blank')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Fox_Cricket_Logo.png/150px-Fox_Cricket_Logo.png" alt="fox cricket 501" class="channel-logo" />
+            <div class="channel-name">fox cricket 501</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=willowtv', '_blank')">
+            <img src="https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/38-by-xfireflix.png" alt="willow cricket" class="channel-logo" />
+            <div class="channel-name">willow cricket</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=tnt3', '_blank')">
+            <img src="https://play-lh.googleusercontent.com/L5QdK6pZeHse9Lz9uG5p7hJ1BMdE_uqIMM7WSxBKVRBi83dTHvUNOYPJ4FIg36ZSypI" alt="tnt sports" class="channel-logo" />
+            <div class="channel-name">tnt sports</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=tnt1', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTstMt15AGcCexoQPvzTocicU0HAbKNYugdxsfddzP-g&s" alt="time 930 am" class="channel-logo" />
+            <div class="channel-name">time 930 am</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=willowsports', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQktgwHooyyhkUn6U4CF7iS2uk5nJquJnOC71okjMM0FpHvnxOEqwOxJDY&s=10" alt="willow sports" class="channel-logo" />
+            <div class="channel-name">willow sports</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=willowsports2', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQktgwHooyyhkUn6U4CF7iS2uk5nJquJnOC71okjMM0FpHvnxOEqwOxJDY&s=10" alt="willow ios" class="channel-logo" />
+            <div class="channel-name">willow ios</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=tnt1', '_blank')">
+            <img src="https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png?bf=0&f=jpg&p=true&q=70&w=1920" alt="tnt sports 1" class="channel-logo" />
+            <div class="channel-name">tnt sports 1</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=tencricket1', '_blank')">
+            <img src="https://images.slivcdn.com/videoasset_images/manage_file/1000011891/1764334473197434_NZvsWI2025_1st_test_28nov_dated_portrait_thumb.jpg?w=360&q=low" alt="time 3 am" class="channel-logo" />
+            <div class="channel-name">time 3 am</div>
+        </div>
+    
+        <div class="channel-card" onclick="window.open('https://tv4go.pages.dev/?id=willowsports', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2tC4Kqh2i-bBio_8tJK_OaHaHpK949hie2ZY74bg1DY3qQIoUumlNoM&s=10" alt="time 510 am 140pm" class="channel-logo" />
+            <div class="channel-name">time 510 am 140pm</div>
+        </div>
+    
+        </div>
+        
+        <div class="footer">
+            <p>Total Channels: 26 | Generated on 12/16/2025</p>
+        </div>
+    </div>
+</body>
+</html>
