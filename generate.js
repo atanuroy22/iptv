@@ -3,7 +3,8 @@ import fs from "fs";
 
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
-const SHUBHAMKUR_TVM3U_URL = "https://github.com/Shubhamkur/Tv/blob/main/tvm3u";
+const SHUBHAMKUR_BASE_URL = "https://raw.githubusercontent.com/Shubhamkur/Tv/main/";
+const SHUBHAMKUR_FILES = ["tv", "tvid", "tvm3u", "waptv"];
 
 // Language Filter Configuration
 // To filter by language, comment out the languages you DON'T want
@@ -120,6 +121,116 @@ function getName(ext) {
     return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : "";
 }
 
+async function processM3UFile(fileData, output) {
+    const lines = fileData.split("\n");
+
+    for (let i = 0; i < lines.length; i++) {
+        if (!lines[i].startsWith("#EXTINF")) continue;
+
+        const ext = lines[i];
+        const url = lines[i + 1];
+
+        if (!url || !url.startsWith('http')) continue;
+
+        // Force all channels from Shubhamkur M3U into sports category
+        const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
+        output["sports"].push(modifiedExt);
+        output["sports"].push(url);
+    }
+}
+
+async function processTVJSON(fileData, output) {
+    let jsonData;
+    try {
+        jsonData = JSON.parse(fileData);
+    } catch (error) {
+        console.log('Error parsing TV JSON:', error.message);
+        console.log('File data preview:', fileData.substring(0, 200));
+        return;
+    }
+
+    for (const channel of jsonData) {
+        if (!channel.id) continue;
+        
+        const name = channel.id.toUpperCase().replace(/_/g, ' ');
+        let url = '';
+        
+        // Get the streaming URL from different possible fields
+        if (channel.m3u8) {
+            url = channel.m3u8;
+        } else if (channel.mpd) {
+            url = channel.mpd;
+        } else if (channel.url) {
+            url = channel.url;
+        }
+        
+        if (!url) continue;
+
+        // Create logo URL if not provided
+        let logo = channel.logo || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
+        
+        // Force all channels into sports category
+        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
+        output["sports"].push(ext);
+        output["sports"].push(url);
+    }
+}
+
+async function processTVIDJSON(fileData, output) {
+    let jsonData;
+    try {
+        jsonData = JSON.parse(fileData);
+    } catch (error) {
+        console.log('Error parsing TVID JSON:', error.message);
+        console.log('File data preview:', fileData.substring(0, 200));
+        return;
+    }
+
+    for (const channel of jsonData) {
+        if (!channel.id || !channel.name) continue;
+        
+        const name = channel.name;
+        const logo = channel.logo || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
+        
+        // Create ID11 proxy URL
+        const url = `https://tv4wap.github.io/ID11?id=${channel.id}`;
+
+        // Force all channels into sports category
+        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
+        output["sports"].push(ext);
+        output["sports"].push(url);
+    }
+}
+
+async function processWAPTVJSON(fileData, output) {
+    let jsonData;
+    try {
+        jsonData = JSON.parse(fileData);
+    } catch (error) {
+        console.log('Error parsing WAPTV JSON:', error.message);
+        console.log('File data preview:', fileData.substring(0, 200));
+        return;
+    }
+
+    // Process each match category
+    for (const [matchName, channels] of Object.entries(jsonData)) {
+        if (!Array.isArray(channels)) continue;
+        
+        for (const channel of channels) {
+            if (!channel.channel_name || !channel.url) continue;
+            
+            const name = channel.channel_name;
+            const logo = channel.image || `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(name)}`;
+            const url = channel.url;
+
+            // Force all channels into sports category
+            const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
+            output["sports"].push(ext);
+            output["sports"].push(url);
+        }
+    }
+}
+
 async function generate() {
     const { data } = await axios.get(PLAYLIST_URL);
     const lines = data.split("\n");
@@ -174,8 +285,6 @@ async function generate() {
             output[key].push(modifiedExt);
             output[key].push(url);
             placed = true;
-            // this break remove the channels from there category.(if a zee news is in zee then it will not be in news category)
-            // break;
         }
 
         if (!placed) {
@@ -219,22 +328,33 @@ async function generate() {
     }
     // --- End of SPORTS_PLAYLIST_URL processing ---
 
-    // --- Process SHUBHAMKUR_TVM3U_URL for sports channels only ---
-    const { data: shubhamkurTvm3uData } = await axios.get(SHUBHAMKUR_TVM3U_URL.replace('github.com', 'raw.githubusercontent.com').replace('/blob', ''));
-    const shubhamkurTvm3uLines = shubhamkurTvm3uData.split("\n");
-
-    for (let i = 0; i < shubhamkurTvm3uLines.length; i++) {
-        if (!shubhamkurTvm3uLines[i].startsWith("#EXTINF")) continue;
-
-        const ext = shubhamkurTvm3uLines[i];
-        const url = shubhamkurTvm3uLines[i + 1];
-
-        // Force all channels from SHUBHAMKUR_TVM3U_URL into sports category
-        const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
-        output["sports"].push(modifiedExt);
-        output["sports"].push(url);
+    // --- Process all SHUBHAMKUR files for comprehensive channel collection ---
+    try {
+        for (const filename of SHUBHAMKUR_FILES) {
+            const fileUrl = SHUBHAMKUR_BASE_URL + filename;
+            console.log(`Processing Shubhamkur file: ${filename}`);
+            
+            const response = await axios.get(fileUrl);
+            const fileData = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
+            
+            if (filename === 'tvm3u') {
+                // Process M3U file (existing logic)
+                await processM3UFile(fileData, output);
+            } else if (filename === 'tv') {
+                // Process JSON file with direct streaming URLs
+                await processTVJSON(fileData, output);
+            } else if (filename === 'tvid') {
+                // Process JSON file with ID11 proxy URLs
+                await processTVIDJSON(fileData, output);
+            } else if (filename === 'waptv') {
+                // Process WAPTV JSON format
+                await processWAPTVJSON(fileData, output);
+            }
+        }
+    } catch (error) {
+        console.log('Warning: Could not fetch Shubhamkur/Tv channels:', error.message);
     }
-    // --- End of SHUBHAMKUR_TVM3U_URL processing ---
+    // --- End of SHUBHAMKUR processing ---
 
 
 
