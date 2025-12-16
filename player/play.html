@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Play M3U with VLC</title>
+
+<style>
+:root {
+  --primary: #007bff;
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #333;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: #1f2937;
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 16px;
+}
+
+.platform {
+  background: var(--card);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.platform-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.platform-content {
+  padding: 24px;
+}
+
+.steps ol {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.steps li {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.action-btn {
+  display: inline-block;
+  margin-top: 8px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.action-btn:hover {
+  background: #0056b3;
+}
+
+/* Smaller instructional video */
+.video-box {
+  position: relative;
+  max-width: 520px;
+  margin: 20px auto 0;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-box::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.video-box video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  header h1 { font-size: 22px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Play M3U Playlists Using VLC</h1>
+</header>
+
+<div class="container">
+
+  <!-- ANDROID -->
+  <section class="platform">
+    <div class="platform-header">Android (VLC)</div>
+    <div class="platform-content">
+
+      <div class="steps">
+        <ol>
+          <li>
+            Download VLC for Android:
+            <!-- <br> -->
+            <a class="action-btn"
+               href="https://play.google.com/store/apps/details/VLC_for_Android?id=org.videolan.vlc"
+               target="_blank">
+              Download VLC
+            </a>
+          </li>
+
+          <li>
+            Open VLC on your Android device and tap the menu (☰),
+            then select <strong>Stream / Open MRL</strong>.
+          </li>
+
+          <li>
+            Get the M3U playlist from here and paste it into VLC:
+            <!-- <br> -->
+            <button class="action-btn"
+              onclick="window.open('https://github.com/atanuroy22/iptv','_blank')">
+              Open M3U Source
+            </button>
+          </li>
+        </ol>
+      </div>
+
+      <div class="video-box">
+        <video controls preload="metadata">
+          <source src="https://github.com/atanuroy22/iptv/raw/refs/heads/main/player/demo.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WINDOWS -->
+  <section class="platform">
+    <div class="platform-header">Windows (VLC)</div>
+    <div class="platform-content">
+
+      <div class="steps">
+        <ol>
+          <li>
+            Download VLC for Windows:
+            <!-- <br> -->
+            <a class="action-btn"
+               href="https://www.videolan.org/vlc/"
+               target="_blank">
+              Download VLC
+            </a>
+          </li>
+
+          <li>
+            Open VLC Media Player and go to
+            <strong>Media → Open Network Stream</strong>.
+          </li>
+
+          <li>
+            Get the M3U playlist from here and paste it into VLC:
+            <!-- <br> -->
+            <button class="action-btn"
+              onclick="window.open('https://github.com/atanuroy22/iptv','_blank')">
+              Open M3U Source
+            </button>
+          </li>
+        </ol>
+      </div>
+
+      <div class="video-box">
+        <video controls preload="metadata">
+          <source src="https://github.com/atanuroy22/iptv/raw/refs/heads/main/player/demo2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
