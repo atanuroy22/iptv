@@ -3,21 +3,6 @@
 Automatically generates custom IPTV M3U playlists (Zee, Sony, Sports, Star and Others) by pulling the latest data from iptv-org and sorting channels into relevant categories.
 
 ------------------------------------
-FEATURES
-------------------------------------
-
-- Categorizes channels into:
-  • Zee
-  • Sony
-  • Star
-  • Sports
-
-- Creates TWO types of playlists:
-  1. Separate .m3u files for each category (in output/ folder)
-  2. A combined all.m3u file with all channels organized by category sections
-
-
-------------------------------------
 DIRECT PLAYLIST URLs
 ------------------------------------
 COMBINED all.m3u PLAYLIST (zee, sony, star, sports categories and All other channels): <br>
@@ -37,6 +22,8 @@ etc.
 
 These URLs auto-refresh every 4 hours.
 
+------------------------------------
+Direct playable sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
 
 ------------------------------------
 WATCH HOW TO PLAY THESE M3U
@@ -44,7 +31,18 @@ WATCH HOW TO PLAY THESE M3U
 Android & Windows Users: [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
 
 ------------------------------------
-Direct playable sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
+FEATURES
+------------------------------------
+
+- Categorizes channels into:
+  • Zee
+  • Sony
+  • Star
+  • Sports
+
+- Creates TWO types of playlists:
+  1. Separate .m3u files for each category (in output/ folder)
+  2. A combined all.m3u file with all channels organized by category sections
 ------------------------------------
 
 <!-- ------------------------------------
