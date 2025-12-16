@@ -127,9 +127,18 @@ function getChannelLogo(channelName) {
         'ptv sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Ad4PNlqneWGKqwJ5ayE57PVczpsXK5a9c7AuD5b2CWYjBS5R_RQjZ8Anu2zq1GxRdcrLkhn8r7HMM0S1s-XOcYIZgfvLOaI41hAOuF8',
         'a sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNm9wSyxdIjvlYdwU2-sq1LCSVXkkqXBWBXA&s',
         'ten sports': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/10-by-xfireflix.png',
+        'ten cricket': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/10-by-xfireflix.png',
         'astro cricket': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/1745008895589.png',
         'geo sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTByiiGGHZsObgvhWaw9Vegy0hJE4ofIyjIr0yW6WIBBKGYNk6TM2acXFbh&s=10',
-        'criclife': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE35VK2_hzS658JLoU8wJ3-8ts909wrRXNRPKJcRlltQ&s'
+        'criclife': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE35VK2_hzS658JLoU8wJ3-8ts909wrRXNRPKJcRlltQ&s',
+        'zee cinema': 'https://img.favpng.com/22/7/13/zee-cinema-zee-tv-high-definition-television-zee-entertainment-enterprises-png-favpng-KHDwBVhTwzz18Sh6EeZGTisrV.jpg',
+        'and pictures': 'https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/HivVrdof.png',
+        'star select': 'https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Star_Selects_logo.svg/300px-Star_Selects_logo.svg.png',
+        'zee tv': 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Zee_TV_logo.svg/300px-Zee_TV_logo.svg.png',
+        'sony tv': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sony_Pictures_Network.svg/512px-Sony_Pictures_Network.svg.png',
+        'star plus': 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Star_Plus.svg/300px-Star_Plus.svg.png',
+        'colors tv': 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Colors_TV_logo.svg/300px-Colors_TV_logo.svg.png',
+        'mtv': 'https://upload.wikimedia.org/wikipedia/en/thumb/6/69/MTV_2021_logo.svg/300px-MTV_2021_logo.svg.png'
     };
     
     const lowerName = channelName.toLowerCase();
@@ -139,7 +148,13 @@ function getChannelLogo(channelName) {
         }
     }
     
-    return `https://via.placeholder.com/100x100.png?text=${encodeURIComponent(channelName)}`;
+    // Generate a better placeholder with channel name initials and color
+    const initials = channelName.split(' ').filter(word => word.length > 0).map(word => word[0].toUpperCase()).join('').substring(0, 3);
+    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F'];
+    const colorIndex = channelName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % colors.length;
+    const bgColor = colors[colorIndex];
+    
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=${bgColor.replace('#', '')}&color=fff&size=100&bold=true`;
 }
 
 // Function to check if URL is a direct playback channel
@@ -218,11 +233,11 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
                     continue;
                 }
                 
-                if (!channelTracker["sports"].has(name)) {
-                    channelTracker["sports"].add(name);
-                    const modifiedExt = ext.replace(/group-title="[^"]+"/i, 'group-title="Sports"');
-                    output["sports"].push(modifiedExt);
-                    output["sports"].push(playableUrl);
+                // For SHUBHAMKUR sources, add all channels to direct HTML only
+                if (!channelTracker["direct"].has(name)) {
+                    channelTracker["direct"].add(name);
+                    // For direct browser playback, use the original URL
+                    directChannels.push({ name, url: url, logo: getChannelLogo(name) });
                 }
             }
         } else {
@@ -265,12 +280,16 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
                             continue;
                         }
                         
-                        if (!channelTracker["sports"].has(name)) {
-                            channelTracker["sports"].add(name);
+                        // For SHUBHAMKUR sources, add all channels to direct HTML only
+                        if (!channelTracker["direct"].has(name)) {
+                            channelTracker["direct"].add(name);
                             const logo = channel.image || getChannelLogo(name);
-                            const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
-                            output["sports"].push(ext);
-                            output["sports"].push(playableUrl);
+                            // For direct browser playback, use the original URL
+                            directChannels.push({ 
+                                name, 
+                                url: url, 
+                                logo
+                            });
                         }
                     }
                 }
@@ -323,12 +342,16 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
                         continue;
                     }
                     
-                    if (!channelTracker["sports"].has(name)) {
-                        channelTracker["sports"].add(name);
+                    // For SHUBHAMKUR sources, add all channels to direct HTML only
+                    if (!channelTracker["direct"].has(name)) {
+                        channelTracker["direct"].add(name);
                         const logo = channel.logo || getChannelLogo(name);
-                        const ext = `#EXTINF:-1 tvg-name="${name}" tvg-logo="${logo}" group-title="Sports"`;
-                        output["sports"].push(ext);
-                        output["sports"].push(playableUrl);
+                        // For direct browser playback, use the original URL
+                        directChannels.push({ 
+                            name, 
+                            url: url, 
+                            logo
+                        });
                     }
                 }
             }
@@ -526,7 +549,7 @@ function generateDirectChannelsHtml(channels) {
         // Use simple anchor tag instead of inline JavaScript to avoid syntax issues
         return `
         <a class="channel-card" href="${safeUrl}" target="_blank" rel="noopener noreferrer">
-            <img src="${safeLogo}" alt="${safeName}" class="channel-logo" />
+            <img src="${safeLogo}" alt="${safeName}" class="channel-logo" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(safeName.substring(0, 3).toUpperCase())}&background=888888&color=fff&size=100&bold=true'" />
             <div class="channel-name">${safeName}</div>
         </a>
     `;
