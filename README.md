@@ -1,8 +1,8 @@
 # Custom IPTV Playlist Generator
 ------------------------------------
-DIRECT PLAYLIST URLs
+WATCH HOW TO PLAY THESE M3U :-  [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
 ------------------------------------
-COMBINED all.m3u PLAYLIST (zee, sony, star, sports categories and All other channels): <br>
+COMBINED all.m3u PLAYLIST (zee, sony, star, sports, etc.): <br>
 - [▶ Play](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/all.m3u) All: `https://atanuroy22.github.io/iptv/output/all.m3u` 
 
 INDIVIDUAL CATEGORY PLAYLISTS:
@@ -17,19 +17,17 @@ INDIVIDUAL CATEGORY PLAYLISTS:
 
 etc.
 
-------------------------------------
-WATCH HOW TO PLAY THESE M3U :-  [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
+Direct playable foraign sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
 
 ------------------------------------
 
-No Ads JIO TV - [▶ Link 1](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://thestarkind.mooo.com/10/) <!-- - [▶ Link 2](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://thestarkind.mooo.com/JIO/) -->
+
+# NO Ads JIO TV - [▶ Play](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://thestarkind.mooo.com/10/) <!-- - [▶ Link 2](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://thestarkind.mooo.com/JIO/) -->
 
 <!-- - [▶ Jio TV v2](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://jiotv2s.teachub.workers.dev/) -->
 <!-- - [▶ Live Sports](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://crichd2home.teachub.workers.dev/) -->
 
-Direct playable sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
-
-------------------------------------
+<!-- ------------------------------------ -->
 
 FEATURES
 ------------------------------------
