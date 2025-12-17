@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Browser - Ad Block Enabled</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .header {
+            display: none;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .shield-icon {
+            width: 24px;
+            height: 24px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .status-indicators {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .status-active {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+
+        .status-loading {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .iframe-container {
+            height: 100vh;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iframe-wrapper {
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            border: none;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            background: white;
+            position: relative;
+        }
+
+        #contentFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 0.3s;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4CAF50;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .blocked-popup {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 12px 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 2000;
+            max-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .back-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-btn {
+            display: none;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+        }
+
+        .home-link {
+            color: #2196F3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <div class="shield-icon">🛡️</div>
+            <h1>Secure Browser</h1>
+        </div>
+        <div class="status-indicators">
+            <div class="status-badge status-active">
+                <span>🚫</span> Ad Blocker: ON
+            </div>
+            <div class="status-badge status-active">
+                <span>🔒</span> Popup Blocker: ON
+            </div>
+            <div class="status-badge status-loading" id="loadingStatus">
+                <span>⏳</span> Loading...
+            </div>
+            <a href="README.md" class="home-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <div class="iframe-container">
+        <div class="iframe-wrapper">
+            <div class="loading-overlay" id="loadingOverlay">
+                <div class="loading-spinner"></div>
+                <p style="margin-top: 20px; color: #666;">Securing your connection...</p>
+            </div>
+            <iframe id="contentFrame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+        </div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='README.md'" title="Back to Home">
+        ←
+    </button>
+
+    <script>
+        let blockedPopups = 0;
+        let autoClickAttempts = 0;
+        let currentUrl = '';
+
+        const PROXY_CANDIDATES = [
+            // Cloudflare Worker (template style)
+            'https://jolly-bonus-cab5.2e0fed7d-4ff6-4935-a061-96106fbf6b04.workers.dev/?u={url}',
+            // Prefix style: append URL directly
+            'https://cors.isomorphic-git.org/',
+            // Template style
+            'https://corsproxy.io/?{url}',
+            // Template style
+            'https://thingproxy.freeboard.io/fetch/{url}'
+        ];
+
+        function buildProxiedUrl(proxyBase, targetUrl) {
+            if (!proxyBase) return targetUrl;
+            if (proxyBase.includes('{url}')) {
+                return proxyBase.replace('{url}', encodeURIComponent(targetUrl));
+            }
+            if (proxyBase.endsWith('?')) {
+                return proxyBase + encodeURIComponent(targetUrl);
+            }
+            if (proxyBase.endsWith('/fetch/')) {
+                return proxyBase + targetUrl;
+            }
+            return proxyBase + targetUrl;
+        }
+
+        // Get URL parameter
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Initialize the page
+        function initializePage() {
+            const targetUrl = getUrlParameter('url');
+            
+            if (!targetUrl) {
+                showError('No URL specified. Please go back and try again.');
+                return;
+            }
+
+            currentUrl = targetUrl;
+            loadContent(targetUrl);
+        }
+
+        // Load content in iframe
+        function loadContent(url) {
+            const frame = document.getElementById('contentFrame');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const loadingStatus = document.getElementById('loadingStatus');
+            
+            // Show loading
+            loadingOverlay.style.opacity = '1';
+            loadingStatus.innerHTML = '<span>⏳</span> Loading...';
+            
+            // Try multiple proxies because some refuse iframe embedding
+            let proxyIndex = 0;
+            let loadTimer = null;
+
+            const tryLoad = () => {
+                if (loadTimer) {
+                    clearTimeout(loadTimer);
+                    loadTimer = null;
+                }
+
+                const proxyBase = PROXY_CANDIDATES[proxyIndex];
+                const proxiedUrl = buildProxiedUrl(proxyBase, url);
+                loadingStatus.innerHTML = `<span>⏳</span> Loading...`;
+                frame.src = proxiedUrl;
+
+                // If the iframe doesn't finish loading quickly, try the next proxy.
+                // "refused to connect" typically results in no useful load.
+                loadTimer = setTimeout(() => {
+                    proxyIndex++;
+                    if (proxyIndex < PROXY_CANDIDATES.length) {
+                        tryLoad();
+                    } else {
+                        showError('Failed to load content (proxy refused/blocked). Try again later or use a different proxy.');
+                        loadingOverlay.style.display = 'none';
+                    }
+                }, 8000);
+            };
+
+            tryLoad();
+            
+            frame.onload = function() {
+                if (loadTimer) {
+                    clearTimeout(loadTimer);
+                    loadTimer = null;
+                }
+                setTimeout(() => {
+                    loadingOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingOverlay.style.display = 'none';
+                    }, 300);
+                    
+                    loadingStatus.innerHTML = '<span>✅</span> Protected';
+                    loadingStatus.className = 'status-badge status-active';
+                    
+                    // Start blocking and auto-clicking
+                    setTimeout(() => {
+                        blockPopups();
+                        autoClickButtons();
+                        injectAdBlocker();
+                    }, 2000);
+                }, 1000);
+            };
+            
+            frame.onerror = function() {
+                if (loadTimer) {
+                    clearTimeout(loadTimer);
+                    loadTimer = null;
+                }
+                proxyIndex++;
+                if (proxyIndex < PROXY_CANDIDATES.length) {
+                    tryLoad();
+                } else {
+                    showError('Failed to load content. The site may be blocked or unavailable.');
+                    loadingOverlay.style.display = 'none';
+                }
+            };
+        }
+
+        // Block popups and new windows
+        function blockPopups() {
+            const frame = document.getElementById('contentFrame');
+            
+            try {
+                const frameDoc = frame.contentDocument || frame.contentWindow.document;
+                
+                // Override window.open
+                frame.contentWindow.open = function(url, name, specs) {
+                    blockedPopups++;
+                    showBlockedNotification(`Blocked popup: ${url || 'Unknown'}`);
+                    return null;
+                };
+                
+                // Block click events that open new windows
+                frameDoc.addEventListener('click', function(e) {
+                    const target = e.target;
+                    if (target.tagName === 'A' && (target.target === '_blank' || target.href.includes('http'))) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        showBlockedNotification(`Blocked external link: ${target.href}`);
+                    }
+                }, true);
+                
+            } catch (e) {
+                // Cross-origin restrictions - will use alternative method
+                console.log('Cannot access iframe content due to cross-origin restrictions');
+            }
+        }
+
+        // Auto-click continue/unlock buttons
+        function autoClickButtons() {
+            const frame = document.getElementById('contentFrame');
+            
+            try {
+                const frameDoc = frame.contentDocument || frame.contentWindow.document;
+                
+                // Common button text patterns to auto-click
+                const buttonTexts = [
+                    'Continue', 'Continue to Site', 'Skip Ad', 'Close', 
+                    'I understand', 'Accept', 'Allow', 'Unlock', 
+                    'Visit Site', 'Proceed', 'Enter Site', 'Join Telegram',
+                    'Subscribe', 'Follow', 'Next', 'Get Started'
+                ];
+                
+                const checkAndClick = () => {
+                    buttonTexts.forEach(text => {
+                        const buttons = frameDoc.querySelectorAll('button, a, input[type="button"], input[type="submit"]');
+                        buttons.forEach(button => {
+                            if (button.textContent.toLowerCase().includes(text.toLowerCase()) ||
+                                button.value?.toLowerCase().includes(text.toLowerCase()) ||
+                                button.title?.toLowerCase().includes(text.toLowerCase())) {
+                                
+                                if (button.offsetParent !== null) { // Check if visible
+                                    button.click();
+                                    autoClickAttempts++;
+                                    console.log(`Auto-clicked: ${text}`);
+                                }
+                            }
+                        });
+                    });
+                };
+                
+                // Check multiple times as content loads
+                checkAndClick();
+                setTimeout(checkAndClick, 2000);
+                setTimeout(checkAndClick, 5000);
+                setTimeout(checkAndClick, 10000);
+                
+            } catch (e) {
+                console.log('Cannot auto-click due to cross-origin restrictions');
+            }
+        }
+
+        // Inject ad blocker
+        function injectAdBlocker() {
+            const frame = document.getElementById('contentFrame');
+            
+            try {
+                const frameDoc = frame.contentDocument || frame.contentWindow.document;
+                
+                // Common ad selectors to block
+                const adSelectors = [
+                    '.ad', '.ads', '.advertisement', '.google-ad',
+                    '[id*="ad"]', '[class*="ad"]', '[id*="banner"]',
+                    '[class*="banner"]', 'iframe[src*="ads"]',
+                    'script[src*="ads"]', '.popup', '.modal',
+                    '.overlay', '.newsletter', '.subscription'
+                ];
+                
+                adSelectors.forEach(selector => {
+                    try {
+                        const elements = frameDoc.querySelectorAll(selector);
+                        elements.forEach(el => {
+                            if (el.offsetParent !== null) {
+                                el.style.display = 'none';
+                                el.remove();
+                            }
+                        });
+                    } catch (e) {
+                        // Ignore errors for individual elements
+                    }
+                });
+                
+            } catch (e) {
+                console.log('Cannot inject ad blocker due to cross-origin restrictions');
+            }
+        }
+
+        // Show blocked popup notification
+        function showBlockedNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'blocked-popup';
+            notification.innerHTML = `
+                <strong>🚫 Blocked</strong><br>
+                <small>${message}</small>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Show error message
+        function showError(message) {
+            const frame = document.getElementById('contentFrame');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const loadingStatus = document.getElementById('loadingStatus');
+            
+            loadingOverlay.innerHTML = `
+                <div style="text-align: center; padding: 40px;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">⚠️</div>
+                    <h3 style="color: #f44336; margin-bottom: 15px;">Error</h3>
+                    <p style="color: #666; margin-bottom: 20px;">${message}</p>
+                    <button onclick="window.location.href='README.md'" class="control-btn btn-primary">
+                        Go Back
+                    </button>
+                </div>
+            `;
+            loadingOverlay.style.opacity = '1';
+            loadingStatus.innerHTML = '<span>❌</span> Error';
+            loadingStatus.className = 'status-badge';
+            loadingStatus.style.background = '#ffebee';
+            loadingStatus.style.color = '#c62828';
+        }
+
+        // Monitor iframe for new content
+        document.getElementById('contentFrame').addEventListener('load', function() {
+            setTimeout(() => {
+                blockPopups();
+                autoClickButtons();
+                injectAdBlocker();
+            }, 1000);
+        });
+
+        // Initialize on page load
+        window.addEventListener('load', initializePage);
+        
+        // Handle browser back button
+        window.addEventListener('popstate', function(event) {
+            if (event.state === null) {
+                window.location.href = 'README.md';
+            }
+        });
+    </script>
+</body>
+</html>
