@@ -31,6 +31,14 @@ WATCH HOW TO PLAY THESE M3U
 Android & Windows Users: [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
 
 ------------------------------------
+JIO TV STREAMS
+------------------------------------
+- [▶ Jio TV Web](https://github.com/atanuroy22/iptv/blocker.html?url=https://thestarkind.mooo.com/JIO/)
+- [▶ Jio TV v1](https://github.com/atanuroy22/iptv/blocker.html?url=https://thestarkind.mooo.com/10/)
+<!-- - [▶ Jio TV v2](https://github.com/atanuroy22/iptv/blocker.html?url=https://jiotv2s.teachub.workers.dev/) -->
+<!-- - [▶ Live Sports](https://github.com/atanuroy22/iptv/blocker.html?url=https://crichd2home.teachub.workers.dev/) -->
+
+------------------------------------
 FEATURES
 ------------------------------------
 
