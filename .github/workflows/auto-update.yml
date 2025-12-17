@@ -11,28 +11,33 @@ jobs:
     permissions:
       contents: write
 
+    # Prevent workflow from running on its own commits
+    if: github.actor != 'github-actions[bot]'
+
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: "20"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Ensure output folder exists
-      run: mkdir -p output
+      - name: Ensure output folder exists
+        run: mkdir -p output
 
-    - name: Run generator
-      run: npm start
+      - name: Run generator
+        run: npm start
 
-    - name: Push updated files
-      run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
-        git add .
-        git commit -m "Auto update IPTV playlists" || echo "No changes to commit"
-        git push
+      - name: Commit and push changes
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+          git add output/
+          git diff --cached --quiet || git commit -m "Auto update IPTV playlists"
+          git push

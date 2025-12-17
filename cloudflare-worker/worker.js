@@ -83,6 +83,13 @@ export default {
       const resp = await fetch(upstream.toString(), init);
       const headers = new Headers(resp.headers);
 
+      headers.delete('X-Frame-Options');
+      headers.delete('x-frame-options');
+      headers.delete('Content-Security-Policy');
+      headers.delete('content-security-policy');
+      headers.delete('Content-Security-Policy-Report-Only');
+      headers.delete('content-security-policy-report-only');
+
       // Add permissive CORS for browser HLS
       headers.set('Access-Control-Allow-Origin', '*');
       headers.set('Access-Control-Allow-Headers', '*');
@@ -97,6 +104,16 @@ export default {
       // For OPTIONS preflight (rare for HLS), respond quickly
       if (request.method === 'OPTIONS') {
         return new Response(null, { status: 204, headers });
+      }
+
+      const contentType = headers.get('content-type') || '';
+      if (contentType.toLowerCase().includes('text/html')) {
+        const html = await resp.text();
+        const injected = html.replace(
+          /<\/body\s*>/i,
+          `<script>(function(){function t(e){return (e&&((e.innerText||e.textContent)||'')||'').trim().toLowerCase()}function c(e){try{if(!e) return false; if(e.disabled) return false; if(e.offsetParent===null) return false; e.click(); return true}catch(_){return false}}function s(){var k=['continue','click here to continue','support','please support us','skip','proceed','i understand','accept','allow','unlock','enter','visit site','go to link','get link'];var nodes=document.querySelectorAll('button,a,input[type="button"],input[type="submit"],div[role="button"],span[role="button"]');for(var i=0;i<nodes.length;i++){var n=nodes[i];var v=t(n);if(!v && n.value) v=(n.value||'').trim().toLowerCase();if(!v && n.getAttribute) v=(n.getAttribute('aria-label')||'').trim().toLowerCase();for(var j=0;j<k.length;j++){if(v===k[j] || v.indexOf(k[j])!==-1){if(c(n)) return true;}}}return false}var a=0;var iv=setInterval(function(){a++;if(s()||a>25){clearInterval(iv)}},400);window.addEventListener('load',function(){setTimeout(s,300);setTimeout(s,1200);});})();</script></body>`
+        );
+        return new Response(injected, { status: resp.status, headers });
       }
 
       return new Response(resp.body, { status: resp.status, headers });
