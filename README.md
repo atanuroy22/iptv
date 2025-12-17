@@ -23,12 +23,16 @@ etc.
 These URLs auto-refresh every 4 hours.
 
 ------------------------------------
-Direct playable sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
+WATCH HOW TO PLAY THESE M3U :-  [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
+------------------------------------
 
 ------------------------------------
-WATCH HOW TO PLAY THESE M3U
+Direct playable sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
 ------------------------------------
-Android & Windows Users: [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
+No Ads JIO TV - [▶ Link 1](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://thestarkind.mooo.com/10/) <!-- - [▶ Link 2](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://thestarkind.mooo.com/JIO/) -->
+
+<!-- - [▶ Jio TV v2](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://jiotv2s.teachub.workers.dev/) -->
+<!-- - [▶ Live Sports](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://crichd2home.teachub.workers.dev/) -->
 
 ------------------------------------
 FEATURES

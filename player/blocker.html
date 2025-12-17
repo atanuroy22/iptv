@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' * data: blob: https: wss:; media-src * data: blob: https: wss:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *; img-src 'self' data: content: https:; connect-src 'self' *; frame-src 'self' *; worker-src 'self' blob:;">
+    <meta http-equiv="Permissions-Policy" content="encrypted-media=*, fullscreen=*">
+    <title>Link Blocker</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            display: none;
+        }
+        #urlInput {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #goButton {
+            padding: 8px 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #goButton:hover {
+            background: #45a049;
+        }
+        #contentFrame {
+            width: 100%;
+            height: 100vh;
+            border: 4px solid #4CAF50;
+            box-sizing: border-box;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        #contentFrame.hidden {
+            display: none;
+        }
+        #welcome {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" style="display: none;">
+        <input type="text" id="urlInput" placeholder="Enter URL (e.g., https://example.com)">
+        <button id="goButton">Go</button>
+    </div>
+    
+    <div id="welcome" style="display: none;">
+        <h2>Link Blocker Active</h2>
+        <p>Enter a URL above to load it in the secure viewer</p>
+        <p>All links will open in this window and popups will be blocked</p>
+    </div>
+    
+    <iframe id="contentFrame" 
+        class="hidden"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-modals"
+        allow="autoplay; fullscreen; encrypted-media"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        referrerpolicy="no-referrer"
+        onload="this.contentWindow.onbeforeunload=function(){return false;};">
+    </iframe>
+
+    <script>
+        // Parse URL parameters
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Block all page navigation and redirects
+        window.addEventListener('beforeunload', function(e) {
+            // Only allow navigation if it's a form submission or link click within our controls
+            const active = document.activeElement;
+            const isAllowedNavigation = active && (
+                active.tagName === 'A' || 
+                active.tagName === 'INPUT' ||
+                active.tagName === 'BUTTON' ||
+                active.tagName === 'FORM'
+            );
+            
+            if (!isAllowedNavigation) {
+                // Standard way to show the confirmation dialog
+                e.preventDefault();
+                e.returnValue = 'Are you sure you want to leave? All browsing is contained within this page.';
+                return e.returnValue;
+            }
+        });
+
+        // Block window.open
+        window.open = function() {
+            console.log('Popup blocked by Link Blocker');
+            return null;
+        };
+
+        // Handle URL input
+        document.getElementById('goButton').addEventListener('click', loadUrl);
+        document.getElementById('urlInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') loadUrl();
+        });
+
+        function loadUrl() {
+            const urlInput = document.getElementById('urlInput');
+            let url = urlInput.value.trim();
+            
+            // Add https:// if no protocol is specified
+            if (url && !/^https?:\/\//i.test(url)) {
+                url = 'https://' + url;
+            }
+            
+            if (url) {
+                const frame = document.getElementById('contentFrame');
+                frame.src = url;
+                frame.classList.remove('hidden');
+                document.getElementById('welcome').style.display = 'none';
+                
+                // Store the URL in the input for easy editing
+                urlInput.value = url;
+            }
+        }
+
+        // Block middle-click and right-click new tabs
+        document.addEventListener('auxclick', function(e) {
+            if (e.button === 1 || e.button === 3) { // Middle or right click
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        }, true);
+
+        // Block right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        }, false);
+
+        // Auto-load URL from query parameter if present
+        const urlParam = getUrlParameter('url');
+        if (urlParam) {
+            document.getElementById('urlInput').value = urlParam;
+            // Small delay to ensure DOM is ready
+            setTimeout(loadUrl, 100);
+        }
+    </script>
+</body>
+</html>
