@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' * data: blob: https: wss:; media-src * data: blob: https: wss:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *; img-src 'self' data: content: https:; connect-src 'self' *; frame-src 'self' *; worker-src 'self' blob:;">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' * data: blob: https: wss:; media-src * data: blob: https: wss:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *; img-src 'self' data: content: https:; connect-src 'self' *; frame-src 'self' *; worker-src 'self' blob:;">
     <meta http-equiv="Permissions-Policy" content="encrypted-media=*, fullscreen=*">
-    <title>Link Blocker</title>
+    <title>Ad-Free Video Player</title>
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
             font-family: Arial, sans-serif;
+            background: #000;
         }
+
         #header {
             display: none;
         }
+
         #urlInput {
             flex-grow: 1;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
+
         #goButton {
             padding: 8px 16px;
             background: #4CAF50;
@@ -30,49 +38,71 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
         }
+
+        @media (max-width: 600px) {
+
+            #urlInput,
+            #goButton {
+                padding: 12px;
+                font-size: 18px;
+            }
+
+            #header {
+                flex-wrap: wrap;
+            }
+
+            #urlInput {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
         #goButton:hover {
             background: #45a049;
         }
+
         #contentFrame {
             width: 100%;
-            height: 100vh;
-            border: 4px solid #4CAF50;
+            height: 100%;
+            border: none;
             box-sizing: border-box;
             display: block;
             position: fixed;
             top: 0;
+            right: 0;
+            bottom: 0;
             left: 0;
+            z-index: 1;
         }
+
         #contentFrame.hidden {
             display: none;
         }
+
         #welcome {
             display: none;
         }
     </style>
 </head>
+
 <body>
     <div id="header" style="display: none;">
         <input type="text" id="urlInput" placeholder="Enter URL (e.g., https://example.com)">
         <button id="goButton">Go</button>
     </div>
-    
+
     <div id="welcome" style="display: none;">
-        <h2>Link Blocker Active</h2>
+        <h2>Ad-Free Video Player</h2>
         <p>Enter a URL above to load it in the secure viewer</p>
-        <p>All links will open in this window and popups will be blocked</p>
+        <p>All ads and popups will be blocked</p>
     </div>
-    
-    <iframe id="contentFrame" 
-        class="hidden"
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-modals"
-        allow="autoplay; fullscreen; encrypted-media"
-        allowfullscreen
-        webkitallowfullscreen
-        mozallowfullscreen
-        referrerpolicy="no-referrer"
-        onload="this.contentWindow.onbeforeunload=function(){return false;};">
+
+    <iframe id="contentFrame" class="hidden"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-pointer-lock allow-downloads"
+        allow="autoplay; fullscreen; encrypted-media" allowfullscreen webkitallowfullscreen mozallowfullscreen
+        referrerpolicy="no-referrer">
     </iframe>
 
     <script>
@@ -82,60 +112,279 @@
             return urlParams.get(name);
         }
 
-        // Block all page navigation and redirects
-        window.addEventListener('beforeunload', function(e) {
-            // Only allow navigation if it's a form submission or link click within our controls
-            const active = document.activeElement;
-            const isAllowedNavigation = active && (
-                active.tagName === 'A' || 
-                active.tagName === 'INPUT' ||
-                active.tagName === 'BUTTON' ||
-                active.tagName === 'FORM'
-            );
-            
-            if (!isAllowedNavigation) {
-                // Standard way to show the confirmation dialog
-                e.preventDefault();
-                e.returnValue = 'Are you sure you want to leave? All browsing is contained within this page.';
-                return e.returnValue;
-            }
-        });
-
-        // Block window.open
-        window.open = function() {
-            console.log('Popup blocked by Link Blocker');
+        // Aggressive popup blocking at parent level
+        const originalOpen = window.open;
+        window.open = function () {
+            console.log('Popup blocked by Ad Blocker');
             return null;
         };
 
+        // Block all alert, confirm, prompt dialogs
+        window.alert = function () { console.log('Alert blocked'); };
+        window.confirm = function () { console.log('Confirm blocked'); return false; };
+        window.prompt = function () { console.log('Prompt blocked'); return null; };
+
         // Handle URL input
         document.getElementById('goButton').addEventListener('click', loadUrl);
-        document.getElementById('urlInput').addEventListener('keypress', function(e) {
+        document.getElementById('urlInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') loadUrl();
         });
 
         function loadUrl() {
             const urlInput = document.getElementById('urlInput');
             let url = urlInput.value.trim();
-            
-            // Add https:// if no protocol is specified
+
             if (url && !/^https?:\/\//i.test(url)) {
                 url = 'https://' + url;
             }
-            
+
             if (url) {
                 const frame = document.getElementById('contentFrame');
                 frame.src = url;
                 frame.classList.remove('hidden');
                 document.getElementById('welcome').style.display = 'none';
-                
-                // Store the URL in the input for easy editing
                 urlInput.value = url;
+
+                // Inject ad blocking script after iframe loads
+                frame.onload = function () {
+                    injectAdBlocker(frame);
+                };
             }
         }
 
+        function injectAdBlocker(iframe) {
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const iframeWin = iframe.contentWindow;
+
+                // Inject CSS to hide ads, particular focus on Telegram and overlays
+                const style = iframeDoc.createElement('style');
+                style.textContent = `
+                    /* Hide common ad elements */
+                    [class*="ad-"], [id*="ad-"], [class*="ads-"], [id*="ads-"],
+                    [class*="advertisement"], [id*="advertisement"],
+                    [class*="sponsor"], [id*="sponsor"],
+                    [class*="popup"], [id*="popup"],
+                    [class*="modal"], [id*="modal"],
+                    [class*="overlay"], [id*="overlay"],
+                    [class*="banner"], [id*="banner"],
+                    .ad, .ads, .advert, .advertisement, .sponsor, .sponsored,
+                    .popup, .pop-up, .modal, .overlay, .banner,
+                    iframe[src*="doubleclick"], iframe[src*="googlesyndication"],
+                    iframe[src*="advertising"], iframe[src*="adserver"],
+                    div[class*="adsbygoogle"], ins.adsbygoogle,
+                    
+                    /* Specific Telegram and Social Blocking */
+                    a[href*="t.me"], a[href*="telegram.me"], 
+                    div:has(> a[href*="t.me"]), div:has(> a[href*="telegram.me"]),
+                    
+                    /* Floating Elements typically used for ads */
+                    div[style*="position: fixed"][style*="z-index: 2147483647"],
+                    div[style*="z-index: 9999"],
+                    
+                    /* Common player overlays */
+                    .jw-display-icon-container {
+                        display: none !important;
+                        visibility: hidden !important;
+                        opacity: 0 !important;
+                        width: 0 !important;
+                        height: 0 !important;
+                        position: absolute !important;
+                        left: -9999px !important;
+                        pointer-events: none !important;
+                    }
+                    
+                    /* Ensure video controls are visible and clickable */
+                    video {
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: contain !important;
+                        pointer-events: auto !important;
+                        z-index: 1 !important;
+                    }
+                    
+                    video::-webkit-media-controls {
+                        display: flex !important;
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                        z-index: 2147483647 !important;
+                    }
+                    
+                    video::-webkit-media-controls-panel {
+                        display: flex !important;
+                        opacity: 1 !important;
+                        z-index: 2147483647 !important;
+                    }
+                `;
+                iframeDoc.head.appendChild(style);
+
+                // Block popups in iframe
+                iframeWin.open = function () { console.log('Iframe popup blocked'); return null; };
+                iframeWin.alert = function () { console.log('Iframe alert blocked'); };
+                iframeWin.confirm = function () { console.log('Iframe confirm blocked'); return false; };
+                iframeWin.prompt = function () { console.log('Iframe prompt blocked'); return null; };
+
+                // Aggressive Cleanup Function
+                function aggressiveCleanup() {
+                    if (!iframeDoc || !iframeDoc.body) return;
+
+                    // 1. Text Content Scan
+                    const prohibitedText = ['join telegram', 'join channel', 'bet now', 'deposit', 'bonus', 'casino'];
+                    const allElements = iframeDoc.querySelectorAll('div, a, span, p, button');
+
+                    allElements.forEach(el => {
+                        if (el.innerText) {
+                            const text = el.innerText.toLowerCase();
+                            if (prohibitedText.some(term => text.includes(term))) {
+                                el.remove();
+                                console.log('Removed element with prohibited text:', text);
+                            }
+                        }
+                    });
+
+                    // 2. Remove any floating overlays on top of video (excluding controls)
+                    // We look for absolute/fixed positioned divs with high z-index that are NOT children of the video
+                    const potentialOverlays = iframeDoc.querySelectorAll('div, a');
+                    potentialOverlays.forEach(el => {
+                        const style = iframeWin.getComputedStyle(el);
+                        if ((style.position === 'absolute' || style.position === 'fixed') &&
+                            parseInt(style.zIndex) > 10 &&
+                            el.tagName !== 'VIDEO') {
+
+                            // Check if it's likely a control bar (avoid removing player controls)
+                            const isControl = el.className.includes('control') ||
+                                el.className.includes('bar') ||
+                                el.className.includes('scrubber') ||
+                                el.className.includes('icon') ||
+                                el.className.includes('jw-'); // JW Player specific
+
+                            if (!isControl) {
+                                el.style.display = 'none';
+                                el.style.pointerEvents = 'none';
+                                console.log('Hidden suspicious floating overlay');
+                            }
+                        }
+                    });
+
+                    // 3. Force Video Controls
+                    const videos = iframeDoc.querySelectorAll('video');
+                    videos.forEach(video => {
+                        if (!video.hasAttribute('controls')) {
+                            video.setAttribute('controls', 'controls');
+                        }
+                        // Ensure video is on top of everything else (except controls)
+                        video.style.zIndex = '1';
+                    });
+
+                    // 4. Remove standard ad elements
+                    removeAdElements(iframeDoc);
+                }
+
+                // Run cleanup repeatedly
+                setInterval(aggressiveCleanup, 500); // Check every 500ms
+                aggressiveCleanup(); // Run immediately
+
+                // Block navigation attempts
+                iframeWin.addEventListener('beforeunload', function (e) {
+                    e.preventDefault();
+                    e.returnValue = '';
+                    return '';
+                });
+
+                // Intercept and block ad-related clicks
+                iframeDoc.addEventListener('click', function (e) {
+                    const target = e.target;
+
+                    // Check if clicking a link
+                    const link = target.closest('a');
+                    if (link) {
+                        const href = link.href.toLowerCase();
+                        if (href.includes('t.me') || href.includes('telegram') || href.includes('javascript:')) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            console.log('Blocked Telegram/Script link');
+                            return false;
+                        }
+                    }
+
+                    if (isAdElement(target)) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Ad click blocked');
+                        return false;
+                    }
+                }, true);
+
+            } catch (error) {
+                console.log('Cannot inject ad blocker due to cross-origin restrictions:', error);
+            }
+        }
+
+        function isAdElement(element) {
+            const className = (element.className || '').toString().toLowerCase();
+            const id = (element.id || '').toLowerCase();
+            const tagName = element.tagName.toLowerCase();
+
+            const adKeywords = ['ad', 'ads', 'advert', 'advertisement', 'sponsor', 'popup', 'modal', 'overlay', 'banner'];
+
+            for (let keyword of adKeywords) {
+                if (className.includes(keyword) || id.includes(keyword)) {
+                    return true;
+                }
+            }
+
+            if (tagName === 'iframe') {
+                const src = element.src || '';
+                if (src.includes('doubleclick') || src.includes('googlesyndication') ||
+                    src.includes('advertising') || src.includes('adserver')) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        function removeAdElement(element) {
+            if (isAdElement(element)) {
+                element.remove();
+                console.log('Ad element removed:', element);
+            }
+        }
+
+        function removeAdElements(doc) {
+            const selectors = [
+                '[class*="ad-"]', '[id*="ad-"]', '[class*="ads-"]', '[id*="ads-"]',
+                '[class*="advertisement"]', '[id*="advertisement"]',
+                '[class*="sponsor"]', '[id*="sponsor"]',
+                '[class*="popup"]', '[id*="popup"]',
+                '[class*="modal"]', '[id*="modal"]',
+                '[class*="overlay"]', '[id*="overlay"]',
+                '.ad', '.ads', '.advert', '.advertisement',
+                'iframe[src*="doubleclick"]', 'iframe[src*="googlesyndication"]',
+                'iframe[src*="advertising"]', 'iframe[src*="adserver"]',
+                '.adsbygoogle',
+                'a[href*="t.me"]', 'a[href*="telegram"]'
+            ];
+
+            selectors.forEach(selector => {
+                try {
+                    const elements = doc.querySelectorAll(selector);
+                    elements.forEach(el => {
+                        // Don't remove video elements
+                        if (el.tagName.toLowerCase() !== 'video') {
+                            el.remove();
+                            console.log('Removed ad element:', selector);
+                        }
+                    });
+                } catch (e) {
+                    // Ignore selector errors
+                }
+            });
+        }
+
         // Block middle-click and right-click new tabs
-        document.addEventListener('auxclick', function(e) {
-            if (e.button === 1 || e.button === 3) { // Middle or right click
+        document.addEventListener('auxclick', function (e) {
+            if (e.button === 1 || e.button === 3) {
                 e.preventDefault();
                 e.stopPropagation();
                 return false;
@@ -143,18 +392,35 @@
         }, true);
 
         // Block right-click context menu
-        document.addEventListener('contextmenu', function(e) {
+        document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
             return false;
         }, false);
+
+        // Block all navigation attempts
+        window.addEventListener('beforeunload', function (e) {
+            const active = document.activeElement;
+            const isAllowedNavigation = active && (
+                active.tagName === 'A' ||
+                active.tagName === 'INPUT' ||
+                active.tagName === 'BUTTON' ||
+                active.tagName === 'FORM'
+            );
+
+            if (!isAllowedNavigation) {
+                e.preventDefault();
+                e.returnValue = 'Are you sure you want to leave?';
+                return e.returnValue;
+            }
+        });
 
         // Auto-load URL from query parameter if present
         const urlParam = getUrlParameter('url');
         if (urlParam) {
             document.getElementById('urlInput').value = urlParam;
-            // Small delay to ensure DOM is ready
             setTimeout(loadUrl, 100);
         }
     </script>
 </body>
+
 </html>
