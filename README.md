@@ -17,12 +17,12 @@ INDIVIDUAL CATEGORY PLAYLISTS:
 
 etc.
 
-Direct playable foraign sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
+Foraign sports channels :- [▶ Click here](https://atanuroy22.github.io/iptv/output/direct.html)
 
 ------------------------------------
 
 
-NO Ads JIO TV - [▶Play](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://thestarkind.mooo.com/10/) <!-- - [▶ Link 2](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://thestarkind.mooo.com/JIO/) --> - [▶Play v2](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://jiotv2s.teachub.workers.dev/) <!-- - [▶ Live Sports](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://crichd2home.teachub.workers.dev/) -->
+NO Ads JIO TV+ - [▶Play](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://thestarkind.mooo.com/10/) <!-- - [▶ Link 2](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://thestarkind.mooo.com/JIO/) --> - [▶Play v2](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://jiotv2s.teachub.workers.dev/) <!-- - [▶ Live Sports](https://raw.githack.com/atanuroy22/iptv/dev/player/blocker.html?url=https://crichd2home.teachub.workers.dev/) -->
 ------------------------------------
 
 FEATURES
