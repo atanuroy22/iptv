@@ -45,7 +45,8 @@ Automatically generates custom IPTV M3U playlists (Zee, Sony, Sports, Star and O
 *Note :- All the Channels are shared by iptv-org or taken from any other provider and are not stored on this repository. We just organize and sort them into categories for better user experience.*
 
 ------------------------------------
-
+Please give a star if you like this project.
+------------------------------------
 <!-- ------------------------------------
 LICENSE
 ------------------------------------

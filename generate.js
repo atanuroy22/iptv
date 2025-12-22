@@ -5,6 +5,8 @@ const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
 const SHUBHAMKUR_BASE_URL = "https://raw.githubusercontent.com/Shubhamkur/Tv/main/";
 const SHUBHAMKUR_FILES = ["waptv"];
+const CRICHD_API_URL = "https://crichd2api.teachub.workers.dev/";
+const CRICHD_PLAYER_BASE = "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=";
 
 // Language Filter Configuration
 // To filter by language, comment out the languages you DON'T want
@@ -361,6 +363,42 @@ async function processShubhamkurFiles(filename, fileData, output, channelTracker
     }
 }
 
+// Function to process Crichd channels
+async function processCrichdChannels(directChannels, channelTracker) {
+    try {
+        console.log(`Fetching Crichd channels from: ${CRICHD_API_URL}`);
+        const { data: responseData } = await axios.get(CRICHD_API_URL);
+        
+        if (!responseData || !responseData.data || !Array.isArray(responseData.data)) {
+            console.log("Invalid Crichd API response format");
+            return;
+        }
+
+        for (const match of responseData.data) {
+            if (!match.channels || !Array.isArray(match.channels)) continue;
+
+            for (const channel of match.channels) {
+                if (!channel.id || !channel.name) continue;
+
+                const name = normalizeChannelName(channel.name);
+                const url = CRICHD_PLAYER_BASE + channel.id;
+
+                if (!channelTracker["direct"].has(name)) {
+                    channelTracker["direct"].add(name);
+                    directChannels.push({
+                        name: channel.name, // Keep original name for display
+                        url: url,
+                        logo: getChannelLogo(channel.name)
+                    });
+                }
+            }
+        }
+        console.log(`Added Crichd channels. Total direct channels: ${directChannels.length}`);
+    } catch (error) {
+        console.log('Warning: Could not fetch Crichd channels:', error.message);
+    }
+}
+
 async function generate() {
     const { data } = await axios.get(PLAYLIST_URL);
     const lines = data.split("\n");
@@ -490,6 +528,10 @@ async function generate() {
         console.log('Warning: Could not fetch Shubhamkur/Tv channels:', error.message);
     }
     // --- End of SHUBHAMKUR processing ---
+
+    // --- Process Crichd channels ---
+    await processCrichdChannels(directChannels, channelTracker);
+    // --- End of Crichd processing ---
 
 
 
