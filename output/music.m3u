@@ -23,7 +23,7 @@ https://cdn-1.pishow.tv/live/1291/master.m3u8
 https://cdn-1.pishow.tv/live/1456/master.m3u8
 #EXTINF:-1 tvg-id="DilSe.in@SD" tvg-logo="https://i.imgur.com/zYbltEk.png" group-title="Music",Dil Se (360p) [Not 24/7]
 https://live.hungama.com/linear/dil-se/playlist.m3u8
-#EXTINF:-1 tvg-id="GeminiMusic.in@SD" tvg-logo="https://i.imgur.com/ShIpLj3.png" group-title="Music",Gemini Music (1080p)
+#EXTINF:-1 tvg-id="GeminiMusic.in@HD" tvg-logo="https://i.imgur.com/ShIpLj3.png" group-title="Music",Gemini Music (1080p)
 http://87.255.35.150:18857
 #EXTINF:-1 tvg-id="Insync.in@SD" tvg-logo="https://i.imgur.com/fAJdazJ.png" group-title="Music",Insync (576p)
 https://yuppftalive.akamaized.net/080823/insync/playlist.m3u8
@@ -83,7 +83,7 @@ http://87.255.35.150:18816
 https://cdn2.in/SteelbirdMusicTVhls/live.m3u8
 #EXTINF:-1 tvg-id="SunLife.in@SD" tvg-logo="https://i.imgur.com/rw9eI7V.png" group-title="Entertainment;Music",Sun Life (576p)
 http://87.255.35.150:18953
-#EXTINF:-1 tvg-id="SunMusic.in@SD" tvg-logo="https://i.imgur.com/j8qxtZZ.png" group-title="Music",Sun Music (1080p)
+#EXTINF:-1 tvg-id="SunMusic.in@HD" tvg-logo="https://i.imgur.com/j8qxtZZ.png" group-title="Music",Sun Music (1080p)
 http://87.255.35.150:18821
 #EXTINF:-1 tvg-id="SuryaMusic.in@SD" tvg-logo="https://i.imgur.com/9vcdaKw.png" group-title="Music",Surya Music (576p)
 http://87.255.35.150:18450

@@ -1,8 +1,8 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-logo="https://i.imgur.com/AkdfpVr.png" group-title="SONY",Sony Entertainment Television (1080p)
 http://87.255.35.150:18546
-#EXTINF:-1 tvg-id="SonyMarathi.in@SD" tvg-logo="https://i.imgur.com/uiDnvqt.png" group-title="SONY",Sony Marathi (1080p)
-#EXTVLCOPT:http-referrer=https://nxtlive.net/
+#EXTINF:-1 tvg-id="SonyMarathi.in@SD" tvg-logo="https://i.imgur.com/uiDnvqt.png" group-title="SONY",Sony Marathi (576p)
+http://87.255.35.150:18409
 #EXTINF:-1 tvg-id="SonyMax2.in@SD" tvg-logo="https://i.imgur.com/gqUYk6C.png" group-title="SONY",Sony Max 2 (576p)
 http://87.255.35.150:18841
 #EXTINF:-1 tvg-id="SonyPal.in@SD" tvg-logo="https://i.imgur.com/GnoJkj4.png" group-title="SONY",Sony Pal (576p)

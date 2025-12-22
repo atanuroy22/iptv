@@ -229,12 +229,14 @@ http://202.164.50.194:8000/play/a037/index.m3u8
 http://202.164.50.194:8000/play/a038/index.m3u8
 #EXTINF:-1 tvg-id="NewsTamil24x7.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/News_Tamil_24x7.png" group-title="News",News Tamil 24x7 (1080p)
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-tamil-24x7/index.m3u8
-#EXTINF:-1 tvg-id="NewsX.in@SD" tvg-logo="https://i.imgur.com/Zpxsc0Q.png" group-title="News",News X (576p)
+#EXTINF:-1 tvg-id="NewsX.in@SD" tvg-logo="https://i.imgur.com/Zpxsc0Q.png" group-title="News",News X (1080p)
 https://newsxott.in/hls/newsx.m3u8
 #EXTINF:-1 tvg-id="NewsXWorld.in@HD" tvg-logo="https://newsx-prod.s3.ap-south-1.amazonaws.com/wp-content/uploads/2025/08/04174249/News-X-no-bg-3-1.png" group-title="News",NewsX World (1080p)
 #EXTVLCOPT:http-referrer=https://newsxott.in/embed.html?channel=newsxworld
 #EXTINF:-1 tvg-id="NKTV24x7.in@SD" tvg-logo="https://i.imgur.com/xMJ2bv9.png" group-title="News",NK TV 24x7 (1080p)
 https://nktv.smartstream.video/smartstream-us/nktvplus/nktvplus/chunks.m3u8
+#EXTINF:-1 tvg-id="NortheastLive.in@HD" tvg-logo="https://i.imgur.com/0Zpwy1Y.png" group-title="News",Northeast Live (720p)
+#EXTVLCOPT:http-referrer=https://server.thelegitpro.in/northeastlive/northeastlive/embed.html
 #EXTINF:-1 tvg-id="NTVTelugu.in@SD" tvg-logo="https://i.imgur.com/WqTIoWS.png" group-title="News",NTV Telugu (576p)
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/ntv_nim_https/110322/ntv/playlist.m3u8
 #EXTINF:-1 tvg-id="PolimerNews.in@SD" tvg-logo="https://i.imgur.com/CxcuvXX.png" group-title="News",Polimer News (576p) [Not 24/7]

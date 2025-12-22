@@ -137,7 +137,7 @@ http://cdn6.live247stream.com/gaundapunjab/tv/playlist.m3u8
 http://akalmultimedia.net:1935/gdnslive/gdns-live/chunklist.m3u8
 #EXTINF:-1 tvg-id="GeminiComedy.in@SD" tvg-logo="https://i.imgur.com/CnDyjkX.png" group-title="Comedy",Gemini Comedy (576p)
 http://87.255.35.150:18858
-#EXTINF:-1 tvg-id="GeminiTV.in@SD" tvg-logo="https://i.imgur.com/yWaacuI.png" group-title="General",Gemini TV (1080p)
+#EXTINF:-1 tvg-id="GeminiTV.in@HD" tvg-logo="https://i.imgur.com/yWaacuI.png" group-title="General",Gemini TV (1080p)
 https://livestream10.sunnxt.com/DolbyVision/GeminiTV_HDR/GeminiTV_HDR_Endpoints/GeminiTV-HDR10-IN-index.m3u8
 #EXTINF:-1 tvg-id="GoodShepherdTV.in@SD" tvg-logo="https://i.imgur.com/1vQH3cM.png" group-title="Religious",Good Shepherd TV (720p)
 http://162.250.201.58:8032/goodshepherd/web/index.fmp4.m3u8
@@ -193,8 +193,6 @@ https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8
 http://103.153.92.157:11037/hls/kbh.m3u8
 #EXTINF:-1 tvg-id="LifeTV.in@SD" tvg-logo="https://i.ibb.co/v1C0bdR/logo-1.png" group-title="Religious",Life TV (480p) [Not 24/7]
 http://59c3ec70cfde0.streamlock.net/channel_6/channel6/playlist.m3u8
-#EXTINF:-1 tvg-id="LokSabhaTV.in@SD" tvg-logo="https://i.imgur.com/QavgfiK.png" group-title="Legislative",Lok Sabha TV (1080p)
-#EXTVLCOPT:http-referrer=https://webcast.gov.in/
 #EXTINF:-1 tvg-id="MadhaTV.in@SD" tvg-logo="https://i.imgur.com/UBBaXzz.png" group-title="Religious",Madha TV (600p)
 https://60e68b19dd194.streamlock.net:55/madhatv/madhatv.stream_HDp/playlist.m3u8
 #EXTINF:-1 tvg-id="MakkalTV.in@SD" tvg-logo="https://i.imgur.com/gmnHoRu.png" group-title="General",Makkal TV (576i)
@@ -273,6 +271,10 @@ https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 https://account30.livebox.co.in/saitvhls/live.m3u8
 #EXTINF:-1 tvg-id="SalvationTV.in@SD" tvg-logo="https://content.jdmagicbox.com/comp/bangalore/l5/080pxx80.xx80.150207120517.e4l5/catalogue/salvation-tv-network-pvt-m-g-road-bangalore-religious-organizations-1sabn2d.jpg" group-title="Religious",Salvation TV (1080p)
 https://ktismaservers.in:3902/live/salvationtvlive.m3u8
+#EXTINF:-1 tvg-id="SansadTV1.in@SD" tvg-logo="https://i.imgur.com/TWSZC2H.png" group-title="Legislative",Sansad TV 1 (1080p) [Not 24/7]
+#EXTVLCOPT:http-referrer=https://webcast.gov.in/
+#EXTINF:-1 tvg-id="SansadTV2.in@HD" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/SANSAD2_HINDI_2000_X_1125_Transpharent.png" group-title="Legislative",Sansad TV 2 (1080p) [Not 24/7]
+https://hls.media.nic.in/hls/live/rstv/rstv.m3u8
 #EXTINF:-1 tvg-id="SanskarTV.in@SD" tvg-logo="https://i.imgur.com/SDkiMvR.png" group-title="Culture;Religious",Sanskar TV (1080p)
 https://d26idhjf0y1p2g.cloudfront.net/out/v1/cd66dd25b9774cb29943bab54bbf3e2f/index.m3u8
 #EXTINF:-1 tvg-id="SanskarUK.in@SD" tvg-logo="https://i.imgur.com/AU5vSPF.png" group-title="Religious",Sanskar UK (1080p)

@@ -23,17 +23,21 @@ http://87.255.35.150:18831
 http://103.140.254.2:3500/live/3381.m3u8
 #EXTINF:-1 tvg-id="CaptainTV.in@SD" tvg-logo="https://i.imgur.com/nLRqcj1.png" group-title="Entertainment",Captain TV (576p) [Not 24/7]
 http://103.199.160.85/Content/captain/Live/Channel(Captain)/index.m3u8
-#EXTINF:-1 tvg-id="Colors.in@SD" tvg-logo="https://i.imgur.com/M8uCJ0D.png" group-title="Entertainment",Colors (1080p)
+#EXTINF:-1 tvg-id="Colors.in@HD" tvg-logo="https://i.imgur.com/M8uCJ0D.png" group-title="Entertainment",Colors (1080p)
 http://87.255.35.150:18890
-#EXTINF:-1 tvg-id="ColorsBangla.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/7b/Colors_Bangla.png" group-title="Entertainment",Colors Bangla (1080p)
+#EXTINF:-1 tvg-id="ColorsBangla.in@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/7b/Colors_Bangla.png" group-title="Entertainment",Colors Bangla (1080p)
 http://87.255.35.150:18236
 #EXTINF:-1 tvg-id="ColorsGujarati.in@SD" tvg-logo="https://i.imgur.com/ZWMyR3j.png" group-title="Entertainment",Colors Gujarati (1080p)
 http://87.255.35.150:18230
-#EXTINF:-1 tvg-id="ColorsKannada.in@SD" tvg-logo="https://i.imgur.com/CFUn43Z.png" group-title="Entertainment",Colors Kannada (1080p)
+#EXTINF:-1 tvg-id="ColorsInfinity.in@HD" tvg-logo="https://i.imgur.com/a5uES9j.png" group-title="Entertainment",Colors Infinity (1080p)
+http://87.255.35.150:18838
+#EXTINF:-1 tvg-id="ColorsKannada.in@HD" tvg-logo="https://i.imgur.com/CFUn43Z.png" group-title="Entertainment",Colors Kannada (1080p)
 http://87.255.35.150:18219
+#EXTINF:-1 tvg-id="ColorsMarathi.in@HD" tvg-logo="https://i.imgur.com/q43P31H.png" group-title="Entertainment",Colors Marathi (1080p)
+http://87.255.35.150:18233
 #EXTINF:-1 tvg-id="ColorsSuper.in@SD" tvg-logo="" group-title="Entertainment",Colors Super (576p)
 http://87.255.35.150:18445
-#EXTINF:-1 tvg-id="ColorsTamil.in@SD" tvg-logo="https://i.imgur.com/zZXCFqF.png" group-title="Entertainment",Colors Tamil (1080p)
+#EXTINF:-1 tvg-id="ColorsTamil.in@HD" tvg-logo="https://i.imgur.com/zZXCFqF.png" group-title="Entertainment",Colors Tamil (1080p)
 http://87.255.35.150:18225
 #EXTINF:-1 tvg-id="Dabangg.in@SD" tvg-logo="https://i.imgur.com/6ChpxLy.png" group-title="Entertainment",Dabangg (720p)
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01448-samsungin-dabanggin-samsungin/playlist.m3u8
@@ -133,8 +137,8 @@ https://cdn-3.pishow.tv/live/230/master.m3u8
 http://202.164.50.194:8000/play/a02q/index.m3u8
 #EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-logo="https://i.imgur.com/AkdfpVr.png" group-title="Entertainment",Sony Entertainment Television (1080p)
 http://87.255.35.150:18546
-#EXTINF:-1 tvg-id="SonyMarathi.in@SD" tvg-logo="https://i.imgur.com/uiDnvqt.png" group-title="Entertainment",Sony Marathi (1080p)
-#EXTVLCOPT:http-referrer=https://nxtlive.net/
+#EXTINF:-1 tvg-id="SonyMarathi.in@SD" tvg-logo="https://i.imgur.com/uiDnvqt.png" group-title="Entertainment",Sony Marathi (576p)
+http://87.255.35.150:18409
 #EXTINF:-1 tvg-id="SonyPal.in@SD" tvg-logo="https://i.imgur.com/GnoJkj4.png" group-title="Entertainment",Sony Pal (576p)
 http://87.255.35.150:18887
 #EXTINF:-1 tvg-id="SooriyanTV.ca@SD" tvg-logo="https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg" group-title="Entertainment",Sooriyan TV (1080p)
@@ -163,25 +167,25 @@ https://stream.galaxyott.live/live/subintv/index.m3u8
 http://103.182.170.32:8888/play/a01v
 #EXTINF:-1 tvg-id="SunLife.in@SD" tvg-logo="https://i.imgur.com/rw9eI7V.png" group-title="Entertainment;Music",Sun Life (576p)
 http://87.255.35.150:18953
-#EXTINF:-1 tvg-id="SunMarathi.in@SD" tvg-logo="https://i.imgur.com/uUJz1tC.png" group-title="Entertainment",Sun Marathi (1080p)
+#EXTINF:-1 tvg-id="SunMarathi.in@HD" tvg-logo="https://i.imgur.com/uUJz1tC.png" group-title="Entertainment",Sun Marathi (1080p)
 https://live.dinesh29.com.np/stream/jiotvplus/sunmarathi/master.m3u8
-#EXTINF:-1 tvg-id="SunMusic.in@SD" tvg-logo="https://i.imgur.com/j8qxtZZ.png" group-title="Music",Sun Music (1080p)
+#EXTINF:-1 tvg-id="SunMusic.in@HD" tvg-logo="https://i.imgur.com/j8qxtZZ.png" group-title="Music",Sun Music (1080p)
 http://87.255.35.150:18821
 #EXTINF:-1 tvg-id="SunNeo.in@SD" tvg-logo="https://sund-images.sunnxt.com/194389/1920x1080_SunNeoHD_194389_5edd34c1-4574-452e-a613-2f4140cd636f.jpg" group-title="Entertainment",Sun Neo (576p)
 http://163.61.227.29:8000/play/a04t/index.m3u8
 #EXTINF:-1 tvg-id="SunNews.in@SD" tvg-logo="https://i.imgur.com/mQWpBdv.png" group-title="News",Sun News (576p)
 http://87.255.35.150:18852
-#EXTINF:-1 tvg-id="SunTV.in@SD" tvg-logo="https://i.imgur.com/Z0HJi56.png" group-title="Entertainment",Sun TV (1080p)
+#EXTINF:-1 tvg-id="SunTV.in@HD" tvg-logo="https://i.imgur.com/Z0HJi56.png" group-title="Entertainment",Sun TV (1080p)
 https://livestream10.sunnxt.com/DolbyVision/SunTV_HDR/SunTV_HDR_Endpoints/SunTV-HDR10-IN-index.m3u8
 #EXTINF:-1 tvg-id="SuriyaTV.in@SD" tvg-logo="https://play-lh.googleusercontent.com/izaQp_W1pZqa_fKqG0fGcWv9ls74BpIE-W1yOZBiw-gG0bSrcBNIvw3EY9SR4RyQYAlT=w480-h960-rw" group-title="Entertainment",Suriya TV (1080p)
 http://103.140.254.2:3500/live/3394.m3u8
-#EXTINF:-1 tvg-id="SuryaTV.in@SD" tvg-logo="https://i.imgur.com/NqXpFXU.png" group-title="Entertainment",Surya TV (1080p)
+#EXTINF:-1 tvg-id="SuryaTV.in@HD" tvg-logo="https://i.imgur.com/NqXpFXU.png" group-title="Entertainment",Surya TV (1080p)
 https://livestream10.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8
 #EXTINF:-1 tvg-id="Swantham.in@SD" tvg-logo="https://i.imgur.com/ye6v4GP.png" group-title="Entertainment",Swantham (720p)
 http://131.153.22.8:1935/SWANTHAM/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ThanthiOne.in@SD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAaQKdmdiu7iORzWeeIaeMTSFVXazVHFXMAp2RoevnRYJsy4O8_cGmQl6wHcUTFu1P7MA&usqp=CAU" group-title="Entertainment",Thanthi One (1080p)
 https://249553662f3e.ap-south-1.playback.live-video.net/api/video/v1/ap-south-1.588204940461.channel.Sx8XPoik8VX2.m3u8
-#EXTINF:-1 tvg-id="UdayaTV.in@SD" tvg-logo="https://i.imgur.com/BQfcmJy.png" group-title="Entertainment",Udaya TV (1080p)
+#EXTINF:-1 tvg-id="UdayaTV.in@HD" tvg-logo="https://i.imgur.com/BQfcmJy.png" group-title="Entertainment",Udaya TV (1080p)
 http://87.255.35.150:18289
 #EXTINF:-1 tvg-id="VanithaTV.in@SD" tvg-logo="https://i.imgur.com/KuLZt2a.png" group-title="Entertainment",Vanitha TV (720p)
 https://cdn-1.pishow.tv/live/393/master.m3u8
@@ -193,21 +197,21 @@ https://rtmp.smartstream.video/velichamtv/velichamtv/playlist.m3u8
 https://cdn-3.pishow.tv/live/1271/master.m3u8
 #EXTINF:-1 tvg-id="VissaTV.in@SD" tvg-logo="https://i.imgur.com/aPirjJ2.png" group-title="Entertainment",Vissa TV (1080p) [Not 24/7]
 https://livestream.rajtvnet.in/hlslive/Admin/px08241089/live/Vissa_Tv/master_1.m3u8
-#EXTINF:-1 tvg-id="ZeeBangla.in@SD" tvg-logo="https://i.imgur.com/zTGTWa8.png" group-title="Entertainment",Zee Bangla (1080p)
+#EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-logo="https://i.imgur.com/zTGTWa8.png" group-title="Entertainment",Zee Bangla (1080p)
 http://87.255.35.150:18238
-#EXTINF:-1 tvg-id="ZeeKannada.in@SD" tvg-logo="https://i.imgur.com/aHLRen7.png" group-title="Entertainment",Zee Kannada (1080p)
+#EXTINF:-1 tvg-id="ZeeKannada.in@HD" tvg-logo="https://i.imgur.com/aHLRen7.png" group-title="Entertainment",Zee Kannada (1080p)
 http://87.255.35.150:18945
-#EXTINF:-1 tvg-id="ZeeKeralam.in@SD" tvg-logo="https://i.imgur.com/NileYZz.png" group-title="Entertainment",Zee Keralam (1080p)
+#EXTINF:-1 tvg-id="ZeeKeralam.in@HD" tvg-logo="https://i.imgur.com/NileYZz.png" group-title="Entertainment",Zee Keralam (1080p)
 http://87.255.35.150:18502
-#EXTINF:-1 tvg-id="ZeeMarathi.in@SD" tvg-logo="https://i.imgur.com/vv9ysD3.png" group-title="Entertainment",Zee Marathi (1080p)
+#EXTINF:-1 tvg-id="ZeeMarathi.in@HD" tvg-logo="https://i.imgur.com/vv9ysD3.png" group-title="Entertainment",Zee Marathi (1080p)
 http://87.255.35.150:18234
 #EXTINF:-1 tvg-id="ZeePower.in@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/aa/Z_power_general.jpg" group-title="Entertainment",Zee Power (576p)
 http://87.255.35.150:18226
 #EXTINF:-1 tvg-id="ZeePunjabi.in@SD" tvg-logo="https://i.imgur.com/boDyrrZ.png" group-title="Entertainment",Zee Punjabi (576p)
 http://87.255.35.150:18931
-#EXTINF:-1 tvg-id="ZeeTamil.in@SD" tvg-logo="https://i.imgur.com/KwTVqSe.png" group-title="Entertainment",Zee Tamil (1080p)
+#EXTINF:-1 tvg-id="ZeeTamil.in@HD" tvg-logo="https://i.imgur.com/KwTVqSe.png" group-title="Entertainment",Zee Tamil (1080p)
 http://87.255.35.150:18553
-#EXTINF:-1 tvg-id="ZeeTelugu.in@SD" tvg-logo="https://i.imgur.com/YSc3G9d.png" group-title="Entertainment",Zee Telugu (1080p)
+#EXTINF:-1 tvg-id="ZeeTelugu.in@HD" tvg-logo="https://i.imgur.com/YSc3G9d.png" group-title="Entertainment",Zee Telugu (1080p)
 http://87.255.35.150:18222
-#EXTINF:-1 tvg-id="ZeeTV.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Zee_TV_Logo_2025.svg/512px-Zee_TV_Logo_2025.svg.png" group-title="Entertainment",Zee TV (1080p)
+#EXTINF:-1 tvg-id="ZeeTV.in@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Zee_TV_Logo_2025.svg/512px-Zee_TV_Logo_2025.svg.png" group-title="Entertainment",Zee TV (1080p)
 http://87.255.35.150:18849
