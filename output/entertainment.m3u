@@ -31,12 +31,8 @@ http://87.255.35.150:18236
 http://87.255.35.150:18230
 #EXTINF:-1 tvg-id="ColorsInfinity.in@HD" tvg-logo="https://i.imgur.com/a5uES9j.png" group-title="Entertainment",Colors Infinity (1080p)
 http://87.255.35.150:18838
-#EXTINF:-1 tvg-id="ColorsKannada.in@HD" tvg-logo="https://i.imgur.com/CFUn43Z.png" group-title="Entertainment",Colors Kannada (1080p)
-http://87.255.35.150:18219
 #EXTINF:-1 tvg-id="ColorsMarathi.in@HD" tvg-logo="https://i.imgur.com/q43P31H.png" group-title="Entertainment",Colors Marathi (1080p)
 http://87.255.35.150:18233
-#EXTINF:-1 tvg-id="ColorsSuper.in@SD" tvg-logo="" group-title="Entertainment",Colors Super (576p)
-http://87.255.35.150:18445
 #EXTINF:-1 tvg-id="ColorsTamil.in@HD" tvg-logo="https://i.imgur.com/zZXCFqF.png" group-title="Entertainment",Colors Tamil (1080p)
 http://87.255.35.150:18225
 #EXTINF:-1 tvg-id="Dabangg.in@SD" tvg-logo="https://i.imgur.com/6ChpxLy.png" group-title="Entertainment",Dabangg (720p)
@@ -153,8 +149,6 @@ http://87.255.35.150:18815
 http://87.255.35.150:18846
 #EXTINF:-1 tvg-id="StarPravah.in@HD" tvg-logo="https://i.imgur.com/ZT0u7AK.png" group-title="Entertainment",Star Pravah HD (1080p)
 http://87.255.35.150:18447
-#EXTINF:-1 tvg-id="StarSuvarna.in@HD" tvg-logo="https://i.imgur.com/U9FA4Gs.png" group-title="Entertainment",Star Suvarna HD (1080p)
-http://87.255.35.150:18545
 #EXTINF:-1 tvg-id="StarUtsav.in@SD" tvg-logo="https://i.imgur.com/H1jhHDl.png" group-title="Entertainment",Star Utsav (576p)
 http://163.61.227.29:8000/play/a04p/index.m3u8
 #EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="Entertainment",Star Vijay HD (1080p)
@@ -185,8 +179,6 @@ https://livestream10.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/Su
 http://131.153.22.8:1935/SWANTHAM/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ThanthiOne.in@SD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAaQKdmdiu7iORzWeeIaeMTSFVXazVHFXMAp2RoevnRYJsy4O8_cGmQl6wHcUTFu1P7MA&usqp=CAU" group-title="Entertainment",Thanthi One (1080p)
 https://249553662f3e.ap-south-1.playback.live-video.net/api/video/v1/ap-south-1.588204940461.channel.Sx8XPoik8VX2.m3u8
-#EXTINF:-1 tvg-id="UdayaTV.in@HD" tvg-logo="https://i.imgur.com/BQfcmJy.png" group-title="Entertainment",Udaya TV (1080p)
-http://87.255.35.150:18289
 #EXTINF:-1 tvg-id="VanithaTV.in@SD" tvg-logo="https://i.imgur.com/KuLZt2a.png" group-title="Entertainment",Vanitha TV (720p)
 https://cdn-1.pishow.tv/live/393/master.m3u8
 #EXTINF:-1 tvg-id="VasanthTV.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bf/Vasanth_TV_logo.png" group-title="Entertainment",Vasanth TV (720p)
@@ -199,19 +191,13 @@ https://cdn-3.pishow.tv/live/1271/master.m3u8
 https://livestream.rajtvnet.in/hlslive/Admin/px08241089/live/Vissa_Tv/master_1.m3u8
 #EXTINF:-1 tvg-id="ZeeBangla.in@HD" tvg-logo="https://i.imgur.com/zTGTWa8.png" group-title="Entertainment",Zee Bangla (1080p)
 http://87.255.35.150:18238
-#EXTINF:-1 tvg-id="ZeeKannada.in@HD" tvg-logo="https://i.imgur.com/aHLRen7.png" group-title="Entertainment",Zee Kannada (1080p)
-http://87.255.35.150:18945
 #EXTINF:-1 tvg-id="ZeeKeralam.in@HD" tvg-logo="https://i.imgur.com/NileYZz.png" group-title="Entertainment",Zee Keralam (1080p)
 http://87.255.35.150:18502
 #EXTINF:-1 tvg-id="ZeeMarathi.in@HD" tvg-logo="https://i.imgur.com/vv9ysD3.png" group-title="Entertainment",Zee Marathi (1080p)
 http://87.255.35.150:18234
-#EXTINF:-1 tvg-id="ZeePower.in@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/aa/Z_power_general.jpg" group-title="Entertainment",Zee Power (576p)
-http://87.255.35.150:18226
 #EXTINF:-1 tvg-id="ZeePunjabi.in@SD" tvg-logo="https://i.imgur.com/boDyrrZ.png" group-title="Entertainment",Zee Punjabi (576p)
 http://87.255.35.150:18931
 #EXTINF:-1 tvg-id="ZeeTamil.in@HD" tvg-logo="https://i.imgur.com/KwTVqSe.png" group-title="Entertainment",Zee Tamil (1080p)
 http://87.255.35.150:18553
-#EXTINF:-1 tvg-id="ZeeTelugu.in@HD" tvg-logo="https://i.imgur.com/YSc3G9d.png" group-title="Entertainment",Zee Telugu (1080p)
-http://87.255.35.150:18222
 #EXTINF:-1 tvg-id="ZeeTV.in@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Zee_TV_Logo_2025.svg/512px-Zee_TV_Logo_2025.svg.png" group-title="Entertainment",Zee TV (1080p)
 http://87.255.35.150:18849
