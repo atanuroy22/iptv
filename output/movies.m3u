@@ -3,10 +3,6 @@
 https://edge3-moblive.yuppcdn.net/drm/smil:nflixdrm.smil/index.m3u8
 #EXTINF:-1 tvg-id="Andpictures.in@HD" tvg-logo="https://i.imgur.com/VYh3V8E.png" group-title="Movies",&pictures (1080p)
 http://66.102.120.18:8000/play/a01t/index.m3u8
-#EXTINF:-1 tvg-id="Andpictures.in@SD" tvg-logo="https://i.imgur.com/VYh3V8E.png" group-title="Movies",&pictures (576p)
-http://87.255.35.150:18510
-#EXTINF:-1 tvg-id="AndpriveHD.in@SD" tvg-logo="https://i.imgur.com/qyyUlg3.png" group-title="Movies",&prive HD (1080p)
-http://87.255.35.150:18494
 #EXTINF:-1 tvg-id="AndTV.in@SD" tvg-logo="https://i.imgur.com/32W50Y6.png" group-title="Movies",&TV (1080p)
 https://amg01117-amg01117c1-amgplt0165.playout.now3.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AndxplorHD.in@SD" tvg-logo="https://i.imgur.com/9mK6dgM.png" group-title="Movies",&xplor HD (1080p)
@@ -17,8 +13,6 @@ https://d2lk5u59tns74c.cloudfront.net/out/v1/4fe6ab07a13543d6bdb2ec63b3e2df44/in
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/db8d4eca72d64748a00d0631debf542d/index.m3u8
 #EXTINF:-1 tvg-id="AnandhamTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/shows/2025-11-25/2511253358000.jpg" group-title="Movies",Anandham TV (1080p)
 https://stream.galaxyott.live/live/anandhamtv/index.m3u8
-#EXTINF:-1 tvg-id="AsianetMovies.in@SD" tvg-logo="https://i.imgur.com/cps67hs.png" group-title="Movies",Asianet Movies (576p)
-http://87.255.35.150:18813
 #EXTINF:-1 tvg-id="B4UBhojpuri.in@SD" tvg-logo="https://i.imgur.com/NwOQUDp.png" group-title="Movies",B4U Bhojpuri (1080p)
 https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
 #EXTINF:-1 tvg-id="B4UKadak.in@SD" tvg-logo="https://i.imgur.com/CKLn0ft.png" group-title="Movies",B4U Kadak (1080p) [Not 24/7]
@@ -32,7 +26,7 @@ http://163.61.227.29:8000/play/a05s/index.m3u8
 #EXTINF:-1 tvg-id="BhojpuriCinema.in@SD" tvg-logo="https://i.imgur.com/ABxIO7r.jpg" group-title="Movies",Bhojpuri Cinema (720p)
 https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8
 #EXTINF:-1 tvg-id="ColorsCineplex.in@HD" tvg-logo="https://i.imgur.com/Hvvjfk5.png" group-title="Movies",Colors Cineplex (1080p)
-http://87.255.35.150:18296
+http://66.102.120.18:8000/play/a06z/index.m3u8
 #EXTINF:-1 tvg-id="ColorsCineplexBollywood.in@SD" tvg-logo="https://i.imgur.com/EbHSQAJ.png" group-title="Movies",Colors Cineplex Bollywood (576p)
 http://103.182.170.32:8888/play/a01o
 #EXTINF:-1 tvg-id="Dhinchaak.in@SD" tvg-logo="https://i.imgur.com/oqqChlH.png" group-title="Movies",Dhinchaak (576p) [Not 24/7]
@@ -47,71 +41,41 @@ https://a.jsrdn.com/broadcast/7ef91d3d7a/+0000/c.m3u8
 https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/index.m3u8
 #EXTINF:-1 tvg-id="JMovie.in@SD" tvg-logo="https://i.imgur.com/cpaudl9.png" group-title="Movies",J Movie (576p)
 http://103.140.254.2:3500/live/417.m3u8
-#EXTINF:-1 tvg-id="JalshaMovies.in@HD" tvg-logo="https://i.imgur.com/25eWjX2.png" group-title="Movies",Jalsha Movies HD (1080p)
-https://live.dinesh29.com.np/stream/jiotvplus/jalshamovieshd/master.m3u8
 #EXTINF:-1 tvg-id="KairaliWe.in@SD" tvg-logo="https://i.imgur.com/zXpROBj.png" group-title="Movies",Kairali We (576p)
 https://cdn-3.pishow.tv/live/1530/master.m3u8
-#EXTINF:-1 tvg-id="KTV.in@HD" tvg-logo="https://i.imgur.com/G4fFx53.png" group-title="Movies",KTV (1080p)
-http://87.255.35.150:18805
 #EXTINF:-1 tvg-id="MahaMovie.in@SD" tvg-logo="https://i.imgur.com/hpShFDL.png" group-title="Movies",Maha Movie (576p) [Not 24/7]
 http://14.199.164.20:4001/play/a0q7/index.m3u8
 #EXTINF:-1 tvg-id="ManoranjanGrand.in@SD" tvg-logo="https://i.imgur.com/qfMEz78.png" group-title="Movies",Manoranjan Grand (720p)
 https://cdn-1.pishow.tv/live/1011/master.m3u8
 #EXTINF:-1 tvg-id="ManoranjanMovies.in@SD" tvg-logo="https://i.imgur.com/oTBVML2.png" group-title="Movies",Manoranjan Movies (720p)
 https://cdn-2.pishow.tv/live/228/master.m3u8
-#EXTINF:-1 tvg-id="MaxMiddleEast.in@SD" tvg-logo="https://i.imgur.com/AFXPVYD.png" group-title="Movies",Max Middle East (1080p)
-http://87.255.35.150:18851
-#EXTINF:-1 tvg-id="MNX.in@HD" tvg-logo="https://i.imgur.com/Fo7n4xX.png" group-title="Movies",MNX (1080p)
-http://87.255.35.150:18936
+#EXTINF:-1 tvg-id="MaxMiddleEast.in@SD" tvg-logo="https://i.imgur.com/AFXPVYD.png" http-referrer="https://nxtlive.net/" group-title="Movies",Max Middle East (1080p)
+#EXTVLCOPT:http-referrer=https://nxtlive.net/
 #EXTINF:-1 tvg-id="MoviePlus.in@SD" tvg-logo="https://i.imgur.com/THJEAqJ.png" group-title="Movies",MoviePlus (576p)
 http://202.164.50.194:8000/play/a03n/index.m3u8
-#EXTINF:-1 tvg-id="MoviesNow.in@HD" tvg-logo="https://i.imgur.com/lShH4Z8.png" group-title="Movies",Movies Now (1080p)
-http://87.255.35.150:18935
 #EXTINF:-1 tvg-id="OscarMoviesBhojpuri.in@SD" tvg-logo="" group-title="Movies",Oscar Movies Bhojpuri (720p)
 https://cdn-4.pishow.tv/live/233/master.m3u8
 #EXTINF:-1 tvg-id="Pitaara.in@SD" tvg-logo="https://i.imgur.com/E8MPUM7.png" group-title="Movies",Pitaara (720p)
 https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8
-#EXTINF:-1 tvg-id="PravahPicture.in@HD" tvg-logo="https://i.imgur.com/T76S4x3.png" group-title="Movies",Pravah Picture HD (1080p)
-https://live.dinesh29.com.np/stream/jiotvplus/starpravahpicturehd/master.m3u8
 #EXTINF:-1 tvg-id="RajDigitalPlus.in@SD" tvg-logo="https://i.imgur.com/m7lm99w.png" group-title="Movies",Raj Digital Plus (1080p)
 http://livestream.rajtv.tv/cluster1/Content/Channel/RajDigitalPlus/HLS/master.m3u8
+#EXTINF:-1 tvg-id="RomedyNow.in@SD" tvg-logo="https://i.imgur.com/PPaGJpN.png" group-title="Movies",Romedy Now (576p)
+http://66.102.120.18:8000/play/a01j/index.m3u8
 #EXTINF:-1 tvg-id="ShemarooJosh.in@SD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSutWZzQySLPpaZvaSHq1SnpV0dXNSFZimyag&s" group-title="Movies",Shemaroo Josh (720p)
 https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="SonyMax2.in@SD" tvg-logo="https://i.imgur.com/gqUYk6C.png" group-title="Movies",Sony Max 2 (576p)
-http://87.255.35.150:18841
+http://66.102.120.18:8000/play/a00h/index.m3u8
 #EXTINF:-1 tvg-id="SonyPix.in@SD" tvg-logo="https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png" group-title="Movies",Sony Pix (1080p)
-http://87.255.35.150:18495
-#EXTINF:-1 tvg-id="StarGold2.in@SD" tvg-logo="https://i.imgur.com/G0ZfzZr.png" group-title="Movies",Star Gold 2 (576p)
-http://87.255.35.150:18807
-#EXTINF:-1 tvg-id="StarGold.in@HD" tvg-logo="https://i.imgur.com/xC460sj.png" group-title="Movies",Star Gold HD (1080p)
-http://87.255.35.150:18859
-#EXTINF:-1 tvg-id="StarGoldSelect.in@HD" tvg-logo="https://i.imgur.com/U7eiuqv.png" group-title="Movies",Star Gold Select HD (1080p)
-http://87.255.35.150:18429
-#EXTINF:-1 tvg-id="StarMaaMovies.in@SD" tvg-logo="https://i.imgur.com/1rRI95N.png" group-title="Movies",Star Maa Movies (576p)
-http://87.255.35.150:18817
-#EXTINF:-1 tvg-id="StarMovies.in@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/STAR_Movies_logo.svg/512px-STAR_Movies_logo.svg.png" group-title="Movies",Star Movies HD (1080p)
-http://87.255.35.150:18301
-#EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-logo="https://i.imgur.com/bnzDNCF.png" group-title="Movies",Star Movies Select HD (1080p)
-http://87.255.35.150:18548
+http://66.102.120.18:8000/play/a01z/index.m3u8
 #EXTINF:-1 tvg-id="StudioOnePlus.in@SD" tvg-logo="https://i.imgur.com/yOPB7JB.png" group-title="Movies",Studio One + (720p)
 https://cdn-1.pishow.tv/live/276/master.m3u8
 #EXTINF:-1 tvg-id="StudioOneYuva.in@SD" tvg-logo="https://i.imgur.com/lzsAPHZ.png" group-title="Movies",Studio One Yuva (576p)
 http://202.164.50.194:8000/play/a030/index.m3u8
 #EXTINF:-1 tvg-id="SuriyanTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/shows/2025-11-06/2511063356010.jpg" group-title="Movies",Suriyan TV (1080p)
 https://stream.galaxyott.live/live/suriyantv/index.m3u8
-#EXTINF:-1 tvg-id="SuryaMovies.in@SD" tvg-logo="https://i.imgur.com/FkSCjIo.png" group-title="Movies",Surya Movies (576p)
-http://87.255.35.150:18932
-#EXTINF:-1 tvg-id="VijaySuper.in@HD" tvg-logo="https://i.imgur.com/3MWm9nD.png" group-title="Movies",Vijay Super HD (1080p)
-http://87.255.35.150:18954
 #EXTINF:-1 tvg-id="ZBCinema.in@HD" tvg-logo="https://i.imgur.com/kUg6WSk.jpeg" group-title="Classic;Movies",ZB Cinema (720p)
 https://server.zillarbarta.com/ZBCINEMA/index.m3u8
-#EXTINF:-1 tvg-id="ZeeAction.in@SD" tvg-logo="https://i.imgur.com/MIzc3I1.png" group-title="Movies",Zee Action (576p)
-http://87.255.35.150:18507
 #EXTINF:-1 tvg-id="ZeeBollymovies.in@SD" tvg-logo="https://framerusercontent.com/images/mqfJ18x4jYe0GbZUbxSHsbnWU.png?scale-down-to=512" group-title="Movies",Zee Bollymovies (1080p) [Geo-blocked]
 https://amg17931-zee-amg17931c8-samsung-th-6526.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeBollymovies.in@Australia" tvg-logo="https://framerusercontent.com/images/mqfJ18x4jYe0GbZUbxSHsbnWU.png?scale-down-to=512" group-title="Movies",Zee Bollymovies Australia (1080p) [Geo-blocked]
-https://amg17931-zee-amg17931c8-samsung-au-8871.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="ZeeBollywood.in@SD" tvg-logo="https://i.imgur.com/0qQrV84.png" group-title="Movies",Zee Bollywood (576p)
-http://87.255.35.150:18861
-#EXTINF:-1 tvg-id="ZeeThirai.in@HD" tvg-logo="https://i.imgur.com/vmHfPD8.png" group-title="Movies",Zee Thirai (1080p)
-http://87.255.35.150:18597
+https://amg17931-zee-amg17931c8-samsung-au-8871.playouts.now.amagi.tv/playlist.m3u8

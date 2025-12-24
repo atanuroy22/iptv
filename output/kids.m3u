@@ -9,15 +9,11 @@ http://66.102.120.18:8000/play/a078/index.m3u8
 http://66.102.120.18:8000/play/a004/index.m3u8
 #EXTINF:-1 tvg-id="Gubbare.in@SD" tvg-logo="https://i.imgur.com/Bvbf9o7.png" group-title="Kids",Gubbare (1080p)
 https://epiconvh.akamaized.net/live/gubbare/master.m3u8
-#EXTINF:-1 tvg-id="KochuTV.in@SD" tvg-logo="https://i.imgur.com/OSKUQHW.png" group-title="Kids",Kochu TV (576p)
-http://87.255.35.150:18212
-#EXTINF:-1 tvg-id="KushiTV.in@SD" tvg-logo="https://i.imgur.com/1h1LzPF.png" group-title="Kids",Kushi TV (576p)
-https://live.dinesh29.com.np/stream/jiotvplus/kushitv/master.m3u8
+#EXTINF:-1 tvg-id="NickJr.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/512px-Nick_Jr._logo_2023_(outline).svg.png" group-title="Kids",Nick Jr. (576p)
+http://66.102.120.18:8000/play/a00m/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Nick.svg/512px-Nick.svg.png" group-title="Kids",Nickelodeon (576p)
-http://87.255.35.150:18249
+http://66.102.120.18:8000/play/a00w/index.m3u8
 #EXTINF:-1 tvg-id="Sonic.in@SD" tvg-logo="https://i.imgur.com/vSJzF6o.png" group-title="Kids",Nickelodeon Sonic Hindi (1080p)
 https://prod-sports-north-gm.jiocinema.com/bpk-tv/Sonic_Nickelodeon_voot_MOB/Fallback/index.m3u8
-#EXTINF:-1 tvg-id="SonyYay.in@SD" tvg-logo="https://i.imgur.com/MhlO1dB.png" group-title="Animation;Kids",Sony Yay! (576p)
-http://87.255.35.150:18285
 #EXTINF:-1 tvg-id="ZBCartoon.in@HD" tvg-logo="https://i.imgur.com/BbFNpMr.jpeg" group-title="Kids",ZB Cartoon (1080p)
 https://server.zillarbarta.com/zbcatun/video.m3u8

@@ -75,26 +75,14 @@ https://cdn-3.pishow.tv/live/1229/master.m3u8
 https://epiconvh.akamaized.net/live/showbox/master.m3u8
 #EXTINF:-1 tvg-id="SongdewTV.in@SD" tvg-logo="https://i.imgur.com/aFlKqH4.png" group-title="Music",Songdew TV (396p)
 https://yupplivefragcp3.yuppcdn.net/260423/smil:songdew.smil/index.m3u8
-#EXTINF:-1 tvg-id="StarMaaMusic.in@SD" tvg-logo="https://i.imgur.com/vxP9L8p.png" group-title="Music",Star Maa Music (576p)
-http://87.255.35.150:18816
 #EXTINF:-1 tvg-id="SteelbirdMusic.in@SD" tvg-logo="https://i.imgur.com/Egijzx3.png" group-title="Music",Steelbird Music (720p) [Not 24/7]
 https://cdn2.in/SteelbirdMusicTVhls/live.m3u8
-#EXTINF:-1 tvg-id="SunLife.in@SD" tvg-logo="https://i.imgur.com/rw9eI7V.png" group-title="Entertainment;Music",Sun Life (576p)
-http://87.255.35.150:18953
-#EXTINF:-1 tvg-id="SunMusic.in@HD" tvg-logo="https://i.imgur.com/j8qxtZZ.png" group-title="Music",Sun Music (1080p)
-http://87.255.35.150:18821
-#EXTINF:-1 tvg-id="SuryaMusic.in@SD" tvg-logo="https://i.imgur.com/9vcdaKw.png" group-title="Music",Surya Music (576p)
-http://87.255.35.150:18450
 #EXTINF:-1 tvg-id="TarangMusic.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Tarang_Miusic.tif/lossless-page1-512px-Tarang_Miusic.tif.png" group-title="Music",Tarang Music (720p)
 https://livetv.tarangplus.in/tarangmusic-origin/live/playlist.m3u8
-#EXTINF:-1 tvg-id="Tunes6.in@SD" tvg-logo="https://i.imgur.com/VUzMQ9S.png" group-title="Music",Tunes 6 (576p)
-https://live.dinesh29.com.np/stream/jiotvplus/tunes6/master.m3u8
 #EXTINF:-1 tvg-id="UltimateTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/shows/2025-11-10/2511103396001.jpg" group-title="Music",Ultimate TV (1080p)
 https://stream.galaxyott.live/live/utv/index.m3u8
 #EXTINF:-1 tvg-id="VaanavilTV.in@SD" tvg-logo="https://i.imgur.com/etr1k08.png" group-title="Music",Vaanavil TV (720p)
 https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="VijayTakkar.in@SD" tvg-logo="https://i.imgur.com/bqqcEu7.png" group-title="Music",Vijay Takkar (576p)
-http://87.255.35.150:18950
 #EXTINF:-1 tvg-id="ZBMusic.in@HD" tvg-logo="https://i.imgur.com/k1nb8u1.jpeg" group-title="Music",ZB Music (720p)
 https://server.zillarbarta.com/zbmusic/index.m3u8
 #EXTINF:-1 tvg-id="Zing.in@SD" tvg-logo="https://i.imgur.com/zStK8g2.png" group-title="Music",Zing! (576p)

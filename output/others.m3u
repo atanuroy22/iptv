@@ -35,14 +35,10 @@ https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 http://202.164.50.194:8000/play/a00n/index.m3u8
 #EXTINF:-1 tvg-id="ChannelWIN.in@SD" tvg-logo="https://i.imgur.com/yrBBCO4.png" group-title="Religious",Channel WIN (720p)
 https://cdn-4.pishow.tv/live/229/master.m3u8
-#EXTINF:-1 tvg-id="ChuttiTV.in@SD" tvg-logo="https://i.imgur.com/FSM47sR.png" group-title="Animation",Chutti TV (576p)
-http://87.255.35.150:18855
 #EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://i.imgur.com/cORao6C.png" group-title="Business",CNBC Bajar (504p) [Geo-blocked]
 https://cnbcbazar-lh.akamaihd.net/i/cnbcbajar_1@178933/index_5_av-p.m3u8
 #EXTINF:-1 tvg-id="CNBCTV18.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d5/CNBC_TV18.png" group-title="Business",CNBC TV18 (1080p)
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/cnbc-tv18/master.m3u8
-#EXTINF:-1 tvg-id="ColorsRishteyAsia.in@SD" tvg-logo="https://i.imgur.com/YKWfMZo.png" group-title="General",Colors Rishtey Asia (576p)
-http://87.255.35.150:18886
 #EXTINF:-1 tvg-id="CVRHealth.in@SD" tvg-logo="https://i.imgur.com/bCyW32I.png" group-title="Lifestyle",CVR Health (576p)
 https://cdn-6.pishow.tv/live/395/master.m3u8
 #EXTINF:-1 tvg-id="CVROMSpiritual.in@SD" tvg-logo="https://i.imgur.com/77RIaqe.png" group-title="Religious",CVR OM Spiritual (576p)
@@ -135,8 +131,6 @@ http://stream-live.in:11037/hls/foxtv.m3u8
 http://cdn6.live247stream.com/gaundapunjab/tv/playlist.m3u8
 #EXTINF:-1 tvg-id="GDNSLudhiana.in@SD" tvg-logo="https://i.imgur.com/JRjcYGl.jpg" group-title="Religious",GDNS Ludhiana (1080p) [Not 24/7]
 http://akalmultimedia.net:1935/gdnslive/gdns-live/chunklist.m3u8
-#EXTINF:-1 tvg-id="GeminiComedy.in@SD" tvg-logo="https://i.imgur.com/CnDyjkX.png" group-title="Comedy",Gemini Comedy (576p)
-http://87.255.35.150:18858
 #EXTINF:-1 tvg-id="GeminiTV.in@HD" tvg-logo="https://i.imgur.com/yWaacuI.png" group-title="General",Gemini TV (1080p)
 https://livestream10.sunnxt.com/DolbyVision/GeminiTV_HDR/GeminiTV_HDR_Endpoints/GeminiTV-HDR10-IN-index.m3u8
 #EXTINF:-1 tvg-id="GoodShepherdTV.in@SD" tvg-logo="https://i.imgur.com/1vQH3cM.png" group-title="Religious",Good Shepherd TV (720p)
@@ -179,8 +173,6 @@ https://yuppftalive.akamaized.net/080823/jantv/playlist.m3u8
 https://cdn-2.pishow.tv/live/989/master.m3u8
 #EXTINF:-1 tvg-id="Jonack.in@SD" tvg-logo="https://i.imgur.com/X2MU1lm.png" group-title="General",Jonack TV (360p) [Not 24/7]
 https://cdn.smartstream.video/smartstream-us/jonakk/jonakk/playlist.m3u8
-#EXTINF:-1 tvg-id="JothiTV.in@SD" tvg-logo="https://i.imgur.com/FyESV9X.png" group-title="Religious",Jothi TV (576p)
-http://87.255.35.150:18254
 #EXTINF:-1 tvg-id="KalaignarTV.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/3/3a/Kalaignar_logo.jpg" group-title="General",Kalaignar TV (480p)
 https://edge2-moblive.yuppcdn.net/drm1/smil:kalaignartvdrm.smil/chunklist_b996000.m3u8
 #EXTINF:-1 tvg-id="KappaTV.in@SD" tvg-logo="https://i.imgur.com/e9qTjgB.png" group-title="Lifestyle",Kappa TV (576p)
@@ -219,6 +211,8 @@ http://202.164.50.194:8000/play/a00c/index.m3u8
 https://namdhari.tv/live/sbs1.m3u8
 #EXTINF:-1 tvg-id="NandighoshaTV.in@SD" tvg-logo="https://i.imgur.com/cxneGRS.png" group-title="General",Nandighosha TV (720p)
 https://www.nandighoshatvlive.com/hls/stream/index.m3u8
+#EXTINF:-1 tvg-id="NationalGeographicWild.in@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/512px-National_Geographic_Wild_logo.svg.png" group-title="Documentary",National Geographic Wild HD (1080p)
+http://66.102.120.18:8000/play/a01d/index.m3u8
 #EXTINF:-1 tvg-id="NDTVGoodTimes.in@SD" tvg-logo="https://i.imgur.com/7cruYvo.png" group-title="Lifestyle",NDTV Good Times (1080p)
 https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="NDTVProfit.in@SD" tvg-logo="https://i.imgur.com/WK4tZ6p.png" group-title="Business",NDTV Profit (480p) [Not 24/7]
@@ -269,7 +263,7 @@ https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 https://account30.livebox.co.in/saitvhls/live.m3u8
 #EXTINF:-1 tvg-id="SalvationTV.in@SD" tvg-logo="https://content.jdmagicbox.com/comp/bangalore/l5/080pxx80.xx80.150207120517.e4l5/catalogue/salvation-tv-network-pvt-m-g-road-bangalore-religious-organizations-1sabn2d.jpg" group-title="Religious",Salvation TV (1080p)
 https://ktismaservers.in:3902/live/salvationtvlive.m3u8
-#EXTINF:-1 tvg-id="SansadTV1.in@SD" tvg-logo="https://i.imgur.com/TWSZC2H.png" group-title="Legislative",Sansad TV 1 (1080p) [Not 24/7]
+#EXTINF:-1 tvg-id="SansadTV1.in@SD" tvg-logo="https://i.imgur.com/TWSZC2H.png" http-referrer="https://webcast.gov.in/" group-title="Legislative",Sansad TV 1 (1080p) [Not 24/7]
 #EXTVLCOPT:http-referrer=https://webcast.gov.in/
 #EXTINF:-1 tvg-id="SansadTV2.in@HD" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/SANSAD2_HINDI_2000_X_1125_Transpharent.png" group-title="Legislative",Sansad TV 2 (1080p) [Not 24/7]
 https://hls.media.nic.in/hls/live/rstv/rstv.m3u8
@@ -303,10 +297,6 @@ https://6284rn2xr7xv-hls-live.wmncdn.net/shubhsandeshtv1/live123.stream/index.m3
 https://segment.yuppcdn.net/240122/siripoli/playlist.m3u8
 #EXTINF:-1 tvg-id="SubhartiTV.in@SD" tvg-logo="https://i.imgur.com/9hdNFtt.png" group-title="Undefined",Subharti TV (576p)
 http://202.164.50.194:8000/play/a02y/index.m3u8
-#EXTINF:-1 tvg-id="SuryaComedy.in@SD" tvg-logo="https://i.imgur.com/dNI0Vm5.png" group-title="Comedy",Surya Comedy (576p)
-http://87.255.35.150:18253
-#EXTINF:-1 tvg-id="SVBC2.in@SD" tvg-logo="https://i.imgur.com/NtmRt1A.png" group-title="Religious",SVBC 2 (576p)
-http://87.255.35.150:18956
 #EXTINF:-1 tvg-id="SVBC3.in@SD" tvg-logo="https://i.imgur.com/Ae2PMTu.png" group-title="Religious",SVBC 3 (720p)
 https://player.mslivestream.net/svbc/2e628d7e1b65d31254fd7705ff7ee64d.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="SVBC4.in@SD" tvg-logo="https://i.imgur.com/vCFdZny.png" group-title="Religious",SVBC 4 (1080p)
