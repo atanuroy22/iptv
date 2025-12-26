@@ -1,10 +1,12 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Aastha.in@SD" tvg-logo="https://i.imgur.com/IqgrV92.png" group-title="Religious",Aastha (480p)
-https://aasthaott.akamaized.net/110923/smil:aasthatv.smil/chunklist_b1328000.m3u8
+#EXTINF:-1 tvg-id="Aastha.in@SD" tvg-logo="https://i.imgur.com/IqgrV92.png" group-title="Religious",Aastha (720p)
+https://aasthaott.akamaized.net/110923/smil:aasthatv.smil/index.m3u8
 #EXTINF:-1 tvg-id="AasthaBhajan.in@SD" tvg-logo="https://i.imgur.com/LyDxqnF.png" group-title="Religious",Aastha Bhajan (480p)
 https://aasthaott.akamaized.net/110923/smil:bhajan.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AasthaKannada.in@SD" tvg-logo="https://i.imgur.com/wP9q0KZ.png" group-title="Religious",Aastha Kannada (480p)
 https://aasthaott.akamaized.net/110923/smil:aasthakannada.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="AasthaPrime1.in@SD" tvg-logo="https://i.imgur.com/LyWSMJS.png" group-title="Religious",Aastha Prime 1 (720p)
+https://aasthaott.akamaized.net/110923/smil:aasthaprime1.smil/master.m3u8
 #EXTINF:-1 tvg-id="AasthaTamil.in@SD" tvg-logo="https://i.imgur.com/YQK9ewf.png" group-title="Religious",Aastha Tamil (480p)
 https://aasthaott.akamaized.net/110923/smil:aasthatamil.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AasthaTelugu.in@SD" tvg-logo="https://i.imgur.com/P0IIqZn.png" group-title="Religious",Aastha Telugu (480p)
@@ -17,8 +19,6 @@ https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/p
 https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="AradanaTV.in@SD" tvg-logo="https://i.imgur.com/w48yzLu.png" group-title="Religious",Aradana TV (576p)
 https://cdn-1.pishow.tv/live/961/master.m3u8
-#EXTINF:-1 tvg-id="AshrafiChannel.in@SD" tvg-logo="https://i.imgur.com/IXpFcJA.png" group-title="Religious",Ashrafi Channel (484p) [Not 24/7]
-https://ashrafichannel.livebox.co.in/ashrafivhannelhls/live.m3u8
 #EXTINF:-1 tvg-id="AwakeningTV.in@SD" tvg-logo="https://i.imgur.com/p26iWOi.png" group-title="Religious",Awakening TV (576p)
 http://202.164.50.194:8000/play/a052/index.m3u8
 #EXTINF:-1 tvg-id="AyushTV.in@SD" tvg-logo="https://i.imgur.com/PWzvp0B.png" group-title="Lifestyle",Ayush TV (360p) [Not 24/7]
@@ -27,18 +27,18 @@ https://95eryw39dwn4-hls-live.wmncdn.net/Ayushu/271ddf829afeece44d8732757fba1a66
 https://cdn-1.pishow.tv/live/397/master.m3u8
 #EXTINF:-1 tvg-id="AaseervathamTV.in@SD" tvg-logo="https://i.imgur.com/GlfrYs7.png" group-title="Religious",Blessing TV Tamil (576p)
 http://202.164.50.194:8000/play/a02p/index.m3u8
-#EXTINF:-1 tvg-id="CalvaryTV.in@SD" tvg-logo="https://i.imgur.com/BvQzwSp.png" group-title="Undefined",Calvary TV (720p)
-https://player.mslivestream.net/mslive/71e7f7cc7dc7c51206b7b3bbb51e3052.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="CCV.in@SD" tvg-logo="https://i.imgur.com/4ss0KfA.png" group-title="General",CCV (480p)
 https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 #EXTINF:-1 tvg-id="ChannelDivya.in@SD" tvg-logo="https://i.imgur.com/RZVmCxf.png" group-title="Religious",Channel Divya (576p)
 http://202.164.50.194:8000/play/a00n/index.m3u8
 #EXTINF:-1 tvg-id="ChannelWIN.in@SD" tvg-logo="https://i.imgur.com/yrBBCO4.png" group-title="Religious",Channel WIN (720p)
 https://cdn-4.pishow.tv/live/229/master.m3u8
-#EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://i.imgur.com/cORao6C.png" group-title="Business",CNBC Bajar (504p) [Geo-blocked]
-https://cnbcbazar-lh.akamaihd.net/i/cnbcbajar_1@178933/index_5_av-p.m3u8
+#EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://i.imgur.com/cORao6C.png" group-title="Business",CNBC Bajar (1080p)
+https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-id="CNBCTV18.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d5/CNBC_TV18.png" group-title="Business",CNBC TV18 (1080p)
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/cnbc-tv18/master.m3u8
+#EXTINF:-1 tvg-id="ColorsRishteyAsia.in@SD" tvg-logo="https://i.imgur.com/YKWfMZo.png" group-title="General",Colors Rishtey Asia (576p)
+http://163.61.227.29:8000/play/a04k/index.m3u8
 #EXTINF:-1 tvg-id="CVRHealth.in@SD" tvg-logo="https://i.imgur.com/bCyW32I.png" group-title="Lifestyle",CVR Health (576p)
 https://cdn-6.pishow.tv/live/395/master.m3u8
 #EXTINF:-1 tvg-id="CVROMSpiritual.in@SD" tvg-logo="https://i.imgur.com/77RIaqe.png" group-title="Religious",CVR OM Spiritual (576p)
@@ -61,8 +61,8 @@ https://cdn-4.pishow.tv/live/35/master.m3u8
 https://d3eyhgoylams0m.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/ed7bd2c7-8d10-4051-b397-2f6b90f99acb/3829f99b-4951-4a9d-98c1-dbc3acfe5193/2.m3u8
 #EXTINF:-1 tvg-id="DDChhattisgarh.in@SD" tvg-logo="https://i.imgur.com/zBg6Iuv.png" group-title="General",DD Chhattisgarh (720p)
 https://cdn-1.pishow.tv/live/15/master.m3u8
-#EXTINF:-1 tvg-id="DDGirnar.in@SD" tvg-logo="https://i.imgur.com/4RT559e.png" group-title="General",DD Girnar
-https://d3eyhgoylams0m.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/ed7bd2c7-8d10-4051-b397-2f6b90f99acb/4a7a0c8a-c58d-43d6-baff-13492d67bf3e/2.m3u8
+#EXTINF:-1 tvg-id="DDGirnar.in@SD" tvg-logo="https://i.imgur.com/4RT559e.png" group-title="General",DD Girnar (504p)
+https://d2lk5u59tns74c.cloudfront.net/out/v1/558fdb9aebb54bb5bbbf0ced03686148/index.m3u8
 #EXTINF:-1 tvg-id="DDGoa.in@SD" tvg-logo="https://yt3.googleusercontent.com/TMl5_x4s5QmOQczAtF9Yc4S-l2APomVtQy_diHuDvxLaF70UwFzXgfwTNw8j1adNPKBItex1o5k=s900-c-k-c0x00ffffff-no-rj" group-title="General",DD Goa (504p)
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e5b9db1cc184406bb97159da2f120f91/index.m3u8
 #EXTINF:-1 tvg-id="DDHaryana.in@SD" tvg-logo="https://i.imgur.com/1T92u0F.jpeg" group-title="General",DD Haryana
@@ -83,8 +83,8 @@ https://d2lk5u59tns74c.cloudfront.net/out/v1/8b75afc6576f450e8f554b6c877681d2/in
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/4f81bc8d13dd49b484da35988abb8729/index.m3u8
 #EXTINF:-1 tvg-id="DDNagaland.in@SD" tvg-logo="https://i.imgur.com/HUL4aF6.png" group-title="General",DD Nagaland (504p)
 https://d2lk5u59tns74c.cloudfront.net/out/v1/29c92e0bef954a6d9b0908d1be29c1f0/index.m3u8
-#EXTINF:-1 tvg-id="DDOdia.in@SD" tvg-logo="https://i.imgur.com/Rw61ile.png" group-title="General",DD Odia
-https://d3eyhgoylams0m.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/ed7bd2c7-8d10-4051-b397-2f6b90f99acb/245d9a9e-4820-43b1-af33-4a3017d09f52/2.m3u8
+#EXTINF:-1 tvg-id="DDOdia.in@SD" tvg-logo="https://i.imgur.com/Rw61ile.png" group-title="General",DD Odia (504p)
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ef4ea632b77a480ebd77106968aa99a9/index.m3u8
 #EXTINF:-1 tvg-id="DDPunjabi.in@SD" tvg-logo="https://i.imgur.com/WVtl6n2.png" group-title="Culture",DD Punjabi
 https://d3eyhgoylams0m.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/ed7bd2c7-8d10-4051-b397-2f6b90f99acb/20c8ad14-a158-4a42-8889-e032d070856e/2.m3u8
 #EXTINF:-1 tvg-id="DDRajasthan.in@SD" tvg-logo="https://i.imgur.com/t8KCi4L.png" group-title="General",DD Rajasthan (720p)
@@ -123,30 +123,18 @@ https://d2cj1h11htct8o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a
 https://ott.livelegitpro.in/fatehtv/fatehtv/index.m3u8
 #EXTINF:-1 tvg-id="FoodFood.in@SD" tvg-logo="https://i.imgur.com/J930pA1.png" group-title="Cooking;Lifestyle",Food Food (576p)
 http://202.164.50.194:8000/play/a025/index.m3u8
-#EXTINF:-1 tvg-id="FoxTV.in@SD" tvg-logo="https://i.imgur.com/cvpDeYH.png" group-title="General",Fox TV (720p) [Not 24/7]
-http://stream-live.in:11037/hls/foxtv.m3u8
 #EXTINF:-1 tvg-id="GaundaPunjabTV.ca@SD" tvg-logo="https://i.imgur.com/ArRZRM3.png" group-title="General",Gaunda Punjab TV
 http://cdn6.live247stream.com/gaundapunjab/tv/playlist.m3u8
-#EXTINF:-1 tvg-id="GDNSLudhiana.in@SD" tvg-logo="https://i.imgur.com/JRjcYGl.jpg" group-title="Religious",GDNS Ludhiana (1080p) [Not 24/7]
-http://akalmultimedia.net:1935/gdnslive/gdns-live/chunklist.m3u8
 #EXTINF:-1 tvg-id="GeminiTV.in@HD" tvg-logo="https://i.imgur.com/yWaacuI.png" group-title="General",Gemini TV (1080p)
 https://livestream10.sunnxt.com/DolbyVision/GeminiTV_HDR/GeminiTV_HDR_Endpoints/GeminiTV-HDR10-IN-index.m3u8
-#EXTINF:-1 tvg-id="GoodShepherdTV.in@SD" tvg-logo="https://i.imgur.com/1vQH3cM.png" group-title="Religious",Good Shepherd TV (720p)
-http://162.250.201.58:8032/goodshepherd/web/index.fmp4.m3u8
 #EXTINF:-1 tvg-id="GoodNewsTV.in@SD" tvg-logo="https://i.imgur.com/ZrvoGqS.png" group-title="Religious",GoodNews TV (720p)
 https://bpgdlwwar3ze-hls-live.wmncdn.net/goodnews/live.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="GospelTVIndia.in@SD" tvg-logo="https://i.ibb.co/xhbZvzt/cropped-final-logo-300x127.png" group-title="Religious",Gospel TV India (720p)
-http://live.adostream.com:1935/gospeltv/gospeltv/playlist.m3u8
-#EXTINF:-1 tvg-id="GosreeVision.in@SD" tvg-logo="https://i.imgur.com/pdBo8Xb.png" group-title="General",Gosree Vision (576p) [Not 24/7]
-https://5a1178b42cc03.streamlock.net/8068/8068/playlist.m3u8
-#EXTINF:-1 tvg-id="GraceFamilyTV.in@SD" tvg-logo="https://i.imgur.com/srOoujm.png" group-title="Religious",Grace Family TV (720p)
-https://gracefamilytv.livebox.co.in/gracefamilytvhls/live.m3u8
 #EXTINF:-1 tvg-id="HareKrsnaTV.in@SD" tvg-logo="https://i.imgur.com/sZgON5J.png" group-title="Religious",Hare Krsna TV (576p)
 http://202.164.50.194:8000/play/a03q/index.m3u8
 #EXTINF:-1 tvg-id="HarvestTV.in@SD" tvg-logo="https://i.imgur.com/Aoq6mpT.png" group-title="Religious",Harvest TV (720p)
 https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvesttvlive1/bbb19eae240ec100af921d511efc86a0.sdp/index.m3u8
 #EXTINF:-1 tvg-id="HarvestTVKeralam.in@SD" tvg-logo="https://i.imgur.com/1DyPuIt.png" group-title="Religious",Harvest TV Keralam (720p)
-https://live.wmncdn.net/harvestenglish/d1796a22d24e8696c7d5d0b5c349fdd2.sdp/index.m3u8
+https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestenglish/d1796a22d24e8696c7d5d0b5c349fdd2.sdp/index.m3u8
 #EXTINF:-1 tvg-id="HarvestUSA.in@SD" tvg-logo="https://www.lyngsat.com/logo/tv/hh/harvest_tv_in_usa.png" group-title="Religious",Harvest USA (576p)
 https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestusa/d57ffba6564caea2fee3f4085f19a098.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="HebronTV.in@SD" tvg-logo="https://i0.wp.com/hebrontv.in/wp-content/uploads/2023/11/hebron-.png?w=512" group-title="Religious",Hebron TV (432p)
@@ -157,8 +145,6 @@ https://cdn-1.pishow.tv/live/959/master.m3u8
 https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="HopeChannelIndia.in@SD" tvg-logo="https://i.imgur.com/wPzPUrK.png" group-title="Religious",Hope Channel India (576p)
 http://202.164.50.194:8000/play/a02o/index.m3u8
-#EXTINF:-1 tvg-id="HulchulTVCanada.ca@SD" tvg-logo="https://i.imgur.com/LvkdhRw.png" group-title="Culture",Hulchul TV (720p) [Not 24/7]
-http://cdn12.henico.net:8080/live/jbani/index.m3u8
 #EXTINF:-1 tvg-id="HyderTV.ca@SD" tvg-logo="https://i.imgur.com/reHjjRZ.png" group-title="Culture",Hyder TV
 https://cdn.live247stream.com/hyder/tv/playlist.m3u8
 #EXTINF:-1 tvg-id="IPlusTV.in@SD" tvg-logo="https://i.imgur.com/rnfEh0c.png" group-title="Religious",iPlus TV (1080p) [Not 24/7]
@@ -166,7 +152,9 @@ https://live.we2live.in/iplustv/iplustv/playlist.m3u8
 #EXTINF:-1 tvg-id="IshwarBhaktiTV.in@SD" tvg-logo="https://i.imgur.com/tsPPU1Y.png" group-title="Religious",Ishwar Bhakti TV (720p)
 https://6n3yow8pl9ok-hls-live.5centscdn.com/ishwartvlive/tv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="JanTV.in@SD" tvg-logo="https://i.imgur.com/RfJBuf5.png" group-title="General",Jan TV (576p)
-https://yuppftalive.akamaized.net/080823/jantv/playlist.m3u8
+https://cdn-6.pishow.tv/live/10004/master.m3u8
+#EXTINF:-1 tvg-id="JeevanTV.in@SD" tvg-logo="https://i.imgur.com/zKDrzDq.png" group-title="General",Jeevan TV (576p)
+https://cdn-3.pishow.tv/live/1467/master.m3u8
 #EXTINF:-1 tvg-id="JinvaniChannel.in@SD" tvg-logo="https://i.imgur.com/lztyGVi.png" group-title="Religious",Jinvani Channel (720p)
 https://cdn-2.pishow.tv/live/989/master.m3u8
 #EXTINF:-1 tvg-id="Jonack.in@SD" tvg-logo="https://i.imgur.com/X2MU1lm.png" group-title="General",Jonack TV (360p) [Not 24/7]
@@ -177,10 +165,6 @@ https://edge2-moblive.yuppcdn.net/drm1/smil:kalaignartvdrm.smil/chunklist_b99600
 https://cdn-3.pishow.tv/live/1123/master.m3u8
 #EXTINF:-1 tvg-id="KaumudyTV.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/74/Kaumudy_TV_Logo.jpg" group-title="General",Kaumudy TV (720p)
 https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="Keralabhumi.in@SD" tvg-logo="https://i.imgur.com/05BslNS.png" group-title="General",Keralabhumi (576p)
-http://103.153.92.157:11037/hls/kbh.m3u8
-#EXTINF:-1 tvg-id="LifeTV.in@SD" tvg-logo="https://i.ibb.co/v1C0bdR/logo-1.png" group-title="Religious",Life TV (480p) [Not 24/7]
-http://59c3ec70cfde0.streamlock.net/channel_6/channel6/playlist.m3u8
 #EXTINF:-1 tvg-id="MadhaTV.in@SD" tvg-logo="https://i.imgur.com/UBBaXzz.png" group-title="Religious",Madha TV (600p)
 https://60e68b19dd194.streamlock.net:55/madhatv/madhatv.stream_HDp/playlist.m3u8
 #EXTINF:-1 tvg-id="MakkalTV.in@SD" tvg-logo="https://i.imgur.com/gmnHoRu.png" group-title="General",Makkal TV (576i)
@@ -241,8 +225,8 @@ https://m6gdavepdn93-hls-live.5centscdn.com/pravasi/d0dbe915091d400bd8ee7f27f079
 https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/a682c050-1974-4e9b-8935-e5508d1ce94d/3.m3u8
 #EXTINF:-1 tvg-id="PunjabiZindabadTV.in@SD" tvg-logo="https://i.imgur.com/H46oTS2.png" group-title="Undefined",Punjabi Zindabad (360p) [Not 24/7]
 http://stream.pztv.online/pztv/playlist.m3u8
-#EXTINF:-1 tvg-id="PuthuyugamTV.in@SD" tvg-logo="https://i.imgur.com/HjwKtSJ.png" group-title="Undefined",Puthuyugam TV (576p) [Not 24/7]
-http://103.140.254.2:3500/live/824.m3u8
+#EXTINF:-1 tvg-id="PuthuyugamTV.in@SD" tvg-logo="https://i.imgur.com/HjwKtSJ.png" group-title="Undefined",Puthuyugam TV (576p)
+http://202.164.50.194:8000/play/a01m/index.m3u8
 #EXTINF:-1 tvg-id="RPlus.in@SD" tvg-logo="https://i.imgur.com/XUnWcZF.png" group-title="Undefined",R Plus (768p)
 https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8
 #EXTINF:-1 tvg-id="RPlusGold.in@SD" tvg-logo="https://i.imgur.com/dpI7XPC.png" group-title="Undefined",R Plus Gold (720p)
@@ -288,7 +272,7 @@ https://d2c4zqo2rb5uf1.cloudfront.net/master.m3u8
 #EXTINF:-1 tvg-id="ShekinahTV.in@SD" tvg-logo="https://i.imgur.com/6hTshsG.png" group-title="Undefined",Shekinah TV (1080p)
 https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sdp/chunks.m3u8
 #EXTINF:-1 tvg-id="ShemarooMarathiBana.in@SD" tvg-logo="https://i.imgur.com/U63jUUq.png" group-title="Undefined",Shemaroo Marathi Bana (720p)
-https://livetv-channels.b-cdn.net/8042/chunklist0.m3u8
+https://airtelapp.shemaroo.com/marathibana/smil:marathibanaadp.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="ShubhTV.in@SD" tvg-logo="https://i.imgur.com/QHv8CL2.png" group-title="Undefined",Shubh TV (1080p)
 https://d2g1vdc6ozl2o8.cloudfront.net/out/v1/0a0dc7d7911b4fddbb4dfc963fdd4b9e/index.m3u8
 #EXTINF:-1 tvg-id="Shubhsandesh.in@SD" tvg-logo="https://i.imgur.com/XsuFVlf.png" group-title="Religious",Shubhsandesh (720p) [Not 24/7]
@@ -303,6 +287,8 @@ https://player.mslivestream.net/svbc/2e628d7e1b65d31254fd7705ff7ee64d.sdp/playli
 https://player.mslivestream.net/mslive/13a2927187b9700ae7ea82d7841d5b68.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="SVBC.in@SD" tvg-logo="https://i.imgur.com/LSMvXAl.png" group-title="Religious",SVBC Sri Venkateswara Bhakti Channel (1080p)
 https://player.mslivestream.net/telugu/5d076e5c3d34cb8bb08e54a4bb7e223e.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="TaazaTV.in@SD" tvg-logo="https://i.imgur.com/4nTpQLC.png" group-title="Undefined",Taaza TV (576p)
+http://202.164.50.194:8000/play/a03o/index.m3u8
 #EXTINF:-1 tvg-id="TamilVisionTV.ca@SD" tvg-logo="https://i.imgur.com/DodsLuW.png" group-title="Undefined",Tamil Vision TV (1080p)
 http://live.tamilvision.tv:8081/TVI/HD/playlist.m3u8
 #EXTINF:-1 tvg-id="TamilanTV.in@SD" tvg-logo="https://i.imgur.com/xdnNAJn.png" group-title="Undefined",Tamilan TV (1080p)
@@ -315,6 +301,8 @@ https://the-pet-collective-international-in.samsung.wurl.tv/playlist.m3u8
 https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8
 #EXTINF:-1 tvg-id="TotalBhakti.in@SD" tvg-logo="https://i.imgur.com/LPwRdmF.png" group-title="Religious",Total Bhakti (1080p)
 https://d34z4embz0hjf6.cloudfront.net/out/v1/d55b3323a9f142638f897378f0b526fe/index.m3u8
+#EXTINF:-1 tvg-id="TotalTVHaryana.in@SD" tvg-logo="https://i.imgur.com/AHB00KG.png" group-title="Undefined",Total TV Haryana (576p)
+https://cdn-2.pishow.tv/live/1522/master.m3u8
 #EXTINF:-1 tvg-id="Travelxp.in@SD" tvg-logo="https://i.postimg.cc/1tMhRdd1/travelxp.png" group-title="Travel",Travelxp (720p)
 https://travelxp-travelxp-1-au.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="TribeTV.in@SD" tvg-logo="https://i.imgur.com/zG2P1WZ.png" group-title="General",Tribe TV (720p)

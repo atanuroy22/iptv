@@ -15,18 +15,12 @@ http://103.140.254.2:3500/live/3395.m3u8
 https://cdnb4u.wiseplayout.com/B4U_Music/master.m3u8
 #EXTINF:-1 tvg-id="BalleBalle.in@SD" tvg-logo="https://i.imgur.com/oxkkWH5.png" group-title="Music",Balle Balle (720p)
 https://mcncdndigital.com/balleballetv/index.m3u8
-#EXTINF:-1 tvg-id="BoogleBollywood.in@SD" tvg-logo="https://i.imgur.com/gaKzWdo.png" group-title="Music",Boogle Bollywood (1080p) [Not 24/7]
-http://live.agmediachandigarh.com/booglebollywood/774e3ea9f3fa9bcdac47f445b83b6653.sdp/index.m3u8
 #EXTINF:-1 tvg-id="Dhamaal.in@SD" tvg-logo="https://i.imgur.com/J6D56EF.png" group-title="Music",Dhamaal (576p)
 https://cdn-1.pishow.tv/live/1291/master.m3u8
 #EXTINF:-1 tvg-id="DhoomMusic.in@SD" tvg-logo="https://i.imgur.com/ai9gpjy.png" group-title="Music",Dhoom Music (720p)
 https://cdn-1.pishow.tv/live/1456/master.m3u8
-#EXTINF:-1 tvg-id="Insync.in@SD" tvg-logo="https://i.imgur.com/fAJdazJ.png" group-title="Music",Insync (576p)
-https://yuppftalive.akamaized.net/080823/insync/playlist.m3u8
 #EXTINF:-1 tvg-id="IsaiAruvi.in@SD" tvg-logo="https://i.imgur.com/yO18FLo.png" group-title="Music",Isai Aruvi (576p)
 https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
-#EXTINF:-1 tvg-id="KalikaTV.in@SD" tvg-logo="https://i.imgur.com/XWXFoJA.png" group-title="Music",Kalika TV (576p) [Not 24/7]
-http://185.105.4.244:1935/livesp/kalika/playlist.m3u8
 #EXTINF:-1 tvg-id="Mastiii.in@SD" tvg-logo="https://i.imgur.com/lxgXHx4.png" group-title="Music",Mastiii (1080p)
 https://sablive-ddpb.akamaized.net/mastii/playlist.m3u8
 #EXTINF:-1 tvg-id="Mh1Music.in@SD" tvg-logo="https://i.imgur.com/Pi6ldXm.png" group-title="Music",Mh 1 Music (720p)
@@ -77,7 +71,5 @@ https://stream.galaxyott.live/live/utv/index.m3u8
 https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ZBMusic.in@HD" tvg-logo="https://i.imgur.com/k1nb8u1.jpeg" group-title="Music",ZB Music (720p)
 https://server.zillarbarta.com/zbmusic/index.m3u8
-#EXTINF:-1 tvg-id="Zing.in@SD" tvg-logo="https://i.imgur.com/zStK8g2.png" group-title="Music",Zing! (576p)
-http://183.89.246.119:8881/play/a09a/index.m3u8
 #EXTINF:-1 tvg-id="Zoom.in@Global" tvg-logo="https://i.imgur.com/kcDJ4g0.png" group-title="Music",Zoom Global (720p)
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/zoom-tv/master.m3u8

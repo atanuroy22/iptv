@@ -15,6 +15,8 @@ http://66.102.120.18:8000/play/a020/index.m3u8
 http://66.102.120.18:8000/play/a009/index.m3u8
 #EXTINF:-1 tvg-id="StarSports1Hindi.in@HD" tvg-logo="https://i.imgur.com/RGeLxjv.png" group-title="STAR",Star Sports 1 Hindi HD (1080p)
 http://66.102.120.18:8000/play/a072/index.m3u8
+#EXTINF:-1 tvg-id="StarSports2.in@HD" tvg-logo="https://i.imgur.com/5En7pOI.png" group-title="STAR",Star Sports 2 HD (1080p)
+http://163.61.227.29:8000/play/a069/index.m3u8
 #EXTINF:-1 tvg-id="StarSports2Hindi.in@SD" tvg-logo="https://i.imgur.com/kHerF19.png" group-title="STAR",Star Sports 2 Hindi (1080p)
 http://66.102.120.18:8000/play/a00v/index.m3u8
 #EXTINF:-1 tvg-id="StarSportsSelect1.in@HD" tvg-logo="https://i.imgur.com/Mh9tKPx.png" group-title="STAR",Star Sports Select 1 HD (1080p)

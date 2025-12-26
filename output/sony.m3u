@@ -5,6 +5,8 @@ http://66.102.120.18:8000/play/a01r/index.m3u8
 http://66.102.120.18:8000/play/a005/index.m3u8
 #EXTINF:-1 tvg-id="SonyMax2.in@SD" tvg-logo="https://i.imgur.com/gqUYk6C.png" group-title="SONY",Sony Max 2 (576p)
 http://66.102.120.18:8000/play/a00h/index.m3u8
+#EXTINF:-1 tvg-id="SonyPal.in@SD" tvg-logo="https://i.imgur.com/GnoJkj4.png" group-title="SONY",Sony Pal (576p)
+http://163.61.227.29:8000/play/a04d/index.m3u8
 #EXTINF:-1 tvg-id="SonyPix.in@SD" tvg-logo="https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png" group-title="SONY",Sony Pix (1080p)
 http://66.102.120.18:8000/play/a01z/index.m3u8
 #EXTINF:-1 tvg-id="SonySportsTen1.in@SD" tvg-logo="https://i.imgur.com/hWo7Ba4.png" group-title="SONY",Sony Sports Ten 1 (1080p)

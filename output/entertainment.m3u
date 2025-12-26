@@ -17,22 +17,16 @@ http://217.20.112.199/asianet/index.m3u8
 http://163.61.227.29:8000/play/a04f/index.m3u8
 #EXTINF:-1 tvg-id="BrioTV.in@SD" tvg-logo="https://www.lyngsat.com/logo/tv/bb/brio-tv-in.png" group-title="Entertainment",Brio TV (576p)
 http://103.140.254.2:3500/live/3381.m3u8
-#EXTINF:-1 tvg-id="CaptainTV.in@SD" tvg-logo="https://i.imgur.com/nLRqcj1.png" group-title="Entertainment",Captain TV (576p) [Not 24/7]
-http://103.199.160.85/Content/captain/Live/Channel(Captain)/index.m3u8
 #EXTINF:-1 tvg-id="Colors.in@HD" tvg-logo="https://i.imgur.com/M8uCJ0D.png" group-title="Entertainment",Colors (1080p)
 http://66.102.120.18:8000/play/a00a/index.m3u8
 #EXTINF:-1 tvg-id="ColorsInfinity.in@HD" tvg-logo="https://i.imgur.com/a5uES9j.png" group-title="Entertainment",Colors Infinity (1080p)
 http://66.102.120.18:8000/play/a014/index.m3u8
-#EXTINF:-1 tvg-id="Dabangg.in@SD" tvg-logo="https://i.imgur.com/6ChpxLy.png" group-title="Entertainment",Dabangg (720p)
-https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01448-samsungin-dabanggin-samsungin/playlist.m3u8
-#EXTINF:-1 tvg-id="DarshanaTV.in@SD" tvg-logo="" group-title="Entertainment",Darshana TV (720p)
-https://cdn-2.pishow.tv/live/1453/master.m3u8
 #EXTINF:-1 tvg-id="DDMalayalam.in@SD" tvg-logo="https://i.imgur.com/ywm2dTl.png" group-title="Entertainment",DD Malayalam
 https://d3eyhgoylams0m.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/ed7bd2c7-8d10-4051-b397-2f6b90f99acb/562ee8f9-9950-48a0-ba1d-effa00cf0478/2.m3u8
 #EXTINF:-1 tvg-id="DDNational.in@HD" tvg-logo="https://i.imgur.com/MohlE5B.png" group-title="Entertainment",DD National HD (1080p)
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8
 #EXTINF:-1 tvg-id="DesiChannel.in@SD" tvg-logo="" group-title="Entertainment",Desi Channel (720p)
-https://live.wmncdn.net/desichannel/7e2dd0aed46b70a5c77f4affdb702e4b.sdp/playlist.m3u8
+https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8
 #EXTINF:-1 tvg-id="E24.in@SD" tvg-logo="https://i.imgur.com/vCaPNTe.png" group-title="Entertainment",E 24
 https://live-e24.dailyhunt.in/eternowsa/live/amlst:E24_,b256,b512,b1024,b1824,.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="EETTV.in@SD" tvg-logo="https://i.imgur.com/rMldFW8.png" group-title="Entertainment",EET TV (1080p) [Not 24/7]
@@ -49,8 +43,6 @@ https://d2z3q47xzd535o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a
 https://cdn-6.pishow.tv/live/10002/master.m3u8
 #EXTINF:-1 tvg-id="HiDost.in@SD" tvg-logo="https://i.imgur.com/bnST6y5.png" group-title="Entertainment",Hi Dost! (720p)
 https://cdn-1.pishow.tv/live/224/master.m3u8
-#EXTINF:-1 tvg-id="ImayamTV.in@SD" tvg-logo="https://i.imgur.com/jHv7t9t.png" group-title="Entertainment",Imayam (720p)
-https://server1.thewebworld.in:3114/live/iniyantvlive.m3u8
 #EXTINF:-1 tvg-id="IsharaTV.in@SD" tvg-logo="https://i.imgur.com/W5YlC2v.png" group-title="Entertainment",Ishara TV (1080p)
 https://epiconvh.akamaized.net/live/ishaara/master.m3u8
 #EXTINF:-1 tvg-id="JayaTV.in@SD" tvg-logo="https://i.imgur.com/wZJBYmA.png" group-title="Culture;Entertainment",Jaya TV (1080p)
@@ -115,6 +107,8 @@ https://cdn-3.pishow.tv/live/230/master.m3u8
 http://202.164.50.194:8000/play/a02q/index.m3u8
 #EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@SD" tvg-logo="https://i.imgur.com/AkdfpVr.png" group-title="Entertainment",Sony Entertainment Television (1080p)
 http://66.102.120.18:8000/play/a005/index.m3u8
+#EXTINF:-1 tvg-id="SonyPal.in@SD" tvg-logo="https://i.imgur.com/GnoJkj4.png" group-title="Entertainment",Sony Pal (576p)
+http://163.61.227.29:8000/play/a04d/index.m3u8
 #EXTINF:-1 tvg-id="SooriyanTV.ca@SD" tvg-logo="https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg" group-title="Entertainment",Sooriyan TV (1080p)
 https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
 #EXTINF:-1 tvg-id="StarUtsav.in@SD" tvg-logo="https://i.imgur.com/H1jhHDl.png" group-title="Entertainment",Star Utsav (576p)
