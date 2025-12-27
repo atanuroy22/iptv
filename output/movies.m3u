@@ -7,8 +7,6 @@ http://66.102.120.18:8000/play/a01t/index.m3u8
 http://163.61.227.29:8000/play/a01h/index.m3u8
 #EXTINF:-1 tvg-id="AndTV.in@SD" tvg-logo="https://i.imgur.com/32W50Y6.png" group-title="Movies",&TV (1080p)
 https://amg01117-amg01117c1-amgplt0165.playout.now3.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="AndxplorHD.in@SD" tvg-logo="https://i.imgur.com/9mK6dgM.png" group-title="Movies",&xplor HD (1080p)
-http://66.102.120.18:8000/play/a012/index.m3u8
 #EXTINF:-1 tvg-id="AbzyDhakad.in@SD" tvg-logo="https://i.imgur.com/5ORC4tn.png" group-title="Movies",Abzy Dhakad (480p)
 https://d2lk5u59tns74c.cloudfront.net/out/v1/4fe6ab07a13543d6bdb2ec63b3e2df44/index.m3u8
 #EXTINF:-1 tvg-id="AbzyMovies.in@SD" tvg-logo="https://i.imgur.com/LnVgKVF.png" group-title="Movies",Abzy Movies (480p)
@@ -51,7 +49,7 @@ https://cdn-6.pishow.tv/live/10007/master.m3u8
 https://cdn-1.pishow.tv/live/1011/master.m3u8
 #EXTINF:-1 tvg-id="ManoranjanMovies.in@SD" tvg-logo="https://i.imgur.com/oTBVML2.png" group-title="Movies",Manoranjan Movies (720p)
 https://cdn-2.pishow.tv/live/228/master.m3u8
-#EXTINF:-1 tvg-id="MaxMiddleEast.in@SD" tvg-logo="https://i.imgur.com/AFXPVYD.png" http-referrer="https://nxtlive.net/" group-title="Movies",Max Middle East (1080p)
+#EXTINF:-1 tvg-id="MaxMiddleEast.in@SD" tvg-logo="https://i.imgur.com/LBICKI5.png" http-referrer="https://nxtlive.net/" group-title="Movies",Max Middle East (1080p)
 #EXTVLCOPT:http-referrer=https://nxtlive.net/
 #EXTINF:-1 tvg-id="MNX.in@SD" tvg-logo="https://i.imgur.com/Fo7n4xX.png" group-title="Movies",MNX SD (576p)
 http://163.61.227.29:8000/play/a01x/index.m3u8

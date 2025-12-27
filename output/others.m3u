@@ -33,6 +33,8 @@ https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 http://202.164.50.194:8000/play/a00n/index.m3u8
 #EXTINF:-1 tvg-id="ChannelWIN.in@SD" tvg-logo="https://i.imgur.com/yrBBCO4.png" group-title="Religious",Channel WIN (720p)
 https://cdn-4.pishow.tv/live/229/master.m3u8
+#EXTINF:-1 tvg-id="CNBCAwaaz.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/CNBC_Awaaz_logo.png/512px-CNBC_Awaaz_logo.png" group-title="Business",CNBC Awaaz (1080p)
+https://n18syndication.akamaized.net/bpk-tv/CNBC_Awaaz_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://i.imgur.com/cORao6C.png" group-title="Business",CNBC Bajar (1080p)
 https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-id="CNBCTV18.in@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d5/CNBC_TV18.png" group-title="Business",CNBC TV18 (1080p)
@@ -253,10 +255,6 @@ https://ktismaservers.in:3902/live/salvationtvlive.m3u8
 https://hls.media.nic.in/hls/live/rstv/rstv.m3u8
 #EXTINF:-1 tvg-id="SanskarTV.in@SD" tvg-logo="https://i.imgur.com/SDkiMvR.png" group-title="Culture;Religious",Sanskar TV (1080p)
 https://d26idhjf0y1p2g.cloudfront.net/out/v1/cd66dd25b9774cb29943bab54bbf3e2f/index.m3u8
-#EXTINF:-1 tvg-id="SanskarUK.in@SD" tvg-logo="https://i.imgur.com/AU5vSPF.png" group-title="Religious",Sanskar UK (1080p)
-https://d34z4embz0hjf6.cloudfront.net/out/v1/7ac2789ff9a544a49337d1ffc54ce61c/index.m3u8
-#EXTINF:-1 tvg-id="SanskarUSA.in@SD" tvg-logo="https://i.imgur.com/5WBWruX.png" group-title="Religious",Sanskar USA (1080p)
-https://d2netiedy8cz3x.cloudfront.net/out/v1/9bf6fa4ac8d6432cb98da13b121ba3c2/index.m3u8
 #EXTINF:-1 tvg-id="SanskarWebTV.in@SD" tvg-logo="https://i.imgur.com/mu2B6hw.png" group-title="Religious",Sanskar Web TV (1080p)
 https://deatfcv3xdvi3.cloudfront.net/out/v1/7a43dd2f64e34ec28da1b4bd6923251a/index.m3u8
 #EXTINF:-1 tvg-id="SantvaniChannel.in@SD" tvg-logo="https://i.imgur.com/V0N1VE4.png" group-title="Undefined",Santvani Channel (576p)
