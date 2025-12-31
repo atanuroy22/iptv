@@ -99,6 +99,7 @@ const categoryOrder = [
   "movies",
   "news",
   "kids",
+  "tamil",
   "others",
 ];
 const categoryLabels = {
