@@ -520,7 +520,7 @@ async function generate() {
       }
 
       // Override group-title for brand-specific categories
-      const brandCategories = ["zee", "sony", "star", "kids"];
+      const brandCategories = ["zee", "sony", "star"];
       let modifiedExt = ext;
       if (brandCategories.includes(key)) {
         const brandName = categoryLabels[key]; // Get the brand name from categoryLabels
@@ -630,15 +630,7 @@ async function generate() {
         continue;
       }
 
-      // Force group-title to KIDS for all kids channels
-      let kidsExt;
-      if (/group-title="[^"]+"/i.test(ext)) {
-        kidsExt = ext.replace(/group-title="[^"]+"/i, 'group-title="KIDS"');
-      } else {
-        kidsExt = ext.replace(/^(#EXTINF[^,]*)/, '$1 group-title="KIDS"');
-      }
-
-      output["kids"].push(kidsExt);
+      output["kids"].push(ext);
       output["kids"].push(url);
     }
   }
