@@ -742,8 +742,8 @@ async function generate() {
   for (const key of categoryOrder) {
     if (!output[key] || output[key].length <= 1) continue; // Skip empty categories
 
-    combined.push("");
-    combined.push(`# ---------------- ${categoryLabels[key]} ----------------`);
+    // combined.push("");
+    // combined.push(`# ---------------- ${categoryLabels[key]} ----------------`);
 
     // Add all channels from this category (skip the #EXTM3U header)
     for (let i = 1; i < output[key].length; i++) {
