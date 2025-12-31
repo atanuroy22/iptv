@@ -3,601 +3,790 @@ import fs from "fs";
 
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
-const SHUBHAMKUR_BASE_URL = "https://raw.githubusercontent.com/Shubhamkur/Tv/main/";
+const TAMIL_PLAYLIST_URL = "https://iptv-org.github.io/iptv/languages/tam.m3u";
+const SHUBHAMKUR_BASE_URL =
+  "https://raw.githubusercontent.com/Shubhamkur/Tv/main/";
 const SHUBHAMKUR_FILES = ["waptv"];
 const CRICHD_API_URL = "https://crichd2api.teachub.workers.dev/";
-const CRICHD_PLAYER_BASE = "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=";
+const CRICHD_PLAYER_BASE =
+  "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=";
 
 // Language Filter Configuration
 // To filter by language, comment out the languages you DON'T want
 // Example: To only include Hindi and English, comment out all others
-// 
-// IMPORTANT: 
+//
+// IMPORTANT:
 // - Channels WITHOUT a language tag are ALWAYS included
 // - Only channels with explicit non-matching languages are filtered out
 //
 // Current setting: ALL languages are included
 const ALL_LANGS = [
-    "hindi",
-    "english",
-    "tamil",
-    "telugu",
-    "malayalam",
-    "kannada",
-    "bengali",
-    "marathi",
-    "punjabi",
-    "gujarati",
-    "urdu",
-    "assamese",
-    "oriya",
-    "odia",
-    "nepali",
-    "sinhala"
+  "hindi",
+  "english",
+  "tamil",
+  "telugu",
+  "malayalam",
+  "kannada",
+  "bengali",
+  "marathi",
+  "punjabi",
+  "gujarati",
+  "urdu",
+  "assamese",
+  "oriya",
+  "odia",
+  "nepali",
+  "sinhala",
 ];
 
 // Category Filters
 // Each category uses the ALL_LANGS filter defined above
 // You can customize individual categories by modifying their 'languages' array
 const FILTERS = {
-    zee: {
-        detect: "zee",      // detected using tvg-name
-        languages: [...ALL_LANGS]
-    },
-    sony: {
-        detect: "sony",     // detected using tvg-name
-        languages: [...ALL_LANGS]
-    },
-    star: {
-        detect: "star",
-        group: ["star"],
-        languages: [...ALL_LANGS]
-    },
-    music: {
-        group: ["music"],
-        languages: [...ALL_LANGS]
-    },
-    entertainment: {
-        detect: "sun",
-        group: ["entertainment"],
-        languages: [...ALL_LANGS]
-    },
-    education: {
-        group: ["education", "knowledge"],
-        languages: [...ALL_LANGS]
-    },
-    sports: {
-        detect: "sport", // Added to detect 'sport' in channel name
-        group: ["sports", "sport"], // Added 'sport' to group as well
-        languages: [...ALL_LANGS]
-    },
-    movies: {
-        group: ["movie", "cinema"],
-        languages: [...ALL_LANGS]
-    },
-    news: {
-        detect: "tv9",
-        group: ["news"],
-        languages: [...ALL_LANGS]
-    },
-    kids: {
-        group: ["kids", "children"],
-        languages: [...ALL_LANGS]
-    },
-    others: {
-        group: [],
-        languages: []
-    }
+  zee: {
+    detect: "zee", // detected using tvg-name
+    languages: [...ALL_LANGS],
+  },
+  sony: {
+    detect: "sony", // detected using tvg-name
+    languages: [...ALL_LANGS],
+  },
+  star: {
+    detect: "star",
+    group: ["star"],
+    languages: [...ALL_LANGS],
+  },
+  music: {
+    group: ["music"],
+    languages: [...ALL_LANGS],
+  },
+  entertainment: {
+    detect: "sun",
+    group: ["entertainment", "education", "knowledge"],
+    languages: [...ALL_LANGS],
+  },
+  sports: {
+    detect: "sport", // Added to detect 'sport' in channel name
+    group: ["sports", "sport"], // Added 'sport' to group as well
+    languages: [...ALL_LANGS],
+  },
+  movies: {
+    group: ["movie", "cinema"],
+    languages: [...ALL_LANGS],
+  },
+  news: {
+    detect: "tv9",
+    group: ["news"],
+    languages: [...ALL_LANGS],
+  },
+  kids: {
+    group: ["kids", "children", "cartoon", "animation"],
+    languages: [...ALL_LANGS],
+  },
+  others: {
+    group: [],
+    languages: [],
+  },
 };
 
-const categoryOrder = ["zee", "sony", "star", "entertainment", "music", "sports", "movies", "news", "kids", "education", "others"];
+const categoryOrder = [
+  "zee",
+  "sony",
+  "star",
+  "entertainment",
+  "music",
+  "sports",
+  "movies",
+  "news",
+  "kids",
+  "others",
+  "tamil",
+];
 const categoryLabels = {
-    zee: "ZEE",
-    sony: "SONY",
-    star: "STAR",
-    entertainment: "ENTERTAINMENT",
-    music: "MUSIC",
-    sports: "SPORTS",
-    movies: "MOVIES",
-    news: "NEWS",
-    kids: "KIDS",
-    education: "EDUCATION",
-    others: "OTHERS"
+  zee: "ZEE",
+  sony: "SONY",
+  star: "STAR",
+  entertainment: "ENTERTAINMENT",
+  music: "MUSIC",
+  sports: "SPORTS",
+  movies: "MOVIES",
+  news: "NEWS",
+  kids: "KIDS",
+  others: "OTHERS",
+  tamil: "TAMIL",
 };
 
 // Extract tvg-language="X"
 function getLanguage(ext) {
-    const m = ext.match(/tvg-language="([^"]+)"/i);
-    return m ? m[1].toLowerCase() : "";
+  const m = ext.match(/tvg-language="([^"]+)"/i);
+  return m ? m[1].toLowerCase() : "";
 }
 
 // Extract group-title="X"
 function getGroup(ext) {
-    const m = ext.match(/group-title="([^"]+)"/i);
-    return m ? m[1].toLowerCase() : "";
+  const m = ext.match(/group-title="([^"]+)"/i);
+  return m ? m[1].toLowerCase() : "";
 }
 
 // Function to get channel logo based on channel name
 function getChannelLogo(channelName) {
-    const logoMappings = {
-        'fox cricket': 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Fox_Cricket_Logo.png/150px-Fox_Cricket_Logo.png',
-        'willow tv': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/38-by-xfireflix.png',
-        'star sports': 'https://www.tataplay.com/s3-api/v1/assets/channels/star-sports-1.gif',
-        'sony sports': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sony_Pictures_Network.svg/512px-Sony_Pictures_Network.svg.png',
-        'tnt sports': 'https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png',
-        't sports': 'https://yt3.googleusercontent.com/eY6Yt0YDmWSheMmneYNjUD_2N5p8r2nFca9CENifrZ9TugWxrQW24oznjqBJPOFmSs2M6avemg=s900-c-k-c0x00ffffff-no-rj',
-        'ptv sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Ad4PNlqneWGKqwJ5ayE57PVczpsXK5a9c7AuD5b2CWYjBS5R_RQjZ8Anu2zq1GxRdcrLkhn8r7HMM0S1s-XOcYIZgfvLOaI41hAOuF8',
-        'a sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNm9wSyxdIjvlYdwU2-sq1LCSVXkkqXBWBXA&s',
-        'ten sports': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/10-by-xfireflix.png',
-        'ten cricket': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/10-by-xfireflix.png',
-        'astro cricket': 'https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/1745008895589.png',
-        'geo sports': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTByiiGGHZsObgvhWaw9Vegy0hJE4ofIyjIr0yW6WIBBKGYNk6TM2acXFbh&s=10',
-        'criclife': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE35VK2_hzS658JLoU8wJ3-8ts909wrRXNRPKJcRlltQ&s',
-        'zee cinema': 'https://img.favpng.com/22/7/13/zee-cinema-zee-tv-high-definition-television-zee-entertainment-enterprises-png-favpng-KHDwBVhTwzz18Sh6EeZGTisrV.jpg',
-        'and pictures': 'https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/HivVrdof.png',
-        'star select': 'https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Star_Selects_logo.svg/300px-Star_Selects_logo.svg.png',
-        'zee tv': 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Zee_TV_logo.svg/300px-Zee_TV_logo.svg.png',
-        'sony tv': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sony_Pictures_Network.svg/512px-Sony_Pictures_Network.svg.png',
-        'star plus': 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Star_Plus.svg/300px-Star_Plus.svg.png',
-        'colors tv': 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Colors_TV_logo.svg/300px-Colors_TV_logo.svg.png',
-        'mtv': 'https://upload.wikimedia.org/wikipedia/en/thumb/6/69/MTV_2021_logo.svg/300px-MTV_2021_logo.svg.png'
-    };
-    
-    const lowerName = channelName.toLowerCase();
-    for (const [key, logo] of Object.entries(logoMappings)) {
-        if (lowerName.includes(key)) {
-            return logo;
-        }
+  const logoMappings = {
+    "fox cricket":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Fox_Cricket_Logo.png/150px-Fox_Cricket_Logo.png",
+    "willow tv":
+      "https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/38-by-xfireflix.png",
+    "star sports":
+      "https://www.tataplay.com/s3-api/v1/assets/channels/star-sports-1.gif",
+    "sony sports":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sony_Pictures_Network.svg/512px-Sony_Pictures_Network.svg.png",
+    "tnt sports":
+      "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
+    "t sports":
+      "https://yt3.googleusercontent.com/eY6Yt0YDmWSheMmneYNjUD_2N5p8r2nFca9CENifrZ9TugWxrQW24oznjqBJPOFmSs2M6avemg=s900-c-k-c0x00ffffff-no-rj",
+    "ptv sports":
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Ad4PNlqneWGKqwJ5ayE57PVczpsXK5a9c7AuD5b2CWYjBS5R_RQjZ8Anu2zq1GxRdcrLkhn8r7HMM0S1s-XOcYIZgfvLOaI41hAOuF8",
+    "a sports":
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNm9wSyxdIjvlYdwU2-sq1LCSVXkkqXBWBXA&s",
+    "ten sports":
+      "https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/10-by-xfireflix.png",
+    "ten cricket":
+      "https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/10-by-xfireflix.png",
+    "astro cricket":
+      "https://cdn.jsdelivr.net/gh/HelloPeopleTv4you/tv-logo@refs/heads/main/crichd2-runded/1745008895589.png",
+    "geo sports":
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTByiiGGHZsObgvhWaw9Vegy0hJE4ofIyjIr0yW6WIBBKGYNk6TM2acXFbh&s=10",
+    criclife:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE35VK2_hzS658JLoU8wJ3-8ts909wrRXNRPKJcRlltQ&s",
+    "zee cinema":
+      "https://img.favpng.com/22/7/13/zee-cinema-zee-tv-high-definition-television-zee-entertainment-enterprises-png-favpng-KHDwBVhTwzz18Sh6EeZGTisrV.jpg",
+    "and pictures":
+      "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/HivVrdof.png",
+    "star select":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Star_Selects_logo.svg/300px-Star_Selects_logo.svg.png",
+    "zee tv":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Zee_TV_logo.svg/300px-Zee_TV_logo.svg.png",
+    "sony tv":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sony_Pictures_Network.svg/512px-Sony_Pictures_Network.svg.png",
+    "star plus":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Star_Plus.svg/300px-Star_Plus.svg.png",
+    "colors tv":
+      "https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Colors_TV_logo.svg/300px-Colors_TV_logo.svg.png",
+    mtv: "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/MTV_2021_logo.svg/300px-MTV_2021_logo.svg.png",
+  };
+
+  const lowerName = channelName.toLowerCase();
+  for (const [key, logo] of Object.entries(logoMappings)) {
+    if (lowerName.includes(key)) {
+      return logo;
     }
-    
-    // Generate a better placeholder with channel name initials and color
-    const initials = channelName.split(' ').filter(word => word.length > 0).map(word => word[0].toUpperCase()).join('').substring(0, 3);
-    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F'];
-    const colorIndex = channelName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0) % colors.length;
-    const bgColor = colors[colorIndex];
-    
-    return `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=${bgColor.replace('#', '')}&color=fff&size=100&bold=true`;
+  }
+
+  // Generate a better placeholder with channel name initials and color
+  const initials = channelName
+    .split(" ")
+    .filter((word) => word.length > 0)
+    .map((word) => word[0].toUpperCase())
+    .join("")
+    .substring(0, 3);
+  const colors = [
+    "#FF6B6B",
+    "#4ECDC4",
+    "#45B7D1",
+    "#96CEB4",
+    "#FFEAA7",
+    "#DDA0DD",
+    "#98D8C8",
+    "#F7DC6F",
+  ];
+  const colorIndex =
+    channelName.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) %
+    colors.length;
+  const bgColor = colors[colorIndex];
+
+  return `https://ui-avatars.com/api/?name=${encodeURIComponent(
+    initials
+  )}&background=${bgColor.replace("#", "")}&color=fff&size=100&bold=true`;
 }
 
 // Function to check if URL is a direct playback channel
 function isDirectPlaybackChannel(originalUrl) {
-    return originalUrl.includes('.html') || 
-           originalUrl.includes('wapka.xyz') || 
-           originalUrl.includes('embed') || 
-           originalUrl.includes('player') ||
-           originalUrl.includes('allinonereborn') ||
-           originalUrl.includes('tv4go.pages.dev') ||
-           originalUrl.includes('tv4wap.github.io/ID');
+  return (
+    originalUrl.includes(".html") ||
+    originalUrl.includes("wapka.xyz") ||
+    originalUrl.includes("embed") ||
+    originalUrl.includes("player") ||
+    originalUrl.includes("allinonereborn") ||
+    originalUrl.includes("tv4go.pages.dev") ||
+    originalUrl.includes("tv4wap.github.io/ID")
+  );
 }
 
 // Function to convert stream URLs to playable format (simplified)
 function convertToPlayableUrl(originalUrl) {
-    // If it's already a direct stream URL, return as-is
-    if (originalUrl.includes('.m3u8') || originalUrl.includes('live/')) {
-        return originalUrl;
-    }
-    
-    // Filter out MPD URLs as they may not be supported by all players
-    if (originalUrl.includes('.mpd')) {
-        return null; // Return null to exclude MPD channels
-    }
-    
-    // Filter out proxy URLs - they should go to direct HTML instead
-    if (originalUrl.includes('tv4wap.github.io/ID')) {
-        return null; // Return null to move proxy channels to direct HTML
-    }
-    
-    return originalUrl; // Keep other URLs as-is for direct channels
+  // If it's already a direct stream URL, return as-is
+  if (originalUrl.includes(".m3u8") || originalUrl.includes("live/")) {
+    return originalUrl;
+  }
+
+  // Filter out MPD URLs as they may not be supported by all players
+  if (originalUrl.includes(".mpd")) {
+    return null; // Return null to exclude MPD channels
+  }
+
+  // Filter out proxy URLs - they should go to direct HTML instead
+  if (originalUrl.includes("tv4wap.github.io/ID")) {
+    return null; // Return null to move proxy channels to direct HTML
+  }
+
+  return originalUrl; // Keep other URLs as-is for direct channels
 }
 
 // Extract channel name (after the last comma)
 function getName(ext) {
-    const parts = ext.split(',');
-    return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : "";
+  const parts = ext.split(",");
+  return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : "";
 }
 
 // Normalize channel name for better deduplication
 function normalizeChannelName(name) {
-    return name.toLowerCase()
-        .replace(/[^a-z0-9\s]/g, '') // Remove special characters
-        .replace(/\s+/g, ' ') // Replace multiple spaces with single space
-        .trim();
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "") // Remove special characters
+    .replace(/\s+/g, " ") // Replace multiple spaces with single space
+    .trim();
 }
 // Simplified function to process all SHUBHAMKUR files
-async function processShubhamkurFiles(filename, fileData, output, channelTracker, directChannels) {
-    try {
-        if (filename === 'tvm3u') {
-            // Process M3U file
-            const lines = fileData.split("\n");
-            for (let i = 0; i < lines.length; i++) {
-                if (!lines[i].startsWith("#EXTINF")) continue;
-                const ext = lines[i];
-                const url = lines[i + 1];
-                if (!url || !url.startsWith('http')) continue;
+async function processShubhamkurFiles(
+  filename,
+  fileData,
+  output,
+  channelTracker,
+  directChannels
+) {
+  try {
+    if (filename === "tvm3u") {
+      // Process M3U file
+      const lines = fileData.split("\n");
+      for (let i = 0; i < lines.length; i++) {
+        if (!lines[i].startsWith("#EXTINF")) continue;
+        const ext = lines[i];
+        const url = lines[i + 1];
+        if (!url || !url.startsWith("http")) continue;
 
-                const name = normalizeChannelName(getName(ext));
-                
-                if (isDirectPlaybackChannel(url)) {
-                    if (!channelTracker["direct"].has(name)) {
-                        channelTracker["direct"].add(name);
-                        directChannels.push({ name, url, logo: getChannelLogo(name) });
-                    }
-                    continue;
-                }
-                
-                const playableUrl = convertToPlayableUrl(url);
-                if (!playableUrl) {
-                    // MPD channels go to direct HTML instead
-                    if (!channelTracker["direct"].has(name)) {
-                        channelTracker["direct"].add(name);
-                        directChannels.push({ name, url, logo: getChannelLogo(name) });
-                    }
-                    continue;
-                }
-                
-                // For SHUBHAMKUR sources, add all channels to direct HTML only
-                if (!channelTracker["direct"].has(name)) {
-                    channelTracker["direct"].add(name);
-                    // For direct browser playback, use the original URL
-                    directChannels.push({ name, url: url, logo: getChannelLogo(name) });
-                }
-            }
-        } else {
-            // Process JSON files (tv, tvid, waptv)
-            const jsonData = JSON.parse(fileData);
-            
-            if (filename === 'waptv') {
-                // Process WAPTV format
-                for (const channels of Object.values(jsonData)) {
-                    if (!Array.isArray(channels)) continue;
-                    for (const channel of channels) {
-                        if (!channel.channel_name || !channel.url) continue;
-                        
-                        const name = normalizeChannelName(channel.channel_name);
-                        const url = channel.url;
-                        
-                        if (isDirectPlaybackChannel(url)) {
-                            if (!channelTracker["direct"].has(name)) {
-                                channelTracker["direct"].add(name);
-                                directChannels.push({ 
-                                    name, 
-                                    url, 
-                                    logo: channel.image || getChannelLogo(name) 
-                                });
-                            }
-                            continue;
-                        }
-                        
-                        const playableUrl = convertToPlayableUrl(url);
-                        if (!playableUrl) {
-                            // MPD channels go to direct HTML instead
-                            if (!channelTracker["direct"].has(name)) {
-                                channelTracker["direct"].add(name);
-                                directChannels.push({ 
-                                    name, 
-                                    url, 
-                                    logo: channel.image || getChannelLogo(name) 
-                                });
-                            }
-                            continue;
-                        }
-                        
-                        // For SHUBHAMKUR sources, add all channels to direct HTML only
-                        if (!channelTracker["direct"].has(name)) {
-                            channelTracker["direct"].add(name);
-                            const logo = channel.image || getChannelLogo(name);
-                            // For direct browser playback, use the original URL
-                            directChannels.push({ 
-                                name, 
-                                url: url, 
-                                logo
-                            });
-                        }
-                    }
-                }
-            } else if (filename === 'tvid') {
-                // Process TVID format
-                for (const channel of jsonData) {
-                    if (!channel.id || !channel.name) continue;
-                    
-                    const name = normalizeChannelName(channel.name);
-                    const url = `https://tv4wap.github.io/ID11?id=${channel.id}`;
-                    
-                    // Check if this is a proxy URL and move to direct channels
-                    if (!channelTracker["direct"].has(name)) {
-                        channelTracker["direct"].add(name);
-                        directChannels.push({ name, url, logo: channel.logo || getChannelLogo(name) });
-                    }
-                }
-            } else {
-                // Process TV format
-                for (const channel of jsonData) {
-                    if (!channel.id) continue;
-                    
-                    const name = normalizeChannelName(channel.id.toUpperCase().replace(/_/g, ' '));
-                    const url = channel.m3u8 || channel.mpd || channel.url;
-                    if (!url) continue;
-                    
-                    if (isDirectPlaybackChannel(url)) {
-                        if (!channelTracker["direct"].has(name)) {
-                            channelTracker["direct"].add(name);
-                            directChannels.push({ 
-                                name, 
-                                url, 
-                                logo: channel.logo || getChannelLogo(name) 
-                            });
-                        }
-                        continue;
-                    }
-                    
-                    const playableUrl = convertToPlayableUrl(url);
-                    if (!playableUrl) {
-                        // MPD channels go to direct HTML instead
-                        if (!channelTracker["direct"].has(name)) {
-                            channelTracker["direct"].add(name);
-                            directChannels.push({ 
-                                name, 
-                                url, 
-                                logo: channel.logo || getChannelLogo(name) 
-                            });
-                        }
-                        continue;
-                    }
-                    
-                    // For SHUBHAMKUR sources, add all channels to direct HTML only
-                    if (!channelTracker["direct"].has(name)) {
-                        channelTracker["direct"].add(name);
-                        const logo = channel.logo || getChannelLogo(name);
-                        // For direct browser playback, use the original URL
-                        directChannels.push({ 
-                            name, 
-                            url: url, 
-                            logo
-                        });
-                    }
-                }
-            }
+        const name = normalizeChannelName(getName(ext));
+
+        if (isDirectPlaybackChannel(url)) {
+          if (!channelTracker["direct"].has(name)) {
+            channelTracker["direct"].add(name);
+            directChannels.push({ name, url, logo: getChannelLogo(name) });
+          }
+          continue;
         }
-    } catch (error) {
-        console.log(`Error processing ${filename}:`, error.message);
+
+        const playableUrl = convertToPlayableUrl(url);
+        if (!playableUrl) {
+          // MPD channels go to direct HTML instead
+          if (!channelTracker["direct"].has(name)) {
+            channelTracker["direct"].add(name);
+            directChannels.push({ name, url, logo: getChannelLogo(name) });
+          }
+          continue;
+        }
+
+        // For SHUBHAMKUR sources, add all channels to direct HTML only
+        if (!channelTracker["direct"].has(name)) {
+          channelTracker["direct"].add(name);
+          // For direct browser playback, use the original URL
+          directChannels.push({ name, url: url, logo: getChannelLogo(name) });
+        }
+      }
+    } else {
+      // Process JSON files (tv, tvid, waptv)
+      const jsonData = JSON.parse(fileData);
+
+      if (filename === "waptv") {
+        // Process WAPTV format
+        for (const channels of Object.values(jsonData)) {
+          if (!Array.isArray(channels)) continue;
+          for (const channel of channels) {
+            if (!channel.channel_name || !channel.url) continue;
+
+            const name = normalizeChannelName(channel.channel_name);
+            const url = channel.url;
+
+            if (isDirectPlaybackChannel(url)) {
+              if (!channelTracker["direct"].has(name)) {
+                channelTracker["direct"].add(name);
+                directChannels.push({
+                  name,
+                  url,
+                  logo: channel.image || getChannelLogo(name),
+                });
+              }
+              continue;
+            }
+
+            const playableUrl = convertToPlayableUrl(url);
+            if (!playableUrl) {
+              // MPD channels go to direct HTML instead
+              if (!channelTracker["direct"].has(name)) {
+                channelTracker["direct"].add(name);
+                directChannels.push({
+                  name,
+                  url,
+                  logo: channel.image || getChannelLogo(name),
+                });
+              }
+              continue;
+            }
+
+            // For SHUBHAMKUR sources, add all channels to direct HTML only
+            if (!channelTracker["direct"].has(name)) {
+              channelTracker["direct"].add(name);
+              const logo = channel.image || getChannelLogo(name);
+              // For direct browser playback, use the original URL
+              directChannels.push({
+                name,
+                url: url,
+                logo,
+              });
+            }
+          }
+        }
+      } else if (filename === "tvid") {
+        // Process TVID format
+        for (const channel of jsonData) {
+          if (!channel.id || !channel.name) continue;
+
+          const name = normalizeChannelName(channel.name);
+          const url = `https://tv4wap.github.io/ID11?id=${channel.id}`;
+
+          // Check if this is a proxy URL and move to direct channels
+          if (!channelTracker["direct"].has(name)) {
+            channelTracker["direct"].add(name);
+            directChannels.push({
+              name,
+              url,
+              logo: channel.logo || getChannelLogo(name),
+            });
+          }
+        }
+      } else {
+        // Process TV format
+        for (const channel of jsonData) {
+          if (!channel.id) continue;
+
+          const name = normalizeChannelName(
+            channel.id.toUpperCase().replace(/_/g, " ")
+          );
+          const url = channel.m3u8 || channel.mpd || channel.url;
+          if (!url) continue;
+
+          if (isDirectPlaybackChannel(url)) {
+            if (!channelTracker["direct"].has(name)) {
+              channelTracker["direct"].add(name);
+              directChannels.push({
+                name,
+                url,
+                logo: channel.logo || getChannelLogo(name),
+              });
+            }
+            continue;
+          }
+
+          const playableUrl = convertToPlayableUrl(url);
+          if (!playableUrl) {
+            // MPD channels go to direct HTML instead
+            if (!channelTracker["direct"].has(name)) {
+              channelTracker["direct"].add(name);
+              directChannels.push({
+                name,
+                url,
+                logo: channel.logo || getChannelLogo(name),
+              });
+            }
+            continue;
+          }
+
+          // For SHUBHAMKUR sources, add all channels to direct HTML only
+          if (!channelTracker["direct"].has(name)) {
+            channelTracker["direct"].add(name);
+            const logo = channel.logo || getChannelLogo(name);
+            // For direct browser playback, use the original URL
+            directChannels.push({
+              name,
+              url: url,
+              logo,
+            });
+          }
+        }
+      }
     }
+  } catch (error) {
+    console.log(`Error processing ${filename}:`, error.message);
+  }
 }
 
 // Function to process Crichd channels
 async function processCrichdChannels(directChannels, channelTracker) {
-    try {
-        console.log(`Fetching Crichd channels from: ${CRICHD_API_URL}`);
-        const { data: responseData } = await axios.get(CRICHD_API_URL);
-        
-        if (!responseData || !responseData.data || !Array.isArray(responseData.data)) {
-            console.log("Invalid Crichd API response format");
-            return;
-        }
+  try {
+    console.log(`Fetching Crichd channels from: ${CRICHD_API_URL}`);
+    const { data: responseData } = await axios.get(CRICHD_API_URL);
 
-        for (const match of responseData.data) {
-            if (!match.channels || !Array.isArray(match.channels)) continue;
-
-            for (const channel of match.channels) {
-                if (!channel.id || !channel.name) continue;
-
-                const name = normalizeChannelName(channel.name);
-                const url = CRICHD_PLAYER_BASE + channel.id;
-
-                if (!channelTracker["direct"].has(name)) {
-                    channelTracker["direct"].add(name);
-                    directChannels.push({
-                        name: channel.name, // Keep original name for display
-                        url: url,
-                        logo: getChannelLogo(channel.name)
-                    });
-                }
-            }
-        }
-        console.log(`Added Crichd channels. Total direct channels: ${directChannels.length}`);
-    } catch (error) {
-        console.log('Warning: Could not fetch Crichd channels:', error.message);
+    if (
+      !responseData ||
+      !responseData.data ||
+      !Array.isArray(responseData.data)
+    ) {
+      console.log("Invalid Crichd API response format");
+      return;
     }
+
+    for (const match of responseData.data) {
+      if (!match.channels || !Array.isArray(match.channels)) continue;
+
+      for (const channel of match.channels) {
+        if (!channel.id || !channel.name) continue;
+
+        const name = normalizeChannelName(channel.name);
+        const url = CRICHD_PLAYER_BASE + channel.id;
+
+        if (!channelTracker["direct"].has(name)) {
+          channelTracker["direct"].add(name);
+          directChannels.push({
+            name: channel.name, // Keep original name for display
+            url: url,
+            logo: getChannelLogo(channel.name),
+          });
+        }
+      }
+    }
+    console.log(
+      `Added Crichd channels. Total direct channels: ${directChannels.length}`
+    );
+  } catch (error) {
+    console.log("Warning: Could not fetch Crichd channels:", error.message);
+  }
 }
 
 async function generate() {
-    const { data } = await axios.get(PLAYLIST_URL);
-    const lines = data.split("\n");
+  const { data } = await axios.get(PLAYLIST_URL);
+  const lines = data.split("\n");
 
-    const output = {};
-    const channelTracker = {}; // Track unique channels to avoid duplicates
-    const directChannels = []; // Store direct playback channels
-    
-    Object.keys(FILTERS).forEach(k => {
-        output[k] = ["#EXTM3U"];
-        channelTracker[k] = new Set(); // Track channel names per category
-    });
-    channelTracker["direct"] = new Set(); // Track direct playback channels
+  const output = {};
+  const channelTracker = {}; // Track unique channels to avoid duplicates
+  const directChannels = []; // Store direct playback channels
 
-    for (let i = 0; i < lines.length; i++) {
-        if (!lines[i].startsWith("#EXTINF")) continue;
+  Object.keys(FILTERS).forEach((k) => {
+    output[k] = ["#EXTM3U"];
+    channelTracker[k] = new Set(); // Track channel names per category
+  });
+  // Initialize Tamil output separately (sourced from language playlist)
+  output["tamil"] = ["#EXTM3U"];
+  channelTracker["direct"] = new Set(); // Track direct playback channels
 
-        const ext = lines[i];
-        const url = lines[i + 1];
+  for (let i = 0; i < lines.length; i++) {
+    if (!lines[i].startsWith("#EXTINF")) continue;
 
-        const low = ext.toLowerCase();
-        const lang = getLanguage(low);
-        const group = getGroup(low);
-        const name = getName(low);
+    const ext = lines[i];
+    const url = lines[i + 1];
 
-        let placed = false;
+    const low = ext.toLowerCase();
+    const lang = getLanguage(low);
+    const group = getGroup(low);
+    const name = getName(low);
 
-        for (const key of Object.keys(FILTERS)) {
-            if (key === "others") continue;
+    let placed = false;
 
-            const def = FILTERS[key];
+    for (const key of Object.keys(FILTERS)) {
+      if (key === "others") continue;
 
-            let match = false;
+      const def = FILTERS[key];
 
-            // Brand detection first (checks channel name)
-            if (def.detect && name.includes(def.detect)) match = true;
+      let match = false;
 
-            // Group detection fallback (checks group-title attribute)
-            if (def.group && def.group.some(g => group.includes(g))) match = true;
+      // Brand detection first (checks channel name)
+      if (def.detect && name.includes(def.detect)) match = true;
 
-            if (!match) continue;
+      // Group detection fallback (checks group-title attribute)
+      if (def.group && def.group.some((g) => group.includes(g))) match = true;
 
-            // Language filtering (if languages array is not empty, filter by language)
-            // If array is empty, accept all languages
-            if (def.languages.length > 0) {
-                // Channels without language tags are accepted
-                if (lang && !def.languages.includes(lang)) continue;
-            }
+      if (!match) continue;
 
-            // Override group-title for brand-specific categories
-            const brandCategories = ["zee", "sony", "star"];
-            let modifiedExt = ext;
-            if (brandCategories.includes(key)) {
-                const brandName = categoryLabels[key]; // Get the brand name from categoryLabels
-                modifiedExt = ext.replace(/group-title="[^"]+"/i, `group-title="${brandName}"`);
-            }
-            output[key].push(modifiedExt);
-            output[key].push(url);
-            placed = true;
+      // Language filtering (if languages array is not empty, filter by language)
+      // If array is empty, accept all languages
+      if (def.languages.length > 0) {
+        // Channels without language tags are accepted
+        if (lang && !def.languages.includes(lang)) continue;
+      }
+
+      // Override group-title for brand-specific categories
+      const brandCategories = ["zee", "sony", "star", "kids"];
+      let modifiedExt = ext;
+      if (brandCategories.includes(key)) {
+        const brandName = categoryLabels[key]; // Get the brand name from categoryLabels
+        if (/group-title="[^"]+"/i.test(ext)) {
+          modifiedExt = ext.replace(
+            /group-title="[^"]+"/i,
+            `group-title="${brandName}"`
+          );
+        } else {
+          modifiedExt = ext.replace(
+            /^(#EXTINF[^,]*)/,
+            `$1 group-title="${brandName}"`
+          );
         }
-
-        if (!placed) {
-            output["others"].push(ext);
-            output["others"].push(url);
-        }
+      }
+      output[key].push(modifiedExt);
+      output[key].push(url);
+      placed = true;
     }
 
-    // --- Process SPORTS_PLAYLIST_URL for sports channels only ---
-    const { data: globalSportsData } = await axios.get(SPORTS_PLAYLIST_URL);
-    const globalSportsLines = globalSportsData.split("\n");
-
-    for (let i = 0; i < globalSportsLines.length; i++) {
-        if (!globalSportsLines[i].startsWith("#EXTINF")) continue;
-
-        const ext = globalSportsLines[i];
-        const url = globalSportsLines[i + 1];
-
-        const low = ext.toLowerCase();
-        const lang = getLanguage(low);
-        const group = getGroup(low);
-        const name = getName(low);
-
-        const def = FILTERS["sports"];
-        let match = false;
-
-        // Brand detection first (checks channel name)
-        if (def.detect && name.includes(def.detect)) match = true;
-
-        // Group detection fallback (checks group-title attribute)
-        if (def.group && def.group.some(g => group.includes(g))) match = true;
-
-        if (match) {
-            // Language filtering (if languages array is not empty, filter by language)
-            if (def.languages.length > 0) {
-                if (lang && !def.languages.includes(lang)) continue;
-            }
-            
-            // Check if URL is proxy URL or MPD and redirect to direct channels
-            if (url.includes('.mpd') || url.includes('tv4wap.github.io/ID')) {
-                const name = normalizeChannelName(getName(ext));
-                if (!channelTracker["direct"].has(name)) {
-                    channelTracker["direct"].add(name);
-                    directChannels.push({ name, url, logo: getChannelLogo(name) });
-                }
-                continue;
-            }
-            
-            output["sports"].push(ext);
-            output["sports"].push(url);
-        }
+    if (!placed) {
+      output["others"].push(ext);
+      output["others"].push(url);
     }
-    // --- End of SPORTS_PLAYLIST_URL processing ---
+  }
 
-    // --- Process all SHUBHAMKUR files for comprehensive channel collection ---
+  // --- Process SPORTS_PLAYLIST_URL for sports channels only ---
+  const { data: globalSportsData } = await axios.get(SPORTS_PLAYLIST_URL);
+  const globalSportsLines = globalSportsData.split("\n");
+
+  for (let i = 0; i < globalSportsLines.length; i++) {
+    if (!globalSportsLines[i].startsWith("#EXTINF")) continue;
+
+    const ext = globalSportsLines[i];
+    const url = globalSportsLines[i + 1];
+
+    const low = ext.toLowerCase();
+    const lang = getLanguage(low);
+    const group = getGroup(low);
+    const name = getName(low);
+
+    const def = FILTERS["sports"];
+    let match = false;
+
+    // Brand detection first (checks channel name)
+    if (def.detect && name.includes(def.detect)) match = true;
+
+    // Group detection fallback (checks group-title attribute)
+    if (def.group && def.group.some((g) => group.includes(g))) match = true;
+
+    if (match) {
+      // Language filtering (if languages array is not empty, filter by language)
+      if (def.languages.length > 0) {
+        if (lang && !def.languages.includes(lang)) continue;
+      }
+
+      // Check if URL is proxy URL or MPD and redirect to direct channels
+      if (url.includes(".mpd") || url.includes("tv4wap.github.io/ID")) {
+        const name = normalizeChannelName(getName(ext));
+        if (!channelTracker["direct"].has(name)) {
+          channelTracker["direct"].add(name);
+          directChannels.push({ name, url, logo: getChannelLogo(name) });
+        }
+        continue;
+      }
+
+      output["sports"].push(ext);
+      output["sports"].push(url);
+    }
+  }
+  // --- End of SPORTS_PLAYLIST_URL processing ---
+
+  // --- Process SPORTS_PLAYLIST_URL for kids channels only ---
+  for (let i = 0; i < globalSportsLines.length; i++) {
+    if (!globalSportsLines[i].startsWith("#EXTINF")) continue;
+
+    const ext = globalSportsLines[i];
+    const url = globalSportsLines[i + 1];
+
+    const low = ext.toLowerCase();
+    const lang = getLanguage(low);
+    const group = getGroup(low);
+    const name = getName(low);
+
+    const def = FILTERS["kids"];
+    let match = false;
+
+    // Group detection (Kids/Children/Cartoon/Animation)
+    if (def.group && def.group.some((g) => group.includes(g))) match = true;
+
+    // Basic name hint if needed
+    if (!match && name.includes("kid")) match = true;
+
+    if (match) {
+      // Language filtering
+      if (def.languages.length > 0) {
+        if (lang && !def.languages.includes(lang)) continue;
+      }
+
+      // Redirect proxy/MPD to direct channels
+      if (url.includes(".mpd") || url.includes("tv4wap.github.io/ID")) {
+        const n = normalizeChannelName(getName(ext));
+        if (!channelTracker["direct"].has(n)) {
+          channelTracker["direct"].add(n);
+          directChannels.push({ name: n, url, logo: getChannelLogo(n) });
+        }
+        continue;
+      }
+
+      // Force group-title to KIDS for all kids channels
+      let kidsExt;
+      if (/group-title="[^"]+"/i.test(ext)) {
+        kidsExt = ext.replace(/group-title="[^"]+"/i, 'group-title="KIDS"');
+      } else {
+        kidsExt = ext.replace(/^(#EXTINF[^,]*)/, '$1 group-title="KIDS"');
+      }
+
+      output["kids"].push(kidsExt);
+      output["kids"].push(url);
+    }
+  }
+  // --- End of KIDS processing ---
+
+  // --- Process all SHUBHAMKUR files for comprehensive channel collection ---
+  try {
+    for (const filename of SHUBHAMKUR_FILES) {
+      const fileUrl = SHUBHAMKUR_BASE_URL + filename;
+      console.log(`Processing Shubhamkur file: ${filename}`);
+
+      const response = await axios.get(fileUrl);
+      const fileData =
+        typeof response.data === "string"
+          ? response.data
+          : JSON.stringify(response.data);
+
+      // Process all SHUBHAMKUR files with simplified function
+      await processShubhamkurFiles(
+        filename,
+        fileData,
+        output,
+        channelTracker,
+        directChannels
+      );
+    }
+  } catch (error) {
+    console.log(
+      "Warning: Could not fetch Shubhamkur/Tv channels:",
+      error.message
+    );
+  }
+  // --- End of SHUBHAMKUR processing ---
+
+  // --- Process Crichd channels ---
+  await processCrichdChannels(directChannels, channelTracker);
+  // --- End of Crichd processing ---
+
+  // --- Fetch and append Tamil language playlist ---
+  try {
+    console.log(`Fetching Tamil channels from: ${TAMIL_PLAYLIST_URL}`);
+    const { data: tamilData } = await axios.get(TAMIL_PLAYLIST_URL);
+    const tamilLines = tamilData.split("\n");
+    for (let i = 0; i < tamilLines.length; i++) {
+      if (!tamilLines[i].startsWith("#EXTINF")) continue;
+      const ext = tamilLines[i];
+      const url = tamilLines[i + 1];
+      if (!url) continue;
+
+      // Force group-title to TAMIL for all Tamil channels
+      let modifiedExt;
+      if (/group-title="[^"]+"/i.test(ext)) {
+        modifiedExt = ext.replace(
+          /group-title="[^"]+"/i,
+          'group-title="TAMIL"'
+        );
+      } else {
+        modifiedExt = ext.replace(/^(#EXTINF[^,]*)/, '$1 group-title="TAMIL"');
+      }
+
+      output["tamil"].push(modifiedExt);
+      output["tamil"].push(url);
+    }
+    console.log(
+      `Added Tamil channels. Total entries: ${(output["tamil"].length - 1) / 2}`
+    );
+  } catch (error) {
+    console.log("Warning: Could not fetch Tamil playlist:", error.message);
+  }
+  // Create output directory if it doesn't exist
+  if (!fs.existsSync("output")) {
+    fs.mkdirSync("output");
+  }
+
+  // Generate direct.html for direct playback channels
+  if (directChannels.length > 0) {
+    const directHtml = generateDirectChannelsHtml(directChannels);
+    fs.writeFileSync("output/direct.html", directHtml);
+    console.log(
+      `Generated direct.html with ${directChannels.length} direct playback channels`
+    );
+  }
+
+  // Write individual category files
+  // Remove stale education file if present (merged into entertainment)
+  if (fs.existsSync("output/education.m3u")) {
     try {
-        for (const filename of SHUBHAMKUR_FILES) {
-            const fileUrl = SHUBHAMKUR_BASE_URL + filename;
-            console.log(`Processing Shubhamkur file: ${filename}`);
-            
-            const response = await axios.get(fileUrl);
-            const fileData = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
-            
-            // Process all SHUBHAMKUR files with simplified function
-            await processShubhamkurFiles(filename, fileData, output, channelTracker, directChannels);
-        }
-    } catch (error) {
-        console.log('Warning: Could not fetch Shubhamkur/Tv channels:', error.message);
+      fs.rmSync("output/education.m3u");
+    } catch {
+      /* ignore */
     }
-    // --- End of SHUBHAMKUR processing ---
+  }
+  for (const key of Object.keys(output)) {
+    fs.writeFileSync(`output/${key}.m3u`, output[key].join("\n"));
+  }
 
-    // --- Process Crichd channels ---
-    await processCrichdChannels(directChannels, channelTracker);
-    // --- End of Crichd processing ---
+  // Create combined all.m3u with section headers
+  const combined = ["#EXTM3U"];
 
+  for (const key of categoryOrder) {
+    if (!output[key] || output[key].length <= 1) continue; // Skip empty categories
 
+    combined.push("");
+    combined.push(`# ---------------- ${categoryLabels[key]} ----------------`);
 
-    // Create output directory if it doesn't exist
-    if (!fs.existsSync("output")) {
-        fs.mkdirSync("output");
+    // Add all channels from this category (skip the #EXTM3U header)
+    for (let i = 1; i < output[key].length; i++) {
+      combined.push(output[key][i]);
     }
+  }
 
-    // Generate direct.html for direct playback channels
-    if (directChannels.length > 0) {
-        const directHtml = generateDirectChannelsHtml(directChannels);
-        fs.writeFileSync('output/direct.html', directHtml);
-        console.log(`Generated direct.html with ${directChannels.length} direct playback channels`);
-    }
+  fs.writeFileSync("output/all.m3u", combined.join("\n"));
 
-    // Write individual category files
-    for (const key of Object.keys(output)) {
-        fs.writeFileSync(`output/${key}.m3u`, output[key].join("\n"));
-    }
-
-    // Create combined all.m3u with section headers
-    const combined = ["#EXTM3U"];
-
-    for (const key of categoryOrder) {
-        if (!output[key] || output[key].length <= 1) continue; // Skip empty categories
-
-        combined.push("");
-        combined.push(`# ---------------- ${categoryLabels[key]} ----------------`);
-
-        // Add all channels from this category (skip the #EXTM3U header)
-        for (let i = 1; i < output[key].length; i++) {
-            combined.push(output[key][i]);
-        }
-    }
-
-    fs.writeFileSync("output/all.m3u", combined.join("\n"));
-
-    console.log("✅ All IPTV category playlists generated successfully!");
-    console.log("📁 Individual files: output/zee.m3u, output/sony.m3u, etc.");
-    console.log("📄 Combined file: output/all.m3u");
+  console.log("✅ All IPTV category playlists generated successfully!");
+  console.log("📁 Individual files: output/zee.m3u, output/sony.m3u, etc.");
+  console.log("📄 Combined file: output/all.m3u");
 }
 
 // Function to generate HTML for direct playback channels
 function generateDirectChannelsHtml(channels) {
-    // Helper to escape HTML in text/attributes
-    const escapeHtml = (str) => String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
+  // Helper to escape HTML in text/attributes
+  const escapeHtml = (str) =>
+    String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
 
-    const htmlChannels = channels.map(channel => {
-        const safeName = escapeHtml(channel.name || "");
-        const safeUrl = escapeHtml(channel.url || "");
-        const safeLogo = escapeHtml(channel.logo || "");
+  const htmlChannels = channels
+    .map((channel) => {
+      const safeName = escapeHtml(channel.name || "");
+      const safeUrl = escapeHtml(channel.url || "");
+      const safeLogo = escapeHtml(channel.logo || "");
 
-        // Use simple anchor tag instead of inline JavaScript to avoid syntax issues
-        return `
+      // Use simple anchor tag instead of inline JavaScript to avoid syntax issues
+      return `
         <a class="channel-card" href="${safeUrl}" target="_blank" rel="noopener noreferrer">
-            <img src="${safeLogo}" alt="${safeName}" class="channel-logo" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(safeName.substring(0, 3).toUpperCase())}&background=888888&color=fff&size=100&bold=true'" />
+            <img src="${safeLogo}" alt="${safeName}" class="channel-logo" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(
+        safeName.substring(0, 3).toUpperCase()
+      )}&background=888888&color=fff&size=100&bold=true'" />
             <div class="channel-name">${safeName}</div>
         </a>
     `;
-    }).join('');
+    })
+    .join("");
 
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -731,7 +920,9 @@ function generateDirectChannelsHtml(channels) {
         </div>
         
         <div class="footer">
-            <p>Total Channels: ${channels.length} | Generated on ${new Date().toLocaleDateString()}</p>
+            <p>Total Channels: ${
+              channels.length
+            } | Generated on ${new Date().toLocaleDateString()}</p>
         </div>
     </div>
 </body>
