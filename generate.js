@@ -100,7 +100,6 @@ const categoryOrder = [
   "news",
   "kids",
   "others",
-  "tamil",
 ];
 const categoryLabels = {
   zee: "ZEE",
