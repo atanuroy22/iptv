@@ -309,6 +309,29 @@ header h1 {
             <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/sports.m3u')">Copy</button>
           </div>
         </li>
+      </ul>
+      
+      <div style="text-align: center; margin: 15px 0;">
+        <button id="toggleMoreBtn" class="action-btn" style="padding: 8px 20px; font-size: 14px;" onclick="toggleMorePlaylists()">
+          Show More Playlists ▼
+        </button>
+      </div>
+      
+      <ul id="morePlaylists" style="list-style: none; padding: 0; margin: 0; display: none;">
+        <li style="margin-bottom: 10px;">
+          <strong>Kids:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/kids.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/kids.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>News:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/news.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/news.m3u')">Copy</button>
+          </div>
+        </li>
         <li style="margin-bottom: 10px;">
           <strong>Entertainment:</strong>
           <div class="url-container">
@@ -321,20 +344,6 @@ header h1 {
           <div class="url-container">
             <code class="url-code">https://atanuroy22.github.io/iptv/output/movies.m3u</code>
             <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/movies.m3u')">Copy</button>
-          </div>
-        </li>
-        <li style="margin-bottom: 10px;">
-          <strong>News:</strong>
-          <div class="url-container">
-            <code class="url-code">https://atanuroy22.github.io/iptv/output/news.m3u</code>
-            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/news.m3u')">Copy</button>
-          </div>
-        </li>
-        <li style="margin-bottom: 10px;">
-          <strong>Kids:</strong>
-          <div class="url-container">
-            <code class="url-code">https://atanuroy22.github.io/iptv/output/kids.m3u</code>
-            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/kids.m3u')">Copy</button>
           </div>
         </li>
         <li style="margin-bottom: 10px;">
@@ -365,7 +374,7 @@ header h1 {
           ⭐ Star on GitHub
         </a>
         <a class="action-btn" href="https://github.com/atanuroy22" target="_blank" style="background: #6c757d;">
-          👤 Follow Profile
+          👤 Follow My Profile
         </a>
         <a class="action-btn" href="https://github.com/atanuroy22" target="_blank" style="background: #ea4aaa; color: #fff;">
           💖 Sponsor/Donate
@@ -377,6 +386,19 @@ header h1 {
 </div>
 
 <script>
+function toggleMorePlaylists() {
+  const container = document.getElementById('morePlaylists');
+  const btn = document.getElementById('toggleMoreBtn');
+  
+  if (container.style.display === 'none') {
+    container.style.display = 'block';
+    btn.textContent = 'Show Less ▲';
+  } else {
+    container.style.display = 'none';
+    btn.textContent = 'Show More Playlists ▼';
+  }
+}
+
 function copyToClipboard(button, text) {
   navigator.clipboard.writeText(text).then(() => {
     const originalText = button.textContent;
