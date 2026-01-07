@@ -6,8 +6,8 @@
 
 ## WATCH HOW TO PLAY THESE M3U :-
 USING VLC - [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)
-<br>OR
-USING JIOTVGO APP (TV & ANDROID) - [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play2.html)
+<br>OR<br>
+USING JIOTVGO APP - [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play2.html)
 
 COMBINED all.m3u PLAYLIST (zee, sony, star, sports, tamil, etc.): <br>
 - [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/all.m3u) All — `https://atanuroy22.github.io/iptv/output/all.m3u`
