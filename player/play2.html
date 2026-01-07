@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Play M3U with VLC</title>
+<title>Play M3U with JioTV Go App</title>
 
 <style>
 :root {
@@ -67,7 +67,11 @@ header h1 {
 
 .steps li {
   margin-bottom: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.steps li strong {
+  color: #0056b3;
 }
 
 /* Buttons */
@@ -77,25 +81,27 @@ header h1 {
   background: #007bff;
   color: #fff;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
 .action-btn:hover {
   background: #0056b3;
 }
 
-/* Smaller instructional video */
+/* Video container */
 .video-box {
   position: relative;
-  max-width: 520px;
+  max-width: 640px;
   margin: 20px auto 0;
   background: #000;
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .video-box::before {
@@ -111,8 +117,21 @@ header h1 {
   height: 100%;
 }
 
+.note {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 12px 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.note strong {
+  color: #856404;
+}
+
 @media (max-width: 768px) {
   header h1 { font-size: 22px; }
+  .platform-header { font-size: 18px; }
 }
 </style>
 </head>
@@ -120,89 +139,92 @@ header h1 {
 <body>
 
 <header>
-  <h1>Play M3U Playlists Using VLC</h1>
+  <h1>Play M3U Playlists Using JioTV Go App</h1>
 </header>
 
 <div class="container">
 
-  <!-- ANDROID -->
+  <!-- TV & ANDROID -->
   <section class="platform">
-    <div class="platform-header">Android (VLC)</div>
+    <div class="platform-header">TV & Android (JioTV Go App)</div>
     <div class="platform-content">
+
+      <div class="note">
+        <strong>Note:</strong> This app works on both Android devices and Android TV.
+      </div>
 
       <div class="steps">
         <ol>
           <li>
-            Download VLC for Android:
-            <!-- <br> -->
+            <strong>Download the APK:</strong>
+            <!--<br> -->
             <a class="action-btn"
-               href="https://play.google.com/store/apps/details/VLC_for_Android?id=org.videolan.vlc"
+               href="https://github.com/JioTV-Go/jiotv_go_app/releases"
                target="_blank">
-              Download VLC
+              Download JioTV Go APK
             </a>
           </li>
 
           <li>
-            Open VLC and tap the More (⋯),
-            then select <strong>New Stream</strong>.
+            <strong>Install the APK</strong> on your Android device or Android TV.
           </li>
 
           <li>
-            Get the M3U playlist from here and paste it into VLC:
+            <strong>Login with your Jio SIM</strong> (mobile number and OTP).
+          </li>
+
+          <li>
+            Open the app and click <strong>Debug</strong> mode.
+          </li>
+
+          <li>
+            Enable <strong>Experimental Features</strong>.
+          </li>
+
+          <li>
+            Enable <strong>Custom Playlist Support</strong>.
+          </li>
+
+          <li>
+            Click <strong>TV UI Beta</strong>.
+          </li>
+
+          <li>
+            Click on the <strong>top left Experimental 🜄</strong> icon.
+          </li>
+
+          <li>
+            Select <strong>Add Custom Playlist</strong> option.
+          </li>
+
+          <!--<li>
+            Enter the M3U playlist URL (for example):
+            <br>
+            <code style="background: #f0f0f0; padding: 8px 12px; display: inline-block; margin-top: 8px; border-radius: 4px; font-size: 13px;">
+              https://atanuroy22.github.io/iptv/output/all.m3u
+            </code>
+          </li> -->
+          
+          <li>
+            Get the M3U playlist from here and paste it into the app:
             <!-- <br> -->
             <button class="action-btn"
               onclick="window.open('https://github.com/atanuroy22/iptv','_blank')">
               Get M3U
             </button>
           </li>
-        </ol>
-      </div>
-
-      <div class="video-box">
-        <video controls preload="metadata">
-          <source src="https://github.com/atanuroy22/iptv/raw/refs/heads/main/player/demo.mp4" type="video/mp4">
-        </video>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- WINDOWS -->
-  <section class="platform">
-    <div class="platform-header">Windows (VLC)</div>
-    <div class="platform-content">
-
-      <div class="steps">
-        <ol>
-          <li>
-            Download VLC for Windows:
-            <!-- <br> -->
-            <a class="action-btn"
-               href="https://www.videolan.org/vlc/"
-               target="_blank">
-              Download VLC
-            </a>
-          </li>
 
           <li>
-            Open VLC Media Player and go to
-            <strong>Media → Open Network Stream</strong>.
-          </li>
-
-          <li>
-            Get the M3U playlist from here and paste it into VLC:
-            <!-- <br> -->
-            <button class="action-btn"
-              onclick="window.open('https://github.com/atanuroy22/iptv','_blank')">
-              Get M3U
-            </button>
+            <strong>Save</strong> the playlist and start watching!
           </li>
         </ol>
       </div>
 
+      <!-- Video Demo -->
       <div class="video-box">
-        <video controls preload="metadata">
-          <source src="https://github.com/atanuroy22/iptv/raw/refs/heads/main/player/demo2.mp4" type="video/mp4">
+        <video controls>
+          <source src="https://github.com/atanuroy22/iptv/raw/refs/heads/main/player/demo3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
 
