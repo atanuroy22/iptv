@@ -129,6 +129,66 @@ header h1 {
   color: #856404;
 }
 
+.url-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.url-code {
+  flex: 1;
+  background: transparent;
+  padding: 0;
+  font-size: 13px;
+  color: #495057;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f8f9fa;
+}
+
+.url-code::-webkit-scrollbar {
+  height: 6px;
+}
+
+.url-code::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+.url-code::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+.url-code::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.copy-btn:hover {
+  background: #218838;
+}
+
+.copy-btn.copied {
+  background: #17a2b8;
+}
+
 @media (max-width: 768px) {
   header h1 { font-size: 22px; }
   .platform-header { font-size: 18px; }
@@ -235,23 +295,105 @@ header h1 {
   <section class="platform">
     <div class="platform-header">Available Playlists</div>
     <div class="platform-content">
-      <ul>
-        <li><strong>All Channels:</strong> <code>https://atanuroy22.github.io/iptv/output/all.m3u</code></li>
-        <li><strong>Zee:</strong> <code>https://atanuroy22.github.io/iptv/output/zee.m3u</code></li>
-        <li><strong>Sony:</strong> <code>https://atanuroy22.github.io/iptv/output/sony.m3u</code></li>
-        <li><strong>Star:</strong> <code>https://atanuroy22.github.io/iptv/output/star.m3u</code></li>
-        <li><strong>Sports:</strong> <code>https://atanuroy22.github.io/iptv/output/sports.m3u</code></li>
-        <li><strong>Entertainment:</strong> <code>https://atanuroy22.github.io/iptv/output/entertainment.m3u</code></li>
-        <li><strong>Movies:</strong> <code>https://atanuroy22.github.io/iptv/output/movies.m3u</code></li>
-        <li><strong>News:</strong> <code>https://atanuroy22.github.io/iptv/output/news.m3u</code></li>
-        <li><strong>Kids:</strong> <code>https://atanuroy22.github.io/iptv/output/kids.m3u</code></li>
-        <li><strong>Music:</strong> <code>https://atanuroy22.github.io/iptv/output/music.m3u</code></li>
-        <li><strong>Education:</strong> <code>https://atanuroy22.github.io/iptv/output/education.m3u</code></li>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 16px;">
+          <strong>All Channels:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/all.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/all.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Zee:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/zee.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/zee.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Sony:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/sony.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/sony.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Star:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/star.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/star.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Sports:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/sports.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/sports.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Entertainment:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/entertainment.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/entertainment.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Movies:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/movies.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/movies.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>News:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/news.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/news.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Kids:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/kids.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/kids.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Music:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/music.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/music.m3u')">Copy</button>
+          </div>
+        </li>
+        <li style="margin-bottom: 16px;">
+          <strong>Education:</strong>
+          <div class="url-container">
+            <code class="url-code">https://atanuroy22.github.io/iptv/output/education.m3u</code>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'https://atanuroy22.github.io/iptv/output/education.m3u')">Copy</button>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
 
 </div>
+
+<script>
+function copyToClipboard(button, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const originalText = button.textContent;
+    button.textContent = 'Copied!';
+    button.classList.add('copied');
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.classList.remove('copied');
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy:', err);
+  });
+}
+</script>
 
 </body>
 </html>
