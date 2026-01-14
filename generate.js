@@ -4,6 +4,7 @@ import fs from "fs";
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
 const TAMIL_PLAYLIST_URL = "https://iptv-org.github.io/iptv/languages/tam.m3u";
+const tamilLocalUrl = "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/main/channels.m3u";
 const SHUBHAMKUR_BASE_URL =
   "https://raw.githubusercontent.com/Shubhamkur/Tv/main/";
 const SHUBHAMKUR_FILES = ["waptv"];
@@ -700,6 +701,38 @@ async function generate() {
     );
   } catch (error) {
     console.log("Warning: Could not fetch Tamil playlist:", error.message);
+  }
+
+  // --- Fetch and append Tamil local IPTV playlist ---
+  try {
+    console.log(`Fetching Tamil local channels from: ${tamilLocalUrl}`);
+    const { data: tamilLocalData } = await axios.get(tamilLocalUrl);
+    const tamilLocalLines = tamilLocalData.split("\n");
+    for (let i = 0; i < tamilLocalLines.length; i++) {
+      if (!tamilLocalLines[i].startsWith("#EXTINF")) continue;
+      const ext = tamilLocalLines[i];
+      const url = tamilLocalLines[i + 1];
+      if (!url) continue;
+
+      // Force group-title to TAMIL for all Tamil channels
+      let modifiedExt;
+      if (/group-title="[^"]+"/i.test(ext)) {
+        modifiedExt = ext.replace(
+          /group-title="[^"]+"/i,
+          'group-title="TAMIL"'
+        );
+      } else {
+        modifiedExt = ext.replace(/^(#EXTINF[^,]*)/, '$1 group-title="TAMIL"');
+      }
+
+      output["tamil"].push(modifiedExt);
+      output["tamil"].push(url);
+    }
+    console.log(
+      `Added Tamil local channels. Total Tamil entries: ${(output["tamil"].length - 1) / 2}`
+    );
+  } catch (error) {
+    console.log("Warning: Could not fetch Tamil local playlist:", error.message);
   }
   // Create output directory if it doesn't exist
   if (!fs.existsSync("output")) {
