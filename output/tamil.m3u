@@ -934,4 +934,6 @@ http://media.7starcloud.com:1935/polimer/live/playlist.m3u8
 #EXTINF:-1 tvg-id="HeartbeatTV" tvg-logo="https://www.ashokadigital.net/_next/image?url=https%3A%2F%2Flivetv.ashokadigital.net%2Fupload%2Flogo%2F1767337190_HEART%2520BEETT.png&w=1920&q=75" group-title="TAMIL",Heartbeat TV
 https://rtmp.bmlive.net/bms/heartbeattv/stream.m3u8
 #EXTINF:-1 tvg-id="HansithaTV" tvg-logo="https://www.ashokadigital.net/_next/image?url=https%3A%2F%2Flivetv.ashokadigital.net%2Fupload%2Flogo%2F1767717103_H1.png&w=1920&q=75" group-title="TAMIL",Hansitha TV
-https://hd.rojatv.cloud/hansitha/tv/index.m3u8
+https://hd.rojatv.cloud/hansitha/tv/index.m3u8
+#EXTINF:-1 tvg-id="ElevenTelevision" group-title="TAMIL",Eleven Television
+https://live3.onecloudlive.in/eleventv/eleventv/index.m3u8
