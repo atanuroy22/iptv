@@ -3303,7 +3303,7 @@ http://media.7starcloud.com:1935/polimer/live/playlist.m3u8
 https://rtmp.bmlive.net/bms/heartbeattv/stream.m3u8
 #EXTINF:-1 tvg-id="HansithaTV" tvg-logo="https://www.ashokadigital.net/_next/image?url=https%3A%2F%2Flivetv.ashokadigital.net%2Fupload%2Flogo%2F1767717103_H1.png&w=1920&q=75" group-title="TAMIL",Hansitha TV
 https://hd.rojatv.cloud/hansitha/tv/index.m3u8
-#EXTINF:-1 tvg-id="ElevenTelevision" group-title="TAMIL",Eleven Television
+#EXTINF:-1 tvg-id="RowthiramTV" group-title="TAMIL",Rowthiram TV
 https://live3.onecloudlive.in/eleventv/eleventv/index.m3u8
 #EXTINF:-1 tvg-id="MTVTrichy" tvg-logo="https://play-lh.googleusercontent.com/g3dRZ3QwjqQN56TtRwVGe8lIx_4a2-HkSTu0Ikuzg3zVXc95COAuDFYBFqSus5l-eA=w480-h960-rw" group-title="TAMIL",MTV Trichy
 https://stream.iplive.xyz/mtv/mtvhd/index.m3u8
