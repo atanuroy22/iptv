@@ -3419,6 +3419,8 @@ https://ytv.iptv.pics/hls/cross.m3u8
 https://play.applelive.in/gcv/gcv.m3u8
 #EXTINF:-1 tvg-id="JeyamTelevision" tvg-logo="https://anywhere.pwisetthon.com/http://jeyamtv.in/wp-content/uploads/2020/01/jeyam-tv-logo-e1581244005299.png" group-title="TAMIL",Jeyam Television
 https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8
+#EXTINF:-1 tvg-id="PCNChannel" tvg-logo="" group-title="TAMIL",PCN Channel
+https://pcntv.wmsdigital.in/hls/gtv/stream.m3u8
 #EXTINF:-1 tvg-id="AadinathTV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AADINATH_TV/images/LOGO_HD/image.png" http-referrer="https://keralive.com/" group-title="Religious",Aadinath TV (396p)
 #EXTVLCOPT:http-referrer=https://keralive.com/
 #EXTINF:-1 tvg-id="AaseervathamTV.in@SD" tvg-logo="https://i.imgur.com/GlfrYs7.png" group-title="Religious",Aaseervatham TV (576p)

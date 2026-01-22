@@ -1068,4 +1068,6 @@ https://ytv.iptv.pics/hls/cross.m3u8
 #EXTINF:-1 tvg-id="GMax" tvg-logo="" group-title="TAMIL",G Max
 https://play.applelive.in/gcv/gcv.m3u8
 #EXTINF:-1 tvg-id="JeyamTelevision" tvg-logo="https://anywhere.pwisetthon.com/http://jeyamtv.in/wp-content/uploads/2020/01/jeyam-tv-logo-e1581244005299.png" group-title="TAMIL",Jeyam Television
-https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8
+https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8
+#EXTINF:-1 tvg-id="PCNChannel" tvg-logo="" group-title="TAMIL",PCN Channel
+https://pcntv.wmsdigital.in/hls/gtv/stream.m3u8
