@@ -1069,5 +1069,5 @@ https://ytv.iptv.pics/hls/cross.m3u8
 https://play.applelive.in/gcv/gcv.m3u8
 #EXTINF:-1 tvg-id="JeyamTelevision" tvg-logo="https://anywhere.pwisetthon.com/http://jeyamtv.in/wp-content/uploads/2020/01/jeyam-tv-logo-e1581244005299.png" group-title="TAMIL",Jeyam Television
 https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8
-#EXTINF:-1 tvg-id="PCNChannel" tvg-logo="" group-title="TAMIL",PCN Channel
+#EXTINF:-1 tvg-id="PCNChannel" tvg-logo="https://www.ashokadigital.net/_next/image?url=https%3A%2F%2Flivetv.ashokadigital.net%2Fupload%2Flogo%2F1769084640_new%2520pcn%2520logo.psd%2520-%2520PNG%252000%2520(2).png&w=1920&q=75" group-title="TAMIL",PCN Channel
 https://pcntv.wmsdigital.in/hls/gtv/stream.m3u8
