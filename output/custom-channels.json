@@ -11231,6 +11231,24 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "ShammahTV",
+      "name": "Shammah TV",
+      "url": "https://play.applelive.in/shammahtv/shammahtv.m3u8",
+      "logo_url": "https://tamiltvchannels.com/img/devotional/Shammah TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "JayamTVAlangulam",
+      "name": "Jayam TV Alangulam",
+      "url": "https://app.ashokadigital.net/app/db285ebc/index.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JayamTVAlangulam.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
