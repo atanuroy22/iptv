@@ -4,7 +4,8 @@ import fs from "fs";
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
 const TAMIL_PLAYLIST_URL = "https://iptv-org.github.io/iptv/languages/tam.m3u";
-const tamilLocalUrl = "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/main/channels.m3u";
+const tamilLocalUrl =
+  "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/main/channels.m3u";
 const SHUBHAMKUR_BASE_URL =
   "https://raw.githubusercontent.com/Shubhamkur/Tv/main/";
 const SHUBHAMKUR_FILES = ["waptv"];
@@ -255,6 +256,142 @@ function normalizeChannelName(name) {
     .replace(/[^a-z0-9\s]/g, "") // Remove special characters
     .replace(/\s+/g, " ") // Replace multiple spaces with single space
     .trim();
+}
+
+function getM3uAttrValue(ext, attrName) {
+  const m = ext.match(new RegExp(`${attrName}="([^"]*)"`, "i"));
+  return m ? m[1] : "";
+}
+
+function getM3uDisplayName(ext) {
+  const idx = ext.indexOf(",");
+  return idx >= 0 ? ext.slice(idx + 1).trim() : "";
+}
+
+function parseM3uEntries(lines) {
+  const entries = [];
+  for (let i = 0; i < lines.length; i++) {
+    const ext = lines[i];
+    if (!ext || !ext.startsWith("#EXTINF")) continue;
+    const url = (lines[i + 1] || "").trim();
+    if (!url) continue;
+    entries.push({ ext, url });
+  }
+  return entries;
+}
+
+function inferCategoryByGroupTitle(m3uEntries, existingById) {
+  const countsByGroup = new Map();
+  for (const { ext, url } of m3uEntries) {
+    if (!url.startsWith("https://")) continue;
+    const id = getM3uAttrValue(ext, "tvg-id").trim();
+    if (!id) continue;
+    const existing = existingById.get(id);
+    if (!existing) continue;
+    const groupTitle = getM3uAttrValue(ext, "group-title").trim();
+    if (!groupTitle) continue;
+    const category =
+      typeof existing.category === "number" ? existing.category : 0;
+    let groupCounts = countsByGroup.get(groupTitle);
+    if (!groupCounts) {
+      groupCounts = new Map();
+      countsByGroup.set(groupTitle, groupCounts);
+    }
+    groupCounts.set(category, (groupCounts.get(category) || 0) + 1);
+  }
+
+  const inferred = new Map();
+  for (const [groupTitle, groupCounts] of countsByGroup.entries()) {
+    let bestCategory = 0;
+    let bestCount = -1;
+    for (const [category, count] of groupCounts.entries()) {
+      if (count > bestCount) {
+        bestCount = count;
+        bestCategory = category;
+      }
+    }
+    inferred.set(groupTitle, bestCategory);
+  }
+  return inferred;
+}
+
+function writeCustomChannelsJsonFromM3uLines(m3uLines) {
+  const outputPath = "output/custom-channels.json";
+
+  let existingChannels = [];
+  try {
+    if (fs.existsSync(outputPath)) {
+      const raw = fs.readFileSync(outputPath, "utf8");
+      const parsed = JSON.parse(raw);
+      if (parsed && Array.isArray(parsed.channels)) {
+        existingChannels = parsed.channels;
+      }
+    }
+  } catch {
+    existingChannels = [];
+  }
+
+  const existingById = new Map();
+  for (const ch of existingChannels) {
+    if (ch && typeof ch.id === "string" && ch.id.trim()) {
+      existingById.set(ch.id, ch);
+    }
+  }
+
+  const m3uEntries = parseM3uEntries(m3uLines);
+  const inferredCategories = inferCategoryByGroupTitle(
+    m3uEntries,
+    existingById
+  );
+
+  const channels = Array.isArray(existingChannels) ? existingChannels : [];
+  const usedIds = new Set(existingById.keys());
+
+  for (const { ext, url } of m3uEntries) {
+    if (!url.startsWith("https://")) continue;
+
+    const id = getM3uAttrValue(ext, "tvg-id").trim();
+    if (!id) continue;
+
+    const existing = existingById.get(id);
+    const groupTitle = getM3uAttrValue(ext, "group-title").trim();
+    const displayName = getM3uDisplayName(ext);
+    const tvgLogo = getM3uAttrValue(ext, "tvg-logo").trim();
+
+    if (existing) {
+      if (
+        typeof existing.url === "string" &&
+        !existing.url.startsWith("https://")
+      ) {
+        existing.url = url;
+      }
+      if (typeof existing.name !== "string" || !existing.name.trim()) {
+        existing.name = displayName || id;
+      }
+      if (
+        (typeof existing.logo_url !== "string" || !existing.logo_url.trim()) &&
+        tvgLogo
+      ) {
+        existing.logo_url = tvgLogo;
+      }
+      continue;
+    }
+
+    if (usedIds.has(id)) continue;
+    usedIds.add(id);
+
+    channels.push({
+      id,
+      name: displayName || id,
+      url,
+      logo_url: tvgLogo || "",
+      category: inferredCategories.get(groupTitle) ?? 0,
+      language: 0,
+      is_hd: false,
+    });
+  }
+
+  fs.writeFileSync(outputPath, JSON.stringify({ channels }, null, 2));
 }
 // Simplified function to process all SHUBHAMKUR files
 async function processShubhamkurFiles(
@@ -729,10 +866,15 @@ async function generate() {
       output["tamil"].push(url);
     }
     console.log(
-      `Added Tamil local channels. Total Tamil entries: ${(output["tamil"].length - 1) / 2}`
+      `Added Tamil local channels. Total Tamil entries: ${
+        (output["tamil"].length - 1) / 2
+      }`
     );
   } catch (error) {
-    console.log("Warning: Could not fetch Tamil local playlist:", error.message);
+    console.log(
+      "Warning: Could not fetch Tamil local playlist:",
+      error.message
+    );
   }
   // Create output directory if it doesn't exist
   if (!fs.existsSync("output")) {
@@ -777,6 +919,7 @@ async function generate() {
   }
 
   fs.writeFileSync("output/all.m3u", combined.join("\n"));
+  writeCustomChannelsJsonFromM3uLines(combined);
 
   console.log("✅ All IPTV category playlists generated successfully!");
   console.log("📁 Individual files: output/zee.m3u, output/sony.m3u, etc.");
