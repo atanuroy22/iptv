@@ -3459,6 +3459,14 @@ https://play.applelive.in/penguinhd/penguinhd.m3u8
 http://punnagaidesamtv.phoenixcreations.online/punnagaidesamtv/punnagaidesamtv/playlist.m3u8
 #EXTINF:-1 tvg-id="AyyaAgilathirattuTV" tvg-logo="https://i.ibb.co/v6FzN61r/1000144432.png" group-title="TAMIL",Ayya Agilathirattu TV
 http://alk.sscloud7.in/live/ayyatv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tataprime.files.wordpress.com/2024/04/20240417_2112437588903960360710022.png" group-title="TAMIL", One Movies
+https://stream.rojatv.cloud/one/movies/index.m3u8
+#EXTINF:-1 tvg-logo="https://tataprime.files.wordpress.com/2024/03/20240316_1126324313884021657110601.png" group-title="TAMIL", One Hollywood
+https://stream.rojatv.cloud/one/hollywood/index.m3u8
+#EXTINF:-1 tvg-id="AnalaiExpress" group-title="TAMIL",Analai Express
+http://198.144.149.206:8080/ANALAI_MOVIE/index.m3u8?token=GTR
+#EXTINF:-1 tvg-id="AnalaiExpressCinema" tvg-logo="https://tataprime.files.wordpress.com/2024/03/20240314_0109167221661575844903220.png" group-title="TAMIL",Analai Express Cinema
+http://198.144.149.206:8080/MONTAMIL_CINEMA/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="AadinathTV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AADINATH_TV/images/LOGO_HD/image.png" http-referrer="https://keralive.com/" group-title="Religious",Aadinath TV (396p)
 #EXTVLCOPT:http-referrer=https://keralive.com/
 #EXTINF:-1 tvg-id="AaseervathamTV.in@SD" tvg-logo="https://i.imgur.com/GlfrYs7.png" group-title="Religious",Aaseervatham TV (576p)
