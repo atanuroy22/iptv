@@ -11249,6 +11249,15 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "TVRSport.ro@SD",
+      "name": "TVR Sport",
+      "url": "https://tvr-sport.lg.mncdn.com/tvrsport/smil:tvrsport.smil/chunklist_b5160000.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/TVR_Sport_Logo_2023.svg/320px-TVR_Sport_Logo_2023.svg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
