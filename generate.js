@@ -315,7 +315,16 @@ function inferCategoryByGroupTitle(m3uEntries, existingById) {
   return inferred;
 }
 
-function writeCustomChannelsJsonFromM3uLines(m3uLines) {
+function directIdFromUrl(url) {
+  const b64 = Buffer.from(String(url), "utf8")
+    .toString("base64")
+    .replace(/=+$/g, "")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_");
+  return `direct:${b64.slice(0, 80)}`;
+}
+
+function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
   const outputPath = "output/custom-channels.json";
 
   let existingChannels = [];
@@ -337,6 +346,11 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines) {
       existingById.set(ch.id, ch);
     }
   }
+  const existingUrls = new Set(
+    existingChannels
+      .map((c) => (c && typeof c.url === "string" ? c.url : ""))
+      .filter(Boolean)
+  );
 
   const m3uEntries = parseM3uEntries(m3uLines);
   const inferredCategories = inferCategoryByGroupTitle(
@@ -389,6 +403,56 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines) {
       language: 0,
       is_hd: false,
     });
+    existingUrls.add(url);
+  }
+
+  for (const ch of directChannels) {
+    if (!ch || typeof ch.url !== "string") continue;
+    const url = ch.url.trim();
+    if (!url || !url.startsWith("http")) continue;
+    if (existingUrls.has(url)) continue;
+
+    const id = directIdFromUrl(url);
+    const existing = existingById.get(id);
+    const name =
+      ch.name && typeof ch.name === "string" && ch.name.trim()
+        ? ch.name.trim()
+        : id;
+    const logo_url =
+      ch.logo && typeof ch.logo === "string" && ch.logo.trim()
+        ? ch.logo.trim()
+        : "";
+
+    if (existing) {
+      if (typeof existing.url === "string" && existing.url !== url) {
+        existing.url = url;
+      }
+      if (typeof existing.name !== "string" || !existing.name.trim()) {
+        existing.name = name;
+      }
+      if (
+        (typeof existing.logo_url !== "string" || !existing.logo_url.trim()) &&
+        logo_url
+      ) {
+        existing.logo_url = logo_url;
+      }
+      existingUrls.add(url);
+      continue;
+    }
+
+    if (usedIds.has(id)) continue;
+    usedIds.add(id);
+
+    channels.push({
+      id,
+      name,
+      url,
+      logo_url,
+      category: 0,
+      language: 0,
+      is_hd: false,
+    });
+    existingUrls.add(url);
   }
 
   fs.writeFileSync(outputPath, JSON.stringify({ channels }, null, 2));
@@ -919,7 +983,7 @@ async function generate() {
   }
 
   fs.writeFileSync("output/all.m3u", combined.join("\n"));
-  writeCustomChannelsJsonFromM3uLines(combined);
+  writeCustomChannelsJsonFromM3uLines(combined, directChannels);
 
   console.log("✅ All IPTV category playlists generated successfully!");
   console.log("📁 Individual files: output/zee.m3u, output/sony.m3u, etc.");
