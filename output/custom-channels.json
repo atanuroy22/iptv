@@ -11233,6 +11233,132 @@
       "is_hd": false
     },
     {
+      "id": "ShammahTV",
+      "name": "Shammah TV",
+      "url": "https://play.applelive.in/shammahtv/shammahtv.m3u8",
+      "logo_url": "https://tamiltvchannels.com/img/devotional/Shammah TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "JayamTVAlangulam",
+      "name": "Jayam TV Alangulam",
+      "url": "https://app.ashokadigital.net/app/db285ebc/index.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JayamTVAlangulam.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TVRSport.ro@SD",
+      "name": "TVR Sport",
+      "url": "https://tvr-sport.lg.mncdn.com/tvrsport/smil:tvrsport.smil/chunklist_b5160000.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/TVR_Sport_Logo_2023.svg/320px-TVR_Sport_Logo_2023.svg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AppleTVTirunelveli",
+      "name": "Apple TV Tirunelveli",
+      "url": "https://stream.iplive.xyz/mayatv/mayatv/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1747967607_APPLE%20TV.jpeg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SriThangamalaiMuruganTV",
+      "name": "Sri Thangamalai Murugan Tv",
+      "url": "https://live.sscloud7.in/stmtv/srithangamalaimurugantv/index.m3u8",
+      "logo_url": "https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1752476824.jpeg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KMMusic",
+      "name": "KM Music",
+      "url": "https://live.sscloud7.in/kmmusic/kmmusic/index.m3u8",
+      "logo_url": "https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1754406985.PNG",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "UdhayamTVMadurai",
+      "name": "Udhayam TV Madurai",
+      "url": "https://view.rcserver.in/tmp_hls8/udhayamtv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SenthamilTV",
+      "name": "Senthamil TV",
+      "url": "https://view.rcserver.in/tmp_hls24/senthamiltv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "JayamTVKarur2",
+      "name": "Jayam TV",
+      "url": "https://view.rcserver.in/tmp_hls20/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/fv-GlWrLfcfS22qBZwl7vkukmo_mKk-qOVhMe808gDHgzVk_ayR7PVEVxfPOXTyBjRGW=w1052-h592-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "VTVNagercoil",
+      "name": "V TV",
+      "url": "https://play.applelive.in/vtv/vtv.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/YUc9M2Gii20Jy5a-dpmR6958-2c1wOMYyO0Jddy9nDqyIp0KdvF8s17sLdzD4ECg4Ws=w512-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SuperTV",
+      "name": "Super TV",
+      "url": "https://stream.onecloudlive.in/superstartv/superstarhd/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "PaasamalarTV",
+      "name": "Paasamalar TV",
+      "url": "https://stream.sscloud7.in/live/paasamalartv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/5ZzLBuMhc1abMJ8KnaTw0Jg3ydqRKNLJrY31DSYD2iR9wCOpuN-XXNxdfI7uqKlXFJEmHFO9ffvh56JS7LbI9g=w512-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KarthickTV",
+      "name": "Karthick TV",
+      "url": "https://ipcloud.live/karthick/karthicktvhd/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1739547181_WhatsApp_Image_2025-02-14_at_8.50.29_PM__2_-removebg-preview.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SelvaTamilTV",
+      "name": "Selva Tamil TV",
+      "url": "https://stream.sscloud7.in/live/selvatamiltv/index.mpd",
+      "logo_url": "https://i.ibb.co/ksrxqTBM/1000144453.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
       "id": "TVRSport.ro@SD",
       "name": "TVR Sport",
       "url": "https://tvr-sport.lg.mncdn.com/tvrsport/smil:tvrsport.smil/chunklist_b5160000.m3u8",
