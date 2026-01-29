@@ -1140,4 +1140,6 @@ http://alk.sscloud7.in/live/mariyevazhgatv/index.m3u8
 #EXTINF:-1 tvg-id="ArputhamTV" tvg-logo="https://play-lh.googleusercontent.com/Sh4LbBRp2dXpGkoDkAgSChE1sP1i5ZL5TU2Ms8gu87eKlRPNYJpQKo1QNoWUXmX7XKDeEfwJaPmpXwJQyzi8=w512-h960-rw" group-title="TAMIL" group-title="Devotional;Christian",Arputham TV
 http://alk.sscloud7.in/live/arputhamtv/index.m3u8
 #EXTINF:-1 tvg-id="SelvaTamilTV" tvg-logo="https://i.ibb.co/ksrxqTBM/1000144453.png" group-title="TAMIL" group-title="PLC",Selva Tamil TV
-https://stream.sscloud7.in/live/selvatamiltv/index.mpd
+https://stream.sscloud7.in/live/selvatamiltv/index.mpd
+#EXTINF:-1 tvg-id="SuperTVDindigul" tvg-logo="" group-title="TAMIL" group-title="PLC",Super TV Dindigul [RTMP]
+rtmp://122.165.249.163/live/supertv
