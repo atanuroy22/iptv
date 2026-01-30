@@ -1133,13 +1133,11 @@ https://stream.sscloud7.in/live/paasamalartv/index.m3u8
 https://ipcloud.live/karthick/karthicktvhd/index.m3u8
 #EXTINF:-1 tvg-id="JeniferTV" tvg-logo="https://i.ibb.co/wF0LnNcQ/1000144434.jpg" group-title="TAMIL" group-title="PLC",Jenifer TV
 http://alk.sscloud7.in/live/jenifertv/index.m3u8
-#EXTINF:-1 tvg-id="OmTV" tvg-logo="https://i.ibb.co/ksrxqTBM/1000144453.png" group-title="TAMIL" group-title="PLC",Om TV
-http://alk.sscloud7.in/live/ohmtv/playlist.m3u8
 #EXTINF:-1 tvg-id="MariyeVazhgaTV" tvg-logo="https://play-lh.googleusercontent.com/8plw_0lxNeX5wYMUz3VmBsvxIltyTb-tSeRf34BKvc2hpEEtW9iRtcSe01gTuKGo-X1m0av-paM3ZKbfPihULaU=w512-h960-rw" group-title="TAMIL" group-title="Devotional;Christian",Mariye Vazhga TV
 http://alk.sscloud7.in/live/mariyevazhgatv/index.m3u8
 #EXTINF:-1 tvg-id="ArputhamTV" tvg-logo="https://play-lh.googleusercontent.com/Sh4LbBRp2dXpGkoDkAgSChE1sP1i5ZL5TU2Ms8gu87eKlRPNYJpQKo1QNoWUXmX7XKDeEfwJaPmpXwJQyzi8=w512-h960-rw" group-title="TAMIL" group-title="Devotional;Christian",Arputham TV
 http://alk.sscloud7.in/live/arputhamtv/index.m3u8
-#EXTINF:-1 tvg-id="SelvaTamilTV" tvg-logo="https://i.ibb.co/ksrxqTBM/1000144453.png" group-title="TAMIL" group-title="PLC",Selva Tamil TV
+#EXTINF:-1 tvg-id="SelvaTamilTV" tvg-logo="https://play-lh.googleusercontent.com/DzEobB1q02UpgqXpng4DebsPDTQ1bH_jpLfhEr_plkPrDBBPpR5_jvJDq15VAPAanVIwnh5MYLuH8wgc5mUt=w512-h960-rw" group-title="TAMIL" group-title="PLC",Selva Tamil TV
 https://stream.sscloud7.in/live/selvatamiltv/index.mpd
 #EXTINF:-1 tvg-id="SuperTVDindigul" tvg-logo="" group-title="TAMIL" group-title="PLC",Super TV Dindigul [RTMP]
 rtmp://122.165.249.163/live/supertv
