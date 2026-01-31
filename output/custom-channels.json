@@ -11825,6 +11825,15 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "ShauntheSheepFriends.uk@US",
+      "name": "Shaun the Sheep & Friends (1080p)",
+      "url": "https://aar-shaun-xumo.otteravision.com/aar/shaun/shaun.m3u8",
+      "logo_url": "https://provider-static.plex.tv/epg/cms/production/b1e2118d-e2f3-4cfe-a227-2b0c7ab664e5/Shaunthesheepandfriends_a_476x476_-_cleo_Parfitt-StarRDXr.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
