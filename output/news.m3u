@@ -169,6 +169,8 @@ https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/living-india-news/index.m3u8
 #EXTINF:-1 tvg-id="LokshahiNews.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_LOKSHAHI/images/LOGO_HD/image.png" group-title="News",Lokshahi News (1080p)
 https://see.lokshahi.live/live/index.m3u8
+#EXTINF:-1 tvg-id="MNaduTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/M_Nadu.png" group-title="News",M Nadu TV (576p)
+https://mumt01.tangotv.in/MNADU/index.m3u8
 #EXTINF:-1 tvg-id="MSignMedia.in@SD" tvg-logo="https://i.imgur.com/8fdUkOl.png" group-title="News",M Sign Media (720p) [Not 24/7]
 http://rtmp2.logicwebs.in:1935/msign/msignmedia/playlist.m3u8
 #EXTINF:-1 tvg-id="MadhimugamTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png" group-title="News",Madhimugam TV (576p)
@@ -185,8 +187,8 @@ https://mmtvnews1.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mathrubhuminews_nim_https/110322/mathrubhuminews/playlist.m3u8
 #EXTINF:-1 tvg-id="MediaOne.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MEDIA_ONE/images/LOGO_HD/image.png" group-title="News",Media One (720p)
 https://cdn-3.pishow.tv/live/1481/master.m3u8
-#EXTINF:-1 tvg-id="Mh1News.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Mh_One_News.png" group-title="News",Mh 1 News (576p) [Not 24/7]
-http://103.140.254.2:3500/live/511.m3u8
+#EXTINF:-1 tvg-id="Mh1News.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Mh_One_News.png" group-title="News",Mh 1 News (360p)
+https://livestream.jswk.online/mhonenews/live/index.m3u8
 #EXTINF:-1 tvg-id="MirrorNow.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MIRROR_NOW/images/LOGO_HD/image.png" http-referrer="https://www.timesnownews.com/" group-title="News",Mirror Now (720p)
 #EXTVLCOPT:http-referrer=https://www.timesnownews.com/
 #EXTINF:-1 tvg-id="MoonTV.in@SD" tvg-logo="https://i.imgur.com/3l25EZI.png" group-title="News",Moon TV (720p)

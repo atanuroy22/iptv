@@ -11843,6 +11843,69 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "BrioTV.in@SD",
+      "name": "Brio TV (576p)",
+      "url": "https://mumt02.tangotv.in/BRIOTV/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Brio_TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Captain.in@SD",
+      "name": "Captain (576p)",
+      "url": "https://mumt01.tangotv.in/CAPTAIN/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Captain.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SuriyaTV.in@SD",
+      "name": "Suriya TV (1080p)",
+      "url": "https://galaxyott.live/hls/suryatv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/suryatvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Mh1Music.in@SD",
+      "name": "Mh 1 Music (576p)",
+      "url": "https://mumt04.tangotv.in/MHONE/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MH1/images/LOGO_HD/image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MNaduTV.in@SD",
+      "name": "M Nadu TV (576p)",
+      "url": "https://mumt01.tangotv.in/MNADU/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/M_Nadu.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Mh1News.in@SD",
+      "name": "Mh 1 News (360p)",
+      "url": "https://livestream.jswk.online/mhonenews/live/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Mh_One_News.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TopKids.pl@HD",
+      "name": "Top Kids HD (1080p)",
+      "url": "https://liveovh010.cda.pl/enc116/topkidshdraw/topkidshdraw.m3u8",
+      "logo_url": "https://i.imgur.com/8Clhlrp.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
