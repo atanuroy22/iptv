@@ -11924,6 +11924,69 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "ColorsBangla.in@HD",
+      "name": "Colors Bangla HD (720p)",
+      "url": "https://tvsen3.aynaott.com/u3LkNQ7UHhFX/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_BANGLA/images/LOGO_HD/image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "7SMusic.in@SD",
+      "name": "7S Music (576p)",
+      "url": "https://mumt03.tangotv.in/7SMUSIC/index.m3u8",
+      "logo_url": "https://i.imgur.com/zDiIhdN.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ABPNews.in@SD",
+      "name": "ABP News (1080p)",
+      "url": "https://d2l4ar6y3mrs4k.cloudfront.net/live-streaming/abpnews-livetv/master.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/ABP_News_India.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AsianetSuvarnaNews.in@SD",
+      "name": "Asianet Suvarna News (1080p) [Not 24/7]",
+      "url": "https://asianetnews.vgcdn.net/vglive-sk-335835/playlist.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Asianet_Suvarna_News_logo.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OMTV.in@SD",
+      "name": "OM TV (576p)",
+      "url": "https://mumt01.tangotv.in/OMTV/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "CNBCTV18PrimeHD.in@SD",
+      "name": "CNBC TV18 Prime HD (1080p)",
+      "url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_CNBC_PRIME_HD/images/LOGO_HD/LOGO_HD_image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KairaliTV.in@SD",
+      "name": "Kairali TV (576p)",
+      "url": "https://mumt01.tangotv.in/KAIRALI/index.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Kairali_TV.svg/512px-Kairali_TV.svg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
