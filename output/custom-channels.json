@@ -8752,7 +8752,7 @@
       "id": "TamilnesanTV",
       "name": "Tamilnesan TV",
       "url": "https://view.rcserver.in/tmp_hls14/tntv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/TamilnesanTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -8797,7 +8797,7 @@
       "id": "AmmaVision",
       "name": "Amma Vision",
       "url": "https://view.rcserver.in/tmp_hls19/ammavision/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/AmmaVision.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -8869,7 +8869,7 @@
       "id": "MRTV",
       "name": "MR TV",
       "url": "https://view.apserver.in/tmp_hls8/mrtv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://bmcloud.in/apptest/uploads/68e6001d4b01e.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9049,7 +9049,7 @@
       "id": "EmperorTV",
       "name": "Emperor TV",
       "url": "https://rtmp.bmlive.net/bms/emperortv/stream.m3u8",
-      "logo_url": "",
+      "logo_url": "https://bmcloud.in/apis/apps/bmcloudimages/Emporar%20Tv%20Logo1.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9076,7 +9076,7 @@
       "id": "MCNTV",
       "name": "MCN TV",
       "url": "https://play.applelive.in/mcntv/mcntv.m3u8",
-      "logo_url": "",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6863874c65f6d.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9085,7 +9085,7 @@
       "id": "STNTV",
       "name": "STN TV",
       "url": "https://play.applelive.in/stntv/stntv.m3u8",
-      "logo_url": "",
+      "logo_url": "https://bmcloud.in/apptest/uploads/686c12aa38d31.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9121,7 +9121,7 @@
       "id": "MalligaiTV",
       "name": "Malligai TV",
       "url": "https://server.sscloud7.in/live/malligai/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MalligaiTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9967,7 +9967,7 @@
       "id": "JayTV",
       "name": "Jay TV",
       "url": "https://stream.onecloudlive.in/jaytv/jaytvhd/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JayTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -11993,6 +11993,150 @@
       "name": "USA Network East (1080p) [Not 24/7]",
       "url": "https://tvpass.org/live/USANetworkEast/hd",
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/512px-USA_Network_logo_%282016%29.svg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KCMusic",
+      "name": "KC Music",
+      "url": "https://rtmp.bmlive.net/bms/kcmusic/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6936d2ffdb5e8.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "VelTV",
+      "name": "Vel TV",
+      "url": "https://view.rcserver.in/tmp_hls26/veltv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SKTV2",
+      "name": "SK TV",
+      "url": "https://view.rcserver.in/tmp_hls29/sktv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AhaTV",
+      "name": "Aha TV",
+      "url": "https://rtmp.bmlive.net/bms/ahatv/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6936d638886a5.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ACNTV",
+      "name": "ACN TV",
+      "url": "https://play.applelive.in/acntv/acntv.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6925b0efd9a77.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AnjaiTV",
+      "name": "Anjai TV",
+      "url": "https://web.applelive.in/stream/anjaitv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AnisaTV",
+      "name": "Anisa TV",
+      "url": "https://web.applelive.in/anisatv/anisatv/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/692dcd8b1d4c8.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RuhashaTV",
+      "name": "Ruhasha TV",
+      "url": "https://live.applelive.in/ruhashatv/ruhashatv/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/692725fb950a3.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MaxTV2",
+      "name": "Max TV",
+      "url": "https://rtmp.applelive.in/kumariplus/kumariplus/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "EzhilTV2",
+      "name": "Ezhil TV",
+      "url": "https://stream.onecloudlive.in/ezhiltv/ezhilhd/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/688a642529460.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KoodalTV",
+      "name": "Koodal TV",
+      "url": "https://web.applelive.in/koodaltv/koodaltv/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/695cf57cc3657.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "CrayonzTV",
+      "name": "Crayonz TV",
+      "url": "https://rtmp.bmlive.net/stream/crayonz/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/692fdeb6e1666.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SKMedia",
+      "name": "SK Media",
+      "url": "https://rtmp.bmlive.net/stream/skmedia/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ThirumalaiTV2",
+      "name": "Thirumalai TV",
+      "url": "https://stream.onecloudlive.in/mullaitvhd/thirumalai/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6944c6d5e64f1.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SaharaTV",
+      "name": "Sahara TV",
+      "url": "https://ipcloud.live/saharatv/saharatv/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/69457f38e68a4.jpeg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
+      "name": "TNT Sports 3",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp3",
+      "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
       "is_hd": false
