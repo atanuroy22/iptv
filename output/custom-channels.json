@@ -11987,6 +11987,15 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "USANetwork.us@East",
+      "name": "USA Network East (1080p) [Not 24/7]",
+      "url": "https://tvpass.org/live/USANetworkEast/hd",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/512px-USA_Network_logo_%282016%29.svg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
