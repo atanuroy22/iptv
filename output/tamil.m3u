@@ -1140,4 +1140,8 @@ https://rtmp.bmlive.net/stream/skmedia/index.m3u8
 #EXTINF:-1 tvg-id="ThirumalaiTV2" tvg-logo="https://bmcloud.in/apptest/uploads/6944c6d5e64f1.png" tvg-region="Unknown" group-title="TAMIL",Thirumalai TV
 https://stream.onecloudlive.in/mullaitvhd/thirumalai/index.m3u8
 #EXTINF:-1 tvg-id="SaharaTV" tvg-logo="https://bmcloud.in/apptest/uploads/69457f38e68a4.jpeg" tvg-region="Unknown" group-title="TAMIL",Sahara TV
-https://ipcloud.live/saharatv/saharatv/index.m3u8
+https://ipcloud.live/saharatv/saharatv/index.m3u8
+#EXTINF:-1 tvg-id="EverestTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Everest TV
+https://view.apserver.in/tmp_hls11/everesttv/index.m3u8
+#EXTINF:-1 tvg-id="TamilOliTV2" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Tamil Oli TV
+https://view.apserver.in/tmp_hls14/tamilolitv/index.m3u8
