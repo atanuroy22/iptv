@@ -12135,8 +12135,116 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=fox5022",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=willowextra",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ZeeMalayalamNews.in@SD",
+      "name": "Zee News Malayalam (720p)",
+      "url": "https://d1ty2af03alkwd.cloudfront.net/index_4.m3u8",
+      "logo_url": "https://i.imgur.com/MePj7ET.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "HorizonSports.us@SD",
+      "name": "Horizon Sports",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/horizon-sports/master.m3u8?ads.vf=yqVv-4q1FVG",
+      "logo_url": "https://i.postimg.cc/zXqj0c2K/horizonsports.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MMAJunkie.us@SD",
+      "name": "MMA Junkie",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/mma-junkie/master.m3u8?ads.vf=h5aUSvZnJu4",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Sportskool.us@SD",
+      "name": "Sportskool TV",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/sportskool-tv/master.m3u8?ads.vf=0vV6h8I3vC8",
+      "logo_url": "https://i.imgur.com/R6FsKYj.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SportsTVPlus.us@SD",
+      "name": "SportsTVPlus",
+      "url": "https://d3s7x6kmqcnb6b.cloudfront.net/d/distro001a/NKXQTWMREOB2XFJRLAHO/hls3/now,-1m/m.m3u8?ads.vf=6S5T4Kl7B10",
+      "logo_url": "https://i.imgur.com/EyCDhgN.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TVPSport.pl@SD",
+      "name": "TVP Sport (1080p)",
+      "url": "https://cdn.kinoteka.cc/weebtv/gen.m3u8.php?id=sportTVP_channeed",
+      "logo_url": "https://i.imgur.com/JUZDOCO.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "BoxCinema.in@SD",
+      "name": "Box Cinema",
+      "url": "https://d3s7x6kmqcnb6b.cloudfront.net/d/distro001a/QK2TKFREGRYXDI8IJGHW/hls3/now,-1m/m.m3u8?ads.vf=kU8ru-Yl4zG",
+      "logo_url": "https://i.imgur.com/LGJlmtp.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Nicktoons.us@East",
+      "name": "Nicktoons East",
+      "url": "https://fl1.moveonjoy.com/NICKTOONS/index.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Nicktoons_Network_logo_2009.svg/512px-Nicktoons_Network_logo_2009.svg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TVPABC.pl@SD",
+      "name": "TVP ABC (576p)",
+      "url": "https://cdn.kinoteka.cc/weebtv/gen.m3u8.php?id=tv4_",
+      "logo_url": "https://i.imgur.com/wP2mpfM.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Smotrim100Detskoe.ru",
+      "name": "Смотрим 100% Детское",
+      "url": "https://player.smotrim.ru/iframe/stream/live_id/29d87e02-f367-48b1-b63e-6ce7923ab089",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "HareKrsnaTV.in@SD",
+      "name": "Hare Krsna",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/hare-krsna/master.m3u8?ads.vf=g5yzzYIk7ha",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Harekrsna.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KTVBangla.in@SD",
+      "name": "KTV Bangla (720p)",
+      "url": "https://server.livelegitpro.in:9899/tribetv/tribetv/index.m3u8",
+      "logo_url": "https://i.imgur.com/zG2P1WZ.png",
       "category": 0,
       "language": 0,
       "is_hd": false
