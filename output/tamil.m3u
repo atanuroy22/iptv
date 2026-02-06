@@ -995,7 +995,7 @@ https://pcntv.wmsdigital.in/hls/gtv/stream.m3u8
 http://almthendraltv.phoenixcreations.online/almthendraltv/almthendraltv/playlist.m3u8
 #EXTINF:-1 tvg-id="TopTVThuraiyur" tvg-logo="https://play-lh.googleusercontent.com/casJz_N_Pc0VK3YJ9LaB4fHTp_YF4MWA93Jt0Lul6kMGK4-UzDJTEt6q-aoaWjGYRA=w512-h960-rw" tvg-region="Thuraiyur;Tiruchirapalli" group-title="TAMIL",Top TV Thuraiyur
 https://stream.onecloudlive.in/toptv/toptvhd/index.m3u8
-#EXTINF:-1 tvg-id="JayTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JayTV.png" tvg-region="Unknown" group-title="TAMIL",Jay TV
+#EXTINF:-1 tvg-id="JayTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JayTV.png" tvg-region="Chennai" group-title="TAMIL",Jay TV
 https://stream.onecloudlive.in/jaytv/jaytvhd/index.m3u8
 #EXTINF:-1 tvg-id="ParamsTV2" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Params TV
 http://jhptv.7starcloud.com:1935/live/jhptv/playlist.m3u8
@@ -1144,4 +1144,14 @@ https://ipcloud.live/saharatv/saharatv/index.m3u8
 #EXTINF:-1 tvg-id="EverestTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Everest TV
 https://view.apserver.in/tmp_hls11/everesttv/index.m3u8
 #EXTINF:-1 tvg-id="TamilOliTV2" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Tamil Oli TV
-https://view.apserver.in/tmp_hls14/tamilolitv/index.m3u8
+https://view.apserver.in/tmp_hls14/tamilolitv/index.m3u8
+#EXTINF:-1 tvg-id="TamilPiraiTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Tamil Pirai TV
+https://kayal.inet.moe/kayal/kayaltv/index.m3u8
+#EXTINF:-1 tvg-id="IslamicChannel" tvg-logo="" tvg-region="Kanyakumari" group-title="TAMIL",Islamic Channel
+https://play.applelive.in/islamicchannel/islamicchannel.m3u8
+#EXTINF:-1 tvg-id="DeepamTV" tvg-logo="https://bmcloud.in/apptest/uploads/6854fcb41cf23.png" tvg-region="Kanyakumari" group-title="TAMIL",Deepam TV
+https://play.applelive.in/deebamtv/deebamtv.m3u8
+#EXTINF:-1 tvg-id="SharonTV2" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Sharon TV
+https://rtmp.bmlive.net/bms/sharontv/index.m3u8
+#EXTINF:-1 tvg-id="ArputharYesuTV" tvg-logo="https://bmcloud.in/apptest/uploads/6854638ce4239.png" tvg-region="Unknown" group-title="TAMIL",Arputhar Yesu TV
+https://arputharyesutv.arputharyesutv.com/live/md/index.m3u8

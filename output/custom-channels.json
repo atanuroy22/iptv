@@ -12257,6 +12257,51 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "TamilPiraiTV",
+      "name": "Tamil Pirai TV",
+      "url": "https://kayal.inet.moe/kayal/kayaltv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "IslamicChannel",
+      "name": "Islamic Channel",
+      "url": "https://play.applelive.in/islamicchannel/islamicchannel.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DeepamTV",
+      "name": "Deepam TV",
+      "url": "https://play.applelive.in/deebamtv/deebamtv.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6854fcb41cf23.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SharonTV2",
+      "name": "Sharon TV",
+      "url": "https://rtmp.bmlive.net/bms/sharontv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ArputharYesuTV",
+      "name": "Arputhar Yesu TV",
+      "url": "https://arputharyesutv.arputharyesutv.com/live/md/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6854638ce4239.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
