@@ -12302,6 +12302,69 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "GangaurTV.in@SD",
+      "name": "Gangaur TV (1080p)",
+      "url": "https://pbgangaur.wiseplayout.com/Gangaur/master.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "GTCPunjabi.in@SD",
+      "name": "GTC Punjabi (1080p)",
+      "url": "https://gtc-yupp.vgcdn.net/vglive-sk-254807/index.m3u8",
+      "logo_url": "https://media.thegtcnetwork.com/uploads/gtc-pujabin-s.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "BilliardTV.us@SD",
+      "name": "Billiard TV (1080p)",
+      "url": "https://1621590671.rsc.cdn77.org/HLS/BILLIARDTV.m3u8",
+      "logo_url": "https://i.imgur.com/BZijfKh.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NBCSportsNOW.us@SD",
+      "name": "NBC Sports NOW (1080p)",
+      "url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_channelId=99993008",
+      "logo_url": "https://i.imgur.com/EzNf2Yx.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MemoriasTVToons.co@SD",
+      "name": "Memorias TV Toons (480p) [Geo-blocked]",
+      "url": "https://video.xtrematv.com:3812/live/memoriastoonslive.m3u8",
+      "logo_url": "https://i.imgur.com/2fiiNCz.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cDovL2Nkbi1zLWxiMi5wbHVzY2RuLnBsL2x2LzE1MTc4MzEvMzUwL2Rhc2gvZTMyZTYwNDYvbGl2",
+      "name": "cafe futbol 1080p geoblocked",
+      "url": "http://cdn-s-lb2.pluscdn.pl/lv/1517831/350/dash/e32e6046/live.mpd",
+      "logo_url": "https://ui-avatars.com/api/?name=CF1&background=96CEB4&color=fff&size=100&bold=true",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cDovL2Nkbi1zLWxiMi5wbHVzY2RuLnBsL2x2LzE1MTc4MzIvMzUxL2Rhc2gvMjY5OWFmNjkvbGl2",
+      "name": "gramy dalej 1080p geoblocked",
+      "url": "http://cdn-s-lb2.pluscdn.pl/lv/1517832/351/dash/2699af69/live.mpd",
+      "logo_url": "https://ui-avatars.com/api/?name=GD1&background=FF6B6B&color=fff&size=100&bold=true",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
