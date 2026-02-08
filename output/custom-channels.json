@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=skysme",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -12289,7 +12289,7 @@
       "id": "SharonTV2",
       "name": "Sharon TV",
       "url": "https://rtmp.bmlive.net/bms/sharontv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://bmcloud.in/apptest/uploads/6855909199a57.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12416,6 +12416,42 @@
       "name": "Stingray Today's KPOP (1080p)",
       "url": "https://lotus.stingray.com/manifest/ose-317ads-montreal/samsungtvplus/master.m3u8",
       "logo_url": "https://i.imgur.com/mMbntB5.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "EagleTVNamakkal",
+      "name": "Eagle TV Namakkal",
+      "url": "https://rtmp.bmlive.net/bms/eagletv/stream.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1746463528_WhatsApp_Image_2025-05-05_at_8.17.32_PM-removebg-preview.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AppleTVMarthandam",
+      "name": "Apple TV Marthandam",
+      "url": "https://web.applelive.in/stream/appletv/index.m3u8",
+      "logo_url": "https://i.ibb.co/F4CFQJkH/Apple-TV.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "FoxTV",
+      "name": "Fox TV",
+      "url": "https://stream.onecloudlive.in/foxtv/foxtv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/y08p17uRsZ0hztiU9omcldzXhIFr43PsqKVsb9Q7sW-jeUy58z2d9XQr3WXlOZWjONDxAAYzeVHNs28ZE7pp=w512-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "BakthiTamil",
+      "name": "Bakthi Tamil",
+      "url": "https://rtmp.bmlive.net/stream/bakthitamil/index.m3u8",
+      "logo_url": "https://bmcloud.in/apis/apps/bmcloudimages/bakthi%20tamil.png",
       "category": 0,
       "language": 0,
       "is_hd": false

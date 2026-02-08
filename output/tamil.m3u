@@ -224,7 +224,7 @@ https://live.maxtn.in/moontv/moontv/index.m3u8
 #EXTINF:-1 tvg-id="NTNTV" tvg-logo="https://play-lh.googleusercontent.com/V4GL0XO3McjRFJeANzwgRZDjI3UPIEjhMtfq4L9oVthSJo1loNfvkBuoSYE8BdDLvfY=w512-h960-rw" tvg-region="Nagapattinam" group-title="TAMIL",NTN TV
 https://live.skystream.in/live/ntntv/index.m3u8?hls_ctx=1314owa2
 #EXTINF:-1 tvg-id="KumariTV" tvg-logo="https://play-lh.googleusercontent.com/5BbVPm_jHSHPVY3XLhfYjpJJtXi1qVV3jlJ9i-cTE0gckC_LSEBKftLgU6uX_UMXgQ=w512-h960-rw" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Kumari TV
-https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8
+https://play.applelive.in/kumaritv/gvkumaritv.m3u8
 #EXTINF:-1 tvg-id="SakthiTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SakthiTV.png" tvg-region="Cuddalore" group-title="TAMIL",Sakthi TV
 https://live.sscloud7.in/live/sakthitv/index.m3u8
 #EXTINF:-1 tvg-id="PrimeTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1752744323.jpg" tvg-region="Nagapattinam" group-title="TAMIL",Prime TV
@@ -297,14 +297,14 @@ https://ipcloud.live/skytv/skytv/index.m3u8
 https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8
 #EXTINF:-1 tvg-id="PaavaiTV" tvg-logo="https://play-lh.googleusercontent.com/QqeM-vu6XSHC2RnsHIavFBogRePV9Tife_VuLTzn9wdJIpDksMV31ha7dd7U5uoJtw=w512-h960-rw" tvg-region="Tirupattur" group-title="TAMIL",Paavai TV
 https://ipcloud.live/paavai/live/index.m3u8
-#EXTINF:-1 tvg-id="AdvikaTV" tvg-logo="https://play-lh.googleusercontent.com/GpP7fx3D7WauJEGYJkj8lJGuRVE3m5IqTKDqK74HIRhk2M_Hg49TSwlcP_oUUPKEt8ij=w512-h960-rw" tvg-region="Madurai" group-title="TAMIL",Advika TV
-http://stream.advikadigital.in/advika/advika/index.mpd
-#EXTINF:-1 tvg-id="SSMusic" tvg-logo="" tvg-region="Madurai" group-title="TAMIL",SS Music
-http://stream.advikadigital.in/advika/ssmusic/index.mpd
-#EXTINF:-1 tvg-id="SreeSaravanaaTV" tvg-logo="" tvg-region="Madurai" group-title="TAMIL",Sree Saravanaa TV
-http://stream.advikadigital.in/advika/saravana/index.mpd
+#EXTINF:-1 tvg-id="AdvikaTV" tvg-logo="https://play-lh.googleusercontent.com/GpP7fx3D7WauJEGYJkj8lJGuRVE3m5IqTKDqK74HIRhk2M_Hg49TSwlcP_oUUPKEt8ij=w512-h960-rw" tvg-region="Madurai" group-title="TAMIL",Advika TV [RTMP]
+rtmp://stream.advikadigital.in/advika/advika
+#EXTINF:-1 tvg-id="SSMusic" tvg-logo="" tvg-region="Madurai" group-title="TAMIL",SS Music [RTMP]
+rtmp://stream.advikadigital.in/advika/ssmusic
+#EXTINF:-1 tvg-id="SreeSaravanaaTV" tvg-logo="" tvg-region="Madurai" group-title="TAMIL",Sree Saravanaa TV [RTMP]
+rtmp://stream.advikadigital.in/advika/saravana
 #EXTINF:-1 tvg-id="Veerbox" tvg-logo="" tvg-region="Madurai" group-title="TAMIL",Veerbox
-http://stream.advikadigital.in/advika/veerbox/index.mpd
+rtmp://stream.advikadigital.in/advika/veerbox
 #EXTINF:-1 tvg-id="DeavathaiTV" tvg-logo="https://play-lh.googleusercontent.com/TD_XAFnpLJk1A9pT-vMW1dImZDTRpN7UZ8F8KGWy8u0z7LnG19MWeiTtnRJenT4-YlA=w512-h960-rw" tvg-region="Unknown" group-title="TAMIL",Deavathai TV
 https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8
 #EXTINF:-1 tvg-id="SMCVTV" tvg-logo="https://play-lh.googleusercontent.com/QHY-UJodq8HOSLN6waYq91yJMCsu1Cq5toOX6PRffCrE2A8sl-MOdifsRgmq-rl3eA=w512-h960-rw" tvg-region="Unknown" group-title="TAMIL",SMCV TV
@@ -385,7 +385,7 @@ https://app.ashokadigital.net/app/db285ebc/index.m3u8
 https://ipcloud.live/mtv/menhd/index.m3u8
 #EXTINF:-1 tvg-id="MSNTV" tvg-logo="https://play-lh.googleusercontent.com/F3TU8RYLcFvQ6V-3okXaome7n0PmClEmkVIcEGHw6YPO1ArCpp30XV_fNjuIdozkCZtq=w512-h960-rw" tvg-region="Cuddalore" group-title="TAMIL",MSN TV
 https://ipcloud.live/msntv/msntv/index.m3u8
-#EXTINF:-1 tvg-id="SaamiTV" tvg-logo="https://tataprime.wordpress.com/wp-content/uploads/2024/02/20240226_1554105857472875437555860.png" tvg-region="Cuddalore" group-title="TAMIL",Saami TV
+#EXTINF:-1 tvg-id="SaamiTV" tvg-logo="https://firebasestorage.googleapis.com/v0/b/playnow-7ce03.appspot.com/o/LOGO%2FSAAMI-TV.png?alt=media&token=433ca55f-db87-4e91-9068-9fe1e7beb5c4" tvg-region="Cuddalore" group-title="TAMIL",Saami TV
 https://ipcloud.live/msntv/saamitv/index.m3u8
 #EXTINF:-1 tvg-id="JeevanTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1754418564_WhatsApp%20Image%202025-08-05%20at%209.34.59%20PM.jpeg" tvg-region="Dharapura;Tiruppur" group-title="TAMIL",Jeevan TV
 https://stream.singamcloud.in/Jeevantv/Jeevantv/index.m3u8
@@ -417,7 +417,7 @@ https://stream.rojatv.cloud/kumarantv/gobi/index.m3u8
 https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8
 #EXTINF:-1 tvg-id="GaneshTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1734974165_IMG-20241223-WA0162-removebg-preview.png" tvg-region="Unknown" group-title="TAMIL",Ganesh TV
 https://live.thendralcloud.in/ganeshtvlive/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="EagleTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1746463528_WhatsApp_Image_2025-05-05_at_8.17.32_PM-removebg-preview.png" tvg-region="Namakkal" group-title="TAMIL",Eagle TV
+#EXTINF:-1 tvg-id="EagleTVNamakkal" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1746463528_WhatsApp_Image_2025-05-05_at_8.17.32_PM-removebg-preview.png" tvg-region="Namakkal" group-title="TAMIL",Eagle TV Namakkal
 https://rtmp.bmlive.net/bms/eagletv/stream.m3u8
 #EXTINF:-1 tvg-id="AshokaTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1732631170_ashoka%20tv%20logo%20png.png" tvg-region="Salem" group-title="TAMIL",Ashoka TV
 https://app.ashokadigital.net/app/12f5e922/index.m3u8
@@ -453,7 +453,7 @@ https://account2.livebox.co.in/AkashTvhls/live.m3u8
 https://play.applelive.in/appletv/appletv.m3u8
 #EXTINF:-1 tvg-id="AppleTVKLM" tvg-logo="https://tamiltvchannels.com/img/tamil%20local/apple%20tv.png" tvg-region="Unknown" group-title="TAMIL",Apple TV KLM
 https://play.applelive.in/appletv/appletvklm.m3u8
-#EXTINF:-1 tvg-id="AppleTV2" tvg-logo="https://i.ibb.co/F4CFQJkH/Apple-TV.jpg" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Apple TV
+#EXTINF:-1 tvg-id="AppleTVMarthandam" tvg-logo="https://i.ibb.co/F4CFQJkH/Apple-TV.jpg" tvg-region="Marthandam;Kanyakumari" group-title="TAMIL",Apple TV Marthandam
 https://web.applelive.in/stream/appletv/index.m3u8
 #EXTINF:-1 tvg-id="JeysonTV" tvg-logo="https://tamiltvchannels.com/img/tamil%20local/jeyson%20tv.jpg" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Jeyson TV
 https://play.applelive.in/jeysontv/jeysontv.m3u8
@@ -504,7 +504,7 @@ https://notvstream.in/rainbowtv/rainbowtv.m3u8
 #EXTINF:-1 tvg-id="ShaliniTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1737815564_Shalini%20Tv%20logo%20New%2028-04-2012.png" tvg-region="State-wide" group-title="TAMIL",Shalini TV
 https://stream.singamcloud.in/shalinitv/shalinitv/index.m3u8
 #EXTINF:-1 tvg-id="AalayaMagimaiTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1731768528_AALYA%20MAGAMAI%20TV%20LOGO%20BAKTHI%20TV.png" tvg-region="Unknown" group-title="TAMIL",Aalaya Magimai TV
-https://app.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8
+https://stream.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8
 #EXTINF:-1 tvg-id="DheiveegamTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1731847296_WhatsApp_Image_2024-11-17_at_6.04.32_PM-removebg-preview.png" tvg-region="Unknown" group-title="TAMIL",Dheiveegam TV
 https://stream.singamcloud.in/Dheiveegamtv/Dheiveegamtv/index.m3u8
 #EXTINF:-1 tvg-id="NishaTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1731776131_WhatsApp_Image_2024-11-16_at_8.36.22_PM-removebg-preview.png" tvg-region="Salem" group-title="TAMIL",Nisha TV
@@ -551,6 +551,8 @@ http://198.144.149.206:8080/NOTV/KAVINTV/index.m3u8?token=GTR
 https://app.ashokadigital.net/app/6a01fb97/index.m3u8
 #EXTINF:-1 tvg-id="7StarTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1754648001_7STV%20Still%202%20(1).png" tvg-region="Salem" group-title="TAMIL",7Star TV
 https://app.ashokadigital.net/app/ed8bd4a7/index.m3u8
+#EXTINF:-1 tvg-id="7StarTV@Alt" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1754648001_7STV%20Still%202%20(1).png" tvg-region="Salem" group-title="TAMIL",7Star TV (Alt)
+http://media.7starcloud.com:1935/live/7star8/playlist.m3u8
 #EXTINF:-1 tvg-id="7StarMusic" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1764994908_7SM%20Still%202.png" tvg-region="Salem" group-title="TAMIL",7Star Music
 https://app.ashokadigital.net/app/9346e98d/index.m3u8
 #EXTINF:-1 tvg-id="TamilStarTV" tvg-logo="https://yt3.googleusercontent.com/5jWU9n12RzHy-xHpVUbCAQEbqjJJ75nUsfvtHYA5Syg4XF6c2FwLcR3_I35Du_0mzU7edCS4wA=s900-c-k-c0x00ffffff-no-rj" tvg-region="Salem" group-title="TAMIL",Tamil Star TV
@@ -754,9 +756,11 @@ https://rtmp.bmlive.net/bms/jayamtv/stream.m3u8
 #EXTINF:-1 tvg-id="MCNTV" tvg-logo="https://bmcloud.in/apptest/uploads/6863874c65f6d.png" tvg-region="Marthandam;Kanyakumari" group-title="TAMIL",MCN TV
 https://play.applelive.in/mcntv/mcntv.m3u8
 #EXTINF:-1 tvg-id="STNTV" tvg-logo="https://bmcloud.in/apptest/uploads/686c12aa38d31.png" tvg-region="Kanyakumari" group-title="TAMIL",STN TV
-https://play.applelive.in/stntv/stntv.m3u8
+https://play.applelive.in/stntv/stntvhd.m3u8
 #EXTINF:-1 tvg-id="EnthiranTV" tvg-logo="https://play-lh.googleusercontent.com/epEjdtuFkTZxmirMjLmL75RB3qpTByhZ1rFGQvWrLV5Y5UjytOYJ_OUAz9PQExkFpqw=s512-rw" tvg-region="Kanyakumari" group-title="TAMIL",Enthiran TV
-https://live.applelive.in/enthirantv/enthirantv/index.m3u8
+https://play.applelive.in/hls/enthirantv.m3u8
+#EXTINF:-1 tvg-id="RoboTV" tvg-logo="https://play-lh.googleusercontent.com/i-Y7wQCHc3_OaQjN3bOqtZnW0GJ1jQ8m6utaVwmdC_6GFGALkAx2HhUrg-9c0fzhPfCK4KPtOsyMaQ0sbqBmjjE=w512-h960-rw" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Robo TV
+https://play.applelive.in/robotv/robotv.m3u8
 #EXTINF:-1 tvg-id="AnbudanTV" tvg-logo="https://play-lh.googleusercontent.com/-lygOyPSa6o0v_RsThiA5Nf6XGN9I6mJATeY3E1xl80cAJSg48bFJabdKifjQPuqdulF=s512-rw" tvg-region="Unknown" group-title="TAMIL",Anbudan TV
 https://rtmp.applelive.in/anbudantv/anbudantv/index.m3u8
 #EXTINF:-1 tvg-id="MalligaiTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MalligaiTV.png" tvg-region="Unknown" group-title="TAMIL",Malligai TV
@@ -782,7 +786,7 @@ https://play.applelive.in/jaitv/jaitv.m3u8
 #EXTINF:-1 tvg-id="CTNChannel" tvg-logo="https://play-lh.googleusercontent.com/RNJI7zZh3z3FU-KkGLsyJou7JVmXU7jh9LA8V1zYfMiHymnmgLTZrCnyB-NeSk_OrGQMCMG2-jmssbeovxt6RMg=w5120-h2880-rw" tvg-region="Unknown" group-title="TAMIL",CTN Channel
 https://live.olidigital.in/ctnchannel/ctnchannel/index.m3u8
 #EXTINF:-1 tvg-id="KingTVRanipet" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1740572567_1740209948_IMG-20250220-WA0130.jpg" tvg-region="Ranipet" group-title="TAMIL",King TV Ranipet
-https://ipcloud.live/kingtv/kingtv/index.m3u8
+https://ipcloud.live/kingtv/kingtv/index.mpd
 #EXTINF:-1 tvg-id="YatraTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1762598647_IMG-20251108-WA0090.jpg" tvg-region="Unknown" group-title="TAMIL",Yatra TV
 https://live.rojatv.cloud/yatra/tv/index.m3u8
 #EXTINF:-1 tvg-id="SuriyanTVKarur" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ95uEPKWiZx3qLhYsQ0Fu1MDRu8RZGpt8HIw&s" tvg-region="Karur" group-title="TAMIL",Suriyan TV Karur
@@ -891,7 +895,7 @@ https://stream.singamcloud.in/jeyamplus/jeyamplus/index.m3u8
 https://stream.singamcloud.in/djeyam/djeyam/index.m3u8
 #EXTINF:-1 tvg-id="TharaniTV" tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_m8dEDu2C1VZk09oicxW-SU8hxRSdivqmjw2GSvUPwnqyA=s900-c-k-c0x00ffffff-no-rj" tvg-region="Tirunelveli" group-title="TAMIL",Tharani TV
 https://singamcloud.in/tharanitvtvl/tharanitvtvl/index.m3u8
-#EXTINF:-1 tvg-id="SMedia" tvg-region="Unknown" group-title="TAMIL",S Media
+#EXTINF:-1 tvg-id="SMedia" tvg-region="Kadayanallur;Tenkasi" group-title="TAMIL",S Media
 https://stream.onecloudlive.in/stv/stvhd/index.m3u8
 #EXTINF:-1 tvg-id="RSTV" tvg-region="Unknown" group-title="TAMIL",RS TV
 https://stream.onecloudlive.in/rstv/rstvhd/index.m3u8
@@ -1017,7 +1021,7 @@ http://arulstream.in:1935/ArulTv/live/playlist.m3u8
 http://198.144.149.206:8080/NOTV/KANCHIMEDIA/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="AVSTV" tvg-logo="https://i.ibb.co/FLp5TnL1/AVS.jpg" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",AVS TV
 http://applelive.net:8091/avstv/avstv/index.m3u8
-#EXTINF:-1 tvg-id="BhagavathTV" tvg-logo="https://bmcloud.in/apptest/uploads/6921b58d54442.png" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Bhagavath TV
+#EXTINF:-1 tvg-id="BhagavathTV" tvg-logo="https://play-lh.googleusercontent.com/3zWAz19ZMvrF6UHFqjVvwxtRSSmVsu5qF4MXpp7fsfQL2wfk9wEV0mB6DRjAH30WX66b2qTiLrxoZieNoLhz=w512-h960-rw" tvg-region="Anjugramam;Kanyakumari" group-title="TAMIL",Bhagavath TV
 https://web.applelive.in/bhagavathtv/bhagavathtv/index.m3u8
 #EXTINF:-1 tvg-id="GlobalTV" tvg-logo="https://i.ibb.co/TxFDP8Cz/Globaltvhd.jpg" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Global TV
 https://play.applelive.in/globaltv/globaltv.m3u8
@@ -1035,8 +1039,6 @@ https://stream.rojatv.cloud/one/hollywood/index.m3u8
 http://198.144.149.206:8080/ANALAI_MOVIE/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="AnalaiExpressCinema" tvg-logo="https://tataprime.files.wordpress.com/2024/03/20240314_0109167221661575844903220.png" tvg-region="Movies" group-title="TAMIL",Analai Express Cinema
 http://198.144.149.206:8080/MONTAMIL_CINEMA/index.m3u8?token=GTR
-#EXTINF:-1 tvg-id="RoboTV" tvg-logo="https://play-lh.googleusercontent.com/i-Y7wQCHc3_OaQjN3bOqtZnW0GJ1jQ8m6utaVwmdC_6GFGALkAx2HhUrg-9c0fzhPfCK4KPtOsyMaQ0sbqBmjjE=w512-h960-rw" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Robo TV
-https://play.applelive.in/robotv/robotv.m3u8
 #EXTINF:-1 tvg-id="MakkalpaniTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MakkalpaniTV.png" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Makkalpani TV
 https://play.applelive.in/mapatv/mapatv.m3u8
 #EXTINF:-1 tvg-id="MariyaAnnaiTV" tvg-logo="https://play-lh.googleusercontent.com/7B-s6NkYveQUWUZpcwi8unjEwxpHXHG34k7M707DK_Da7IFv48CYXqYgE3jUrCawbg=w512-h960-rw" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Mariya Annai TV
@@ -1149,7 +1151,11 @@ https://kayal.inet.moe/kayal/kayaltv/index.m3u8
 https://play.applelive.in/islamicchannel/islamicchannel.m3u8
 #EXTINF:-1 tvg-id="DeepamTV" tvg-logo="https://bmcloud.in/apptest/uploads/6854fcb41cf23.png" tvg-region="Kanyakumari" group-title="TAMIL",Deepam TV
 https://play.applelive.in/deebamtv/deebamtv.m3u8
-#EXTINF:-1 tvg-id="SharonTV2" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Sharon TV
+#EXTINF:-1 tvg-id="SharonTV2" tvg-logo="https://bmcloud.in/apptest/uploads/6855909199a57.png" tvg-region="Unknown" group-title="TAMIL",Sharon TV
 https://rtmp.bmlive.net/bms/sharontv/index.m3u8
 #EXTINF:-1 tvg-id="ArputharYesuTV" tvg-logo="https://bmcloud.in/apptest/uploads/6854638ce4239.png" tvg-region="Unknown" group-title="TAMIL",Arputhar Yesu TV
-https://arputharyesutv.arputharyesutv.com/live/md/index.m3u8
+https://arputharyesutv.arputharyesutv.com/live/md/index.m3u8
+#EXTINF:-1 tvg-id="FoxTV" tvg-logo="https://play-lh.googleusercontent.com/y08p17uRsZ0hztiU9omcldzXhIFr43PsqKVsb9Q7sW-jeUy58z2d9XQr3WXlOZWjONDxAAYzeVHNs28ZE7pp=w512-h960-rw" tvg-region="Unknown" group-title="TAMIL",Fox TV
+https://stream.onecloudlive.in/foxtv/foxtv/index.m3u8
+#EXTINF:-1 tvg-id="BakthiTamil" tvg-logo="https://bmcloud.in/apis/apps/bmcloudimages/bakthi%20tamil.png" tvg-region="Unknown" group-title="TAMIL",Bakthi Tamil
+https://rtmp.bmlive.net/stream/bakthitamil/index.m3u8
