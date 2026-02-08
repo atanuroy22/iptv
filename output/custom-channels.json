@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=skysme",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -12362,6 +12362,60 @@
       "name": "gramy dalej 1080p geoblocked",
       "url": "http://cdn-s-lb2.pluscdn.pl/lv/1517832/351/dash/2699af69/live.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=GD1&background=FF6B6B&color=fff&size=100&bold=true",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "StingrayClassicRock.ca@SD",
+      "name": "Stingray Classic Rock (1080p)",
+      "url": "https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8",
+      "logo_url": "https://i.imgur.com/FBgu8yB.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "StingrayDJAZZ.ca@SD",
+      "name": "Stingray DJAZZ (1080p)",
+      "url": "https://lotus.stingray.com/manifest/djazz-djaads-montreal/samsungtvplus/master.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Stingray_Djazz.png/512px-Stingray_Djazz.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "StingrayEasyListening.ca@SD",
+      "name": "Stingray Easy Listening (1080p)",
+      "url": "https://lotus.stingray.com/manifest/ose-137ads-montreal/samsungtvplus/master.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Stingray_Music_logo.svg/512px-Stingray_Music_logo.svg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "StingrayNaturescape.ca@SD",
+      "name": "Stingray Naturescape (1080p)",
+      "url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8",
+      "logo_url": "https://i.imgur.com/882kd90.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "StingrayTheSpa.ca@SD",
+      "name": "Stingray The Spa (1080p)",
+      "url": "https://lotus.stingray.com/manifest/ose-122ads-montreal/samsungtvplus/master.m3u8",
+      "logo_url": "https://i.imgur.com/ywAN923.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "StingrayTodaysKPop.ca@SD",
+      "name": "Stingray Today's KPOP (1080p)",
+      "url": "https://lotus.stingray.com/manifest/ose-317ads-montreal/samsungtvplus/master.m3u8",
+      "logo_url": "https://i.imgur.com/mMbntB5.png",
       "category": 0,
       "language": 0,
       "is_hd": false
