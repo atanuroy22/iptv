@@ -8815,7 +8815,7 @@
       "id": "QMaxPlus",
       "name": "QMax Plus",
       "url": "https://view.rcserver.in/tmp_hls23/qmaxtv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/QMaxPlus.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -10138,7 +10138,7 @@
       "id": "AyyaTV",
       "name": "Ayya TV",
       "url": "https://play.applelive.in/ayyatv/ayyatv.m3u8",
-      "logo_url": "",
+      "logo_url": "https://tamiltvchannels.com/img/Devotional H/ayya logo.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=skysfott",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -12271,7 +12271,7 @@
       "id": "IslamicChannel",
       "name": "Islamic Channel",
       "url": "https://play.applelive.in/islamicchannel/islamicchannel.m3u8",
-      "logo_url": "",
+      "logo_url": "https://play-lh.googleusercontent.com/O1pprcPKyDJ95KLGDKyVtcoLrSgAeX0-STgyaYAWYEwBAiReAhxhE2asi4HXP2cplqM=w512-h960-rw",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12464,6 +12464,51 @@
       "category": 12,
       "language": 0,
       "is_hd": true
+    },
+    {
+      "id": "GTVKumbakonam",
+      "name": "G TV",
+      "url": "https://live.singamcloud.in/gtv/gtv/index.m3u8",
+      "logo_url": "https://tvchannel.in/wp-content/uploads/2025/03/gtv-kumbakonam-300x169.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MAPATV",
+      "name": "Makkalpani TV",
+      "url": "https://play.applelive.in/mapatv/mapatv.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MakkalpaniTV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MRTV2",
+      "name": "MR TV",
+      "url": "https://rtmp.bmlive.net/bms/bms/index.m3u8",
+      "logo_url": "https://bmcloud.in/apptest/uploads/68e6001d4b01e.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SriArjunTV",
+      "name": "Sri Arjun TV",
+      "url": "https://stream.onecloudlive.in/sriarjuntv/sriarjun/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/wZOk1Hq2elqzOuiC8GNQaIxes8xTuV8IyK5bofvxqjbnyNJ7vwaT3OOr-pTNg-qCNH_T=w512-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NilaTVTiruchengode",
+      "name": "Nila TV",
+      "url": "https://stream.onecloudlive.in/nilaatv/nilahd/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/zNrBrOSIJ_iVatOnqVAr6f-oMeFe0_2uyhwwqstMs7iwiRmuvvMzKxIba6hJlTRzMYw=w512-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
