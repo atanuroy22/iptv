@@ -324,6 +324,28 @@ function directIdFromUrl(url) {
   return `direct:${b64.slice(0, 80)}`;
 }
 
+function inferIsHdFromName(name) {
+  const n = String(name || "").toLowerCase();
+  if (!n) return false;
+  if (/\b(720|1080|1440|2160)p\b/.test(n)) return true;
+  if (/\b(4k|uhd)\b/.test(n)) return true;
+  if (/\bhd\b/.test(n) && !/\b(sd|480p|360p|240p|576p)\b/.test(n)) return true;
+  return false;
+}
+
+function inferCategoryFromGroupTitle(groupTitle) {
+  const g = String(groupTitle || "")
+    .toLowerCase()
+    .trim();
+  if (!g) return 0;
+  if (g === "news") return 12;
+  if (g === "sports") return 8;
+  if (g === "kids") return 7;
+  if (g === "movies") return 6;
+  if (g === "entertainment") return 5;
+  return 0;
+}
+
 function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
   const outputPath = "output/custom-channels.json";
 
@@ -371,6 +393,12 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
     const groupTitle = getM3uAttrValue(ext, "group-title").trim();
     const displayName = getM3uDisplayName(ext);
     const tvgLogo = getM3uAttrValue(ext, "tvg-logo").trim();
+    const categoryFromGroup = inferCategoryFromGroupTitle(groupTitle);
+    const inferredCategory =
+      categoryFromGroup !== 0
+        ? categoryFromGroup
+        : inferredCategories.get(groupTitle) ?? 0;
+    const inferredIsHd = inferIsHdFromName(displayName || id);
 
     if (existing) {
       if (
@@ -388,6 +416,19 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
       ) {
         existing.logo_url = tvgLogo;
       }
+      if (
+        (typeof existing.category !== "number" || existing.category === 0) &&
+        inferredCategory !== 0
+      ) {
+        existing.category = inferredCategory;
+      }
+      if (
+        typeof existing.is_hd !== "boolean" ||
+        (existing.is_hd === false &&
+          inferIsHdFromName(existing.name || displayName || id))
+      ) {
+        existing.is_hd = inferIsHdFromName(existing.name || displayName || id);
+      }
       continue;
     }
 
@@ -399,9 +440,9 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
       name: displayName || id,
       url,
       logo_url: tvgLogo || "",
-      category: inferredCategories.get(groupTitle) ?? 0,
+      category: inferredCategory,
       language: 0,
-      is_hd: false,
+      is_hd: inferredIsHd,
     });
     existingUrls.add(url);
   }
@@ -422,6 +463,7 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
       ch.logo && typeof ch.logo === "string" && ch.logo.trim()
         ? ch.logo.trim()
         : "";
+    const inferredIsHd = inferIsHdFromName(name);
 
     if (existing) {
       if (typeof existing.url === "string" && existing.url !== url) {
@@ -435,6 +477,12 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
         logo_url
       ) {
         existing.logo_url = logo_url;
+      }
+      if (
+        typeof existing.is_hd !== "boolean" ||
+        (existing.is_hd === false && inferredIsHd)
+      ) {
+        existing.is_hd = inferredIsHd;
       }
       existingUrls.add(url);
       continue;
@@ -450,7 +498,7 @@ function writeCustomChannelsJsonFromM3uLines(m3uLines, directChannels = []) {
       logo_url,
       category: 0,
       language: 0,
-      is_hd: false,
+      is_hd: inferredIsHd,
     });
     existingUrls.add(url);
   }
