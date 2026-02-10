@@ -93,12 +93,8 @@ https://mumt01.tangotv.in/MHONEDILSE/index.m3u8
 https://cdn-3.pishow.tv/live/1253/master.m3u8
 #EXTINF:-1 tvg-id="MarutamTV.in@SD" tvg-logo="https://i.imgur.com/cFNw4Af.png" group-title="Entertainment",MNTV (1080p)
 https://mntv.livebox.co.in/mntvhls/live.m3u8
-#EXTINF:-1 tvg-id="MTV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MTV/images/LOGO_HD/image.png" group-title="Entertainment",MTV (1080p)
-http://103.253.18.58:8000/play/a01t
 #EXTINF:-1 tvg-id="Nazara.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Nazara.png" group-title="Entertainment",Nazara (1080p)
 https://epiconvh.akamaized.net/live/nazara/master.m3u8
-#EXTINF:-1 tvg-id="NCV.in@SD" tvg-logo="https://i.imgur.com/HZy6x27.png" group-title="Entertainment",NCV (720p)
-http://131.153.22.8:1935/NCV/ncvstream/playlist.m3u8
 #EXTINF:-1 tvg-id="NTCTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ntvtamil.png" group-title="Entertainment",NTC TV (720p)
 https://galaxyott.live/hls/ntv.m3u8
 #EXTINF:-1 tvg-id="PasandTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Pasand.png" group-title="Entertainment",Pasand TV (576p)
@@ -135,8 +131,6 @@ http://103.78.149.54:8000/play/a016/index.m3u8
 https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
 #EXTINF:-1 tvg-id="StarUtsav.in@SD" tvg-logo="https://i.imgur.com/H1jhHDl.png" group-title="Entertainment",STAR UTSAV (576p)
 http://103.78.149.54:8000/play/a00r/index.m3u8
-#EXTINF:-1 tvg-id="StarPlus.in@SD" tvg-logo="https://i.imgur.com/xWxNy3L.png" group-title="Entertainment",StarPlus (576p)
-http://103.52.34.182:8001/play/a01l/index.m3u8
 #EXTINF:-1 tvg-id="StudioYuva.in@SD" tvg-logo="https://i.imgur.com/BOhgz2T.png" group-title="Entertainment",Studio Yuva (576p)
 https://mumt01.tangotv.in/STUDIOYUVA/index.m3u8
 #EXTINF:-1 tvg-id="SubinTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/subintvtamil.png" group-title="Entertainment",Subin TV (1080p)
