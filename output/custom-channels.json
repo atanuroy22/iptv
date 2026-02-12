@@ -311,7 +311,7 @@
       "name": "E 24",
       "url": "https://live-e24.dailyhunt.in/eternowsa/live/amlst:E24_,b256,b512,b1024,b1824,.smil/playlist.m3u8",
       "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_E24/images/LOGO_HD/image.png",
-      "category": 0,
+      "category": 5,
       "language": 0,
       "is_hd": false
     },
@@ -3587,7 +3587,7 @@
       "name": "Bansal News (576p)",
       "url": "https://cdn-2.pishow.tv/live/1051/master.m3u8",
       "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BANSAL_NEWS/images/LOGO_HD/image.png",
-      "category": 0,
+      "category": 12,
       "language": 0,
       "is_hd": false
     },
@@ -3785,9 +3785,9 @@
       "name": "GS TV (1080p)",
       "url": "https://cdnplay.livecast.io/560828843292539228453915.m3u8",
       "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/GS_TV.png",
-      "category": 0,
+      "category": 12,
       "language": 0,
-      "is_hd": false
+      "is_hd": true
     },
     {
       "id": "GujaratFirst.in@SD",
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=fox5022",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -12894,6 +12894,321 @@
       "url": "https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/656ef4af4261ca00083c8f37/master.m3u8?terminate=false&appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=deviceId&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&sid=sid&serverSideAds=false",
       "logo_url": "https://i.imgur.com/1gIpagY.png",
       "category": 7,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Dabangg.in@SD",
+      "name": "Dabangg (576p)",
+      "url": "https://mumt01.tangotv.in/DABANGG/index.m3u8",
+      "logo_url": "https://i.imgur.com/6ChpxLy.png",
+      "category": 5,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "VissaTV.in@SD",
+      "name": "Vissa TV (576p)",
+      "url": "https://mumt02.tangotv.in/VISSATV/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_VISSA_TV/images/LOGO_HD/image.png",
+      "category": 5,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Insync.in@SD",
+      "name": "Insync (576p)",
+      "url": "https://mumt04.tangotv.in/INSYNC/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Insync.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "F1Channel.ie@SD",
+      "name": "F1 Channel",
+      "url": "https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65c69ee3d77d450008c80438/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&sid=64dd0ce3-1a0f-4d0c-8ee3-21d8032923bf&serverSideAds=false",
+      "logo_url": "https://i.imgur.com/cjXzWsI.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "APN.in@SD",
+      "name": "APN (576p)",
+      "url": "https://mumt01.tangotv.in/APN/index.m3u8",
+      "logo_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/APN.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AssamTalks.in@SD",
+      "name": "Assam Talks (576p)",
+      "url": "https://mumt05.tangotv.in/ASSAMTALKS/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Assam_Talks.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "HarKhabar.in@SD",
+      "name": "Har Khabar (576p)",
+      "url": "https://mumt01.tangotv.in/HARKHABAR/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HARKHABAR/images/LOGO_HD/LOGO_HD_image.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Ind24.in@SD",
+      "name": "Ind 24 (576p)",
+      "url": "https://mumt02.tangotv.in/IND24/index.m3u8",
+      "logo_url": "https://i.imgur.com/exRpVmL.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "IndiaAhead.in@SD",
+      "name": "India Ahead (576p)",
+      "url": "https://mumt05.tangotv.in/INDIAAHEAD/index.m3u8",
+      "logo_url": "https://i.imgur.com/hBkTmf9.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "IndiaVoice.in@SD",
+      "name": "India Voice (576p)",
+      "url": "https://mumt04.tangotv.in/INDIAVOICE/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/India_Voice.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KhabarFast.in@SD",
+      "name": "Khabar Fast (576p)",
+      "url": "https://mumt04.tangotv.in/KHABARFAST/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHABAR_FAST/images/LOGO_HD/image.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KhabrainAbhiTak.in@SD",
+      "name": "Khabrain Abhi Tak (576p)",
+      "url": "https://mumt05.tangotv.in/KHABRAINABHITAK/index.m3u8",
+      "logo_url": "https://i.imgur.com/LIrolUQ.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NENews.in@SD",
+      "name": "NE News (576p)",
+      "url": "https://mumt05.tangotv.in/NENEWS/index.m3u8",
+      "logo_url": "https://i.imgur.com/L5GeJFb.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RajNewsKannada.in@SD",
+      "name": "Raj News Kannada (576p)",
+      "url": "https://mumt03.tangotv.in/RAJNEWSKANDA/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_NEWS_KANNADA/images/LOGO_HD/image.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RajNewsMalayalam.in@SD",
+      "name": "Raj News Malayalam (576p)",
+      "url": "https://mumt04.tangotv.in/RAJNEWSMALAYALAM/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_NEWS_MALAYALAM/images/LOGO_HD/image.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RajNewsTelugu.in@SD",
+      "name": "Raj News Telugu (576p)",
+      "url": "https://mumt04.tangotv.in/RAJNEWSTELUGU/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_NEWS_TELUGU/images/LOGO_HD/image.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SahanaNews.in@SD",
+      "name": "Sahana News (576p)",
+      "url": "https://mumt03.tangotv.in/SAHANANEWS/index.m3u8",
+      "logo_url": "https://i.imgur.com/3odbJJq.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "VelichamTV.in@SD",
+      "name": "Velicham TV (576p)",
+      "url": "https://cdn-3.pishow.tv/live/461/master.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/en/e/e4/Logo_of_Velicham_TV.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Smotrim100Detskoe.ru@SD",
+      "name": "Смотрим 100% Детское",
+      "url": "https://player.smotrim.ru/iframe/stream/live_id/29d87e02-f367-48b1-b63e-6ce7923ab089",
+      "logo_url": "https://i.imgur.com/1hsNeTa.png",
+      "category": 7,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TamilEntertainmentTelevision.ca@HD",
+      "name": "Tamil Entertainment Television (1080p)",
+      "url": "https://origin-de-y376549.cdn.nextologies.com:444/4c3caf7294b3/fbbd0aee3d9a8260/playlist.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/en/d/dd/Tamil_Entertainment_Television.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "AryanTVNational.in@SD",
+      "name": "Aryan TV National (576p)",
+      "url": "https://mumt04.tangotv.in/ARYANTVNATIONAL/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ARYAN_TV_NATIONAL/images/LOGO_HD/image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "BhaktiSagar.in@SD",
+      "name": "Bhakti Sagar (576p)",
+      "url": "https://mumt05.tangotv.in/BHAKTISAGAR/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Bhaktisagar.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "CalvaryTV.in@SD",
+      "name": "Calvary TV (576p)",
+      "url": "https://mumt04.tangotv.in/CALVARYTV/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Calvary.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Darshan24.in@SD",
+      "name": "Darshan 24 (576p)",
+      "url": "https://mumt05.tangotv.in/DARSHAN24/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Darshan_24.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DharmSandesh.in@SD",
+      "name": "Dharm Sandesh (576p)",
+      "url": "https://mumt05.tangotv.in/DHARMSANDESH/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Arihant_TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DishaTV.in@SD",
+      "name": "Disha TV (576p)",
+      "url": "https://mumt04.tangotv.in/DISHATV/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Disha_tv.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "FoodFood.in@SD",
+      "name": "Food Food (576p)",
+      "url": "https://mumt03.tangotv.in/FOODFOOD/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Food_Food.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "GraceTV.in@SD",
+      "name": "Grace TV (576p)",
+      "url": "https://mumt03.tangotv.in/GRACETV/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Grace_TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "HopeChannelIndia.in@SD",
+      "name": "Hope Channel India (576p)",
+      "url": "https://mumt01.tangotv.in/HOPECHANNELINDIA/index.m3u8",
+      "logo_url": "https://i.imgur.com/wPzPUrK.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MBCTV.in@SD",
+      "name": "MBC TV (576p)",
+      "url": "https://mumt03.tangotv.in/MBCTV/index.m3u8",
+      "logo_url": "https://i.imgur.com/Z4PlPUg.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Network10.in@SD",
+      "name": "Network 10",
+      "url": "https://network10.livebox.co.in/network10hls/live.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Network_10.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "News11.in@SD",
+      "name": "News 11 (576p)",
+      "url": "https://mumt02.tangotv.in/NEWS11BHARAT/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/News11.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ParasGold.in@SD",
+      "name": "Paras Gold (576p)",
+      "url": "https://mumt04.tangotv.in/PARASGOLD/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PARAS_GOLD_ONE/images/LOGO_HD/image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Ramdhenu.in@SD",
+      "name": "Ramdhenu (576p)",
+      "url": "https://mumt01.tangotv.in/RAMDHENU/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAMDHENU/images/LOGO_HD/image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Rang.in@SD",
+      "name": "Rang (576p)",
+      "url": "https://mumt01.tangotv.in/RANG/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RANG/images/LOGO_HD/image.png",
+      "category": 0,
       "language": 0,
       "is_hd": false
     }
