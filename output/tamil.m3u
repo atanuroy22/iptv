@@ -1168,4 +1168,8 @@ https://stream.onecloudlive.in/nilaatv/nilahd/index.m3u8
 #EXTINF:-1 tvg-id="BassTV" tvg-logo="https://play-lh.googleusercontent.com/x6njvZ3CWH4ZYi8T5vfRdrpB9CVy3FBUwow_ExUZ3BoMVXxxVoo_7V5xmTaJ1Q2FuE7K=w240-h480-rw" tvg-region="Namakkal" group-title="TAMIL",Bass TV
 http://xstream.onecloudlive.in:8080/bass/basstv/index.m3u8
 #EXTINF:-1 tvg-id="OmTVSalem" tvg-logo="https://i.ibb.co/xKZ0ydCW/1000136450.jpg" tvg-region="Salem" group-title="TAMIL",Om TV
-http://omtv.7starcloud.com:1935/omtv/live/live.m3u8
+http://omtv.7starcloud.com:1935/omtv/live/live.m3u8
+#EXTINF:-1 tvg-id="ArasuTV" tvg-logo="https://tataprime.wordpress.com/wp-content/uploads/2024/02/ctn-arasu-tv204274256292633484.png" tvg-region="Unknown" group-title="TAMIL",Arasu TV
+https://ipcloud.live/ctn/arasu/index.m3u8
+#EXTINF:-1 tvg-id="MagalirTV" tvg-logo="https://firebasestorage.googleapis.com/v0/b/playnow-7ce03.appspot.com/o/LOGO%2FCTN%2FCTN-MAGALIR-TV.png?alt=media&token=479bc182-afa2-406a-8dbb" tvg-region="" group-title="TAMIL",Magalir TV
+https://ipcloud.live/ctn/magalir/index.m3u8
