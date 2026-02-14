@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp3",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=liga1tv",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13317,6 +13317,24 @@
       "url": "https://ipcloud.live/ctn/magalir/index.m3u8",
       "logo_url": "https://firebasestorage.googleapis.com/v0/b/playnow-7ce03.appspot.com/o/LOGO%2FCTN%2FCTN-MAGALIR-TV.png?alt=media&token=479bc182-afa2-406a-8dbb",
       "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AlkassSHOOF2.qa@SD",
+      "name": "Alkass SHOOF 2 (1080p)",
+      "url": "https://liveeu-gcp.alkassdigital.net/shooflive2/main.m3u8",
+      "logo_url": "https://shoof.alkass.net/assets/images/shoof2.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "NudgeSportsChannel.ph@HD",
+      "name": "Nudge Sports Channel",
+      "url": "https://streams.comclark.com/live_input/nudge_sports/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/TW0hapZ.png",
+      "category": 8,
       "language": 0,
       "is_hd": false
     }
