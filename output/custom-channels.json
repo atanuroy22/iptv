@@ -8473,7 +8473,7 @@
       "id": "RasiCinema",
       "name": "Rasi Cinema",
       "url": "https://rasinetworks.in/live/rasicinemahd/index.mpd",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/RasiCinema.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -8482,7 +8482,7 @@
       "id": "RasiCinemax",
       "name": "Rasi Cinemax",
       "url": "https://rasinetworks.in/live/rasicinemaxhd/index.mpd",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/RasiCinemax.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -8491,7 +8491,7 @@
       "id": "RasiLifestyle",
       "name": "Rasi Lifestyle",
       "url": "https://rasinetworks.in/live/rasilifestylehd/index.mpd",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/RasiLifestyle.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9535,7 +9535,7 @@
       "id": "JeyamPlus",
       "name": "Jeyam Plus",
       "url": "https://stream.singamcloud.in/jeyamplus/jeyamplus/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JeyamPlus.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9562,7 +9562,7 @@
       "id": "SMedia",
       "name": "S Media",
       "url": "https://stream.onecloudlive.in/stv/stvhd/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SMedia.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12046,7 +12046,7 @@
       "id": "AnjaiTV",
       "name": "Anjai TV",
       "url": "https://web.applelive.in/stream/anjaitv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/AnjaiTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=hdchnl1",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=liga1tv",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13335,6 +13335,24 @@
       "url": "https://streams.comclark.com/live_input/nudge_sports/playlist.m3u8",
       "logo_url": "https://i.imgur.com/TW0hapZ.png",
       "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RockTV@Jio",
+      "name": "Rock TV (Jio)",
+      "url": "https://m3uplay.com/leo/live.m3u8?id=3357&format=.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/6fWqtRlywXirpl4cUwbjCl1vo86lOznuX6VZgG88MjMQvuwEa3OdQUG05njBjuCuhg=w512-h480-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "PCN",
+      "name": "PCN",
+      "url": "https://rtmp.bmlive.net/bms/pcn/stream.m3u8",
+      "logo_url": "https://i.ibb.co/vcfjYB9/PCN.png",
+      "category": 0,
       "language": 0,
       "is_hd": false
     }
