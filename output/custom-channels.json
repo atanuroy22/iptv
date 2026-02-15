@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=willowextra",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp1",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13352,6 +13352,24 @@
       "name": "PCN",
       "url": "https://rtmp.bmlive.net/bms/pcn/stream.m3u8",
       "logo_url": "https://i.ibb.co/vcfjYB9/PCN.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "VelurTV",
+      "name": "Velur TV",
+      "url": "https://stream.onecloudlive.in/bass/velurtv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/IeIaCvqJwuinzGQUFhY18PPxQip0JmPoRJ3_jy11b1pkB9ztitJYpWGgLNEk8VLfd6I=w512-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DinaTharani",
+      "name": "Dina Tharani",
+      "url": "https://stream.sscloud7.in/live/ddtv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/k0H62_q4i5vekWUm4A5ibIg33Dx4eO7qwRj9RewY_QMhC2VCvpaS5Rz0xiKg0vQqMDM=w480-h960-rw",
       "category": 0,
       "language": 0,
       "is_hd": false
