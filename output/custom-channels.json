@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=hdchnl2",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13373,6 +13373,33 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "SuryaTV.in@SD",
+      "name": "Surya TV SD (1080p)",
+      "url": "https://livestream10.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SURYA_TV/images/LOGO_HD/image.png",
+      "category": 5,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "FoxSports1.us@HD",
+      "name": "Fox Sports 1",
+      "url": "https://fl2.moveonjoy.com/FOX_Sports_1/index.m3u8",
+      "logo_url": "https://i.imgur.com/O9BapV9.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DisneyXD.us@East",
+      "name": "Disney XD (720p)",
+      "url": "https://fl7.moveonjoy.com/DISNEY_XD/index.m3u8",
+      "logo_url": "https://i.postimg.cc/MKNssTyj/disneyxd.png",
+      "category": 7,
+      "language": 0,
+      "is_hd": true
     }
   ]
 }
