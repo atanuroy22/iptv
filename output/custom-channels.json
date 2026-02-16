@@ -9922,7 +9922,7 @@
       "id": "CrossTV",
       "name": "Cross TV",
       "url": "https://ytv.iptv.pics/hls/cross.m3u8",
-      "logo_url": "",
+      "logo_url": "https://play-lh.googleusercontent.com/WogiHnNy_zWGvEkgFmKpeX5qHK-IBW6S7Q013WabPKOwCh0oU1ebmEL4gAi5MJRE0ek=w512-h960-rw",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=skysfott",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13400,6 +13400,33 @@
       "category": 7,
       "language": 0,
       "is_hd": true
+    },
+    {
+      "id": "TCBN",
+      "name": "TCBN",
+      "url": "https://ktismaservers.in:3382/live/tcbntvlive.m3u8",
+      "logo_url": "https://tvchannel.in/wp-content/uploads/2025/04/tcbn-300x169.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TamilChristianTV",
+      "name": "Tamil Christian TV",
+      "url": "https://server1.thewebworld.in:3797/stream/play.m3u8",
+      "logo_url": "https://tvchannel.in/wp-content/uploads/2025/04/Tamil-Christian-TV-300x169.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "FamilyChannel",
+      "name": "Family Channel",
+      "url": "https://2-fss-2.streamhoster.com/pl_118/203324-1410936-1/chunklist.m3u8",
+      "logo_url": "https://tvchannel.in/wp-content/uploads/2025/03/family-channel-420x237.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
