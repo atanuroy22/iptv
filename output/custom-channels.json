@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp3",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtespn",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13604,6 +13604,15 @@
       "name": "stss2hd",
       "url": "https://Tv4go.pages.dev/?id=stss2hd",
       "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/stss2hd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DrisyaTV",
+      "name": "Drisya TV",
+      "url": "https://view.apserver.in/tmp_hls7/tamilolitv/index.m3u8",
+      "logo_url": "",
       "category": 0,
       "language": 0,
       "is_hd": false
