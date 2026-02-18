@@ -7429,7 +7429,7 @@
       "id": "DeiveegaOliTV",
       "name": "Deiveega Oli TV",
       "url": "https://app.ashokadigital.net/app/e9fa0994/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1760613566_Deiveeka%20oli.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -13436,6 +13436,177 @@
       "category": 0,
       "language": 0,
       "is_hd": true
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czFoZA",
+      "name": "sts1hd",
+      "url": "https://Tv4go.pages.dev/?id=sts1hd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts1hd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czFoaGQ",
+      "name": "sts1hhd",
+      "url": "https://Tv4go.pages.dev/?id=sts1hhd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts1hhd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czFrbg",
+      "name": "sts1kn",
+      "url": "https://Tv4go.pages.dev/?id=sts1kn",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts1kn.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czF0Zw",
+      "name": "sts1tg",
+      "url": "https://Tv4go.pages.dev/?id=sts1tg",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts1tg.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czF0Z2hk",
+      "name": "sts1tghd",
+      "url": "https://Tv4go.pages.dev/?id=sts1tghd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts1tghd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czF0bQ",
+      "name": "sts1tm",
+      "url": "https://Tv4go.pages.dev/?id=sts1tm",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts1tm.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czF0bWhk",
+      "name": "sts1tmhd",
+      "url": "https://Tv4go.pages.dev/?id=sts1tmhd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts1tmhd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJo",
+      "name": "sts2h",
+      "url": "https://Tv4go.pages.dev/?id=sts2h",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2h.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJoZA",
+      "name": "sts2hd",
+      "url": "https://Tv4go.pages.dev/?id=sts2hd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2hd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJoaGQ",
+      "name": "sts2hhd",
+      "url": "https://Tv4go.pages.dev/?id=sts2hhd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2hhd.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJrbg",
+      "name": "sts2kn",
+      "url": "https://Tv4go.pages.dev/?id=sts2kn",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2kn.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJ0Zw",
+      "name": "sts2tg",
+      "url": "https://Tv4go.pages.dev/?id=sts2tg",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2tg.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJ0Z2hk",
+      "name": "sts2tghd",
+      "url": "https://Tv4go.pages.dev/?id=sts2tghd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2tghd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJ0bQ",
+      "name": "sts2tm",
+      "url": "https://Tv4go.pages.dev/?id=sts2tm",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2tm.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czJ0bWhk",
+      "name": "sts2tmhd",
+      "url": "https://Tv4go.pages.dev/?id=sts2tmhd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2tmhd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0czM",
+      "name": "sts3",
+      "url": "https://Tv4go.pages.dev/?id=sts3",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts3.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0c2toZWw",
+      "name": "stskhel",
+      "url": "https://Tv4go.pages.dev/?id=stskhel",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/stskhel.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0c3MxaGQ",
+      "name": "stss1hd",
+      "url": "https://Tv4go.pages.dev/?id=stss1hd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/stss1hd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9UdjRnby5wYWdlcy5kZXYvP2lkPXN0c3MyaGQ",
+      "name": "stss2hd",
+      "url": "https://Tv4go.pages.dev/?id=stss2hd",
+      "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/stss2hd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
