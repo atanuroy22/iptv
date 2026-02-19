@@ -8536,7 +8536,7 @@
       "id": "AnandamUTV",
       "name": "Anandam UTV",
       "url": "https://mumt02.tangotv.in/UTVANANDAM/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://yt3.googleusercontent.com/2xDkHaxdCWOHICws_UnBcFP6gRQoZ9YD-GtSw1KMxTGMblNYaWvlyYsFNkjzvJKKA9tU336n=s900-c-k-c0x00ffffff-no-rj",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=skysfott",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -12262,7 +12262,7 @@
       "id": "TamilPiraiTV",
       "name": "Tamil Pirai TV",
       "url": "https://kayal.inet.moe/kayal/kayaltv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://play-lh.googleusercontent.com/2xOQgGv_AKb8CQwnKGtomGzKpV9X1fpjcm7Dpr0hitR4OT2eWzZQqzikgiMCoB7uLrSF8v0R585Wj6v2TTmZIw=w512-h960-rw",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -13676,6 +13676,15 @@
       "name": "Nijam TV",
       "url": "https://nijamtv.indiamatrix.in/nijamtv/nijamtv.m3u8",
       "logo_url": "https://tamiltvchannels.com/img/devotional/Nijam TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "JawaharChannel@SD",
+      "name": "Jawahar Channel",
+      "url": "https://app.ashokadigital.net/app/6a01fb97/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1731775837_JAWAHAR%20TV%20LOGO%20PNG.png",
       "category": 0,
       "language": 0,
       "is_hd": false
