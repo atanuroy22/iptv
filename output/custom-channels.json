@@ -7906,7 +7906,7 @@
       "id": "DuraiMelodies",
       "name": "Durai Melodies",
       "url": "https://stream.onecloudlive.in/duraitv/classic/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/DuraiMelodies.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -8833,7 +8833,7 @@
       "id": "ThiraiTVMusic",
       "name": "Thirai TV Music",
       "url": "https://view.apserver.in/tmp_hls1/thiraitvplus/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/ThiraiTVMusic.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9526,7 +9526,7 @@
       "id": "JJeyam",
       "name": "J Jeyam",
       "url": "https://stream.singamcloud.in/jjeyam/jjeyam/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JJeyam.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9661,7 +9661,7 @@
       "id": "RVTamil",
       "name": "RV Tamil",
       "url": "https://ipcloud.live/rvtv/rvtvhd/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/RVTamil.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=willowextra",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=supercricket",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13612,7 +13612,7 @@
       "id": "DrisyaTV",
       "name": "Drisya TV",
       "url": "https://view.apserver.in/tmp_hls7/tamilolitv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/DrisyaTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
