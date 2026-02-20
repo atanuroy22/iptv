@@ -7033,7 +7033,7 @@
       "id": "VedhaTV",
       "name": "Vedha TV",
       "url": "https://skystream.in/live/vedha6528/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/VedhaTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -8743,7 +8743,7 @@
       "id": "JeyasubbuTV",
       "name": "Jeyasubbu TV",
       "url": "https://view.rcserver.in/tmp_hls15/jeyasubbumovies/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JeyasubbuTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -8788,7 +8788,7 @@
       "id": "AppleTVKumbakkonam",
       "name": "Apple TV Kumbakonam",
       "url": "https://view.rcserver.in/tmp_hls18/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/AppleTVKumbakonam.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9544,7 +9544,7 @@
       "id": "DJeyam",
       "name": "D Jeyam",
       "url": "https://stream.singamcloud.in/djeyam/djeyam/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/DJeyam.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -11407,7 +11407,7 @@
       "id": "SenthamilTV",
       "name": "Senthamil TV",
       "url": "https://view.rcserver.in/tmp_hls24/senthamiltv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SenthamilTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=skysfott",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13648,7 +13648,7 @@
       "id": "SriBhagavanTV",
       "name": "Sri Bhagavan TV",
       "url": "https://ipcloud.live/sriarjuntv/sribhagavan/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SriBhagavanTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
