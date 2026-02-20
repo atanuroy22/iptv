@@ -429,8 +429,8 @@ https://ipcloud.live/msntv/msntv/index.m3u8
 https://ipcloud.live/msntv/saamitv/index.m3u8
 #EXTINF:-1 tvg-id="JeevanTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1754418564_WhatsApp%20Image%202025-08-05%20at%209.34.59%20PM.jpeg" tvg-region="Dharapura;Tiruppur" group-title="TAMIL",Jeevan TV
 https://stream.singamcloud.in/Jeevantv/Jeevantv/index.m3u8
-#EXTINF:-1 tvg-id="RioTV" tvg-logo="https://play-lh.googleusercontent.com/r8o_7nnHnNBGqWHnTSl98uPoTwsxVGCfFArM5OTIcGQUoaNuxORznc11pQjyTF8GMA0=w512-h960-rw" tvg-region="Alangulam;Tenkasi" group-title="TAMIL",Rio TV [RTMP]
-rtmp://riotv.ipcloud.live:1935/riotv/riotvhd
+#EXTINF:-1 tvg-id="RioTV" tvg-logo="https://play-lh.googleusercontent.com/r8o_7nnHnNBGqWHnTSl98uPoTwsxVGCfFArM5OTIcGQUoaNuxORznc11pQjyTF8GMA0=w512-h960-rw" tvg-region="Alangulam;Tenkasi" group-title="TAMIL",Rio TV
+http://ipcloud.live/riotv/riotvhd/index.m3u8
 #EXTINF:-1 tvg-id="VeeraliTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1741273429_logo.gif" tvg-region="Udangudi;Thoothukudi" group-title="TAMIL",Veerali TV
 https://ipcloud.live/veerali/veeralitv/index.m3u8
 #EXTINF:-1 tvg-id="KingTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1731847465_WhatsApp_Image_2024-11-17_at_6.04.44_PM-removebg-preview.png" tvg-region="Coimbatore" group-title="TAMIL",King TV
