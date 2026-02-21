@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=espn1hd",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13694,6 +13694,42 @@
       "name": "Life TV (720p)",
       "url": "https://lifetv.livebox.co.in/lifetvhls/lifetv.m3u8",
       "logo_url": "https://i.ibb.co/v1C0bdR/logo-1.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "Nepal1.in@SD",
+      "name": "Nepal 1 (396p)",
+      "url": "https://d1msejlow1t3l4.cloudfront.net/fta/nepal1/chunks.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Nepal_one.png",
+      "category": 5,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Tunes6.in@SD",
+      "name": "Tunes 6 (720p)",
+      "url": "https://stream.d6-pro.com/tunes6music/live/video.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Tunes_6.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "SuspilneSport.ua@SD",
+      "name": "Suspilne. Sport (1080p) [Geo-blocked]",
+      "url": "https://cdnua05.hls.tv/934/hls/8743361621b245838bee193c9ec28322/4856/stream.m3u8",
+      "logo_url": "https://i.imgur.com/16IhU0M.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "PMCTelugu.in@SD",
+      "name": "PMC Telugu (1080p)",
+      "url": "https://mumbai-edge.smartplaytv.in/PMC/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/PMC_Telugu.png",
       "category": 0,
       "language": 0,
       "is_hd": true
