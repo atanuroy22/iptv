@@ -8716,7 +8716,7 @@
       "id": "SkyTVKarur",
       "name": "Sky TV Karur",
       "url": "https://view.rcserver.in/tmp_hls6/skytv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTiAMPvQdn3e68Q90iUhMckQEf_EPgIyG7OQ&s",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=espn1hd",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp3",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13892,6 +13892,15 @@
       "name": "sts2tmhd",
       "url": "https://Wap4tv.pages.dev/?id=sts2tmhd",
       "logo_url": "https://raw.githubusercontent.com/Tvwap/Tvimage/refs/heads/main/sts2tmhd.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MeiAlaiTV",
+      "name": "Mei Alai TV",
+      "url": "https://view.rcserver.in/tmp_hls21/meialai/index.m3u8",
+      "logo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkifCQtA5Q9jffIS1MkOz0KEp00hQopIKM6g&s",
       "category": 0,
       "language": 0,
       "is_hd": false
