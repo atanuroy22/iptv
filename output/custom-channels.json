@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp3",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=premieruk",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -13904,6 +13904,24 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "JayaPlus.in@SD",
+      "name": "Jaya Plus (576p)",
+      "url": "https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_PLUS/images/LOGO_HD/image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9lc3RyZWFtcy50di5uZWouY3ovZGFzaC9DSF9UVlBfU1BPUlRfUG9ydGFibGUuaXNtL3Bs",
+      "name": "tvp sport 1080p",
+      "url": "https://estreams.tv.nej.cz/dash/CH_TVP_SPORT_Portable.ism/playlist.mpd",
+      "logo_url": "https://ui-avatars.com/api/?name=TS1&background=96CEB4&color=fff&size=100&bold=true",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
     }
   ]
 }
