@@ -3098,7 +3098,7 @@ https://rtmp.bmlive.net/bms/pcn/stream.m3u8
 #EXTINF:-1 tvg-id="BamaTV" tvg-logo="https://play-lh.googleusercontent.com/dFwaSTm2m91d1PrCHW-u6f3gwodMUA_uU9rtQyFkj5_de0E6U-SJh3KQlHtMNOXoug=w512-h960-rw" tvg-region="Tirunelveli" group-title="TAMIL",Bama TV
 http://indiamatrix.in/bamahd/bamahd.m3u8
 #EXTINF:-1 tvg-id="SmartSriTV" tvg-logo="https://tataprime.wordpress.com/wp-content/uploads/2024/02/1669967959_smart.jpg" tvg-region="Virudhunagar" group-title="TAMIL",Smart Sri TV
-http://hdserver.7starcloud.com:1935/smart/tv/playlist.m3u8
+https://mumbai-edge.smartplaytv.in/smartsri/index.m3u8
 #EXTINF:-1 tvg-id="ManjuTV" tvg-logo="https://i.ibb.co/QvnKft4c/1000145860.png" tvg-region="Tenkasi" group-title="TAMIL",Manju TV
 https://stream.onecloudlive.in/manjutv/manjutv/index.m3u8
 #EXTINF:-1 tvg-id="JJeyam" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/JJeyam.png" tvg-region="Chennai" group-title="TAMIL",J Jeyam
