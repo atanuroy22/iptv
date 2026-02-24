@@ -1252,4 +1252,8 @@ http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8
 #EXTINF:-1 tvg-id="MangalamTV" tvg-logo="https://play-lh.googleusercontent.com/SGyfDbRPr5ySSLnPaRWovKGYTPhIZ0WdDxKgR5tiAURCGOVQDOWFNSNXZ3YtLIjZ9hq0_vqsyz4SpSmFO6Nj=w512-h960-rw" tvg-region="Tirunelveli" group-title="TAMIL",Mangalam TV
 http://mangalamtv.phoenixcreations.online/mangalamtv/mangalam/playlist.m3u8
 #EXTINF:-1 tvg-id="SSTV2" tvg-logo="https://play-lh.googleusercontent.com/WK6xINTd91o8A-6jaYgoGFSGXikEFoh2tlznkzY8tap0lEH2N8p5j2sumbYD-lOpQEN3c-oz4u79JKqdHAoq=w512-h960-rw" tvg-region="Unknown" group-title="TAMIL",SS TV
-http://mangalamtv.phoenixcreations.online/sstv/sstv/playlist.m3u8
+http://mangalamtv.phoenixcreations.online/sstv/sstv/playlist.m3u8
+#EXTINF:-1 tvg-id="RajaTVValliyur" tvg-logo="https://play-lh.googleusercontent.com/U1fN2q0X_xkL3qW5ziSDkdEh2WaBIohIyllEo6iVpbbj9htD4okHJ7f0pca4-iV6Yvs_aoMtu-ZVF-UDng4bQWg=w512-h960-rw" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",Raja TV Valliyur
+http://rajatv.phoenixcreations.online/rajatv/raja/playlist.m3u8
+#EXTINF:-1 tvg-id="MMTVValliyur" tvg-logo="https://play-lh.googleusercontent.com/KYp4jlQ7vzYLBQMDJPCAaep_EYWWdSZ6FEnvQxAxvCYapVcI6eEWEWRSFt56sPMZ2rIWg3LJuF80lN3P5Li_WFg=w512-h960-rw" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",MM TV Valliyur
+http://mmtv.phoenixcreations.online/mmtv/mm/index.mpd
