@@ -601,7 +601,7 @@ https://app.ashokadigital.net/app/6a01fb97/index.m3u8
 http://jawahar.7starcloud.com:1935/live/hd/playlist.m3u8
 #EXTINF:-1 tvg-chno="28" tvg-id="7StarTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1754648001_7STV%20Still%202%20(1).png" tvg-region="Salem" group-title="TAMIL",7Star TV
 https://app.ashokadigital.net/app/ed8bd4a7/index.m3u8
-#EXTINF:-1 tvg-chno="29" tvg-id="7StarMusic" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1764994908_7SM%20Still%202.png" tvg-region="Salem" group-title="TAMIL",7Star Music
+#EXTINF:-1 tvg-chno="55" tvg-id="7StarMusic" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1764994908_7SM%20Still%202.png" tvg-region="Salem" group-title="TAMIL",7Star Music
 https://app.ashokadigital.net/app/9346e98d/index.m3u8
 #EXTINF:-1 tvg-id="TamilStarTV" tvg-logo="https://yt3.googleusercontent.com/5jWU9n12RzHy-xHpVUbCAQEbqjJJ75nUsfvtHYA5Syg4XF6c2FwLcR3_I35Du_0mzU7edCS4wA=s900-c-k-c0x00ffffff-no-rj" tvg-region="Salem" group-title="TAMIL",Tamil Star TV
 http://acv.7starcloud.com:1935/tamilstar/tv/playlist.m3u8
@@ -713,7 +713,7 @@ https://server.sscloud7.in/kingtv/kingtv/index.m3u8
 https://server.sscloud7.in/live/devitv/index.m3u8
 #EXTINF:-1 tvg-chno="166" tvg-id="SriThangamalaiMuruganTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1752476824.jpeg" tvg-region="Unknown" group-title="TAMIL",Sri Thangamalai Murugan Tv
 https://live.sscloud7.in/stmtv/srithangamalaimurugantv/index.m3u8
-#EXTINF:-1 tvg-chno="145" tvg-id="KMMusic" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1754406985.PNG" tvg-region="Unknown" group-title="TAMIL",KM Music
+#EXTINF:-1 tvg-chno="35" tvg-id="KMMusic" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1754406985.PNG" tvg-region="Unknown" group-title="TAMIL",KM Music
 https://live.sscloud7.in/kmmusic/kmmusic/index.m3u8
 #EXTINF:-1 tvg-chno="171" tvg-id="VelavanTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1755348568.png" tvg-region="Unknown" group-title="TAMIL",Velavan TV
 http://velavantv.sscloud7.in/live/velavantv/index.m3u8
@@ -1244,6 +1244,8 @@ http://198.144.149.206:8080/NOTV/NEWS80/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="CTV" tvg-logo="https://play-lh.googleusercontent.com/X_vIkiQs3knoHDyeyTFs35jyICkM8c_s4jqW3pcC49PsnOapF2gtoMGzez4XkQtmU7k=w512-h960-rw" tvg-region="Unknown" group-title="TAMIL",C TV
 http://ctv.phoenixcreations.online:1935/ctv/ctv/playlist.m3u8
 #EXTINF:-1 tvg-id="ThentamilTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/ThentamilTV.png" tvg-region="" group-title="TAMIL",Thentamil TV
-http://thentv.stream.onecloudlive.in:8080/thentv/thentvhd/index.m3u8
+http://thentv.stream.onecloudlive.in/thentv/thentvhd/index.m3u8
 #EXTINF:-1 tvg-id="AnbuTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1761325584_anbu%20tv.png" tvg-region="Unknown" group-title="TAMIL",Anbu TV
-https://rtmp.bmlive.net/bms/anbutvhd/index.m3u8
+https://rtmp.bmlive.net/bms/anbutvhd/index.m3u8
+#EXTINF:-1 tvg-id="PalkarTV" tvg-chno="189" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Palkar
+https://live.applelive.in/palkartv/palkartv/index.m3u8
