@@ -13981,7 +13981,70 @@
       "id": "PalkarTV",
       "name": "Palkar",
       "url": "https://live.applelive.in/palkartv/palkartv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1771921658_Palkar%20TV%20Logo%20copy.PNG",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RaghulTV",
+      "name": "Raghul TV",
+      "url": "https://live1.sscloud7.in/live/raghultv/index.m3u8",
+      "logo_url": "https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv1721757628.PNG",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OmTV",
+      "name": "Om TV",
+      "url": "https://live1.sscloud7.in/live/ohmtv/playlist.m3u8",
+      "logo_url": "https://i.ibb.co/ksrxqTBM/1000144453.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "BloodOfJesusTV",
+      "name": "Blood Of Jesus TV",
+      "url": "https://live1.sscloud7.in/live/yovantv/playlist.m3u8",
+      "logo_url": "https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1732520813.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AyyaAgilathirattuTV",
+      "name": "Ayya Agilathirattu TV",
+      "url": "https://live1.sscloud7.in/live/ayyatv/playlist.m3u8",
+      "logo_url": "https://i.ibb.co/v6FzN61r/1000144432.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "JeniferTV",
+      "name": "Jenifer TV",
+      "url": "https://live1.sscloud7.in/live/jenifertv/index.m3u8",
+      "logo_url": "https://i.ibb.co/wF0LnNcQ/1000144434.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MariyeVazhgaTV",
+      "name": "Mariye Vazhga TV",
+      "url": "https://live1.sscloud7.in/live/mariyevazhgatv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/8plw_0lxNeX5wYMUz3VmBsvxIltyTb-tSeRf34BKvc2hpEEtW9iRtcSe01gTuKGo-X1m0av-paM3ZKbfPihULaU=w512-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ArputhamTV",
+      "name": "Arputham TV",
+      "url": "https://live1.sscloud7.in/live/arputhamtv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/Sh4LbBRp2dXpGkoDkAgSChE1sP1i5ZL5TU2Ms8gu87eKlRPNYJpQKo1QNoWUXmX7XKDeEfwJaPmpXwJQyzi8=w512-h960-rw",
       "category": 0,
       "language": 0,
       "is_hd": false
