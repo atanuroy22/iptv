@@ -12135,7 +12135,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "TNT Sports 3",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp2",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp1",
       "logo_url": "https://eu1-prod-images.disco-api.com/2023/07/03/d90c87a7-968b-47b4-bf66-98686bcd043b.png",
       "category": 0,
       "language": 0,
@@ -14046,6 +14046,24 @@
       "url": "https://live1.sscloud7.in/live/arputhamtv/index.m3u8",
       "logo_url": "https://play-lh.googleusercontent.com/Sh4LbBRp2dXpGkoDkAgSChE1sP1i5ZL5TU2Ms8gu87eKlRPNYJpQKo1QNoWUXmX7XKDeEfwJaPmpXwJQyzi8=w512-h960-rw",
       "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ESPN8TheOcho.us@ESPN8TheOchoHD",
+      "name": "ESPN 8: The Ocho",
+      "url": "https://d3b6q2ou5kp8ke.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-vz67vw1bljinm/ESPNTheOcho.m3u8",
+      "logo_url": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RaiYoyo.it@SD",
+      "name": "Rai YoYo (576p) [Geo-blocked]",
+      "url": "https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899",
+      "logo_url": "https://i.imgur.com/9gCxiDy.png",
+      "category": 7,
       "language": 0,
       "is_hd": false
     }
