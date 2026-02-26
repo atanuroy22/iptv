@@ -4,6 +4,7 @@ import fs from "fs";
 const PLAYLIST_URL = "https://iptv-org.github.io/iptv/countries/in.m3u";
 const SPORTS_PLAYLIST_URL = "https://iptv-org.github.io/iptv/index.m3u";
 const TAMIL_PLAYLIST_URL = "https://iptv-org.github.io/iptv/languages/tam.m3u";
+const TELUGU_PLAYLIST_URL = "https://iptv-org.github.io/iptv/languages/tel.m3u";
 const tamilLocalUrl =
   "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/main/channels.m3u";
 const SHUBHAMKUR_BASE_URL =
@@ -102,6 +103,7 @@ const categoryOrder = [
   "news",
   "kids",
   "tamil",
+  "telugu",
   "others",
 ];
 const categoryLabels = {
@@ -116,6 +118,7 @@ const categoryLabels = {
   kids: "KIDS",
   others: "OTHERS",
   tamil: "TAMIL",
+  telugu: "TELUGU",
 };
 
 // Extract tvg-language="X"
@@ -733,6 +736,8 @@ async function generate() {
   });
   // Initialize Tamil output separately (sourced from language playlist)
   output["tamil"] = ["#EXTM3U"];
+  // Initialize Telugu output separately (sourced from language playlist)
+  output["telugu"] = ["#EXTM3U"];
   channelTracker["direct"] = new Set(); // Track direct playback channels
 
   for (let i = 0; i < lines.length; i++) {
@@ -988,6 +993,39 @@ async function generate() {
       error.message
     );
   }
+  // --- Fetch and append Telugu language playlist ---
+  try {
+    console.log(`Fetching Telugu channels from: ${TELUGU_PLAYLIST_URL}`);
+    const { data: teluguData } = await axios.get(TELUGU_PLAYLIST_URL);
+    const teluguLines = teluguData.split("\n");
+    for (let i = 0; i < teluguLines.length; i++) {
+      if (!teluguLines[i].startsWith("#EXTINF")) continue;
+      const ext = teluguLines[i];
+      const url = teluguLines[i + 1];
+      if (!url) continue;
+
+      // Force group-title to TELUGU for all Telugu channels
+      let modifiedExt;
+      if (/group-title="[^"]+"/i.test(ext)) {
+        modifiedExt = ext.replace(
+          /group-title="[^"]+"/i,
+          'group-title="TELUGU"'
+        );
+      } else {
+        modifiedExt = ext.replace(/^(#EXTINF[^,]*)/, '$1 group-title="TELUGU"');
+      }
+
+      output["telugu"].push(modifiedExt);
+      output["telugu"].push(url);
+    }
+    console.log(
+      `Added Telugu channels. Total entries: ${(output["telugu"].length - 1) / 2}`
+    );
+  } catch (error) {
+    console.log("Warning: Could not fetch Telugu playlist:", error.message);
+  }
+  // --- End of Telugu processing ---
+
   // Create output directory if it doesn't exist
   if (!fs.existsSync("output")) {
     fs.mkdirSync("output");
