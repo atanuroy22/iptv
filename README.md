@@ -16,7 +16,7 @@ INDIVIDUAL CATEGORY PLAYLISTS:<br>
 - [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/sports.m3u) Sports — `https://atanuroy22.github.io/iptv/output/sports.m3u`
 - [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/kids.m3u) Kids — `https://atanuroy22.github.io/iptv/output/kids.m3u`
 - [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/tamil.m3u) Tamil — `https://atanuroy22.github.io/iptv/output/tamil.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/telugu.m3u) Telegu — `https://atanuroy22.github.io/iptv/output/telugu.m3u`
+- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/telugu.m3u) Telugu — `https://atanuroy22.github.io/iptv/output/telugu.m3u`
 
 <details>
   <summary><strong>👉 More Categories (click to expand)</strong></summary>
