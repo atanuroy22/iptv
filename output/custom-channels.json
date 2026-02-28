@@ -1525,7 +1525,7 @@
       "id": "DraftKingsNetwork.us@SD",
       "name": "DraftKings Network",
       "url": "https://na.linear.zype.com/e0bd0e23-a958-4e43-8164-4f2fef8876a8/fd3614bd-90bf-4530-a277-65ae3a1720c8-zype/live.m3u8",
-      "logo_url": "",
+      "logo_url": "https://i.imgur.com/SFYhgrt.png",
       "category": 8,
       "language": 0,
       "is_hd": false
@@ -1597,7 +1597,7 @@
       "id": "FanDuelRacing.us@SD",
       "name": "FanDuel Racing",
       "url": "https://d3ehq1uaxory6w.cloudfront.net/out/v1/35c05f080f4e49a4b4eb031b5a14e505/TVG2index_2.m3u8",
-      "logo_url": "",
+      "logo_url": "https://i.imgur.com/84lMjSj.png",
       "category": 8,
       "language": 0,
       "is_hd": false
@@ -1606,7 +1606,7 @@
       "id": "FanDuelTV.us@SD",
       "name": "FanDuel TV (720p)",
       "url": "https://d2jl8r92tdc3f1.cloudfront.net/out/v1/59419700344b4625b7cb0693ba265ea3/TVGindex_1.m3u8",
-      "logo_url": "",
+      "logo_url": "https://i.imgur.com/YPHrFU0.png",
       "category": 8,
       "language": 0,
       "is_hd": true
@@ -11856,7 +11856,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "Sky Sports  Cricket",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=espn1hd",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp2",
       "logo_url": "https://ui-avatars.com/api/?name=SSC&background=F7DC6F&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -11867,6 +11867,15 @@
       "name": "Yu-Gi-Oh! (1080p)",
       "url": "https://amg01796-amg01796c19-rakuten-gb-7486.playouts.now.amagi.tv/playlist/amg01796-fastmediafast-yugioh2en-rakutengb/playlist.m3u8",
       "logo_url": "https://i.imgur.com/Tl6aW2u.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "direct:aHR0cDovL2Nkbi1zLWxiMi5wbHVzY2RuLnBsL2x2LzE1NDQzMDMvOTM5L2Rhc2gvN2Y3NGIwNzkvbGl2",
+      "name": "polsat sport 1 1080p geoblocked",
+      "url": "http://cdn-s-lb2.pluscdn.pl/lv/1544303/939/dash/7f74b079/live.mpd",
+      "logo_url": "https://ui-avatars.com/api/?name=PS1&background=FFEAA7&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
       "is_hd": true
