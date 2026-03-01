@@ -1257,7 +1257,7 @@ http://ctv.phoenixcreations.online:1935/ctv/ctv/playlist.m3u8
 http://thentv.stream.onecloudlive.in/thentv/thentvhd/index.m3u8
 #EXTINF:-1 tvg-id="AnbuTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1761325584_anbu%20tv.png" tvg-region="Unknown" group-title="TAMIL",Anbu TV
 https://rtmp.bmlive.net/bms/anbutvhd/index.m3u8
-#EXTINF:-1 tvg-id="PalkarTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1771921658_Palkar%20TV%20Logo%20copy.PNG" tvg-region="Unknown" group-title="TAMIL",Palkar TV
+#EXTINF:-1 tvg-id="PalkarTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1771921658_Palkar%20TV%20Logo%20copy.PNG" tvg-region="Madurai" group-title="TAMIL",Palkar TV
 https://live.applelive.in/palkartv/palkartv/index.m3u8
 #EXTINF:-1 tvg-id="RKTV" tvg-logo="https://play-lh.googleusercontent.com/mv4jpeF5UsjK42qemWFUefrTsj5EAr6USSr1ZKI8Sm0HtSiowA5ha5BbcGsWM6mXC4Mp=w512-h960-rw" tvg-region="Tenkasi" group-title="TAMIL",RK TV
 http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8
@@ -1268,4 +1268,8 @@ http://rajatv.phoenixcreations.online/sstv/sstv/playlist.m3u8
 #EXTINF:-1 tvg-id="RajaTVValliyur" tvg-logo="https://play-lh.googleusercontent.com/U1fN2q0X_xkL3qW5ziSDkdEh2WaBIohIyllEo6iVpbbj9htD4okHJ7f0pca4-iV6Yvs_aoMtu-ZVF-UDng4bQWg=w512-h960-rw" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",Raja TV Valliyur
 http://rajatv.phoenixcreations.online/rajatv/raja/playlist.m3u8
 #EXTINF:-1 tvg-id="MMTVValliyur" tvg-logo="https://play-lh.googleusercontent.com/KYp4jlQ7vzYLBQMDJPCAaep_EYWWdSZ6FEnvQxAxvCYapVcI6eEWEWRSFt56sPMZ2rIWg3LJuF80lN3P5Li_WFg=w512-h960-rw" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",MM TV Valliyur
-http://mmtv.phoenixcreations.online/mmtv/mm/index.mpd
+http://mmtv.phoenixcreations.online/mmtv/mm/index.mpd
+#EXTINF:-1 tvg-id="WeBadugaTV" tvg-logo="https://i.ibb.co/msBGprc/1000145103.jpg" tvg-region="Nilgiris" group-title="TAMIL",We Baduga TV
+https://rtmp.bmlive.net/webaduga/webaduga/index.m3u8
+#EXTINF:-1 tvg-id="ManasuTV" tvg-logo="" tvg-region="Nilgiris" group-title="TAMIL",Manasu TV
+https://stream6.livebox.co.in/manasutvhls/live.m3u8

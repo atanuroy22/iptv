@@ -11856,7 +11856,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "Sky Sports  Cricket",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=willowextra",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp2",
       "logo_url": "https://ui-avatars.com/api/?name=SSC&background=F7DC6F&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -11975,6 +11975,24 @@
       "name": "Peace Of Mind TV (576p)",
       "url": "https://mumt03.tangotv.in/PEACEOFMIND/index.m3u8",
       "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PEACE_OF_MIND/images/LOGO_HD/image.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "WeBadugaTV",
+      "name": "We Baduga TV",
+      "url": "https://rtmp.bmlive.net/webaduga/webaduga/index.m3u8",
+      "logo_url": "https://i.ibb.co/msBGprc/1000145103.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ManasuTV",
+      "name": "Manasu TV",
+      "url": "https://stream6.livebox.co.in/manasutvhls/live.m3u8",
+      "logo_url": "",
       "category": 0,
       "language": 0,
       "is_hd": false
