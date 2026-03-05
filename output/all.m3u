@@ -3583,7 +3583,7 @@ http://ctv.phoenixcreations.online:1935/ctv/ctv/playlist.m3u8
 http://thentv.stream.onecloudlive.in/thentv/thentvhd/index.m3u8
 #EXTINF:-1 tvg-id="AnbuTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1761325584_anbu%20tv.png" tvg-region="Unknown" group-title="TAMIL",Anbu TV
 https://rtmp.bmlive.net/bms/anbutvhd/index.m3u8
-#EXTINF:-1 tvg-id="PalkarTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1771921658_Palkar%20TV%20Logo%20copy.PNG" tvg-region="Madurai" group-title="TAMIL",Palkar TV
+#EXTINF:-1 tvg-id="PalkarTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1772671396_Palkar%20TV%20new%20Logo%204.3.26.PNG" tvg-region="Madurai" group-title="TAMIL",Palkar TV
 https://live.applelive.in/palkartv/palkartv/index.m3u8
 #EXTINF:-1 tvg-id="RKTV" tvg-logo="https://play-lh.googleusercontent.com/mv4jpeF5UsjK42qemWFUefrTsj5EAr6USSr1ZKI8Sm0HtSiowA5ha5BbcGsWM6mXC4Mp=w512-h960-rw" tvg-region="Tenkasi" group-title="TAMIL",RK TV
 http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8
@@ -3599,6 +3599,8 @@ http://mmtv.phoenixcreations.online/mmtv/mm/index.mpd
 https://rtmp.bmlive.net/webaduga/webaduga/index.m3u8
 #EXTINF:-1 tvg-id="ManasuTV" tvg-logo="" tvg-region="Nilgiris" group-title="TAMIL",Manasu TV
 https://stream6.livebox.co.in/manasutvhls/live.m3u8
+#EXTINF:-1 tvg-id="AbiTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1772634994_ABI%20TV.png" tvg-region="Unknown" group-title="TAMIL",Abi TV [RTMP]
+rtmp://103.136.136.77:1935/abihd/abihd?psk=123456
 #EXTINF:-1 tvg-id="6TVTelugu.in@SD" tvg-logo="https://i.imgur.com/l3EcRnZ.png" group-title="TELUGU",6 TV Telugu (576p)
 https://cdn-1.pishow.tv/live/232/master.m3u8
 #EXTINF:-1 tvg-id="10TV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png" group-title="TELUGU",10 TV (576p)
