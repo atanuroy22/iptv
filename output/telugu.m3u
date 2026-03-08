@@ -103,6 +103,8 @@ https://mercury.streambridge.link:8042/telugu/metrotv/index.m3u8
 http://iptvcasomsapi.jprdigital.in/x-media/C0426/master.m3u8
 #EXTINF:-1 tvg-id="NationalGeographic.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540" group-title="TELUGU",National Geographic HD (1080p)
 http://103.113.103.202:8001/play/a007/index.m3u8
+#EXTINF:-1 tvg-id="NationalGeographicWild.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png" group-title="TELUGU",National Geographic Wild (576p)
+http://103.229.254.25:7001/play/a06r/index.m3u8
 #EXTINF:-1 tvg-id="NationalGeographicWild.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png" group-title="TELUGU",National Geographic Wild HD (1080p)
 http://103.113.103.202:8001/play/a02s/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png" group-title="TELUGU",Nickelodeon (576p)
