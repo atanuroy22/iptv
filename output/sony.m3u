@@ -1,6 +1,8 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="SonyAath.in@SD" tvg-logo="https://i.imgur.com/q4AwVq9.png" group-title="SONY",Sony Aath (576p)
 http://103.229.254.25:7001/play/a07a/index.m3u8
+#EXTINF:-1 tvg-id="SonyBBCEarth.in@SD" tvg-logo="https://i.imgur.com/XVUGLxa.png" group-title="SONY",Sony BBC Earth (576p)
+http://iptvcasomsapi.jprdigital.in/x-media/C0384/master.m3u8
 #EXTINF:-1 tvg-id="SonyBBCEarth.in@HD" tvg-logo="https://i.imgur.com/XVUGLxa.png" group-title="SONY",Sony BBC Earth HD (1080p)
 http://111.88.78.21:8000/play/a0uh/index.m3u8
 #EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s159096_ld_h15_aa.png?lock=720x540" group-title="SONY",Sony Entertainment Television HD (1080p)
