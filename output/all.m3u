@@ -3675,6 +3675,8 @@ http://ipcloud.live/dsrchannel/dsrhd/index.m3u8
 https://ipcloud.live/nilatvsvg/nilatv/index.m3u8
 #EXTINF:-1 tvg-id="MaduraTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1772719964_madhura tv.png" tvg-region="Madurai" group-title="TAMIL",Madura TV
 https://stream.onecloudlive.in/mm/maduratv/index.m3u8
+#EXTINF:-1 tvg-id="JPRTamil" tvg-logo="http://iptvcasomsapi.jprdigital.in/uploads/channels/channel_182_1739524444_thumb.png" tvg-region="Unknown" group-title="TAMIL",JPR Tamil
+http://iptvcasomsapi.jprdigital.in/x-media/C0182/master.m3u8
 #EXTINF:-1 tvg-id="6TVTelugu.in@SD" tvg-logo="https://i.imgur.com/l3EcRnZ.png" group-title="TELUGU",6 TV Telugu (576p)
 https://cdn-1.pishow.tv/live/232/master.m3u8
 #EXTINF:-1 tvg-id="10TV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png" group-title="TELUGU",10 TV (576p)

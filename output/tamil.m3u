@@ -1334,4 +1334,6 @@ http://ipcloud.live/dsrchannel/dsrhd/index.m3u8
 #EXTINF:-1 tvg-id="NilaTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1772708977_Nila Tv_00151.png" tvg-region="Sivaganga;Madurai" group-title="TAMIL",Nila TV Sivaganga
 https://ipcloud.live/nilatvsvg/nilatv/index.m3u8
 #EXTINF:-1 tvg-id="MaduraTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1772719964_madhura tv.png" tvg-region="Madurai" group-title="TAMIL",Madura TV
-https://stream.onecloudlive.in/mm/maduratv/index.m3u8
+https://stream.onecloudlive.in/mm/maduratv/index.m3u8
+#EXTINF:-1 tvg-id="JPRTamil" tvg-logo="http://iptvcasomsapi.jprdigital.in/uploads/channels/channel_182_1739524444_thumb.png" tvg-region="Unknown" group-title="TAMIL",JPR Tamil
+http://iptvcasomsapi.jprdigital.in/x-media/C0182/master.m3u8
