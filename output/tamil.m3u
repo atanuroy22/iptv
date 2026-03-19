@@ -1,10 +1,8 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="7SMusic.in@SD" tvg-logo="https://i.imgur.com/zDiIhdN.png" group-title="TAMIL",7S Music (576p)
 https://mumt03.tangotv.in/7SMUSIC/index.m3u8
-#EXTINF:-1 tvg-id="Andflix.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDFLIX/images/LOGO_HD/LOGO_HD_image.png" group-title="TAMIL",&flix (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0523/master.m3u8
-#EXTINF:-1 tvg-id="Andflix.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDFLIX/images/LOGO_HD/LOGO_HD_image.png" group-title="TAMIL",&flix HD (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0540/master.m3u8
+#EXTINF:-1 tvg-id="Andflix.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDFLIX/images/LOGO_HD/LOGO_HD_image.png" group-title="TAMIL",&flix HD (1080p)
+http://116.90.120.151:8000/play/a0il/index.m3u8
 #EXTINF:-1 tvg-id="AaseervathamTV.in@SD" tvg-logo="https://i.imgur.com/GlfrYs7.png" group-title="TAMIL",Aaseervatham TV (576p)
 https://mumt04.tangotv.in/AASEERVATHAMTV/index.m3u8
 #EXTINF:-1 tvg-id="AasthaTamil.in@SD" tvg-logo="https://i.imgur.com/YQK9ewf.png" group-title="TAMIL",Aastha Tamil (480p)
@@ -41,8 +39,6 @@ http://iptvcasomsapi.jprdigital.in/x-media/C0593/master.m3u8
 https://galaxyott.live/hls/dharshantv.m3u8
 #EXTINF:-1 tvg-id="DisneyChannel.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_CHANNEL/images/LOGO_HD/image.png" group-title="TAMIL",Disney Channel (576p)
 http://103.182.170.32:8888/play/a04g
-#EXTINF:-1 tvg-id="DisneyJunior.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_JUNIOR/images/LOGO_HD/image.png" group-title="TAMIL",Disney Junior (576p)
-http://103.229.254.25:7001/play/a09r/index.m3u8
 #EXTINF:-1 tvg-id="EETTV.ca@SD" tvg-logo="https://i.imgur.com/rntSEDZ.png" group-title="TAMIL",EET TV (1080p) [Not 24/7]
 https://eu.streamjo.com/eetlive/eettv.m3u8
 #EXTINF:-1 tvg-id="EETTV.in@SD" tvg-logo="https://i.imgur.com/rMldFW8.png" group-title="TAMIL",EET TV (1080p) [Not 24/7]
@@ -107,22 +103,20 @@ https://mntv.livebox.co.in/musichls/live.m3u8
 https://jk3lz8xklw79-hls-live.5centscdn.com/lpl/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="MoonTV.in@SD" tvg-logo="https://i.imgur.com/3l25EZI.png" group-title="TAMIL",Moon TV (720p)
 https://player.mslivestream.net/mslive/e10bb900976df9177b9a080314f26f86.sdp/index.m3u8
-#EXTINF:-1 tvg-id="MoviesNow.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png" group-title="TAMIL",Movies Now (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0090/master.m3u8
 #EXTINF:-1 tvg-id="MoviesNowPlus.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png" group-title="TAMIL",Movies Now + (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0112/master.m3u8
+http://116.90.120.151:8000/play/a0i4/index.m3u8
+#EXTINF:-1 tvg-id="MoviesNow.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png" group-title="TAMIL",Movies Now HD (1080p)
+http://116.90.120.151:8000/play/a0ib/index.m3u8
 #EXTINF:-1 tvg-id="MTA6Asia.uk@SD" tvg-logo="https://i.imgur.com/nhCNPJI.png" group-title="TAMIL",MTA6 Asia (1080p)
 https://livemtaasia.akamaized.net/hls/live/2039224/mta6asia/playlist.m3u8
 #EXTINF:-1 tvg-id="MTA7Asia.uk@SD" tvg-logo="https://i.imgur.com/3Nl8Tpu.png" group-title="TAMIL",MTA7 Asia (1080p)
 https://livemtaasia.akamaized.net/hls/live/2039224/mtaasia2/playlist.m3u8
-#EXTINF:-1 tvg-id="NationalGeographic.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143573_ld_h15_aa.png?lock=720x540" group-title="TAMIL",National Geographic (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0426/master.m3u8
-#EXTINF:-1 tvg-id="NationalGeographic.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540" group-title="TAMIL",National Geographic HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0447/master.m3u8
+#EXTINF:-1 tvg-id="NationalGeographic.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s143574_ld_h15_aa.png?lock=720x540" group-title="TAMIL",National Geographic HD
+http://116.90.120.151:8000/play/a0in/index.m3u8
 #EXTINF:-1 tvg-id="NationalGeographicWild.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png" group-title="TAMIL",National Geographic Wild (576p)
 http://103.229.254.25:7001/play/a06r/index.m3u8
 #EXTINF:-1 tvg-id="NationalGeographicWild.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NAT_GEO_WILD/images/LOGO_HD/image.png" group-title="TAMIL",National Geographic Wild HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0448/master.m3u8
+http://116.90.120.151:8000/play/a0ie/index.m3u8
 #EXTINF:-1 tvg-id="NDTVGoodTimes.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png" group-title="TAMIL",NDTV Good Times (1080p)
 https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="NDTVLANKA.lk@SD" tvg-logo="https://i.imgur.com/5cyTVRJ.png" group-title="TAMIL",NDTV LANKA (1080p)
@@ -138,7 +132,7 @@ https://cdn-3.pishow.tv/live/1279/master.m3u8
 #EXTINF:-1 tvg-id="NewsTamil24x7.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS_TAMIL_24X7/images/LOGO_HD/image.png" group-title="TAMIL",News Tamil 24x7 (1080p)
 https://d18a8tqmogafg2.cloudfront.net/newstamil/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png" group-title="TAMIL",Nickelodeon (576p)
-http://103.229.254.25:7001/play/a0cq/index.m3u8
+http://116.90.120.151:8000/play/a0hj/index.m3u8
 #EXTINF:-1 tvg-id="NTCTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ntvtamil.png" group-title="TAMIL",NTC TV (720p)
 https://galaxyott.live/hls/ntv.m3u8
 #EXTINF:-1 tvg-id="OliTV.in@SD" tvg-logo="https://i.ibb.co/XfvTQyJn/main-removebg-preview.png" group-title="TAMIL",Oli TV (1080p)
@@ -183,34 +177,22 @@ http://iptvcasomsapi.jprdigital.in/x-media/C0318/master.m3u8
 http://sivantv.livebox.co.in/sivantvhls/sivan.m3u8
 #EXTINF:-1 tvg-id="Sonic.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONIC/images/LOGO_HD/image.png" group-title="TAMIL",Sonic (576p)
 http://103.229.254.25:7001/play/a0dl/index.m3u8
-#EXTINF:-1 tvg-id="SonyBBCEarth.in@SD" tvg-logo="https://i.imgur.com/XVUGLxa.png" group-title="TAMIL",Sony BBC Earth (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0384/master.m3u8
 #EXTINF:-1 tvg-id="SonyBBCEarth.in@HD" tvg-logo="https://i.imgur.com/XVUGLxa.png" group-title="TAMIL",Sony BBC Earth HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0371/master.m3u8
-#EXTINF:-1 tvg-id="SonyPix.in@SD" tvg-logo="https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png" group-title="TAMIL",Sony Pix (720p)
-https://edge2.roarzone.info:8447/roarzone/edge3/sony-pix-hd/index.m3u8
+http://116.90.120.151:8000/play/a0j1/index.m3u8
 #EXTINF:-1 tvg-id="SonyPix.in@HD" tvg-logo="https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png" group-title="TAMIL",Sony Pix HD (1080p)
 http://103.229.254.25:7001/play/a0ed/index.m3u8
 #EXTINF:-1 tvg-id="SonyYay.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_YAY/images/LOGO_HD/image.png" group-title="TAMIL",Sony Yay! (576p)
-http://103.229.254.25:7001/play/a0cl/index.m3u8
+http://116.90.120.151:8000/play/a0hf/index.m3u8
 #EXTINF:-1 tvg-id="SooriyanTV.ca@SD" tvg-logo="https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg" group-title="TAMIL",Sooriyan TV (1080p)
 https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
-#EXTINF:-1 tvg-id="StarMovies.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png" group-title="TAMIL",Star Movies (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0403/master.m3u8
-#EXTINF:-1 tvg-id="StarMovies.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png" group-title="TAMIL",Star Movies HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0439/master.m3u8
-#EXTINF:-1 tvg-id="StarMoviesSelect.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT/images/LOGO_HD/image.png" group-title="TAMIL",Star Movies Select (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0404/master.m3u8
 #EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png" group-title="TAMIL",Star Movies Select HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0440/master.m3u8
+http://116.90.120.151:8000/play/a0ij/index.m3u8
 #EXTINF:-1 tvg-id="StarSports1Tamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_TAMIL/images/LOGO_HD/image.png" group-title="TAMIL",Star Sports 1 Tamil (576p)
 http://iptvcasomsapi.jprdigital.in/x-media/C0419/master.m3u8
 #EXTINF:-1 tvg-id="StarSports1Tamil.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_TAMIL/images/LOGO_HD/image.png" group-title="TAMIL",Star Sports 1 Tamil HD (1080p)
 http://iptvcasomsapi.jprdigital.in/x-media/C0472/master.m3u8
-#EXTINF:-1 tvg-id="StarSports2.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png" group-title="TAMIL",Star Sports 2 (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0413/master.m3u8
 #EXTINF:-1 tvg-id="StarSports2.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png" group-title="TAMIL",Star Sports 2 HD (1080p)
-http://103.121.6.5:8000/play/a05u/index.m3u8
+http://116.90.120.151:8000/play/a0jb/index.m3u8
 #EXTINF:-1 tvg-id="StarSports2Tamil.in@SD" tvg-logo="https://i.imgur.com/eWPoUxB.png" group-title="TAMIL",Star Sports 2 Tamil (576p)
 http://103.229.254.25:7001/play/a0dc/index.m3u8
 #EXTINF:-1 tvg-id="StarSports2Tamil.in@HD" tvg-logo="https://i.imgur.com/eWPoUxB.png" group-title="TAMIL",Star Sports 2 Tamil HD (1080p)
@@ -258,7 +240,7 @@ https://cdn-3.pishow.tv/live/1612/master.m3u8
 #EXTINF:-1 tvg-id="Travelxp.in@4KHDR" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TRAVELXP/images/LOGO_HD/image.png" group-title="TAMIL",Travelxp 4K HDR (2160p) [Geo-blocked]
 https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 #EXTINF:-1 tvg-id="Travelxp.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TRAVELXP/images/LOGO_HD/image.png" group-title="TAMIL",Travelxp HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0118/master.m3u8
+http://116.90.120.151:8000/play/a0ho/index.m3u8
 #EXTINF:-1 tvg-id="TravelxpTamil.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Travel_XP_Tamil.png" group-title="TAMIL",Travelxp Tamil (576p)
 http://iptvcasomsapi.jprdigital.in/x-media/C0202/master.m3u8
 #EXTINF:-1 tvg-id="Tunes6.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Tunes_6.png" group-title="TAMIL",Tunes 6 (720p)
@@ -286,9 +268,7 @@ http://iptvcasomsapi.jprdigital.in/x-media/C0473/master.m3u8
 #EXTINF:-1 tvg-id="WinTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Win_TV.png" group-title="TAMIL",Win TV (576p)
 https://cdn-4.pishow.tv/live/1531/master.m3u8
 #EXTINF:-1 tvg-id="ZeeTamil.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022S29Y.png?lock=720x540" group-title="TAMIL",Zee Tamil (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0535/master.m3u8
-#EXTINF:-1 tvg-id="ZeeTamil.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG00233WCL.png?lock=720x540" group-title="TAMIL",Zee Tamil HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0557/master.m3u8
+http://116.90.120.151:8000/play/a0h4/index.m3u8
 #EXTINF:-1 tvg-id="ZeeThirai.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_THIRAI/images/LOGO_HD/LOGO_HD_image.png" group-title="TAMIL",Zee Thirai (1080p)
 http://iptvcasomsapi.jprdigital.in/x-media/C0558/master.m3u8
 #EXTINF:-1 tvg-id="ZeeThirai.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_THIRAI/images/LOGO_HD/LOGO_HD_image.png" group-title="TAMIL",Zee Thirai SD (576p)

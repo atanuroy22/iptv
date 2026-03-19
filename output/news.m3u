@@ -354,7 +354,7 @@ https://dkshlpp7ugzua.cloudfront.net/sandeshnews/index.m3u8
 #EXTINF:-1 tvg-id="SathiyamTV.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143765_ld_h15_aa.png?lock=720x540" group-title="News",Sathiyam TV (720p)
 https://live-cf-sathiyamtv.dailyhunt.in/master.m3u8
 #EXTINF:-1 tvg-id="StarBharat.in@SD" tvg-logo="https://i.imgur.com/Q8ajPij.png" group-title="News",Star Bharat (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0388/master.m3u8
+http://116.90.120.151:8000/play/a0h2/index.m3u8
 #EXTINF:-1 tvg-id="StarBharat.in@HD" tvg-logo="https://i.imgur.com/Q8ajPij.png" group-title="News",Star Bharat HD (1080p)
 http://103.121.6.5:8000/play/a05z/index.m3u8
 #EXTINF:-1 tvg-id="SudarshanNews.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUDARSHAN_NEWS/images/LOGO_HD/image.png" group-title="News",Sudarshan News (1080p)
