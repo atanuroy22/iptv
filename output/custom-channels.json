@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -11856,7 +11856,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "Sky Sports  Cricket",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=skysfott",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=laligauk",
       "logo_url": "https://ui-avatars.com/api/?name=SSC&background=F7DC6F&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
