@@ -47,10 +47,8 @@ https://live.streamjo.com/eetlive/eettv.m3u8
 http://iptvcasomsapi.jprdigital.in/x-media/C0305/master.m3u8
 #EXTINF:-1 tvg-id="HebronTV.in@SD" tvg-logo="https://i0.wp.com/hebrontv.in/wp-content/uploads/2023/11/hebron-.png?w=512" group-title="TAMIL",Hebron TV (432p)
 https://account20.livebox.co.in/charleshls/live.m3u8
-#EXTINF:-1 tvg-id="HistoryTV18.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143132_ld_h15_aa.png?lock=720x540" group-title="TAMIL",History TV18 (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0427/master.m3u8
-#EXTINF:-1 tvg-id="HistoryTV18.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540" group-title="TAMIL",History TV18 HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0449/master.m3u8
+#EXTINF:-1 tvg-id="HistoryTV18.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540" group-title="TAMIL",History TV18 HD (1080p) [Geo-blocked]
+https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
 #EXTINF:-1 tvg-id="IBCBakthi.uk@SD" tvg-logo="https://i.imgur.com/ZNEz5Wx.png" group-title="TAMIL",IBC Bakthi (1080p)
 https://ibc.massstream.net/IBC2/index.m3u8
 #EXTINF:-1 tvg-id="IBCTamil.uk@SD" tvg-logo="https://i.imgur.com/uVt9vBa.png" group-title="TAMIL",IBC Tamil (1080p)
@@ -60,7 +58,7 @@ http://iptvcasomsapi.jprdigital.in/x-media/C0317/master.m3u8
 #EXTINF:-1 tvg-id="JMovie.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_J_MOVIES/images/LOGO_HD/image.png" group-title="TAMIL",J Movie (576p)
 http://iptvcasomsapi.jprdigital.in/x-media/C0314/master.m3u8
 #EXTINF:-1 tvg-id="JayaMax.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_MAX/images/LOGO_HD/image.png" group-title="TAMIL",Jaya Max (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0313/master.m3u8
+https://mac.zenplay.top/linear-live.php?id=994&amp;vtoken=&amp;e=.m3u8
 #EXTINF:-1 tvg-id="JayaPlus.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_PLUS/images/LOGO_HD/image.png" group-title="TAMIL",Jaya Plus (576p)
 https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
 #EXTINF:-1 tvg-id="JayaTV.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JAYA_TV/images/LOGO_HD/image.png" group-title="TAMIL",Jaya TV (1080p)
@@ -211,10 +209,6 @@ http://iptvcasomsapi.jprdigital.in/x-media/C0563/master.m3u8
 http://15.235.144.106:14055
 #EXTINF:-1 tvg-id="SunNews.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002Z0MBD.png?lock=720x540" group-title="TAMIL",Sun News (576p)
 http://iptvcasomsapi.jprdigital.in/x-media/C0565/master.m3u8
-#EXTINF:-1 tvg-id="SunTV.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002Z0DG5.png?lock=720x540" group-title="TAMIL",Sun TV (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0532/master.m3u8
-#EXTINF:-1 tvg-id="SunTV.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002Z0M0Y.png?lock=720x540" group-title="TAMIL",Sun TV HD (720p)
-http://15.235.144.106:14054
 #EXTINF:-1 tvg-id="SuperHungama.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SUPER_HUNGAMA/images/LOGO_HD/image.png" group-title="TAMIL",Super Hungama (576p)
 http://103.161.153.165:8000/play/a05a/index.m3u8
 #EXTINF:-1 tvg-id="SuriyanTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/suriyantvtamil.png" group-title="TAMIL",Suriyan TV (576p)
