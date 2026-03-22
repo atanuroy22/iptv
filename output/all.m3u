@@ -2891,7 +2891,7 @@ https://server.sscloud7.in/isaihd/isaihd/index.m3u8
 https://view.rcserver.in/tmp_hls7/tamilolitv/index.m3u8
 #EXTINF:-1 tvg-id="UdhayamTV" tvg-logo="https://play-lh.googleusercontent.com/I-rcjG38vEXWpJnCPBGYwb7ewylDfPPM-F6V7YkQ2WovdqFdo5V3gpwebrMDNx_LX2V21hURwSbOLZKFvvo_pQ=w512-h960-rw" tvg-region="Pochampalli;Krishnagiri" group-title="TAMIL",Udhayam TV
 https://ipcloud.live/udhayamtv/live/index.m3u8
-#EXTINF:-1 tvg-id="DeiveegaOliTV" tvg-logo="https://app.ashokadigital.net/app/ce705f4a/index.m3u8" tvg-region="Unknown" group-title="TAMIL",Deiveega Oli TV
+#EXTINF:-1 tvg-id="DeiveegaOliTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1760613566_Deiveeka%20oli.png" tvg-region="Unknown" group-title="TAMIL",Deiveega Oli TV
 https://app.ashokadigital.net/app/e9fa0994/index.m3u8
 #EXTINF:-1 tvg-id="SailamTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1756798921_f97c3c8d-9b6e-410e-a4e0-c990a5c76bf5-removebg-preview.png" tvg-region="Salem" group-title="TAMIL",Sailam TV
 https://stream.onecloudlive.in/sailamtv/sailamtv/index.m3u8
@@ -3253,9 +3253,9 @@ https://view.rcserver.in/tmp_hls19/ammavision/index.m3u8
 https://view.rcserver.in/tmp_hls20/index.m3u8
 #EXTINF:-1 tvg-id="QMaxPlus" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/QMaxPlus.png" tvg-region="Unknown" group-title="TAMIL",QMax Plus
 https://view.rcserver.in/tmp_hls22/qmaxtv/index.m3u8
-#EXTINF:-1 tvg-id="ThiraiTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/ThiraiTV.png" tvg-region="Erode" group-title="TAMIL",Thirai TV
+#EXTINF:-1 tvg-id="ThiraiTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1774072924_WhatsApp%20Image%202026-03-21%20at%2010.56.05%20AM-Photoroom.png" tvg-region="Erode" group-title="TAMIL",Thirai TV
 https://live.apcloud.in/thiraitv/thiraitvhd/index.m3u8
-#EXTINF:-1 tvg-id="ThiraiTVMusic" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/ThiraiTVMusic.png" tvg-region="Erode" group-title="TAMIL",Thirai TV Music
+#EXTINF:-1 tvg-id="ThiraiTVMusic" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1774072938_WhatsApp%20Image%202026-03-21%20at%2010.56.05%20AM%20(1)-Photoroom.png" tvg-region="Erode" group-title="TAMIL",Thirai TV Music
 https://live.apcloud.in/thiraimusic/thiraimusichd/index.m3u8
 #EXTINF:-1 tvg-id="BKTV" tvg-region="Ellapalayam;Erode" group-title="TAMIL",BK TV
 https://view.apserver.in/tmp_hls3/bktv/index.m3u8
