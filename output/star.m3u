@@ -15,64 +15,34 @@ http://103.229.254.25:7001/play/a032/index.m3u8
 http://116.90.120.151:8000/play/a0gw/index.m3u8
 #EXTINF:-1 tvg-id="StarJalsha.in@HD" tvg-logo="https://i.imgur.com/IlufzR5.png" group-title="STAR",Star Jalsha HD (720p)
 http://103.161.153.165:8000/play/a00w/index.m3u8
-#EXTINF:-1 tvg-id="StarMaa.in@SD" tvg-logo="https://i.imgur.com/5c9PVS0.png" group-title="STAR",Star Maa (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0478/master.m3u8
 #EXTINF:-1 tvg-id="StarMaaGold.in@SD" tvg-logo="https://i.imgur.com/8v4JXYu.png" group-title="STAR",Star Maa Gold (576p)
 http://103.121.6.5:8000/play/a063/index.m3u8
-#EXTINF:-1 tvg-id="StarMaaMovies.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143825_ld_h15_aa.png?lock=720x540" group-title="STAR",Star Maa Movies (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0479/master.m3u8
-#EXTINF:-1 tvg-id="StarMaaMusic.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143828_ld_h15_aa.png?lock=720x540" group-title="STAR",Star Maa Music (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0481/master.m3u8
 #EXTINF:-1 tvg-id="StarMoviesSelect.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png" group-title="STAR",Star Movies Select HD (1080p)
 http://116.90.120.151:8000/play/a0ij/index.m3u8
-#EXTINF:-1 tvg-id="StarPravah.in@SD" tvg-logo="https://i.imgur.com/ZT0u7AK.png" group-title="STAR",Star Pravah (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0466/master.m3u8
-#EXTINF:-1 tvg-id="StarPravah.in@HD" tvg-logo="https://i.imgur.com/ZT0u7AK.png" group-title="STAR",Star Pravah HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0453/master.m3u8
 #EXTINF:-1 tvg-id="StarSports1.in@HD" tvg-logo="https://i.imgur.com/E5jjKHI.png" group-title="STAR",Star Sports 1 HD (1080p)
 http://116.90.120.151:8000/play/a0gs/index.m3u8
 #EXTINF:-1 tvg-id="StarSports1Hindi.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HINDI/images/LOGO_HD/image.png" group-title="STAR",Star Sports 1 Hindi (576p)
 http://116.90.120.151:8000/play/a0h1/index.m3u8
 #EXTINF:-1 tvg-id="StarSports1Hindi.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD_HINDI/images/LOGO_HD/image.png" group-title="STAR",Star Sports 1 Hindi HD (1080p)
 http://116.90.120.151:8000/play/a0je/index.m3u8
-#EXTINF:-1 tvg-id="StarSports1Kannada.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_KANNADA/images/LOGO_HD/image.png" group-title="STAR",Star Sports 1 Kannada (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0420/master.m3u8
-#EXTINF:-1 tvg-id="StarSports1Tamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_TAMIL/images/LOGO_HD/image.png" group-title="STAR",Star Sports 1 Tamil (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0419/master.m3u8
-#EXTINF:-1 tvg-id="StarSports1Telugu.in@SD" tvg-logo="https://i.imgur.com/gK415D7.png" group-title="STAR",Star Sports 1 Telugu (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0421/master.m3u8
 #EXTINF:-1 tvg-id="StarSports2.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png" group-title="STAR",Star Sports 2 HD (1080p)
 http://116.90.120.151:8000/play/a0jb/index.m3u8
 #EXTINF:-1 tvg-id="StarSports2Hindi.in@SD" tvg-logo="https://i.imgur.com/kHerF19.png" group-title="STAR",Star Sports 2 Hindi (576p)
 http://116.90.120.151:8000/play/a0jc/index.m3u8
 #EXTINF:-1 tvg-id="StarSports2Hindi.in@HD" tvg-logo="https://i.imgur.com/kHerF19.png" group-title="STAR",Star Sports 2 Hindi HD (1080p)
 http://116.90.120.151:8000/play/a0hi/index.m3u8
-#EXTINF:-1 tvg-id="StarSports2Kannada.in@SD" tvg-logo="https://i.imgur.com/LHuS2ev.png" group-title="STAR",Star Sports 2 Kannada (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0422/master.m3u8
 #EXTINF:-1 tvg-id="StarSports2Tamil.in@SD" tvg-logo="https://i.imgur.com/eWPoUxB.png" group-title="STAR",Star Sports 2 Tamil (576p)
 http://103.229.254.25:7001/play/a0dc/index.m3u8
 #EXTINF:-1 tvg-id="StarSports2Tamil.in@HD" tvg-logo="https://i.imgur.com/eWPoUxB.png" group-title="STAR",Star Sports 2 Tamil HD (1080p)
 http://103.229.254.25:7001/play/a0d1/index.m3u8
-#EXTINF:-1 tvg-id="StarSports2Telugu.in@SD" tvg-logo="https://i.imgur.com/m7DvvqF.png" group-title="STAR",Star Sports 2 Telugu (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0424/master.m3u8
-#EXTINF:-1 tvg-id="StarSports2Telugu.in@HD" tvg-logo="https://i.imgur.com/m7DvvqF.png" group-title="STAR",Star Sports 2 Telugu HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0513/master.m3u8
 #EXTINF:-1 tvg-id="StarSports3.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_3/images/LOGO_HD/image.png" group-title="STAR",Star Sports 3 (576p)
-http://103.121.6.5:8000/play/a05y/index.m3u8
-#EXTINF:-1 tvg-id="StarSportsKhel.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_KHEL/images/LOGO_HD/LOGO_HD_image.png" group-title="STAR",Star Sports Khel (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0423/master.m3u8
-#EXTINF:-1 tvg-id="StarSuvarna.in@SD" tvg-logo="https://i.imgur.com/U9FA4Gs.png" group-title="STAR",Star Suvarna (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0483/master.m3u8
-#EXTINF:-1 tvg-id="StarSuvarnaPlus.in@SD" tvg-logo="https://i.imgur.com/xlCOq0l.png" group-title="STAR",Star Suvarna Plus (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0486/master.m3u8
+http://103.161.153.165:8000/play/a05p/index.m3u8
 #EXTINF:-1 tvg-id="StarUtsav.in@SD" tvg-logo="https://i.imgur.com/H1jhHDl.png" group-title="STAR",Star Utsav (576p)
 http://116.90.120.151:8000/play/a0kc/index.m3u8
 #EXTINF:-1 tvg-id="StarUtsavMovies.in@SD" tvg-logo="https://i.imgur.com/k5QHfH2.png" group-title="STAR",Star Utsav Movies (576p)
 http://116.90.120.151:8000/play/a0ka/index.m3u8
-#EXTINF:-1 tvg-id="StarVijay.in@SD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="STAR",Star Vijay (576p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0469/master.m3u8
-#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="STAR",Star Vijay HD (1080p)
-http://iptvcasomsapi.jprdigital.in/x-media/C0460/master.m3u8
+#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="STAR",Star Vijay HD (360p)
+http://198.27.83.207:2550/STAR_VIJAY_SD/index.m3u8
 #EXTINF:-1 tvg-id="Starnet.in@SD" tvg-logo="https://i.imgur.com/J3jB7Kr.png" group-title="STAR",Starnet (480p)
 https://5a1178b42cc03.streamlock.net/8220/8220/playlist.m3u8
 #EXTINF:-1 tvg-id="StarPlus.in@HD" tvg-logo="https://i.imgur.com/xWxNy3L.png" group-title="STAR",StarPlus HD (720p)

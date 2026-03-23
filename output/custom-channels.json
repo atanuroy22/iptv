@@ -11066,7 +11066,7 @@
       "name": "Hindu Dharmam (576p)",
       "url": "https://cdn-1.pishow.tv/live/959/master.m3u8",
       "logo_url": "https://i.imgur.com/VL6O6Ck.png",
-      "category": 0,
+      "category": 12,
       "language": 0,
       "is_hd": false
     },
@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -11856,7 +11856,7 @@
     {
       "id": "direct:aHR0cHM6Ly9jYWxtLXN1bi0wNGQ1LnJvam9uaTk1ODkud29ya2Vycy5kZXYvaW5kZXhpbmQ_ZHR2PWh0",
       "name": "Sky Sports  Cricket",
-      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp1",
+      "url": "https://calm-sun-04d5.rojoni9589.workers.dev/indexind?dtv=https://crichd1.teachub.workers.dev/?v=bbtsp2",
       "logo_url": "https://ui-avatars.com/api/?name=SSC&background=F7DC6F&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13370,6 +13370,213 @@
       "name": "top kids",
       "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DDNational.in@SD",
+      "name": "DD National SD (576p)",
+      "url": "https://cdn-1.pishow.tv/live/11/master.m3u8",
+      "logo_url": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20National.png",
+      "category": 5,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SunSurya.in@HD",
+      "name": "Sun Surya HD (1080p)",
+      "url": "https://livestream10.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Surya_HD.png",
+      "category": 5,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "RajMusixKannada.in@SD",
+      "name": "Raj Musix Kannada (576p)",
+      "url": "https://mumt01.tangotv.in/RAJMUSIXKANDA/index.m3u8",
+      "logo_url": "https://i.imgur.com/z7fhhyX.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "FUELTV.pt@AU",
+      "name": "Fuel TV (1080p)",
+      "url": "https://amg01074-fueltv-fueltvau-samsungau-g09kq.amagi.tv/playlist/amg01074-fueltv-fueltvau-samsungau/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/I8mviBy.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "FUELTV.pt@EMEA",
+      "name": "FUEL TV (1080p)",
+      "url": "https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_rakutenAA-fueltvemeaen/CDN/master.m3u8",
+      "logo_url": "https://i.imgur.com/I8mviBy.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "FUELTV.pt@SD",
+      "name": "Fuel TV (1080p)",
+      "url": "https://amg01074-fueltv-amg01074c1-stirr-us-4214.playouts.now.amagi.tv/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/I8mviBy.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "OnkarOnlyTruthTV.in@SD",
+      "name": "Onkar Only Truth TV (576p)",
+      "url": "https://5dd3981940faa.streamlock.net/onkarentertainment/onkarentertainment/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/wu7aQRg.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SachBedhadak.in@SD",
+      "name": "Sach Bedhadak (576p)",
+      "url": "https://mumt04.tangotv.in/SACHBEDHADAK/index.m3u8",
+      "logo_url": "https://dtil.tmsimg.com/assets/s158864_ld_h15_aa.png?lock=720x540",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AniOne.hk@SD",
+      "name": "Ani-Blast (720p)",
+      "url": "https://amg19223-amg19223c9-amgplt0019.playout.now3.amagi.tv/playlist/amg19223-amg19223c9-amgplt0019/playlist.m3u8",
+      "logo_url": "https://www.medialink.com.hk/img/anione/AOYC1.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "Minimax.pk@SD",
+      "name": "Minimax (360p)",
+      "url": "https://vodzong.mjunoon.tv:8087/streamtest/disckids-157-1/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/TJvf8vd.png",
+      "category": 7,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "Narutoenespanol.us",
+      "name": "Naruto",
+      "url": "https://jmp2.uk/plu-5ee92e72fb286e0007285fec.m3u8",
+      "logo_url": "https://i.imgur.com/hG8F0RY.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NarutoShippuden.us@LatAm",
+      "name": "Naruto Shippuden",
+      "url": "https://jmp2.uk/plu-64c92fea3c3344000869e8a9.m3u8",
+      "logo_url": "https://images.pluto.tv/channels/64c92fea3c3344000869e8a9/colorLogoPNG.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OnePiece.us@BR",
+      "name": "One Piece",
+      "url": "https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8",
+      "logo_url": "https://i.imgur.com/XsvbAWR.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OnePiece.us@CA",
+      "name": "One Piece",
+      "url": "https://jmp2.uk/plu-62e94ec74823db0007277a8f.m3u8",
+      "logo_url": "https://i.imgur.com/XsvbAWR.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OnePiece.us@FR",
+      "name": "One Piece",
+      "url": "https://jmp2.uk/plu-6380c94947c72b0007ee9a13.m3u8",
+      "logo_url": "https://i.imgur.com/XsvbAWR.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OnePiece.us@LatAm",
+      "name": "One Piece",
+      "url": "https://jmp2.uk/plu-5ff4b9ccf938f8000779eb99.m3u8",
+      "logo_url": "https://i.imgur.com/XsvbAWR.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OnePiece.us@Spain",
+      "name": "One Piece",
+      "url": "https://jmp2.uk/plu-680ba8992472a7200a183eb5.m3u8",
+      "logo_url": "https://i.imgur.com/XsvbAWR.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "PlutoTVAnime.us@US",
+      "name": "Pluto TV Anime",
+      "url": "https://jmp2.uk/plu-5812b7d3249444e05d09cc49.m3u8",
+      "logo_url": "https://images.pluto.tv/channels/62a2e8d8a1c8650007e95bac/colorLogoPNG.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "PlutoTVAnimeMovies.us@SD",
+      "name": "Pluto TV Anime Movies",
+      "url": "https://jmp2.uk/plu-67ed8f7e443f0671bc2b2368.m3u8",
+      "logo_url": "https://images.pluto.tv/channels/67ed8f7e443f0671bc2b2368/colorLogoPNG.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SairamTV.in@SD",
+      "name": "Sairam TV (576p)",
+      "url": "https://mumt04.tangotv.in/SAIRAMTV/index.m3u8",
+      "logo_url": "https://www.lyngsat.com/logo/tv/ss/sairam_tv_in.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NKRTVKannada.in@SD",
+      "name": "NKR TV Kannada (576p)",
+      "url": "https://mumt05.tangotv.in/NKRTV/index.m3u8",
+      "logo_url": "https://nkrtv.in/wp-content/uploads/2024/09/nkr-tv-logo-final-.webp",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SohamTV.in@SD",
+      "name": "Soham TV (576p)",
+      "url": "https://mumt03.tangotv.in/SOHAMTV/index.m3u8",
+      "logo_url": "https://i.imgur.com/cpedJ0L.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SubhartiTV.in@SD",
+      "name": "Subharti TV (576p)",
+      "url": "https://mumt04.tangotv.in/SUBHARTITV/index.m3u8",
+      "logo_url": "https://i.imgur.com/9hdNFtt.png",
       "category": 0,
       "language": 0,
       "is_hd": false
