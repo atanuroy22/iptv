@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13368,7 +13368,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDEwLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "top kids",
-      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
+      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc119/polsatjimjamraw/polsatjimjamraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13643,6 +13643,69 @@
       "category": 0,
       "language": 0,
       "is_hd": true
+    },
+    {
+      "id": "PrimeNews.in@SD",
+      "name": "Prime News (576p)",
+      "url": "https://mumt02.tangotv.in/PRIMENEWS/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Prime_News.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "STVHaryanaNews.in@SD",
+      "name": "STV Haryana News (576p)",
+      "url": "https://mumt01.tangotv.in/STVHARYANANEWS/index.m3u8",
+      "logo_url": "https://i.imgur.com/TJRZo9e.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "VistaarNews.in@SD",
+      "name": "Vistaar News (576p)",
+      "url": "https://mumt04.tangotv.in/VISTAARNEWS/index.m3u8",
+      "logo_url": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_VISTAAR_NEWS/images/LOGO_HD/image.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NickOnline.br@SD",
+      "name": "NickOnline (576p)",
+      "url": "https://x1co.com.br:8443/hls/stream.m3u8",
+      "logo_url": "https://x1co.com.br/logo.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ShekinahTV.in@SD",
+      "name": "Shekinah TV (1080p)",
+      "url": "https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Shekinah.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "TaazaTV.in@SD",
+      "name": "Taaza TV (720p)",
+      "url": "https://live.we2live.in/taazatv/live/playlist.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Taaza_TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "TheQIndia.us@SD",
+      "name": "The Q India (576p)",
+      "url": "https://mumt05.tangotv.in/THEQ/index.m3u8",
+      "logo_url": "https://dtil.tmsimg.com/assets/s144002_ld_h15_aa.png?lock=720x540",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
