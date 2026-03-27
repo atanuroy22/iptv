@@ -1274,4 +1274,6 @@ https://ipcloud.live/nilatvsvg/nilatv/index.m3u8
 #EXTINF:-1 tvg-id="MaduraTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1772719964_madhura%20tv.png" tvg-region="Madurai" group-title="TAMIL",Madura TV
 https://stream.onecloudlive.in/mm/maduratv/index.m3u8
 #EXTINF:-1 tvg-id="StarMedia" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1773809677_WhatsApp%20Image%202026-03-18%20at%209.42.26%20AM.jpeg" tvg-region="Unknown" group-title="TAMIL",Star Media
-https://rtmp.notvstream.in/starmedia/starmedia/index.m3u8
+https://rtmp.notvstream.in/starmedia/starmedia/index.m3u8
+#EXTINF:-1 tvg-id="JowhTV" tvg-logo="https://play-lh.googleusercontent.com/l-91g2ccOvNuDO5YHS364EZxu7wwn4_WND_WhUlg550O57h3wABPAdfE-Gn09YibnnZtLDX9nbAcfNtL97Y7Y4E=s512-rw" tvg-region="Unknown" group-title="TAMIL",Jowh TV
+https://jowhtv.phoenixcreations.online/jowhtv/jowh/index.m3u8
