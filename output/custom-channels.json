@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,11 +13197,11 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
-      "is_hd": false
+      "is_hd": true
     },
     {
       "id": "CBSSportsHQ.us",
@@ -13368,11 +13368,11 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDEwLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "top kids",
-      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
+      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc119/polsatjimjamraw/polsatjimjamraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
-      "is_hd": false
+      "is_hd": true
     },
     {
       "id": "DDNational.in@SD",
@@ -13760,6 +13760,33 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "FTFSports.us@SD",
+      "name": "FTF Sports (720p)",
+      "url": "https://1657061170.rsc.cdn77.org/HLS/FTF-LINEAR.m3u8",
+      "logo_url": "https://i.imgur.com/yvUjOI3.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "SamacharPlus24x7.in@SD",
+      "name": "Samachar Plus 24x7 (576p)",
+      "url": "https://mumt05.tangotv.in/VERTENTSAMACHARPLUS/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/Samachar_Plus.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly92aWFtb3Rpb25oc2kubmV0cGx1cy5jaC9saXZlL2Vkcy9ndWxsaS9icm93c2VyLWRhc2gv",
+      "name": "gulli 720p geoblocked",
+      "url": "https://viamotionhsi.netplus.ch/live/eds/gulli/browser-dash/gulli.mpd",
+      "logo_url": "https://ui-avatars.com/api/?name=G7G&background=DDA0DD&color=fff&size=100&bold=true",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
     }
   ]
 }
