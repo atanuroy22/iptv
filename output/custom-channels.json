@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13368,7 +13368,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDEwLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "top kids",
-      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
+      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc119/polsatjimjamraw/polsatjimjamraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13850,6 +13850,78 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "Spondon.in@SD",
+      "name": "Spondon (1080p)",
+      "url": "https://nktv.smartstream.video/smartstream-us/spondon/spondon/playlist.m3u8",
+      "logo_url": "https://www.spondontv.com/wp-content/uploads/2025/10/cropped-SPONDON_Blue-Violet_1-copy-300x100.png",
+      "category": 5,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "SouthStation.in@HD",
+      "name": "South Station (1080p)",
+      "url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8",
+      "logo_url": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN3800008CX_20260325T012316SQUARE.png",
+      "category": 6,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "TheMovieClub.in@HD",
+      "name": "The Movie Club (1080p)",
+      "url": "https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8",
+      "logo_url": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN38000072R_20260325T012318SQUARE.png",
+      "category": 6,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "NKTVBangla.in@SD",
+      "name": "NK TV Bangla (1080p)",
+      "url": "https://nktv.smartstream.video/smartstream-us/nkbangla/nkbangla/playlist.m3u8",
+      "logo_url": "https://www.nktvbangla.com/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-12-at-2.59.18-PM.jpg",
+      "category": 12,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "RozanaSpokesman.in@SD",
+      "name": "Rozana Spokesman (1080p)",
+      "url": "https://live1.ottlive.co.in/spokesman/spokesman/index.m3u8",
+      "logo_url": "https://www.rozanaspokesman.in/images/logospokesman.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "TNPNews.in@SD",
+      "name": "TNP News (1080p)",
+      "url": "https://server.thelegitpro.in/tnpnews/tnpnews/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/TNP_News.png",
+      "category": 12,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "OnTV.in@SD",
+      "name": "On TV (576p)",
+      "url": "https://mumt03.tangotv.in/ONTV/index.m3u8",
+      "logo_url": "https://www.lyngsat.com/logo/tv/oo/on-tv-in.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "direct:aHR0cHM6Ly9jZG4tcy1sYjIucGx1c2Nkbi5wbC9jaC8xNDU1ODMyLzExNy9kYXNoLzc5MGZmMzdjL2xp",
+      "name": "polsat sport 3 1080p geoblocked",
+      "url": "https://cdn-s-lb2.pluscdn.pl/ch/1455832/117/dash/790ff37c/live.mpd",
+      "logo_url": "https://ui-avatars.com/api/?name=PS3&background=98D8C8&color=fff&size=100&bold=true",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
     }
   ]
 }
