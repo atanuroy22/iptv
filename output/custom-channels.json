@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13368,7 +13368,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDEwLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "top kids",
-      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
+      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc119/polsatjimjamraw/polsatjimjamraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13985,6 +13985,33 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "CazeTV.br@SD",
+      "name": "CazeTV (1080i)",
+      "url": "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8",
+      "logo_url": "",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "WinPlusFutbol.co@SD",
+      "name": "Win+ Futbol (1080p)",
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/winsporplusco/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/0UN87vB.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "TheMovieClub.in@Plus2",
+      "name": "The Movie Club +2 (1080p)",
+      "url": "https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf",
+      "logo_url": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN40000100Y_20260204T004058SQUARE.png",
+      "category": 6,
+      "language": 0,
+      "is_hd": true
     }
   ]
 }

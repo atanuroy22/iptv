@@ -321,6 +321,8 @@ https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8
 https://jmp2.uk/plu-5d8d08395f39465da6fb3ec4.m3u8
 #EXTINF:-1 tvg-id="NickelodeonJunior.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Nickelodeon_Junior.png/960px-Nickelodeon_Junior.png" group-title="Kids",Nickelodeon Junior (1080p)
 http://151.80.18.177:86/Nickelodeon_Junior/index.m3u8
+#EXTINF:-1 tvg-id="NickelodeonLatinAmerica.us@Panregional" tvg-logo="https://i.imgur.com/E84jnP8.png" http-referrer="https://www.nickelodeon.la/" group-title="Kids",Nickelodeon Latin America
+#EXTVLCOPT:http-referrer=https://www.nickelodeon.la/
 #EXTINF:-1 tvg-id="NickPlutoTV.us@US" tvg-logo="https://i.imgur.com/N7rQyzN.png" group-title="Kids",Nickelodeon Pluto TV (720p)
 https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8
 #EXTINF:-1 tvg-id="NickelodeonTeen.fr@SD" tvg-logo="https://i.imgur.com/OWRUPA4.png" group-title="Kids",Nickelodeon Teen (720p)

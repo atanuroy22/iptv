@@ -103,8 +103,6 @@ http://103.229.254.25:7001/play/a0ed/index.m3u8
 http://116.90.120.151:8000/play/a0hf/index.m3u8
 #EXTINF:-1 tvg-id="StarMaaGold.in@SD" tvg-logo="https://i.imgur.com/8v4JXYu.png" group-title="TELUGU",Star Maa Gold (576p)
 http://103.121.6.5:8000/play/a063/index.m3u8
-#EXTINF:-1 tvg-id="StarSports2.in@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png" group-title="TELUGU",Star Sports 2 HD (1080p)
-http://116.90.120.151:8000/play/a0jb/index.m3u8
 #EXTINF:-1 tvg-id="StudioOnePlus.in@SD" tvg-logo="https://i.imgur.com/yOPB7JB.png" group-title="TELUGU",Studio One + (720p)
 https://cdn-1.pishow.tv/live/276/master.m3u8
 #EXTINF:-1 tvg-id="StudioYuva.in@SD" tvg-logo="https://i.imgur.com/BOhgz2T.png" group-title="TELUGU",Studio Yuva (576p)
