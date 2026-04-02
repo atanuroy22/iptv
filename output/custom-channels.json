@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13368,7 +13368,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDEwLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "top kids",
-      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
+      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc119/polsatjimjamraw/polsatjimjamraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -14012,6 +14012,69 @@
       "category": 6,
       "language": 0,
       "is_hd": true
+    },
+    {
+      "id": "AVSTV",
+      "name": "AVS TV",
+      "url": "https://play.applelive.in/avstv/avstv.m3u8",
+      "logo_url": "https://i.ibb.co/FLp5TnL1/AVS.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "EagleTVNagercoil",
+      "name": "Eagle TV Nagercoil",
+      "url": "https://play.applelive.in/eagletv/eagletv.m3u8",
+      "logo_url": "https://i.ibb.co/7N76R7K/Eagletv.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TTNTV",
+      "name": "TTN TV",
+      "url": "https://web.applelive.in/stream/ttntv/index.m3u8",
+      "logo_url": "https://i.ibb.co/shRMXxh/Ttn250x250.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OmmTVNagercoil",
+      "name": "Omm TV Nagercoil",
+      "url": "https://web.applelive.in/ommtv/ommtv/index.m3u8",
+      "logo_url": "https://i.ibb.co/qM3f5YvS/Ommtv.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AmmaTVNagercoil",
+      "name": "Amma TV Nagercoil",
+      "url": "https://web.applelive.in/stream/ammatv/index.m3u8",
+      "logo_url": "https://i.ibb.co/39jqBzg6/Amma250x250.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SRTV",
+      "name": "SR TV",
+      "url": "https://web.applelive.in/stream/srtv/index.m3u8",
+      "logo_url": "https://i.ibb.co/bMmm6ZKr/Stvhd250x250.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KannaTV",
+      "name": "Kanna TV",
+      "url": "https://web.applelive.in/stream/kktv/index.m3u8",
+      "logo_url": "https://i.ibb.co/39H1Shtr/Kannatv250x250.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
