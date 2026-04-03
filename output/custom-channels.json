@@ -8572,7 +8572,7 @@
       "id": "AnandamAbiTV",
       "name": "Anandam Abi TV",
       "url": "https://mumt02.tangotv.in/ABITV/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/AnandamAbiTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -9031,7 +9031,7 @@
       "id": "EasonTV",
       "name": "Eason TV",
       "url": "https://amigofx.com:1936/easontv/easontv/playlist.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/EasonTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -10417,7 +10417,7 @@
       "id": "SKMedia",
       "name": "SK Media",
       "url": "https://rtmp.bmlive.net/stream/skmedia/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SKMedia.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13368,7 +13368,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDEwLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "top kids",
-      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc119/polsatjimjamraw/polsatjimjamraw.mpd",
+      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13792,7 +13792,7 @@
       "id": "BlueMoonTV",
       "name": "Blue Moon TV",
       "url": "https://rtmp.bmlive.net/bms/bmtv/stream.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/BMTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -13828,7 +13828,7 @@
       "id": "MathanTV",
       "name": "Mathan TV",
       "url": "https://ipcloud.live/mathantv/mathantv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MathanTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -13846,7 +13846,7 @@
       "id": "HelloTamilTV",
       "name": "Hello Tamil TV",
       "url": "https://view.rcserver.in/tmp_hls26/hellotamiltv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/HelloTamilTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -13927,7 +13927,7 @@
       "id": "CityTV2",
       "name": "City TV",
       "url": "https://stream.onecloudlive.in/citytv/citytv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/CityTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -13963,7 +13963,7 @@
       "id": "ShalwinTV",
       "name": "Shalwin TV",
       "url": "https://live3.onecloudlive.in/shalwintv/shalwintv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/ShalwinTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -13972,7 +13972,7 @@
       "id": "SuperTVTheni",
       "name": "Super TV",
       "url": "https://stream.onecloudlive.in/superstartv/superstarhd/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SuperTVTheni.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -14084,6 +14084,15 @@
       "category": 8,
       "language": 0,
       "is_hd": true
+    },
+    {
+      "id": "UdhayamTVKarur",
+      "name": "Udhayam TV Karur",
+      "url": "https://view.rcserver.in/tmp_hls13/udhayamhd/index.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/UdhayamTVKarur.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
