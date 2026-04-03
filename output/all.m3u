@@ -3499,7 +3499,7 @@ https://rtmp.bmlive.net/bms/bmtv/stream.m3u8
 https://stream.onecloudlive.in/kallaiads/kallaitv/index.m3u8
 #EXTINF:-1 tvg-id="NakshatraTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Nakshatra TV
 https://rtmp.bmlive.net/stream/nakshatra/index.m3u8
-#EXTINF:-1 tvg-id="JayamTVPolur" tvg-logo="" tvg-region="Polur,Tiruvannamalai" group-title="TAMIL",Jayam TV Polur
+#EXTINF:-1 tvg-id="JayamTVPolur" tvg-logo="" tvg-region="Polur;Tiruvannamalai" group-title="TAMIL",Jayam TV Polur
 https://live.singamcloud.in/jayamtv/jayamki/index.m3u8
 #EXTINF:-1 tvg-id="SivaTV" tvg-logo="https://play-lh.googleusercontent.com/J8Ih5f6cYVKL5QTGi55mMU8-uPuBnjTCrdFZc7HNPIDrajuLhP2qGjAlvGfUSeCwYWo=w512-h960-rw" tvg-region="Gandarvakottai;Thanjavur" group-title="TAMIL",Siva TV
 http://xstream.onecloudlive.in:8080/sivatv/sivatv/index.m3u8
