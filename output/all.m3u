@@ -127,8 +127,8 @@ http://116.90.120.151:8000/play/a0kc/index.m3u8
 http://116.90.120.151:8000/play/a0ka/index.m3u8
 #EXTINF:-1 tvg-id="StarVijay.in@SD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="STAR",Star Vijay (576p)
 http://ptu.ridsys.in/riptv/live/STAR_VIJAY/index.m3u8
-#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="STAR",Star Vijay HD (360p)
-http://198.27.83.207:2550/STAR_VIJAY_SD/index.m3u8
+#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="STAR",Star Vijay HD (1080p)
+http://ajkiptv.ridsys.in/riptv/live/STAR_VIJAY_HD/index.m3u8
 #EXTINF:-1 tvg-id="Starnet.in@SD" tvg-logo="https://i.imgur.com/J3jB7Kr.png" group-title="STAR",Starnet (480p)
 https://5a1178b42cc03.streamlock.net/8220/8220/playlist.m3u8
 #EXTINF:-1 tvg-id="StarPlus.in@SD" tvg-logo="https://i.imgur.com/xWxNy3L.png" group-title="STAR",StarPlus (1080p)
@@ -291,8 +291,8 @@ http://103.121.6.5:8000/play/a063/index.m3u8
 http://116.90.120.151:8000/play/a0kc/index.m3u8
 #EXTINF:-1 tvg-id="StarVijay.in@SD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="Entertainment",Star Vijay (576p)
 http://ptu.ridsys.in/riptv/live/STAR_VIJAY/index.m3u8
-#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="Entertainment",Star Vijay HD (360p)
-http://198.27.83.207:2550/STAR_VIJAY_SD/index.m3u8
+#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="Entertainment",Star Vijay HD (1080p)
+http://ajkiptv.ridsys.in/riptv/live/STAR_VIJAY_HD/index.m3u8
 #EXTINF:-1 tvg-id="StarPlus.in@SD" tvg-logo="https://i.imgur.com/xWxNy3L.png" group-title="Entertainment",StarPlus (1080p)
 http://103.229.254.25:7001/play/a09z/index.m3u8
 #EXTINF:-1 tvg-id="StudioYuva.in@SD" tvg-logo="https://i.imgur.com/BOhgz2T.png" group-title="Entertainment",Studio Yuva (576p)
@@ -381,8 +381,8 @@ https://lotus.stingray.com/manifest/qello-qello001-montreal/samsungtvplus/master
 https://mumt01.tangotv.in/RAJMUSIXKANDA/index.m3u8
 #EXTINF:-1 tvg-id="RajMusixMalayalam.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_MALAYALAM/images/LOGO_HD/image.png" group-title="Music",Raj Musix Malayalam (576p)
 https://mumt04.tangotv.in/RAJMUSIXMALAYALAM/index.m3u8
-#EXTINF:-1 tvg-id="RajMusixTamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TAMIL/images/LOGO_HD/image.png" group-title="Music",Raj Musix Tamil (1080p)
-https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8
+#EXTINF:-1 tvg-id="RajMusixTamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TAMIL/images/LOGO_HD/image.png" group-title="Music",Raj Musix Tamil (576p)
+http://ajkiptv.ridsys.in/riptv/live/RAJ_MUSIX/index.m3u8
 #EXTINF:-1 tvg-id="RajMusixTelugu.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TELUGU/images/LOGO_HD/image.png" group-title="Music",Raj Musix Telugu (720p)
 https://cdn-1.pishow.tv/live/1213/master.m3u8
 #EXTINF:-1 tvg-id="SanaPlus.in@SD" tvg-logo="https://i.imgur.com/N6tKUZv.png" group-title="Music",Sana Plus (1080p)
@@ -421,6 +421,8 @@ https://stream.d6-pro.com/tunes6music/live/video.m3u8
 https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 #EXTINF:-1 tvg-id="VaanavilTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Vaanavil_TV.png" group-title="Music",Vaanavil TV (720p)
 https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="VijayTakkar.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s144078_ld_h15_aa.png?lock=720x540" group-title="Music",Vijay Takkar (576p)
+http://ajkiptv.ridsys.in/riptv/live/VIJAY_TAKKAR/index.m3u8
 #EXTINF:-1 tvg-id="YRFMusic.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/YRF_Music.png" group-title="Music",YRF Music (1080p)
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="ZBMusic.in@HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/zbmusic.png" group-title="Music",ZB Music (720p)
@@ -639,6 +641,8 @@ https://steep-wildflower-284d.nhhwkiszzzvcuojxdo.workers.dev/?url=https://gg.hls
 https://6f972d29.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0dsb3J5S2lja2JveGluZ19ITFM/playlist.m3u8
 #EXTINF:-1 tvg-id="GloryKickboxing.us@US" tvg-logo="https://i.imgur.com/tS7Ub7i.png" group-title="Sports",GLORY Kickboxing
 https://jmp2.uk/plu-5417a212ff9fba68282fbf5e.m3u8
+#EXTINF:-1 tvg-id="GoalZone.sa@SD" tvg-logo="https://shahid.mbc.net/mediaObject/18bf9987-49ab-4c51-bb94-c568efa51db7?height=auto&width=512&croppingPoint=&version=1&type=png" group-title="Sports",Goal Zone (1080p)
+https://shls-live-enc.edgenextcdn.net/out/v1/18cffab0757d448ca6c1a686d330b346/index.m3u8
 #EXTINF:-1 tvg-id="GolClassics.es@SD" tvg-logo="https://golstadium.com/_next/image?url=%2Fimg%2Fhome%2Fchannels%2Fthumb-gol-classics.jpg&w=1920&q=75" group-title="Sports",Gol Classics (1080p)
 https://d71gqtnep83vb.cloudfront.net/gol_classics/gol_classics.m3u8
 #EXTINF:-1 tvg-id="GolfChannel.us@SD" tvg-logo="https://i.imgur.com/Lgux6Ik.png" group-title="Sports",Golf Channel (1080p) [Not 24/7]
@@ -2349,8 +2353,8 @@ https://segment.yuppcdn.net/240122/puthiya/playlist.m3u8
 https://mumt04.tangotv.in/PUTHUYUGAMTV/index.m3u8
 #EXTINF:-1 tvg-id="RajDigitalPlus.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_DIGITAL_PLUS/images/LOGO_HD/image.png" group-title="TAMIL",Raj Digital Plus (1080p)
 https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8
-#EXTINF:-1 tvg-id="RajMusixTamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TAMIL/images/LOGO_HD/image.png" group-title="TAMIL",Raj Musix Tamil (1080p)
-https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8
+#EXTINF:-1 tvg-id="RajMusixTamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TAMIL/images/LOGO_HD/image.png" group-title="TAMIL",Raj Musix Tamil (576p)
+http://ajkiptv.ridsys.in/riptv/live/RAJ_MUSIX/index.m3u8
 #EXTINF:-1 tvg-id="RajTV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_TV/images/LOGO_HD/image.png" group-title="TAMIL",Raj TV (1080p)
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/2839e3d1e0f84a2e821c1708d5fdfdf0/index.m3u8
 #EXTINF:-1 tvg-id="RojaMovies.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/rojamovies.png" group-title="TAMIL",Roja Movies (1080p)
@@ -2395,8 +2399,8 @@ http://ptu.ridsys.in/riptv/live/STAR_SPORTS_TAMIL/index.m3u8
 https://edge4-moblive.yuppcdn.net/trans1sd/smil:strtml19.smil/playlist.m3u8?dvr=
 #EXTINF:-1 tvg-id="StarVijay.in@SD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="TAMIL",Star Vijay (576p)
 http://ptu.ridsys.in/riptv/live/STAR_VIJAY/index.m3u8
-#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="TAMIL",Star Vijay HD (360p)
-http://198.27.83.207:2550/STAR_VIJAY_SD/index.m3u8
+#EXTINF:-1 tvg-id="StarVijay.in@HD" tvg-logo="https://i.imgur.com/dZtJHAe.png" group-title="TAMIL",Star Vijay HD (1080p)
+http://ajkiptv.ridsys.in/riptv/live/STAR_VIJAY_HD/index.m3u8
 #EXTINF:-1 tvg-id="SubinTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/subintvtamil.png" group-title="TAMIL",Subin TV (1080p)
 https://stream.galaxyott.live/live/subintv/index.m3u8
 #EXTINF:-1 tvg-id="SuriyanTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/suriyantvtamil.png" group-title="TAMIL",Suriyan TV (576p)
@@ -2441,6 +2445,8 @@ https://cdn-3.pishow.tv/live/1271/master.m3u8
 https://edge3-moblive.yuppcdn.net/drm1/smil:verbumtvdrm.smil/index.m3u8
 #EXTINF:-1 tvg-id="VijaySuper.in@SD" tvg-logo="https://i.imgur.com/3MWm9nD.png" group-title="TAMIL",Vijay Super (576p)
 http://ptu.ridsys.in/riptv/live/VIJAY_SUPER/index.m3u8
+#EXTINF:-1 tvg-id="VijayTakkar.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s144078_ld_h15_aa.png?lock=720x540" group-title="TAMIL",Vijay Takkar (576p)
+http://ajkiptv.ridsys.in/riptv/live/VIJAY_TAKKAR/index.m3u8
 #EXTINF:-1 tvg-id="VillageTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/VillageTV.png" group-title="TAMIL",Village TV (576p)
 https://villagetv.applelive.in/villagetv/villagetv/index.m3u8
 #EXTINF:-1 tvg-id="WinTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Win_TV.png" group-title="TAMIL",Win TV (576p)
@@ -3715,7 +3721,7 @@ https://vg-pitaaratvlive.akamaized.net/v1/vglive-sk-906482/playlist.m3u8
 https://cdn-4.pishow.tv/live/229/master.m3u8
 #EXTINF:-1 tvg-id="CNBCAwaaz.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCAwaaz.png" group-title="Business",CNBC Awaaz (1080p)
 https://n18syndication.akamaized.net/bpk-tv/CNBC_Awaaz_NW18_MOB/output01/master.m3u8
-#EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG00216V90.png?lock=720x540" group-title="Business",CNBC Bajar (1080p)
+#EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCBajar.png" group-title="Business",CNBC Bajar (1080p)
 https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-id="CNBCTV18.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18.png" group-title="Business",CNBC TV18 (1080p)
 https://n18syndication.akamaized.net/bpk-tv/CNBC_TV18_NW18_MOB/output01/index.m3u8

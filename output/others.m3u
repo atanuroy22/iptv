@@ -49,7 +49,7 @@ https://vg-pitaaratvlive.akamaized.net/v1/vglive-sk-906482/playlist.m3u8
 https://cdn-4.pishow.tv/live/229/master.m3u8
 #EXTINF:-1 tvg-id="CNBCAwaaz.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCAwaaz.png" group-title="Business",CNBC Awaaz (1080p)
 https://n18syndication.akamaized.net/bpk-tv/CNBC_Awaaz_NW18_MOB/output01/master.m3u8
-#EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG00216V90.png?lock=720x540" group-title="Business",CNBC Bajar (1080p)
+#EXTINF:-1 tvg-id="CNBCBajar.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCBajar.png" group-title="Business",CNBC Bajar (1080p)
 https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8
 #EXTINF:-1 tvg-id="CNBCTV18.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/CNBCTV18.png" group-title="Business",CNBC TV18 (1080p)
 https://n18syndication.akamaized.net/bpk-tv/CNBC_TV18_NW18_MOB/output01/index.m3u8

@@ -51,8 +51,8 @@ https://lotus.stingray.com/manifest/qello-qello001-montreal/samsungtvplus/master
 https://mumt01.tangotv.in/RAJMUSIXKANDA/index.m3u8
 #EXTINF:-1 tvg-id="RajMusixMalayalam.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_MALAYALAM/images/LOGO_HD/image.png" group-title="Music",Raj Musix Malayalam (576p)
 https://mumt04.tangotv.in/RAJMUSIXMALAYALAM/index.m3u8
-#EXTINF:-1 tvg-id="RajMusixTamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TAMIL/images/LOGO_HD/image.png" group-title="Music",Raj Musix Tamil (1080p)
-https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8
+#EXTINF:-1 tvg-id="RajMusixTamil.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TAMIL/images/LOGO_HD/image.png" group-title="Music",Raj Musix Tamil (576p)
+http://ajkiptv.ridsys.in/riptv/live/RAJ_MUSIX/index.m3u8
 #EXTINF:-1 tvg-id="RajMusixTelugu.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_RAJ_MUSIX_TELUGU/images/LOGO_HD/image.png" group-title="Music",Raj Musix Telugu (720p)
 https://cdn-1.pishow.tv/live/1213/master.m3u8
 #EXTINF:-1 tvg-id="SanaPlus.in@SD" tvg-logo="https://i.imgur.com/N6tKUZv.png" group-title="Music",Sana Plus (1080p)
@@ -91,6 +91,8 @@ https://stream.d6-pro.com/tunes6music/live/video.m3u8
 https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 #EXTINF:-1 tvg-id="VaanavilTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Vaanavil_TV.png" group-title="Music",Vaanavil TV (720p)
 https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="VijayTakkar.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s144078_ld_h15_aa.png?lock=720x540" group-title="Music",Vijay Takkar (576p)
+http://ajkiptv.ridsys.in/riptv/live/VIJAY_TAKKAR/index.m3u8
 #EXTINF:-1 tvg-id="YRFMusic.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/YRF_Music.png" group-title="Music",YRF Music (1080p)
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 #EXTINF:-1 tvg-id="ZBMusic.in@HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/zbmusic.png" group-title="Music",ZB Music (720p)
