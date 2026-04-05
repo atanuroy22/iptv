@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13197,7 +13197,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDExLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "nick jr",
-      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc127/porucznikkaburaraw/porucznikkaburaraw.mpd",
+      "url": "https://liveovh011.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc010/nickelodeonraw/nickelodeonraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=NJ&background=4ECDC4&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13368,7 +13368,7 @@
     {
       "id": "direct:aHR0cHM6Ly9saXZlb3ZoMDEwLmNkYS5wbC8yU0haaV9Ta1g0aDBNRGZsemExUFB3LzE3NTM3NDg0Nzgv",
       "name": "top kids",
-      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc119/polsatjimjamraw/polsatjimjamraw.mpd",
+      "url": "https://liveovh010.cda.pl/2SHZi_SkX4h0MDflza1PPw/1753748478/3480440/enc116/topkidshdraw/topkidshdraw.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=TK&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -14102,6 +14102,105 @@
       "category": 0,
       "language": 0,
       "is_hd": true
+    },
+    {
+      "id": "SanaTV@TataPlay",
+      "name": "Sana TV (Tata Play)",
+      "url": "https://cable75tataplay.akamaized.net/hls/sanatv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/sanatv.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SanaPlus@GalaxyOTT",
+      "name": "Sana Plus",
+      "url": "https://galaxyott.live/hls/sanaplus.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/sanaplus.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SanaPlus@TataPlay",
+      "name": "Sana Plus (Tata Play)",
+      "url": "https://cable74tataplay.akamaized.net/hls/sanaplus.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/sanaplus.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NTCTV@GalaxyOTT",
+      "name": "NTC TV",
+      "url": "https://galaxyott.live/hls/ntv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/ntvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NTCTV@TataPlay",
+      "name": "NTC TV (Tata Play)",
+      "url": "https://cable85tataplay.akamaized.net/live/ntvpkt/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/ntvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "UltimateTV@GalaxyOTT",
+      "name": "Ultimate TV",
+      "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/utvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "UltimateTV@TataPlay",
+      "name": "Ultimate TV (Tata Play)",
+      "url": "https://cable92tataplay.akamaized.net/live/utv/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/utvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SubinTV@TataPlay",
+      "name": "Subin TV (Tata Play)",
+      "url": "https://cable88tataplay.akamaized.net/live/subintv/index.m3u8",
+      "logo_url": "https://subintv.in/SUBINLOGO.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DharsanTV@GalaxyOTT",
+      "name": "Dharsan TV",
+      "url": "https://galaxyott.live/hls/dharshantv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/dharshantvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DharsanTV@TataPlay",
+      "name": "Dharsan TV (Tata Play)",
+      "url": "https://cable91tataplay.akamaized.net/live/dharshantv/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/dharshantvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KannaTVNagercoil",
+      "name": "Kanna TV",
+      "url": "https://web.applelive.in/stream/kktv/index.m3u8",
+      "logo_url": "https://i.ibb.co/39H1Shtr/Kannatv250x250.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
     }
   ]
 }
