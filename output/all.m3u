@@ -3441,11 +3441,11 @@ https://view.rcserver.in/tmp_hls24/sktv/index.m3u8
 http://ptuf.ridsys.in/riptv/live/AURO_HD/index.m3u8
 #EXTINF:-1 tvg-id="RidsysTV" tvg-logo="https://i.ibb.co/zTDC85jp/30052.png" tvg-region="Puducherry" group-title="TAMIL",Ridsys TV
 http://ptuf.ridsys.in/riptv/live/RIDSYS_HD/index.m3u8
-#EXTINF:-1 tvg-id="AJKTV" tvg-logo="https://i.ibb.co/WNzjYdHZ/30048.png" tvg-region="Madurai" group-title="TAMIL",AJK Tv
+#EXTINF:-1 tvg-id="AJKTV" tvg-logo="https://i.ibb.co/WNzjYdHZ/30048.png" tvg-region="Puducherry" group-title="TAMIL",AJK TV
 http://ptuf.ridsys.in/riptv/live/AJK_TV/index.m3u8
-#EXTINF:-1 tvg-id="AJKMovie" tvg-logo="https://i.ibb.co/QFbnSHjD/30050.png" tvg-region="Madurai" group-title="TAMIL",AJK Movie
+#EXTINF:-1 tvg-id="AJKMovie" tvg-logo="https://i.ibb.co/QFbnSHjD/30050.png" tvg-region="Puducherry" group-title="TAMIL",AJK Movie
 http://ptuf.ridsys.in/riptv/live/AJK_MOVIE_HD/index.m3u8
-#EXTINF:-1 tvg-id="AJKKids" tvg-logo="https://i.ibb.co/QFbnSHjD/30050.png" tvg-region="Madurai" group-title="TAMIL",AJK Kids
+#EXTINF:-1 tvg-id="AJKKids" tvg-logo="https://i.ibb.co/QFbnSHjD/30050.png" tvg-region="Puducherry" group-title="TAMIL",AJK Kids
 http://ajkiptv.ridsys.in/riptv/live/AJK_KIDS_HD/index.m3u8
 #EXTINF:-1 tvg-id="SMedia2" tvg-logo="https://i.ibb.co/5Xv68ypB/29996.png" tvg-region="Puducherry" group-title="TAMIL",S Media
 http://ptuf.ridsys.in/riptv/live/S_MEDIA/index.m3u8
@@ -3455,6 +3455,8 @@ http://ptuf.ridsys.in/riptv/live/LATHA_SMILE_HD/index.m3u8
 http://ajkiptv.ridsys.in/riptv/live/SARAH_MOVIES/index.m3u8
 #EXTINF:-1 tvg-id="TianaaMusic" tvg-logo="" tvg-region="Puducherry" group-title="TAMIL",Tianaa Music
 http://ajkiptv.ridsys.in/riptv/live/TIANAA_MUSIC_HD/index.m3u8
+#EXTINF:-1 tvg-id="MVDigitalNetwork" tvg-logo="" tvg-region="Puducherry" group-title="TAMIL",MV Digital Network
+http://ajkiptv.ridsys.in/riptv/live/MV_MOVIES/index.m3u8
 #EXTINF:-1 tvg-id="MRTV2" tvg-logo="https://bmcloud.in/apptest/uploads/68e6001d4b01e.png" tvg-region="Unknown" group-title="TAMIL",MR TV
 https://rtmp.bmlive.net/bms/bms/index.m3u8
 #EXTINF:-1 tvg-id="AhaTV" tvg-logo="https://bmcloud.in/apptest/uploads/6936d638886a5.jpg" tvg-region="Unknown" group-title="TAMIL",Aha TV
@@ -3588,7 +3590,7 @@ rtmp://103.136.136.77:1935/cs4k/cs4k?psk=123456
 #EXTINF:-1 tvg-id="KaniTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/KaniTV.png" tvg-region="Unknown" group-title="TAMIL",Kani TV [RTMP]
 rtmp://103.136.136.77:1935/kanitv/kanitv?psk=123456
 #EXTINF:-1 tvg-id="HelloTamilTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/HelloTamilTV.png" tvg-region="Unknown" group-title="TAMIL",Hello Tamil TV
-https://view.rcserver.in/tmp_hls26/index.m3u8
+https://view.rcserver.in/tmp_hls26/hellotamiltv/index.m3u8
 #EXTINF:-1 tvg-id="RPlusTV" tvg-logo="https://play-lh.googleusercontent.com/VuGcjfIEogf7W5cztkJKkyCINbL7gG_qRbn8Aoce5Sv15n0oCCglG4WhJtpQEeVpoG4=w512-h960-rw" tvg-region="Namakkal" group-title="TAMIL",R Plus TV
 http://rplustv.stream.onecloudlive.in:8080/rplustv/rplustvhd/index.mpd
 #EXTINF:-1 tvg-id="CityTV2" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/CityTV.png" tvg-region="Unknown" group-title="TAMIL",City TV
