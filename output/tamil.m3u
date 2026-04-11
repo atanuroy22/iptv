@@ -1326,8 +1326,10 @@ https://web.applelive.in/stream/srtv/index.m3u8
 #EXTINF:-1 tvg-id="KannaTVNagercoil" tvg-logo="https://i.ibb.co/39H1Shtr/Kannatv250x250.jpg" tvg-region="Nagercoil;Kanyakumari" group-title="TAMIL",Kanna TV
 https://web.applelive.in/stream/kktv/index.m3u8
 #EXTINF:-1 tvg-id="MalarTVALK" tvg-logo="https://play-lh.googleusercontent.com/VFvalPp4IMh7AVU4OOgF7-mnNhSkxnFB5LNnqa31Uds6EjB9Xk3YoMo1WrH9V13rkw_vPC49Dzh1JWnzzrVu=w512-h960-rw" tvg-region="Alangulam;Tenkasi" group-title="TAMIL",Malar TV Alangulam
-https://live1.sscloud7.in/malartv/malartv/index.m3u8
+http://malartv.sscloud7.in/malartv/malartv/index.m3u8
 #EXTINF:-1 tvg-id="RightTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1775293989_Logo.PNG" tvg-region="Unknown" group-title="TAMIL",Right TV
 https://stream.onecloudlive.in/righttv/live/index.m3u8
 #EXTINF:-1 tvg-id="ThendralTVChennai" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1774794281_thendral%20tv%20chennai.png" tvg-region="Chennai" group-title="TAMIL",Thendral TV Chennai
-https://stream.ashokadigital.net/thendraltv/thendraltv/index.m3u8
+https://stream.ashokadigital.net/thendraltv/thendraltv/index.m3u8
+#EXTINF:-1 tvg-id="RatchagarTV" tvg-logo="" tvg-region="Devotional;Christian" group-title="TAMIL",Rathchagar TV
+http://ratchagartv.phoenixcreations.online/ratchagartv/ratchagar/index.m3u8
