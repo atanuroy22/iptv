@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -14523,6 +14523,42 @@
       "url": "https://server.livelegitpro.in:9899/gospeltv/index.m3u8",
       "logo_url": "https://i.ibb.co/xhbZvzt/cropped-final-logo-300x127.png",
       "category": 12,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "WatchitKID.us@SD",
+      "name": "Watch it KID! (480i)",
+      "url": "https://stream-us-east-1.getpublica.com/cl/260415d7g24jv4hnf3ahfafgog/318x234_424101_3_f.m3u8?i=513_2256",
+      "logo_url": "https://i.imgur.com/YNx0j1b.png",
+      "category": 7,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ImaiTV.lk@SD",
+      "name": "Imai TV (1080p)",
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/9tODclu.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "INFAST.nl@SD",
+      "name": "INFAST (1080p)",
+      "url": "https://amg00861-terninternation-lifestyle-samsungau-kdlyy.amagi.tv/playlist/amg00861-terninternation-lifestyle-samsungau/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/VwAMqA7.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "InWonder.nl@SD",
+      "name": "InWonder (1080p)",
+      "url": "https://amg00861-terninternation-inwonder-samsungau-1k63k.amagi.tv/playlist/amg00861-terninternation-inwonder-samsungau/playlist.m3u8",
+      "logo_url": "https://cdn.uc.assets.prezly.com/f12e798d-6da4-46e1-8ec5-e391d6762659/InWonder_portrait-purple.png",
+      "category": 0,
       "language": 0,
       "is_hd": true
     }
