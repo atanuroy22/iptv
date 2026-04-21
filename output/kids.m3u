@@ -7,10 +7,12 @@ https://cdn-6.pishow.tv/live/1243/master.m3u8
 http://103.182.170.32:8888/play/a04g
 #EXTINF:-1 tvg-id="DisneyInternationalHD.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_INTERNATIONAL_HD/images/LOGO_HD/image.png" group-title="Kids",Disney International HD (1080p)
 http://116.90.120.151:8000/play/a0hp/index.m3u8
+#EXTINF:-1 tvg-id="HungamaTV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png" group-title="Kids",Hungama TV (576p)
+https://mini.allinonereborn.fun/tata.php?id=11647
 #EXTINF:-1 tvg-id="MrBeanAnimated.uk@English" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png" group-title="Animation;Kids",Mr. Bean Animated (1080p)
 https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="NickHDPlus.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s159121_ld_h15_aa.png?lock=720x540" group-title="Kids",Nick HD+ (1080p)
-http://116.90.120.151:8000/play/a0i3/index.m3u8
+http://103.154.3.101:5001/live/1226.m3u8
 #EXTINF:-1 tvg-id="NickJr.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png" group-title="Kids",Nick Jr. (576p)
 http://103.154.3.101:5001/live/544.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png" group-title="Kids",Nickelodeon (576p)
@@ -209,6 +211,8 @@ https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/1080p-vtt/index.m3u8
 https://ssh101stream.ssh101.com/akamaissh101/ssh101/channel32/playlist.m3u8
 #EXTINF:-1 tvg-id="HappyKids.us@SD" tvg-logo="https://i.imgur.com/cPrUCFw.png" group-title="Kids",HappyKids (1080p)
 https://dil9xdvretp0f.cloudfront.net/index.m3u8
+#EXTINF:-1 tvg-id="HungamaTV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png" group-title="Kids",Hungama TV (576p)
+https://mini.allinonereborn.fun/tata.php?id=11647
 #EXTINF:-1 tvg-id="IuniorTV.it@SD" tvg-logo="https://i.imgur.com/FBOJnfT.png" group-title="Kids",Iunior TV (1080p)
 https://5f22d76e220e1.streamlock.net/iuniortv/iuniortv/chunklist_w774879328.m3u8
 #EXTINF:-1 tvg-id="JapanimTV.be@SD" tvg-logo="https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png" group-title="Animation;Kids",Japanim TV (1080p)
@@ -261,6 +265,8 @@ https://jmp2.uk/plu-51c75f7bb6f26ba1cd00002f.m3u8
 https://streamer1.streamhost.org/salive/logoskidsH/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",LooLoo Kids TV (1080p)
 https://amg02757-amg02757c3-rakuten-de-6135.playouts.now.amagi.tv/playlist/amg02757-loolookids-llkdefast-rakutende/playlist.m3u8
+#EXTINF:-1 tvg-id="M2Petofi.hu@SD" tvg-logo="https://i.imgur.com/N7fc9X6.png" group-title="Kids",M2 Petofi (720 p)
+http://46.149.191.217:9005/play/a016
 #EXTINF:-1 tvg-id="MNetKids.mk@SD" tvg-logo="https://i.imgur.com/SbKkpuH.png" group-title="Kids",M-Net Kids (720p)
 http://ares.mnet.mk/hls/mnet-kids.m3u8
 #EXTINF:-1 tvg-id="MagicKids.ar@SD" tvg-logo="https://i.imgur.com/CMImqQY.png" group-title="Animation",Magic Kids (486p)
@@ -308,7 +314,7 @@ https://reflect-npa.cablecast.tv/live-9/live/live.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.de@SD" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Kids",Nick Germany (1080p) [Geo-blocked]
 https://0d26a00dfbb1.airspace-cdn.cbsivideo.com/nick1999/master/nick1999.m3u8
 #EXTINF:-1 tvg-id="NickHDPlus.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s159121_ld_h15_aa.png?lock=720x540" group-title="Kids",Nick HD+ (1080p)
-http://116.90.120.151:8000/play/a0i3/index.m3u8
+http://103.154.3.101:5001/live/1226.m3u8
 #EXTINF:-1 tvg-id="NickJr.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK_JUNIOR/images/LOGO_HD/image.png" group-title="Kids",Nick Jr. (576p)
 http://103.154.3.101:5001/live/544.m3u8
 #EXTINF:-1 tvg-id="NickComedyCentralPlus1.de@HD" tvg-logo="https://i.imgur.com/08ZUI9k.png" group-title="Comedy;Kids",Nick/Comedy Central +1 HD (1080p) [Geo-Blocked]
