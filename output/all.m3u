@@ -3911,23 +3911,23 @@ https://app.ashokadigital.net/app/0fca457c/index.m3u8
 http://117.247.192.123:8080/vds/vds.m3u8?psk=123456
 #EXTINF:-1 tvg-id="UTVCBE" tvg-logo="" tvg-region="Coimbatore" group-title="TAMIL",UTV Coimbatore
 http://cdn.utvtamil.in/utvkovai/utv/playlist.m3u8
-#EXTINF:-1 tvg-id="STV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",S TV
+#EXTINF:-1 tvg-id="STV" tvg-logo="" tvg-region="Trichy" group-title="TAMIL",S TV
 https://apis.avmediawork.in/tvhls/stv.m3u8
-#EXTINF:-1 tvg-id="RoyalTV" tvg-logo="https://tamilradios.org/wp-content/uploads/2025/01/royal-tv.jpg" tvg-region="Unknown" group-title="TAMIL",Royal TV
+#EXTINF:-1 tvg-id="RoyalTV" tvg-logo="https://tamilradios.org/wp-content/uploads/2025/01/royal-tv.jpg" tvg-region="Guduvancheri;Chennai" group-title="TAMIL",Royal TV
 https://cloudstream4k.com/jptvhd/bsk/playlist.m3u8
 #EXTINF:-1 tvg-id="RudhramTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Rudhram TV [RTMP]
 rtmp://148.113.170.17/static/rudhram
 #EXTINF:-1 tvg-id="MCN" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",MCN [RTMP]
 rtmp://103.136.136.77:1935/tvr/tvr?psk=123456
-#EXTINF:-1 tvg-id="LionTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Lion TV
+#EXTINF:-1 tvg-id="LionTV" tvg-logo="" tvg-region="Arcot;Ranipet" group-title="TAMIL",Lion TV
 https://stream.iplive.xyz/smmedia/liontv/index.m3u8
-#EXTINF:-1 tvg-id="VisionTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Vision TV
+#EXTINF:-1 tvg-id="VisionTV" tvg-logo="" tvg-region="Mayiladuthurai" group-title="TAMIL",Vision TV
 https://rtmp.bmlive.net/bms/visiontv/index.m3u8
 #EXTINF:-1 tvg-id="ATNTV" tvg-logo="https://play-lh.googleusercontent.com/EdFj4R6OppJ5GuBSXyLWigMaj0nyleQCcwMiBLG6mRWL4sPy1ODUTigqHecr1UWrGw=w512-h960-rw" tvg-region="Chidambaram;Cuddalore" group-title="TAMIL",ATN TV
 https://stream.rojatv.cloud/ATNHD/onecloud/index.m3u8
 #EXTINF:-1 tvg-id="ArramTVKomarapalayam" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1733831106_IMG-20241210-WA0197.jpg" tvg-region="Komarapalayam;Namakkal" group-title="TAMIL",Arram TV Komarapalayam
 https://stream.rojatv.cloud/Arramtv/komarapalayam/index.m3u8
-#EXTINF:-1 tvg-id="LuckyTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Lucky TV
+#EXTINF:-1 tvg-id="LuckyTV" tvg-logo="" tvg-region="Sayalkudi;Ramanathapuram" group-title="TAMIL",Lucky TV
 https://stream.rojatv.cloud/LUCKYTV/onecloud/index.m3u8
 #EXTINF:-1 tvg-id="NakkubettaTV" tvg-logo="https://play-lh.googleusercontent.com/n8HM6cgcx1PhavqlloBdloQUqkVvFOvoiC9KtxlJk1_FOhdOFxKeBZt5t3b6kMvUuNU=w480-h960-rw" tvg-region="Nilgris" group-title="TAMIL",Nakkubetta TV
 https://rojatv.cloud/nbtv/nbtv/index.m3u8
@@ -3938,9 +3938,9 @@ http://198.144.149.206:8080/NOTV/VTV1/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="KSRTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",KSR TV
 http://ksrtv.stream.onecloudlive.in:8080/ksrtv/ksrtvhd/index.m3u8
 #EXTINF:-1 tvg-id="BhairavaTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Bhairava TV
-http://stream.onecloudlive.in/bhairavatv/bhairavahd/index.m3u8
+https://stream.onecloudlive.in/bhairavatv/bhairavahd/index.m3u8
 #EXTINF:-1 tvg-id="SabariTV2" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Sabari TV
-http://stream.onecloudlive.in/sabaritv/sabaritvhd/index.m3u8
+https://stream.onecloudlive.in/sabaritv/sabaritvhd/index.m3u8
 #EXTINF:-1 tvg-id="VIPTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",VIP TV
 https://ipcloud.live/vip/viptv/index.m3u8
 #EXTINF:-1 tvg-id="ThiraiTamilTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Thirai Tamil TV
