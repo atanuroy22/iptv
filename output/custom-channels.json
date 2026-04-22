@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -15117,6 +15117,42 @@
       "url": "https://stream8.cinerama.uz/1441/tracks-v1a1/mono.m3u8",
       "logo_url": "https://i.imgur.com/QCOUJ30.png",
       "category": 7,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RockTV@Main",
+      "name": "Rock TV",
+      "url": "https://apis.avmediawork.in/tvhls/rocktv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/suriyantvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RockTV@Jio",
+      "name": "Rock TV (Jio)",
+      "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/suriyantvtamil/HLSPartner/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/suriyantvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AaryaaTV@Jio",
+      "name": "Aaryaa TV (Jio)",
+      "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/aryatvtamil/HLSPartner/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1751968987_AARYAA%20TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "BhagyamTV",
+      "name": "Bhagyam TV",
+      "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/aanadhamtvtamil/HLSPartner/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/aanadhamtvtamil.png",
+      "category": 0,
       "language": 0,
       "is_hd": false
     }
