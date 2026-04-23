@@ -3265,8 +3265,6 @@ https://app.ashokadigital.net/app/67a779e9/index.m3u8
 https://account26.livebox.co.in/RAGAMMTPhls/live.m3u8
 #EXTINF:-1 tvg-id="CSKTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1733983239_csk%20tv%20png%20logo%20kanishq.png" tvg-region="Dharmapuri" group-title="TAMIL",CSK TV
 http://csktv.7starcloud.com:1935/csktv/csktvdpi/playlist.m3u8
-#EXTINF:-1 tvg-id="HariTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1754982558_f90dff80-1533-4884-906a-de6f24041e53-removebg-preview.png" tvg-region="Pochampalli;Krishnagiri" group-title="TAMIL",Hari TV
-https://stream.ashokadigital.net/haritv/haritvhd/index.m3u8
 #EXTINF:-1 tvg-id="SriKrishnaTV@Erode" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1732431684_227461593_220794490025454_2506413802748050177_n-removebg-preview.png" tvg-region="Erode" group-title="TAMIL",Sri Krishna TV
 http://krishnatv.7starcloud.com:1935/erodekrishnatv/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="SriKrishnaTV@Tiruchengode" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1732431684_227461593_220794490025454_2506413802748050177_n-removebg-preview.png" tvg-region="Tiruchengode" group-title="TAMIL",Sri Krishna TV Tiruchengode
@@ -3433,7 +3431,9 @@ http://103.78.164.62:8090/MMCLASSIC/index.m3u8
 http://103.78.164.62:8090/SSSHD/index.m3u8
 #EXTINF:-1 tvg-id="QTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1736392772_IMG-20250109-WA0035.jpg" tvg-region="Kanchipuram" group-title="TAMIL",Q TV
 http://103.78.164.62:8090/QTVHD/index.m3u8
-#EXTINF:-1 tvg-id="RCMusic" tvg-region="Karur" group-title="TAMIL",RC Music
+#EXTINF:-1 tvg-id="RCTelevision" tvg-logo="" tvg-region="Karur" group-title="TAMIL",RC Television
+https://view.rcserver.in/tmp_hls1/stream/index.m3u8
+#EXTINF:-1 tvg-id="RCMusic" tvg-logo="" tvg-region="Karur" group-title="TAMIL",RC Music
 https://view.rcserver.in/tmp_hls2/stream/index.m3u8
 #EXTINF:-1 tvg-id="MeiAlaiTV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkifCQtA5Q9jffIS1MkOz0KEp00hQopIKM6g&s" tvg-region="Karur" group-title="TAMIL",Mei Alai TV
 https://view.rcserver.in/tmp_hls21/meialai/index.m3u8
@@ -3971,6 +3971,12 @@ https://stream.onecloudlive.in/sabaritv/sabaritvhd/index.m3u8
 https://ipcloud.live/vip/viptv/index.m3u8
 #EXTINF:-1 tvg-id="ThiraiTamilTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Thirai Tamil TV
 https://tn.streamezy.in/hls/tthirai/live.m3u8
+#EXTINF:-1 tvg-id="CityTVPondy" tvg-logo="" tvg-region="Chennai;Puducherry" group-title="TAMIL",City TV Puducherry [RTMP]
+rtmp://103.136.136.77:1935/citytv/citytv?psk=123456
+#EXTINF:-1 tvg-id="KLTV" tvg-logo="" tvg-region="Karaikal;Puducherry" group-title="TAMIL",KL TV [RTMP]
+rtmp://103.136.136.77:1935/kl4k/kl4k?psk=123456
+#EXTINF:-1 tvg-id="JSPTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",JSP TV
+rtmp://103.136.136.77:1935/jsp4k/jsp4k?psk=123456
 #EXTINF:-1 tvg-id="6TVTelugu.in@SD" tvg-logo="https://i.imgur.com/l3EcRnZ.png" group-title="TELUGU",6 TV Telugu (576p)
 https://cdn-1.pishow.tv/live/232/master.m3u8
 #EXTINF:-1 tvg-id="10TV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png" group-title="TELUGU",10 TV (576p)
