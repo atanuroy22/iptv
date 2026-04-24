@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -13810,7 +13810,7 @@
       "id": "NakshatraTV",
       "name": "Nakshatra TV",
       "url": "https://rtmp.bmlive.net/stream/nakshatra/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/NakshatraTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -14926,7 +14926,7 @@
       "id": "STV",
       "name": "S TV",
       "url": "https://apis.avmediawork.in/tvhls/stv.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/STV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -14935,7 +14935,7 @@
       "id": "LionTV",
       "name": "Lion TV",
       "url": "https://stream.iplive.xyz/smmedia/liontv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/LionTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -14971,7 +14971,7 @@
       "id": "LuckyTV",
       "name": "Lucky TV",
       "url": "https://stream.rojatv.cloud/LUCKYTV/onecloud/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/LuckyTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -14989,7 +14989,7 @@
       "id": "VinothTV",
       "name": "Vinoth TV",
       "url": "https://server.sscloud7.in/live/vinothtv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/VinothTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -14998,7 +14998,7 @@
       "id": "VIPTV",
       "name": "VIP TV",
       "url": "https://ipcloud.live/vip/viptv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/VIPTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -15007,7 +15007,7 @@
       "id": "ThiraiTamilTV",
       "name": "Thirai Tamil TV",
       "url": "https://tn.streamezy.in/hls/tthirai/live.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/ThiraiTamil.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -15061,7 +15061,7 @@
       "id": "BhairavaTV",
       "name": "Bhairava TV",
       "url": "https://stream.onecloudlive.in/bhairavatv/bhairavahd/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/BhairavaTV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -15224,6 +15224,204 @@
       "name": "Arighni TV",
       "url": "https://dmtv.iptv.pics/live/dmtv/index.m3u8",
       "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "EzraBibleNetwork",
+      "name": "Ezra Bible Network",
+      "url": "https://stream.onecloudlive.in/riotv/riotvmax/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DSRChannel",
+      "name": "DSR Channel",
+      "url": "https://ipcloud.live/dsrchannel/dsrhd/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1772769336_WhatsApp%20Image%202026-03-05%20at%208.36.34%20AM.jpeg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SabariTVAruppukottai",
+      "name": "Sabari TV Aruppukottai",
+      "url": "https://stream.onecloudlive.in/sabaritv/sabaritvhd/index.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SabariTVAruppukottai.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "KirubaiTV",
+      "name": "Kirubai TV",
+      "url": "https://server1.thewebworld.in:3208/hybrid/play.m3u8",
+      "logo_url": "https://static.wixstatic.com/media/3d2e01_e0908e81588a4eb1b3cf5ab61cab149e~mv2.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TamilVisionInternational",
+      "name": "Tamil Vision International",
+      "url": "https://live.cmr24.fm/TVI/HD/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/wJeELGj.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SooriyanTV",
+      "name": "Sooriyan TV",
+      "url": "https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8",
+      "logo_url": "https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SooriyanTVCinema",
+      "name": "Sooriyan TV Cinema",
+      "url": "https://live20.bozztv.com/giatv/giatv-Sooriyantv/Sooriyantv/playlist.m3u8",
+      "logo_url": "https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ThamilaaramTV",
+      "name": "Thamilaaram TV",
+      "url": "https://thamilaaramtv24-hls.secdn.net/thamilaaramtv24-channel/play/ThamilaaramTV.smil/playlist.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ThaaiTV",
+      "name": "Thaai TV",
+      "url": "https://ap02.iqplay.tv:8082/hls/thailive/playlist.m3u8",
+      "logo_url": "https://thaaitv.com/wp-content/uploads/2024/10/THAAITV-LOGOO.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "UthamiyaeTV",
+      "name": "Uthamiyae TV",
+      "url": "https://kali.vdopanel.com:3169/stream/play.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SamugamTV",
+      "name": "Samugam TV",
+      "url": "https://ca.streamjo.com/live/samugam.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "EETTV",
+      "name": "EET TV",
+      "url": "https://eu.streamjo.com/eetlive/eettv.m3u8",
+      "logo_url": "https://i.imgur.com/rntSEDZ.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "JCTVMadurai",
+      "name": "JC TV Madurai",
+      "url": "https://ktismaservers.in:3545/live/jctvlive.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/G_KgC3YE0jgkkHw_45fQMEYbwgqXRVShTn3sJLP9_WeqNxmKvHdskh-nPmTFgLvn=w640-h1080-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ME24Tamil",
+      "name": "ME24 Tamil",
+      "url": "https://stream.onecloudlive.in/orange/ME24TAMIL/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MeiveliTV",
+      "name": "Meiveli TV",
+      "url": "https://meiveli.livebox.co.in/MEIVELIMAINhls/meivelimain.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "YeshuaTV",
+      "name": "Yeshua TV",
+      "url": "https://transcoding.livebox.co.in/Yeshuahls/live.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1739979735_WhatsApp_Image_2025-02-19_at_6.21.54_PM-removebg-preview.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TWOCTV",
+      "name": "TWOC TV",
+      "url": "https://rtmp.applelive.in/twoctv/twoctv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/XYKsBBKAjwJKGTBBGlvTvlah5o2kmTvO0P8MSxC5b4jb1El08QJY_9FQyoW5Novupd4=w640-h1080-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ImaiTV",
+      "name": "Imai TV",
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/9tODclu.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "GoRevivalTV",
+      "name": "Go Revival TV",
+      "url": "https://ktismaservers.in:3870/live/gorevivaltvlive.m3u8",
+      "logo_url": "https://i.imgur.com/h9hsOt0.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SalvationTV",
+      "name": "Salvation TV",
+      "url": "https://ktismaservers.in:3902/live/salvationtvlive.m3u8",
+      "logo_url": "https://content.jdmagicbox.com/comp/bangalore/l5/080pxx80.xx80.150207120517.e4l5/catalogue/salvation-tv-network-pvt-m-g-road-bangalore-religious-organizations-1sabn2d.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "MyFaithTV",
+      "name": "My Faith TV",
+      "url": "https://stream.iplive.xyz/faithtv/faithtv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/jwlLipuM4pwkQqg6ImIgREz9w6fhXfjnepY3tS5j8E0rgWVSROCqcxsyWKpGzxAFoSux=w640-h1080-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AdhisayamTV",
+      "name": "Adhisayam TV",
+      "url": "https://livetv.adhisayamtv.org/adhisayamtv/83a062a18a761b948a73ad2ba7747a8f.sdp/playlist.m3u8",
+      "logo_url": "https://i.imgur.com/6b3nJcD.png",
       "category": 0,
       "language": 0,
       "is_hd": false
