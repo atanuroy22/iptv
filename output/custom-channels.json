@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -15349,7 +15349,7 @@
       "id": "ME24Tamil",
       "name": "ME24 Tamil",
       "url": "https://stream.onecloudlive.in/orange/ME24TAMIL/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://yt3.googleusercontent.com/S0VbxZv3csKk0_O9fcExcgWKssT1nUlHXT1uiyIuIlCYCu4_1EtJ4kJlgx4Gtwwa5Rbe0f2l=s900-c-k-c0x00ffffff-no-rj",
       "category": 0,
       "language": 0,
       "is_hd": false
@@ -15430,6 +15430,51 @@
       "id": "MTVChennai",
       "name": "MTV Chennai",
       "url": "https://stream.ashokadigital.net/mtvlive/mtvlive/index.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MTVChennai.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SubinTV",
+      "name": "Subin TV",
+      "url": "https://stream.galaxyott.live/live/subintv/index.m3u8",
+      "logo_url": "https://subintv.in/SUBINLOGO.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AaryaaTV",
+      "name": "Aaryaa TV (Jio)",
+      "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/aryatvtamil/HLSPartner/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1751968987_AARYAA%20TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "EagleTVTenkasi",
+      "name": "Eagle TV Tenkasi",
+      "url": "https://ipcloud.live/eaglemedia/eagletv/index.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/EagleTV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SamugamMedia",
+      "name": "Samugam Media",
+      "url": "https://ca.streamjo.com/live/samugam.m3u8",
+      "logo_url": "https://yt3.googleusercontent.com/ytc/AIdro_meX_j-Fg6LcfbwLBDI8X1BlC3q_nD1Io5wVWriMgWVJA=s900-c-k-c0x00ffffff-no-rj",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "TamilOliTheni",
+      "name": "Tamil Oli TV Theni",
+      "url": "https://view.rcserver.in/tmp_hls29/tamilolilive/index.m3u8",
       "logo_url": "",
       "category": 0,
       "language": 0,
