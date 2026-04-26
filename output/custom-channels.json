@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -15539,6 +15539,123 @@
       "name": "Jawahar Channel",
       "url": "https://app.ashokadigital.net/app/6a01fb97/index.m3u8",
       "logo_url": "https://livetv.ashokadigital.net/upload/logo/1731775837_JAWAHAR%20TV%20LOGO%20PNG.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "PhoenixTV2",
+      "name": "Phoenix TV [TamilStream]",
+      "url": "https://phoenix-hs-ott.tamilstream.in/phoenix/phoenix/playlist.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/CgR5PN5Jd8RTd8XqsUB7-Hq14-pv-Xw7giZfKls-BZMxn3NvnhtBDIh6lO_cp8ykHA8=w640-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SakthiTVSMB",
+      "name": "Sakthi TV Sambavarvadakarai",
+      "url": "https://stream.onecloudlive.in/sachintv/sakthitv/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SarvikTV",
+      "name": "Sarvik TV",
+      "url": "https://live3.onecloudlive.in/sachintv/sarvikhd/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AadhavanTV",
+      "name": "Aadhavan TV",
+      "url": "https://view.apserver.in/tmp_hls3/aadhavantv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/rXgRs8Q1_vQ6O_cxEZYlfZYNGgY9Q03ZK_iNtALU2BgMmfQ7U4yR4NmLl_uFffU-eGvh=w640-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "BassTV",
+      "name": "Bass TV",
+      "url": "https://app.xstream.onecloudlive.in/bass/basstv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/x6njvZ3CWH4ZYi8T5vfRdrpB9CVy3FBUwow_ExUZ3BoMVXxxVoo_7V5xmTaJ1Q2FuE7K=w640-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "RKTV",
+      "name": "RK TV [TamilStream]",
+      "url": "https://rktv-hs1.tamilstream.in/rktv/tenkasi/playlist.m3u8",
+      "logo_url": "https://phoenixcreations.online/ott/jayamott/uploads/1775656903_WhatsApp%20Image%202026-04-08%20at%207.01.09%20PM%20(2).jpeg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SSTV2",
+      "name": "SS TV",
+      "url": "https://sstv-ott.tamilstream.in/sstv/sstv/playlist.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/WK6xINTd91o8A-6jaYgoGFSGXikEFoh2tlznkzY8tap0lEH2N8p5j2sumbYD-lOpQEN3c-oz4u79JKqdHAoq=w640-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "NilaTVSVG",
+      "name": "Nila TV Sivaganga",
+      "url": "https://ipcloud.live/nilatvsvg/nilatv/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1772708977_Nila%20Tv_00151.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SivaTV",
+      "name": "Siva TV",
+      "url": "https://app.xstream.onecloudlive.in/sivatv/sivatv/index.m3u8",
+      "logo_url": "https://play-lh.googleusercontent.com/J8Ih5f6cYVKL5QTGi55mMU8-uPuBnjTCrdFZc7HNPIDrajuLhP2qGjAlvGfUSeCwYWo=w640-h960-rw",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "AbinayaTV",
+      "name": "Abinaya TV",
+      "url": "https://app.xstream.onecloudlive.in/abinayatv/abinayatv/index.m3u8",
+      "logo_url": "https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/AbinayaTV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "DeltaTV",
+      "name": "Delta TV",
+      "url": "https://live.onecloudlive.in/delta/namtv/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1770896079_deltha%20tv.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ThangamTV",
+      "name": "Thangam TV",
+      "url": "https://stream.onecloudlive.in/thangamtv/thangamtvhd/index.m3u8",
+      "logo_url": "",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "GoodNewsTime",
+      "name": "Good News Time",
+      "url": "https://5dd3981940faa.streamlock.net/goodnewstime/goodnewstime/playlist.m3u8",
+      "logo_url": "https://i.ibb.co/JRmvfqgj/GNT.png",
       "category": 0,
       "language": 0,
       "is_hd": false
