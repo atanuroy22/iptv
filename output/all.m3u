@@ -3789,7 +3789,7 @@ http://joshuatv.phoenixcreations.online/joshuatv/joshuatv/index.m3u8
 http://joshuatv-live.phoenixcreations.online/joshuatv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="KirubaiGoodnewsTV" tvg-logo="https://play-lh.googleusercontent.com/LfRXaqN5celAnHn_8Y8bQeypCIzpVhIiiUwOVYeblqe1e_F6ClEArPl61L-pbpvV-fHqFePGke8-QANxurinvw" tvg-region="Uinown" group-title="TAMIL",Kirubai Goodnews TV
 http://kirubaitv.phoenixcreations.online/kirubaitv/kirubaitv/index.m3u8
-#EXTINF:-1 tvg-id="PaasamalarTV" tvg-logo="https://play-lh.googleusercontent.com/5ZzLBuMhc1abMJ8KnaTw0Jg3ydqRKNLJrY31DSYD2iR9wCOpuN-XXNxdfI7uqKlXFJEmHFO9ffvh56JS7LbI9g" tvg-region="Unknown" group-title="TAMIL",Paasamalar TV
+#EXTINF:-1 tvg-id="PasamalarTV" tvg-logo="https://play-lh.googleusercontent.com/5ZzLBuMhc1abMJ8KnaTw0Jg3ydqRKNLJrY31DSYD2iR9wCOpuN-XXNxdfI7uqKlXFJEmHFO9ffvh56JS7LbI9g" tvg-region="Unknown" group-title="TAMIL",Pasamalar TV
 https://stream.sscloud7.in/live/paasamalartv/index.m3u8
 #EXTINF:-1 tvg-id="KarthickTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1739547181_WhatsApp_Image_2025-02-14_at_8.50.29_PM__2_-removebg-preview.png" tvg-region="Tirunelveli" group-title="TAMIL",Karthick TV
 https://ipcloud.live/karthick/karthicktvhd/index.m3u8
