@@ -2893,7 +2893,7 @@
       "id": "TVRISport.id@SD",
       "name": "TVRI Sport (720p)",
       "url": "https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8",
-      "logo_url": "",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/TVRI_Sport_2022.svg/960px-TVRI_Sport_2022.svg.png",
       "category": 8,
       "language": 0,
       "is_hd": true
@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -15929,6 +15929,33 @@
       "category": 0,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "Nickelodeon.pl@SD",
+      "name": "Nickelodeon (1080p)",
+      "url": "https://streamer.filmowo.xyz/memfs/cd3264be-9df6-43cb-91ca-364082c257eb.m3u8",
+      "logo_url": "https://i.imgur.com/E84jnP8.png",
+      "category": 7,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "Nicktoons.pl@SD",
+      "name": "Nicktoons (1080p)",
+      "url": "https://streamer.filmowo.xyz/memfs/a9e785bf-54f7-4a9d-be03-1ad6ace02cd3.m3u8",
+      "logo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Nicktoons_UK_Logo_2014.png",
+      "category": 7,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "NickWeb.br",
+      "name": "NickWeb (720p)",
+      "url": "https://vs20.live.opencaster.com/nickelodeonbrasil_68f1743d/index.m3u8",
+      "logo_url": "https://i.ibb.co/Qvxbvk9B/20260422-174151.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
     }
   ]
 }
