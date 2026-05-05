@@ -507,13 +507,13 @@ https://live.olidigital.in/aadhavantvcolours/aadhavantvcolours/index.m3u8
 https://view.apserver.in/tmp_hls4/aadhavancolours/index.m3u8
 #EXTINF:-1 tvg-id="MaruthiTV" tvg-logo="https://play-lh.googleusercontent.com/LSjXF_sRhe2bGwzZUSEeDwBtopkY3lj6Ftn-A4vPsogTWodKtFe14lOAGL7L8qgryC8" tvg-region="Vazhapadi;Salem" group-title="TAMIL",Maruthi TV
 https://stream.onecloudlive.in/maruthitv/maruthitvhd/index.m3u8
-#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi" group-title="TAMIL",Jayam TV Sivakasi
+#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Jayam TV Sivakasi
 https://stream.rojatv.cloud/jayam4k/index.m3u8
-#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi" group-title="TAMIL",Jayam TV Sivakasi [RTMP]
+#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Jayam TV Sivakasi [RTMP]
 rtmp://in-south-blr.livepush.io/live/rtmp_855a06c27c63420e9eb56e6ff68dd2v7
-#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi" group-title="TAMIL",Jayam TV Sivakasi [TamilStream]
+#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Jayam TV Sivakasi [TamilStream]
 https://jayamtv-ott.tamilstream.in/jayamtv/sivakasi/playlist.m3u8
-#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi" group-title="TAMIL",Jayam TV Sivakasi [Phoenix]
+#EXTINF:-1 tvg-id="JayamTVSivakasi" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1775654228_Jayam%20Tv%20Logo.png" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Jayam TV Sivakasi [Phoenix]
 http://jayamtv.phoenixcreations.online/jayamtv/sivakasi/playlist.m3u8
 #EXTINF:-1 tvg-id="MTVKodai" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1743837928_TELEVESION.png" tvg-region="Kodaikanal" group-title="TAMIL",MTV Kodaikanal
 https://ipcloud.live/mtv/menhd/index.m3u8
@@ -565,7 +565,7 @@ https://cloudstream4k.com/rainbowtv/ssdslive/playlist.m3u8
 https://stream.onecloudlive.in/saitvmdu/saitvmdu/index.mpd
 #EXTINF:-1 tvg-id="SaiTVMadurai" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1739599891_logo-removebg-preview.png" tvg-region="Madurai" group-title="TAMIL",Sai TV Madurai [NOTV]
 http://198.144.149.206:8080/NOTV/SAITVMD/index.m3u8?token=GTR
-#EXTINF:-1 tvg-id="AnbuTVSivakasi" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1744352400_IMG-20250411-WA0102-removebg-preview.png" tvg-region="Sivakasi" group-title="TAMIL",Anbu TV
+#EXTINF:-1 tvg-id="AnbuTVSivakasi" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1744352400_IMG-20250411-WA0102-removebg-preview.png" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Anbu TV
 https://ipcloud.live/anbutv/anbutvhd/index.m3u8
 #EXTINF:-1 tvg-id="NellaiTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1753792693_WhatsApp_Image_2025-07-29_at_5.34.20_AM-removebg-preview.png" tvg-region="Tirunelveli" group-title="TAMIL",Nellai TV
 https://stream.onecloudlive.in/nellaitv/nellaitv/index.m3u8
@@ -1231,6 +1231,8 @@ https://ark.inet.moe/ark/index.m3u8
 https://view.rcserver.in/tmp_hls23/kaalaitv/index.m3u8
 #EXTINF:-1 tvg-id="SKTVKarur" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SKTVKarur.png" tvg-region="Karur" group-title="TAMIL",SK TV Karur
 https://view.rcserver.in/tmp_hls24/sktv/index.m3u8
+#EXTINF:-1 tvg-id="SKMusic" tvg-logo="" tvg-region="Karur" group-title="TAMIL",SK Music
+https://view.rcserver.in/tmp_hls18/skmusic/index.m3u8
 #EXTINF:-1 tvg-id="MRTV2" tvg-logo="https://bmcloud.in/apptest/uploads/68e6001d4b01e.png" tvg-region="Unknown" group-title="TAMIL",MR TV
 https://rtmp.bmlive.net/bms/bms/index.m3u8
 #EXTINF:-1 tvg-id="AhaTV" tvg-logo="https://bmcloud.in/apptest/uploads/6936d638886a5.jpg" tvg-region="Unknown" group-title="TAMIL",Aha TV
@@ -1538,4 +1540,8 @@ http://saitv.sscloud7.in/live/livesaitv/index.m3u8
 #EXTINF:-1 tvg-id="BoobshTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1743337212_1000035047-removebg-preview.png" tvg-region="Kanyakumari" group-title="TAMIL",Boobsh TV
 https://live.applelive.in/boobsh/boobsh/index.m3u8
 #EXTINF:-1 tvg-id="AnuTV" tvg-logo="https://play-lh.googleusercontent.com/bnS-7trsEk7zu4Il5WX8uFIvNqEMJo16ZWpcgmrTzVq40SXIWKtzILxKARboSMZeHg" tvg-region="Tirunelveli" group-title="TAMIL",Anu TV
-http://anutv.phoenixcreations.online/anutv/anutv/index.m3u8
+http://anutv.phoenixcreations.online/anutv/anutv/index.m3u8
+#EXTINF:-1 tvg-id="ACFTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",ACF TV
+https://view.rcserver.in/tmp_hls27/acftv/index.m3u8
+#EXTINF:-1 tvg-id="DolphinTVSVK" tvg-logo="" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Dolphin TV Sivakasi
+https://view.rcserver.in/tmp_hls31/dolphintv/index.m3u8
