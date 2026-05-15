@@ -1526,4 +1526,6 @@ http://anutv.phoenixcreations.online/anutv/anutv/index.m3u8
 #EXTINF:-1 tvg-id="ACFTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",ACF TV
 https://view.rcserver.in/tmp_hls27/acftv/index.m3u8
 #EXTINF:-1 tvg-id="MRTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",MR TV
-https://live.apcloud.in/mrtv/mrtvhd/index.m3u8
+https://live.apcloud.in/mrtv/mrtvhd/index.m3u8
+#EXTINF:-1 tvg-id="TunefulTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Tuneful TV
+https://mediacp.hiredhosting.com/hls/hwnzhmjhym/hwnzhmjhym.m3u8
