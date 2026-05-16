@@ -1393,7 +1393,7 @@ http://117.247.192.123:8080/vds/vds.m3u8?psk=123456
 http://cdn.utvtamil.in/utvkovai/utv/playlist.m3u8
 #EXTINF:-1 tvg-id="STV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/STV.png" tvg-region="Trichy" group-title="TAMIL",S TV
 https://apis.avmediawork.in/tvhls/stv.m3u8
-#EXTINF:-1 tvg-id="RoyalTVGuduvancheri" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1746501094_ROYAL%20TV.png" tvg-region="Guduvancheri;Chennai" group-title="TAMIL",Royal TV Guduvancheri
+#EXTINF:-1 tvg-id="RoyalTVGuduvancheri" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1746501094_ROYAL%20TV.png" tvg-region="Guduvancheri" group-title="TAMIL",Royal TV Guduvancheri
 https://cloudstream4k.com/jptvhd/bsk/playlist.m3u8
 #EXTINF:-1 tvg-id="MCNChennai" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MCN.png" tvg-region="Chennai" group-title="TAMIL",MCN Chennai [RTMP]
 rtmp://103.136.136.77:1935/tvr/tvr?psk=123456
@@ -1536,4 +1536,6 @@ https://live.apcloud.in/mrtv/mrtvhd/index.m3u8
 #EXTINF:-1 tvg-id="TunefulTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Tuneful TV
 https://mediacp.hiredhosting.com/hls/hwnzhmjhym/hwnzhmjhym.m3u8
 #EXTINF:-1 tvg-id="DolphinTVSVK" tvg-logo="" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Dolphin TV Sivakasi
-https://view.rcserver.in/tmp_hls31/dolphintv/index.m3u8
+https://view.rcserver.in/tmp_hls31/dolphintv/index.m3u8
+#EXTINF:-1 tvg-id="AruljothiTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Aruljothi TV
+https://jothi.inet.moe/jothitv/index.m3u8
