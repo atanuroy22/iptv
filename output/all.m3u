@@ -4167,6 +4167,8 @@ https://mediacp.hiredhosting.com/hls/hwnzhmjhym/hwnzhmjhym.m3u8
 https://view.rcserver.in/tmp_hls31/dolphintv/index.m3u8
 #EXTINF:-1 tvg-id="AruljothiTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Aruljothi TV
 https://jothi.inet.moe/jothitv/index.m3u8
+#EXTINF:-1 tvg-id="AppleTVThanjai" tvg-logo="" tvg-region="Thanjavur" group-title="TAMIL",Apple TV Thanjavur
+https://stream.ipcloud.live/appletv/appletv/index.m3u8
 #EXTINF:-1 tvg-id="6TVTelugu.in@SD" tvg-logo="https://i.imgur.com/l3EcRnZ.png" group-title="TELUGU",6 TV Telugu (576p)
 https://cdn-1.pishow.tv/live/232/master.m3u8
 #EXTINF:-1 tvg-id="10TV.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_10TV/images/LOGO_HD/image.png" group-title="TELUGU",10 TV (576p)

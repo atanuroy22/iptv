@@ -1540,4 +1540,6 @@ https://mediacp.hiredhosting.com/hls/hwnzhmjhym/hwnzhmjhym.m3u8
 #EXTINF:-1 tvg-id="DolphinTVSVK" tvg-logo="" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Dolphin TV Sivakasi
 https://view.rcserver.in/tmp_hls31/dolphintv/index.m3u8
 #EXTINF:-1 tvg-id="AruljothiTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Aruljothi TV
-https://jothi.inet.moe/jothitv/index.m3u8
+https://jothi.inet.moe/jothitv/index.m3u8
+#EXTINF:-1 tvg-id="AppleTVThanjai" tvg-logo="" tvg-region="Thanjavur" group-title="TAMIL",Apple TV Thanjavur
+https://stream.ipcloud.live/appletv/appletv/index.m3u8
