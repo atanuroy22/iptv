@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -16087,7 +16087,7 @@
       "id": "AppleTVThanjai",
       "name": "Apple TV Thanjavur",
       "url": "https://stream.ipcloud.live/appletv/appletv/index.m3u8",
-      "logo_url": "",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1779002306_aple%20tv.png",
       "category": 0,
       "language": 0,
       "is_hd": false
