@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -16304,6 +16304,132 @@
       "name": "TNSE",
       "url": "https://5790d294af2dc.streamlock.net/mchanneltv24/mchanneltv24/playlist.m3u8",
       "logo_url": "https://bx-tv.com/wp-content/uploads/2022/09/TNSE.jpg",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3201",
+      "name": "Sana TV",
+      "url": "https://stream.galaxyott.live/live/sanatv/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/sanatv.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3359",
+      "name": "Sana Plus",
+      "url": "https://galaxyott.live/hls/sanaplus.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/sanaplus.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3393",
+      "name": "NTC TV",
+      "url": "https://galaxyott.live/hls/ntv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/ntvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3396",
+      "name": "Ultimate TV",
+      "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/utvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3394",
+      "name": "Suriya TV",
+      "url": "https://galaxyott.live/hls/suryatv.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1732170490_WhatsApp_Image_2024-11-21_at_11.10.20_AM-removebg-preview%20(2).png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3360",
+      "name": "Subin TV",
+      "url": "https://stream.galaxyott.live/live/subintv/index.m3u8",
+      "logo_url": "https://subintv.in/SUBINLOGO.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3357",
+      "name": "Dharsan TV",
+      "url": "https://galaxyott.live/hls/dharshantv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/dharshantvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3356",
+      "name": "Rock TV",
+      "url": "https://apis.avmediawork.in/tvhls/rocktv.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/suriyantvtamil.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3395",
+      "name": "Aaryaa TV",
+      "url": "https://stream.ottlive.co.in/aryatvtamil/index.m3u8",
+      "logo_url": "https://livetv.ashokadigital.net/upload/logo/1751968987_AARYAA%20TV.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3409",
+      "name": "Roja TV",
+      "url": "https://rojatv.cloud/rojatv/rojatv/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/rojatv.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3417",
+      "name": "Roja Movies",
+      "url": "https://live.rojatv.cloud/rojamovies/rojamovies/index.m3u8",
+      "logo_url": "https://jiotvimages.cdn.jio.com/dare_images/images/rojamovies.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "3358",
+      "name": "Bhagyam TV",
+      "url": "https://www.offer360.in/bhagyamtv/bhagyam/index.m3u8",
+      "logo_url": "https://phoenixcreations.online/ott/jayamott/uploads/1777037057_Timeline 1_00180000.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "OLI TV",
+      "name": "Oli TV",
+      "url": "https://live.olidigital.in/olitv/olitv/index.m3u8",
+      "logo_url": "https://i.ibb.co/XfvTQyJn/main-removebg-preview.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "ts1383",
+      "name": "Nijam TV",
+      "url": "https://nijamtv.nijamtv.org/live/nijamtv/index.m3u8",
+      "logo_url": "https://tamiltvchannels.com/img/devotional/Nijam%20TV.png",
       "category": 0,
       "language": 0,
       "is_hd": false
