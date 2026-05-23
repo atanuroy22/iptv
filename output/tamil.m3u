@@ -1590,4 +1590,6 @@ https://samson.streamerr.co:8081/tvt/index.m3u8
 #EXTINF:-1 tvg-id="AathiTV" tvg-logo="https://bx-tv.com/wp-content/uploads/2026/01/AATHITV.jpg" tvg-region="Unknown" group-title="TAMIL",Aathi TV
 https://5790d294af2dc.streamlock.net/aathitv/aathitv/playlist.m3u8
 #EXTINF:-1 tvg-id="TNSE" tvg-logo="https://bx-tv.com/wp-content/uploads/2022/09/TNSE.jpg" tvg-region="Unknown" group-title="TAMIL",TNSE
-https://5790d294af2dc.streamlock.net/mchanneltv24/mchanneltv24/playlist.m3u8
+https://5790d294af2dc.streamlock.net/mchanneltv24/mchanneltv24/playlist.m3u8
+#EXTINF:-1 tvg-id="SMediaPDC" tvg-logo="https://i.ibb.co/5Xv68ypB/29996.png" tvg-region="Puducherry" group-title="TAMIL",S Media Puducherry
+http://ptuf.ridsys.in/riptv/live/S_MEDIA/index.m3u8
