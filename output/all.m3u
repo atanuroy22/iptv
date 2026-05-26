@@ -3809,9 +3809,9 @@ https://play.applelive.in/islamicchannel/islamicchannel.m3u8
 https://play.applelive.in/deebamtv/deebamtv.m3u8
 #EXTINF:-1 tvg-id="SharonTV2" tvg-logo="https://bmcloud.in/apptest/uploads/6855909199a57.png" tvg-region="Unknown" group-title="TAMIL",Sharon TV
 https://rtmp.bmlive.net/bms/sharontv/index.m3u8
-#EXTINF:-1 tvg-id="ArputharYesuTV" tvg-logo="https://play-lh.googleusercontent.com/Y4A-pPCvdE_GyEnvHTYjP3IQncyEMWAMwhKe5ugSTW-HRYLJxc1o2AqJHuLj5HJUBmGO" tvg-region="Chennai" group-title="TAMIL",Arputhar Yesu TV
+#EXTINF:-1 tvg-id="ArputharYesuTV" tvg-logo="https://arputharyesutv.net/wp-content/uploads/2022/07/AR-LOGO-PNG.png" tvg-region="Chennai" group-title="TAMIL",Arputhar Yesu TV
 https://arputharyesutv.arputharyesutv.com/live/md/index.m3u8
-#EXTINF:-1 tvg-id="ArputharYesuTV" tvg-logo="https://play-lh.googleusercontent.com/Y4A-pPCvdE_GyEnvHTYjP3IQncyEMWAMwhKe5ugSTW-HRYLJxc1o2AqJHuLj5HJUBmGO" tvg-region="Chennai" group-title="TAMIL",Arputhar Yesu TV [Livebox]
+#EXTINF:-1 tvg-id="ArputharYesuTV" tvg-logo="https://arputharyesutv.net/wp-content/uploads/2022/07/AR-LOGO-PNG.png" tvg-region="Chennai" group-title="TAMIL",Arputhar Yesu TV [Livebox]
 https://account33.livebox.co.in/jesushelpshls/live.m3u8
 #EXTINF:-1 tvg-id="FoxTV" tvg-logo="https://play-lh.googleusercontent.com/y08p17uRsZ0hztiU9omcldzXhIFr43PsqKVsb9Q7sW-jeUy58z2d9XQr3WXlOZWjONDxAAYzeVHNs28ZE7pp" tvg-region="Unknown" group-title="TAMIL",Fox TV
 https://stream.onecloudlive.in/foxtv/foxtv/index.m3u8
@@ -4084,7 +4084,7 @@ http://devatv.sscloud7.in/live/devatv/index.m3u8
 #EXTINF:-1 tvg-id="SaiTVTKS" tvg-logo="https://play-lh.googleusercontent.com/FvkjCrWmYV__Sl4_7wf0ScZrrHcHfYlo3-6JmRn0NkxTXJ7IGHLoMLqa576xrHXMU-dc" tvg-region="Tenkasi" group-title="TAMIL",Sai TV Tenkasi
 http://saitv.sscloud7.in/live/livesaitv/index.m3u8
 #EXTINF:-1 tvg-id="BoobshTV" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1743337212_1000035047-removebg-preview.png" tvg-region="Kanyakumari" group-title="TAMIL",Boobsh TV
-https://live.applelive.in/boobs h/boobsh/index.m3u8
+https://live.applelive.in/boobsh/boobsh/index.m3u8
 #EXTINF:-1 tvg-id="AnuTV" tvg-logo="https://play-lh.googleusercontent.com/bnS-7trsEk7zu4Il5WX8uFIvNqEMJo16ZWpcgmrTzVq40SXIWKtzILxKARboSMZeHg" tvg-region="Tirunelveli" group-title="TAMIL",Anu TV
 http://anutv.phoenixcreations.online/anutv/anutv/index.m3u8
 #EXTINF:-1 tvg-id="ACFTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",ACF TV
@@ -4095,7 +4095,7 @@ https://live.apcloud.in/mrtv/mrtvhd/index.m3u8
 https://mediacp.hiredhosting.com/hls/hwnzhmjhym/hwnzhmjhym.m3u8
 #EXTINF:-1 tvg-id="DolphinTVSVK" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/DolphinTVSVK.png" tvg-region="Sivakasi;Virudhunagar" group-title="TAMIL",Dolphin TV Sivakasi
 https://view.rcserver.in/tmp_hls31/dolphintv/index.m3u8
-#EXTINF:-1 tvg-id="AruljothiTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Aruljothi TV
+#EXTINF:-1 tvg-id="AruljothiTV" tvg-logo="https://i.imgur.com/BmQ0r5S.png" tvg-region="Chennai" group-title="TAMIL",Aruljothi TV
 https://jothi.inet.moe/jothitv/index.m3u8
 #EXTINF:-1 tvg-id="AppleTVThanjai" tvg-logo="https://livetv.ashokadigital.net/upload/logo/1779002306_aple%20tv.png" tvg-region="Thanjavur" group-title="TAMIL",Apple TV Thanjavur
 https://stream.ipcloud.live/appletv/appletv/index.m3u8?token=dHVsbml0aXNhZHVtZHVt
