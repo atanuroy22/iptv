@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -16484,6 +16484,24 @@
       "name": "RC Music (720p)",
       "url": "https://view.rcserver.in/tmp_hls2/stream/index.m3u8",
       "logo_url": "https://rctv.in/logo_s.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "ArputharYesuTV.in@SD",
+      "name": "Arputhar Yesu TV (720p)",
+      "url": "https://arputharyesutv.arputharyesutv.com/live/md/index.m3u8",
+      "logo_url": "https://arputharyesutv.net/wp-content/uploads/2022/07/AR-LOGO-PNG.png",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
+    },
+    {
+      "id": "JoyTV.in@SD",
+      "name": "Joy TV (1080p)",
+      "url": "https://ktismaservers.in:3412/live/joytvlive.m3u8",
+      "logo_url": "https://joytvchennai.org/wp-content/uploads/2026/04/cropped-512.png",
       "category": 0,
       "language": 0,
       "is_hd": true
