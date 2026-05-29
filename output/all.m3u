@@ -2873,6 +2873,12 @@ https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8
 https://hls.rojatv.cloud/rojamovies/rojamovies/index.m3u8
 #EXTINF:-1 tvg-id="BhagyamTV" tvg-logo="https://phoenixcreations.online/ott/jayamott/uploads/1777037057_Timeline 1_00180000.png" tvg-region="Puducherry" group-title="TAMIL",Bhagyam TV
 https://www.offer360.in/bhagyamtv/bhagyam/index.m3u8
+#EXTINF:-1 tvg-id="3550" tvg-logo="https://tamiltvchannels.com/img/devotional/Nijam%20TV.png" tvg-region="Valliyur;Tirunelveli" group-title="TAMIL",Nijam TV
+https://nijamtv.nijamtv.org/live/nijamtv/index.m3u8
+#EXTINF:-1 tvg-id="3550" tvg-logo="https://tamiltvchannels.com/img/devotional/Nijam%20TV.png" tvg-region="Valliyur;Tirunelveli" group-title="TAMIL",Nijam TV [IndiaMatrix]
+https://nijamtv.indiamatrix.in/nijamtv/nijamtv.m3u8
+#EXTINF:-1 tvg-id="3550" tvg-logo="https://tamiltvchannels.com/img/devotional/Nijam%20TV.png" tvg-region="Valliyur;Tirunelveli" group-title="TAMIL",Nijam TV [GalaxyOTT]
+https://stream.galaxyott.live/live/nijamtv/index.m3u8
 #EXTINF:-1 tvg-id="KCTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/KCTV.png" tvg-region="Coimbatore" group-title="TAMIL",KC TV
 https://rtmp.bmlive.net/bms/kctv/stream.m3u8
 #EXTINF:-1 tvg-id="KCMusic" tvg-logo="https://bmcloud.in/apptest/uploads/6936d2ffdb5e8.png" tvg-region="Coimbatore" group-title="TAMIL",KC Music
@@ -3633,7 +3639,7 @@ https://play.applelive.in/jesustv/jesustv.m3u8
 https://play.applelive.in/praisetv/praisetv.m3u8
 #EXTINF:-1 tvg-id="SharonTV" tvg-logo="https://tamiltvchannels.com/img/devotional/Sharon%20TV.png" tvg-region="Unknown" group-title="TAMIL",Sharon TV
 https://sscloud7.com/live/sharontv/index.m3u8
-#EXTINF:-1 tvg-id="VinmeenMusic" tvg-logo="https://tamiltvchannels.com/img/devotional/Vinmeen%20Music.png" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",Vinmeen Music
+#EXTINF:-1 tvg-id="VinmeenMusic" tvg-logo="https://tamiltvchannels.com/img/devotional/Vinmeen%20Music.png" tvg-region="Valliyur;Tirunelveli" group-title="TAMIL",Vinmeen Music
 https://vinmeentv.livebox.co.in/vinmeentvhls/live.m3u8
 #EXTINF:-1 tvg-id="JeevaOliTV" tvg-logo="https://tamiltvchannels.com/img/devotional/Jeevaoli%20TV.png" tvg-region="Unknown" group-title="TAMIL",Jeeva Oli TV
 https://jaeppiyar.livebox.co.in/jeevaolitvhls/live.m3u8
@@ -3853,12 +3859,6 @@ https://2-fss-2.streamhoster.com/pl_118/203324-1410936-1/chunklist.m3u8
 https://ipcloud.live/rtv/rtvstream/index.m3u8
 #EXTINF:-1 tvg-id="LifeTV" tvg-logo="https://i.ibb.co/v1C0bdR/logo-1.png" tvg-region="Unknown" group-title="TAMIL",Life TV
 https://lifetv.livebox.co.in/lifetvhls/lifetv.m3u8
-#EXTINF:-1 tvg-id="ts1383" tvg-logo="https://tamiltvchannels.com/img/devotional/Nijam%20TV.png" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",Nijam TV
-https://nijamtv.nijamtv.org/live/nijamtv/index.m3u8
-#EXTINF:-1 tvg-id="ts1383" tvg-logo="https://tamiltvchannels.com/img/devotional/Nijam%20TV.png" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",Nijam TV [IndiaMatrix]
-https://nijamtv.indiamatrix.in/nijamtv/nijamtv.m3u8
-#EXTINF:-1 tvg-id="ts1383" tvg-logo="https://tamiltvchannels.com/img/devotional/Nijam%20TV.png" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",Nijam TV [Tata Play]
-https://cable90tataplay.akamaized.net/live/nijamtv/index.m3u8
 #EXTINF:-1 tvg-id="News80Tamil" tvg-logo="https://play-lh.googleusercontent.com/vUleh6XgoF2Ouabo6ImWZFg1wZY0xiFZDgp8d2fl2wvx2gejgt7eavWhn9DxTVEtw4I" tvg-region="Unknown" group-title="TAMIL",News 80 Tamil
 http://198.144.149.206:8080/NOTV/NEWS80/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="CTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/CTV.png" tvg-region="Unknown" group-title="TAMIL",C TV
@@ -3877,9 +3877,9 @@ https://rktv-hs1.tamilstream.in/rktv/tenkasi/playlist.m3u8
 http://mangalamtv.phoenixcreations.online/mangalamtv/mangalam/playlist.m3u8
 #EXTINF:-1 tvg-id="SSTV2" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SSTV2.png" tvg-region="Unknown" group-title="TAMIL",SS TV
 https://sstv-ott.tamilstream.in/sstv/sstv/playlist.m3u8
-#EXTINF:-1 tvg-id="RajaTVValliyur" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/RajaTVValliyur.png" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",Raja TV Valliyur
+#EXTINF:-1 tvg-id="RajaTVValliyur" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/RajaTVValliyur.png" tvg-region="Valliyur;Tirunelveli" group-title="TAMIL",Raja TV Valliyur
 http://rajatv.phoenixcreations.online/rajatv/raja/playlist.m3u8
-#EXTINF:-1 tvg-id="MMTVValliyur" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MMTVValliyur.png" tvg-region="Valliyur;Tenkasi" group-title="TAMIL",MM TV Valliyur
+#EXTINF:-1 tvg-id="MMTVValliyur" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MMTVValliyur.png" tvg-region="Valliyur;Tirunelveli" group-title="TAMIL",MM TV Valliyur
 http://mmtv.phoenixcreations.online/mmtv/mm/index.mpd
 #EXTINF:-1 tvg-id="WeBadugaTV" tvg-logo="https://i.ibb.co/msBGprc/1000145103.jpg" tvg-region="Nilgiris" group-title="TAMIL",We Baduga TV
 https://rtmp.bmlive.net/webaduga/webaduga/index.m3u8
@@ -4116,7 +4116,7 @@ https://view.rcserver.in/tmp_hls34/dmtv/index.m3u8?token=YW1hemV5
 #EXTINF:-1 tvg-id="BWTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",BW TV
 https://view.rcserver.in/tmp_hls35/bwtv/index.m3u8?token=YW1hemV5
 #EXTINF:-1 tvg-id="PothigaiPrime" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Pothigai Prime
-https://view.apserver.in/tmp_hls6/pothigaiprime/index.m3u8
+https://view.apserver.in/tmp_hls5/pothigaiprime/index.m3u8
 #EXTINF:-1 tvg-id="GoldenTV" tvg-logo="" tvg-region="Unknown" group-title="TAMIL",Golden TV
 http://sanplayout.xyz/live2/goldentv/index.m3u8
 #EXTINF:-1 tvg-id="IdhayamTV" tvg-logo="http://phoenixcreations.online/ott/jayamott/uploads/1778983521_WhatsApp%20Image%202026-05-17%20at%207.34.56%20AM.jpeg" tvg-region="Unknown" group-title="TAMIL",Idhayam TV
