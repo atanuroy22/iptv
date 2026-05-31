@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/iptv_mse_v0_hevc.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -16556,6 +16556,51 @@
       "name": "Canal+ Foot",
       "url": "https://test.946985.filegear-sg.me/proxy/ef3174f16d4557d2",
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Canal%2BFoot.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "PolsatSportPremium1.pl@SD",
+      "name": "Polsat Sport Premium 1",
+      "url": "https://test.946985.filegear-sg.me/proxy/2d01a86f2b919823",
+      "logo_url": "https://i.imgur.com/hy1SKE0.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "PolsatSportPremium2.pl@SD",
+      "name": "Polsat Sport Premium 2",
+      "url": "https://test.946985.filegear-sg.me/proxy/0d12c4e1bf16ebac",
+      "logo_url": "https://i.imgur.com/myyWeXY.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SportTV1.pt@SD",
+      "name": "Sport TV1",
+      "url": "https://test.946985.filegear-sg.me/proxy/b57707d48ea3395e",
+      "logo_url": "https://i.imgur.com/YWic36u.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SportTV5.pt@SD",
+      "name": "Sport TV5",
+      "url": "https://test.946985.filegear-sg.me/proxy/2e5a3cb38f72a6dd",
+      "logo_url": "https://i.imgur.com/4w4vuad.png",
+      "category": 8,
+      "language": 0,
+      "is_hd": false
+    },
+    {
+      "id": "SportTV7.pt@SD",
+      "name": "Sport TV7",
+      "url": "https://test.946985.filegear-sg.me/proxy/a8c7608240dec023",
+      "logo_url": "https://i.imgur.com/2HmCAm5.png",
       "category": 8,
       "language": 0,
       "is_hd": false
