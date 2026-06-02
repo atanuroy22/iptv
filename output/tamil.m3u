@@ -1001,8 +1001,6 @@ https://play.applelive.in/dolphintv/dolphintv.m3u8
 http://198.144.149.206:8080/NOTV/ASOSACHENNAI/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="TSNMusic" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/TSNMusic.png" tvg-region="Unknown" group-title="TAMIL",TSN Music
 http://198.144.149.206:8080/NOTV/VAAGAI/index.m3u8?token=GTR
-#EXTINF:-1 tvg-id="TSNHollywoodTamil" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/TSNHollywoodTamil.png" tvg-region="Unknown" group-title="TAMIL",TSN Hollywood Tamil
-http://198.144.149.206:8080/DINESH/PT/index.m3u8?token=YAAL
 #EXTINF:-1 tvg-id="AppuTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/AppuTV.png" tvg-region="Udangudi;Thoothukudi" group-title="TAMIL",Appu TV
 http://198.144.149.206:8080/NOTV/IWORLDHD/index.m3u8?token=GTR
 #EXTINF:-1 tvg-id="PCN" tvg-logo="https://i.ibb.co/vcfjYB9/PCN.png" tvg-region="Unknown" group-title="TAMIL",PCN
@@ -1357,6 +1355,8 @@ https://live.singamcloud.in/jayamtv/jayamki/index.m3u8
 https://app.xstream.onecloudlive.in/sivatv/sivatv/index.m3u8
 #EXTINF:-1 tvg-id="SiddharTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/SiddharTV.png" tvg-region="Unknown" group-title="TAMIL",Siddhar TV
 http://198.144.149.206:8080/DINESH/PT2/index.m3u8?token=YAAL
+#EXTINF:-1 tvg-id="SiddharIsai" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/TSNHollywoodTamil.png" tvg-region="Unknown" group-title="TAMIL",Siddhar Isai
+http://198.144.149.206:8080/DINESH/PT/index.m3u8?token=YAAL
 #EXTINF:-1 tvg-id="IthazhTV" tvg-logo="https://play-lh.googleusercontent.com/WOVl9OoVhMuStsl6ws9HTXQZrQgk__GjErulmJpy7JnCxOp0yDc5e0SThZ5lIF87xrY" tvg-region="Unknown" group-title="TAMIL",Ithazh TV [RTMP]
 rtmp://148.113.170.17/static/ithal
 #EXTINF:-1 tvg-id="MathanTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MathanTV.png" tvg-region="Unknown" group-title="TAMIL",Mathan TV
