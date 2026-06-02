@@ -11658,7 +11658,7 @@
     {
       "id": "direct:aHR0cHM6Ly92cy1jbWFmLXB1c2hiLXVrLWxpdmUuYWthbWFpemVkLm5ldC94PTQvaT11cm46YmJjOnBp",
       "name": "cbbc hd 1080p geoblocked",
-      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/iptv_mse_v0_hevc.mpd",
+      "url": "https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/hevc_iptv_mse_v0.mpd",
       "logo_url": "https://ui-avatars.com/api/?name=CH1&background=98D8C8&color=fff&size=100&bold=true",
       "category": 0,
       "language": 0,
@@ -16604,6 +16604,15 @@
       "category": 8,
       "language": 0,
       "is_hd": false
+    },
+    {
+      "id": "Placid.us@EastHD",
+      "name": "Placid (1080p) [Not 24/7]",
+      "url": "https://toy.vcdn.fyi/placid/index.m3u8",
+      "logo_url": "https://static.wikitide.net/indietvwiki/0/03/Placid_(2026).svg",
+      "category": 0,
+      "language": 0,
+      "is_hd": true
     }
   ]
 }
