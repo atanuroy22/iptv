@@ -1,60 +1,86 @@
 # Custom IPTV Playlist Generator
 
-<!-- ## NO Ads JIO TV+ : [▶Play](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://thestarkind.mooo.com/10/) - [▶ Link 2](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://thestarkind.mooo.com/JIO/)- [▶ Jio TV v2](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://jiotv2s.teachub.workers.dev/)- [▶ Live Sports](https://atanuroy22.github.io/iptv/player/blocker.html?url=https://crichd2home.teachub.workers.dev/) -->
+This repository is an educational Node.js playlist organizer template.
+
+It demonstrates how to read M3U playlist data, categorize channels, and generate structured output files.
+
+> All example streaming URLs have been removed for compliance. This project does not provide or distribute live IPTV sources.
 
 ---
 
-## WATCH HOW TO PLAY THESE M3U :-<br><br>1. USING VLC - [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play.html)<br>OR<br>2. USING JIOTVGO APP - [▶ Watch Video](https://atanuroy22.github.io/iptv/player/play2.html)
+## What this repo does
 
-COMBINED all.m3u PLAYLIST (zee, sony, star, sports, tamil, etc.): <br>
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/all.m3u) All — `https://atanuroy22.github.io/iptv/output/all.m3u`
+- Reads M3U playlist content from configured source URLs.
+- Categorizes channels into groups such as `ZEE`, `SONY`, `STAR`, `SPORTS`, `MOVIES`, `NEWS`, `KIDS`, `TAMIL`, and `TELUGU`.
+- Generates output files in the `output/` folder:
+  - `all.m3u`
+  - `custom-channels.json`
+  - category-specific `.m3u` files
 
-INDIVIDUAL CATEGORY PLAYLISTS:<br>
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/zee.m3u) Zee — `https://atanuroy22.github.io/iptv/output/zee.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/sony.m3u) Sony — `https://atanuroy22.github.io/iptv/output/sony.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/star.m3u) Star — `https://atanuroy22.github.io/iptv/output/star.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/sports.m3u) Sports — `https://atanuroy22.github.io/iptv/output/sports.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/kids.m3u) Kids — `https://atanuroy22.github.io/iptv/output/kids.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/tamil.m3u) Tamil — `https://atanuroy22.github.io/iptv/output/tamil.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/telugu.m3u) Telugu — `https://atanuroy22.github.io/iptv/output/telugu.m3u`
+## Setup
 
-<details>
-  <summary><strong>👉 More Categories (click to expand)</strong></summary>
+1. Install Node.js 20+ and npm.
+2. Open a terminal in this repository.
+3. Install dependencies:
 
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/entertainment.m3u) Entertainment — `https://atanuroy22.github.io/iptv/output/entertainment.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/music.m3u) Music — `https://atanuroy22.github.io/iptv/output/music.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/movies.m3u) Movies — `https://atanuroy22.github.io/iptv/output/movies.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/news.m3u) News — `https://atanuroy22.github.io/iptv/output/news.m3u`
-- [▶](https://atanuroy22.github.io/iptv/player/index.html?url=https://atanuroy22.github.io/iptv/output/others.m3u) Others — `https://atanuroy22.github.io/iptv/output/others.m3u`
+```bash
+npm install
+```
 
-</details>
+## Configure sources
 
-Foraign sports channels :- [▶ Play](https://atanuroy22.github.io/iptv/output/direct.html)
+Before generating, open `generate.js` and update the playlist source URLs with content you are legally allowed to use.
 
-## FEATURES
+The top of `generate.js` contains constants such as:
 
-- Categorizes channels into:
-  • Zee
-  • Sony
-  • Star
-  • Sports
-  • Tamil
+- `PLAYLIST_URL`
+- `SPORTS_PLAYLIST_URL`
+- `TAMIL_PLAYLIST_URL`
+- `TELUGU_PLAYLIST_URL`
 
-- Creates TWO types of playlists:
-  1. Separate .m3u files for each category (in output/ folder)
-  2. A combined all.m3u file with all channels organized by category sections
+Replace those values with authorized M3U source URLs or local playlist files.
 
-These URLs auto-refresh every 4 hours.
+## Generate output
 
-Automatically generates custom IPTV M3U playlists (Zee, Sony, Sports, Star, Tamil and Others) by pulling the latest data from iptv-org and sorting channels into relevant categories.
+Run the generator with:
 
-_Note :- All the Channels are shared by iptv-org or taken from any other provider and are not stored on this repository. We just organize and sort them into categories for better user experience._
+```bash
+npm start
+```
+
+Or directly:
+
+```bash
+node generate.js
+```
+
+This will create or update files in the `output/` directory.
+
+## What is generated
+
+- `output/all.m3u` — combined playlist of all categories
+- `output/zee.m3u`, `output/sony.m3u`, `output/star.m3u`, etc.
+- `output/custom-channels.json` — organized channel metadata
+
+## Safe usage guidance
+
+- Do not add unauthorized or pirated stream URLs.
+- Use this repository only for learning how to process playlist data.
+- Keep the player workflow disabled unless you are hosting only legally permitted content.
+
+## Development notes
+
+If you want to adapt the generator for your own playlists:
+
+1. Edit `generate.js` to point to your source data.
+2. Customize category filters in the `FILTERS` object.
+3. Run `npm start` to regenerate output.
 
 ---
 
-## Please give a star if you like this project.
+## Compliance
 
-<!-- ------------------------------------
-LICENSE
-------------------------------------
-MIT License – free to use and modify. -->
+This repository has been updated to remove public IPTV playback links and unauthorized playlist URLs.
+
+If you plan to publish or share generated output, ensure you have permission for every stream source used.
+
